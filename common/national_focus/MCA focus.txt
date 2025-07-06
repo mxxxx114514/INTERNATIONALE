@@ -1,0 +1,439 @@
+focus_tree = {
+	id = MCA_focus
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2200 }
+
+	focus = {
+		id = MCA_the_comeback
+		icon = GFX_focus_unknown
+		x = 1
+		y = 0
+		cost = 2
+		completion_reward = {
+			add_war_support = 0.1
+		}
+
+	}
+
+	focus = {
+		id = MCA_recruit_peasants
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_the_comeback
+		x = 0
+		y = 1
+		prerequisite = { focus = MCA_the_comeback }
+		cost = 2
+		completion_reward = {
+			484 = {
+				create_unit = {
+					division = "division_template = \"Brigada Agrarista\" start_experience_factor = 0.65 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 3
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = MCA_alliance_with_workers
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_recruit_peasants
+		x = -2
+		y = 1
+		prerequisite = { focus = MCA_recruit_peasants }
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MCA_land_and_liberty
+				add_idea = MCA_land_and_liberty_1
+			}
+		}
+
+	}
+
+	focus = {
+		id = MCA_experiences_from_1917
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_recruit_peasants
+		x = 2
+		y = 1
+		prerequisite = { focus = MCA_recruit_peasants }
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MCA_peasants_army
+				add_idea = MCA_peasants_army_1
+			}
+			484 = {
+				create_unit = {
+					division = "division_template = \"Brigada de Artillería\" start_experience_factor = 0.65 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 3
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = MCA_new_northern_divisions
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_recruit_peasants
+		x = 0
+		y = 2
+		prerequisite = { focus = MCA_alliance_with_workers }
+		prerequisite = { focus = MCA_experiences_from_1917 }
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MCA_peasants_army_1
+				add_idea = MCA_new_northern_army
+			}
+		}
+
+	}
+
+	focus = {
+		id = MCA_destroy_traitors
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_new_northern_divisions
+		x = 0
+		y = 1
+		prerequisite = { focus = MCA_new_northern_divisions }
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MCA_new_northern_army
+				add_idea = MCA_new_northern_army_1
+			}
+		}
+
+	}
+
+	focus = {
+		id = MCA_long_way_to_go
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_destroy_traitors
+		x = 0
+		y = 1
+		prerequisite = { focus = MCA_destroy_traitors }
+		cost = 2
+		completion_reward = {
+			add_stability = 0.1
+			484 = {
+				create_unit = {
+					division = "division_template = \"Brigada de Artillería\" start_experience_factor = 0.65 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = MCA_a_state_in_chaos
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_long_way_to_go
+		x = -1
+		y = 1
+		prerequisite = { focus = MCA_long_way_to_go }
+		cost = 2
+		completion_reward = {
+			add_ideas = MCA_survive_in_the_chaos
+		}
+
+	}
+
+	focus = {
+		id = MCA_peninsula_home
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_long_way_to_go
+		x = 1
+		y = 1
+		prerequisite = { focus = MCA_long_way_to_go }
+		cost = 2
+		available = { has_completed_focus = MCA_a_state_in_chaos }
+		completion_reward = {
+			add_stability = 0.05
+			925 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = MCA_survive_in_the_chaos
+				add_idea = MCA_survive_in_the_chaos_1
+			}
+		}
+
+	}
+
+	focus = {
+		id = MCA_follow_pancho_villa
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_long_way_to_go
+		x = 0
+		y = 2
+		prerequisite = { focus = MCA_peninsula_home }
+		prerequisite = { focus = MCA_a_state_in_chaos }
+		cost = 2
+		completion_reward = {
+			add_war_support = 0.1
+			country_event = MCA_civilwar.2
+		}
+
+	}
+
+	focus = {
+		id = MCA_count_of_monte_cristo
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_follow_pancho_villa
+		x = 0
+		y = 1
+		prerequisite = { focus = MCA_follow_pancho_villa }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_rewarded_land
+		icon = GFX_focus_unknown
+		x = 8
+		y = 0
+		cost = 2
+		allow_branch = { MEX = { has_country_flag = MEX_civil_war_obregon_victory_flag }}
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_cultivate_wasteland
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_rewarded_land
+		x = 0
+		y = 1
+		prerequisite = { focus = MCA_rewarded_land }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_new_shining_city
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_cultivate_wasteland
+		x = -2
+		y = 1
+		prerequisite = { focus = MCA_cultivate_wasteland }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_learn_from_california
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_new_shining_city
+		x = 0
+		y = 1
+		prerequisite = { focus = MCA_new_shining_city }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_request_government_aid
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_learn_from_california
+		x = 0
+		y = 1
+		prerequisite = { focus = MCA_learn_from_california }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_rebuild_infrastructure
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_request_government_aid
+		x = -1
+		y = 1
+		prerequisite = { focus = MCA_request_government_aid }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_develop_ports
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_request_government_aid
+		x = 1
+		y = 1
+		prerequisite = { focus = MCA_request_government_aid }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_land_of_hope
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_request_government_aid
+		x = 0
+		y = 2
+		prerequisite = { focus = MCA_rebuild_infrastructure }
+		prerequisite = { focus = MCA_develop_ports }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_burden_of_the_ideal
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_cultivate_wasteland
+		x = 2
+		y = 1
+		prerequisite = { focus = MCA_cultivate_wasteland }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_recruit_supervisors
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_burden_of_the_ideal
+		x = -1
+		y = 1
+		prerequisite = { focus = MCA_burden_of_the_ideal }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_investigate_land_corruption
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_recruit_supervisors
+		x = 0
+		y = 1
+		prerequisite = { focus = MCA_recruit_supervisors }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_advocate_rural_communes
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_burden_of_the_ideal
+		x = 1
+		y = 1
+		prerequisite = { focus = MCA_burden_of_the_ideal }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_ban_land_sale
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_advocate_rural_communes
+		x = 0
+		y = 1
+		prerequisite = { focus = MCA_advocate_rural_communes }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_rural_integrity
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_burden_of_the_ideal
+		x = 0
+		y = 3
+		prerequisite = { focus = MCA_investigate_land_corruption }
+		prerequisite = { focus = MCA_ban_land_sale }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_two_decades
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_rural_integrity
+		x = 0
+		y = 1
+		prerequisite = { focus = MCA_rural_integrity }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MCA_old_but_vigorous
+		icon = GFX_focus_unknown
+		relative_position_id = MCA_cultivate_wasteland
+		x = 0
+		y = 6
+		prerequisite = { focus = MCA_land_of_hope }
+		prerequisite = { focus = MCA_two_decades }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+}

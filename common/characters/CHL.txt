@@ -1,0 +1,36 @@
+characters = {
+
+	CHL_arturo_alessandri = {
+		name = CHL_arturo_alessandri
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_chile_arturo_alessandri"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			traits = { JUNO_the_lion_of_tarapaca }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		instance = {
+			allowed = { 
+				NOT = {
+					has_dlc = "Trial of Allegiance"
+				}
+			}
+		
+			name = CHL_arturo_alessandri
+			portraits = {
+				civilian = {
+					large = "GFX_Portrait_chile_arturo_alessandri"
+				}
+			}
+			country_leader = {
+				ideology = liberalism
+				expire = "1965.1.1.1"
+				id = -1
+			}
+		}
+	}
+}

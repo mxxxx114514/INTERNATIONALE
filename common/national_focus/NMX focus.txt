@@ -1,0 +1,240 @@
+focus_tree = {
+	id = NMX_focus
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2200 }
+
+	focus = {
+		id = NMX_the_past_blood
+		icon = GFX_focus_NMX_the_past_blood
+		x = 1
+		y = 0
+		cost = 2
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+	}
+
+	focus = {
+		id = NMX_fall_into_fire
+		icon = GFX_focus_NMX_fall_into_fire
+		relative_position_id = NMX_the_past_blood
+		x = 0
+		y = 1
+		prerequisite = { focus = NMX_the_past_blood }
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NMX_the_second_revolution
+				add_idea = NMX_the_second_revolution_1
+			}
+		}
+
+	}
+
+	focus = {
+		id = NMX_focus_on_the_leader
+		icon = GFX_focus_NMX_focus_on_the_leader
+		relative_position_id = NMX_fall_into_fire
+		x = -2
+		y = 1
+		prerequisite = { focus = NMX_fall_into_fire }
+		mutually_exclusive = { focus = NMX_focus_on_peasant_rebels }
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NMX_the_second_revolution_1
+				add_idea = NMX_the_second_revolution_21
+			}
+		}
+
+	}
+
+	focus = {
+		id = NMX_focus_on_peasant_rebels
+		icon = GFX_focus_NMX_focus_on_peasant_rebels
+		relative_position_id = NMX_fall_into_fire
+		x = 2
+		y = 1
+		prerequisite = { focus = NMX_fall_into_fire }
+		mutually_exclusive = { focus = NMX_focus_on_the_leader }
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NMX_the_second_revolution_1
+				add_idea = NMX_the_second_revolution_22
+			}
+		}
+
+	}
+
+	focus = {
+		id = NMX_stabilize_public_opinion
+		icon = GFX_focus_NMX_stabilize_public_opinion
+		relative_position_id = NMX_fall_into_fire
+		x = 0
+		y = 2
+		prerequisite = { focus = NMX_focus_on_the_leader focus = NMX_focus_on_peasant_rebels }
+		cost = 2
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+	}
+
+	focus = {
+		id = NMX_condemn_obregon
+		icon = GFX_focus_NMX_condemn_obregon
+		relative_position_id = NMX_stabilize_public_opinion
+		x = 0
+		y = 1
+		prerequisite = { focus = NMX_stabilize_public_opinion }
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = NMX_legacy_of_madero
+				add_idea = NMX_legacy_of_madero_1
+			}
+		}
+
+	}
+
+	focus = {
+		id = NMX_recruit_militias
+		icon = GFX_focus_NMX_recruit_militias
+		relative_position_id = NMX_condemn_obregon
+		x = 0
+		y = 1
+		prerequisite = { focus = NMX_condemn_obregon }
+		cost = 2
+		completion_reward = {
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"Brigada Agrarista\" start_experience_factor = 0.3 start_equipment_factor = 0.75" 
+					owner = PREV
+					count = 4
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = NMX_dark_clouds
+		icon = GFX_focus_NMX_dark_clouds
+		relative_position_id = NMX_recruit_militias
+		x = -2
+		y = 1
+		prerequisite = { focus = NMX_recruit_militias }
+		cost = 2
+		completion_reward = {
+			add_ideas = NMX_the_great_rain
+		}
+
+	}
+
+	focus = {
+		id = NMX_inner_fighting
+		icon = GFX_focus_NMX_inner_fighting
+		relative_position_id = NMX_recruit_militias
+		x = 2
+		y = 1
+		prerequisite = { focus = NMX_recruit_militias }
+		cost = 2
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = NMX_the_second_revolution_21
+					add_idea = NMX_the_second_revolution_31
+				}
+			}
+			hidden_effect = {
+				IF = {
+					limit = { has_idea = NMX_the_second_revolution_21 }
+					swap_ideas = {
+						remove_idea = NMX_the_second_revolution_21
+						add_idea = NMX_the_second_revolution_31
+					}
+				}
+				ELSE_IF = {
+					limit = { has_idea = NMX_the_second_revolution_22 }
+					swap_ideas = {
+						remove_idea = NMX_the_second_revolution_22
+						add_idea = NMX_the_second_revolution_32
+					}
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = NMX_the_capital_stops_weeping
+		icon = GFX_focus_NMX_the_capital_stops_weeping
+		relative_position_id = NMX_recruit_militias
+		x = 0
+		y = 2
+		prerequisite = { focus = NMX_dark_clouds }
+		prerequisite = { focus = NMX_inner_fighting }
+		#available = { NOT = { controls_province = 13278 } }
+        #bypass_if_unavailable = yes
+		cost = 2
+		completion_reward = {
+			add_political_power = 25
+			IF = {
+				limit = { has_idea = NMX_the_second_revolution_31 }
+				swap_ideas = { remove_idea = NMX_the_second_revolution_31 add_idea = NMX_the_second_revolution_41 }
+			}
+			ELSE_IF = {
+				limit = { has_idea = NMX_the_second_revolution_32 }
+				swap_ideas = { remove_idea = NMX_the_second_revolution_32 add_idea = NMX_the_second_revolution_42 }
+			}
+			IF = {
+				limit = {
+					controls_province = 13278
+				}
+				add_stability = 0.1
+				add_war_support = 0.1
+				add_state_core = 277
+			}
+			ELSE = {
+				activate_targeted_decision = {
+					target = NMX
+					decision = NMX_capture_mexico_city
+				}
+				hidden_effect = {
+					add_ideas = MEX_civil_war_offensive
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = NMX_mexico_stops_bleeding
+		icon = GFX_focus_NMX_mexico_stops_bleeding
+		relative_position_id = NMX_the_capital_stops_weeping
+		x = 0
+		y = 1
+		prerequisite = { focus = NMX_the_capital_stops_weeping }
+		available = { NOT = { OR = { country_exists = MEX country_exists = MCA country_exists = MGS country_exists = COM } } }
+        #bypass_if_unavailable = yes
+		cost = 2
+		completion_reward = {
+			add_political_power = 25
+			every_owned_state = {
+				add_core_of = NMX
+			}
+			country_event = { 
+				id = NMX_civilwar.3
+				days = 3
+				random_days = 3
+			}
+		}
+
+	}
+
+}

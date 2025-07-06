@@ -1,0 +1,181 @@
+division_template = {
+	name = "Saudi Infantry Division"			# Infantry Division
+	division_names_group = SAU_INF_01
+	# Note: Divisions were nowhere near full strength until mobilized
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		location = 12727
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 12727
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 12727
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 12727
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 12727
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 12727
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 12727
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 12727
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 12727
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 10892
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 10892
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 10892
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 10892
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 10892
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 8004
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 8004
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 8004
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 8004
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 8004
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 2057
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 2057
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 2057
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 2057
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 10870
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 10870
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 10870
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+	division = {
+		location = 10870
+		division_template = "Saudi Infantry Division"
+		start_experience_factor = 0.75
+		start_equipment_factor = 1.0
+	}
+}

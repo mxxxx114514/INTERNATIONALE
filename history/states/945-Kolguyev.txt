@@ -1,0 +1,35 @@
+
+state = {
+	id = 945
+	name = "STATE_945"
+	manpower = 200
+	
+	state_category = wasteland
+	
+	resources = {
+		oil = 7 # was: 8
+	}
+	impassable = yes
+	history = {
+		victory_points = {
+			12530 1 
+		}
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+			12530 = {
+				naval_base = 1
+			}
+
+		}
+		add_core_of = SOV
+		add_core_of = RUS
+		add_core_of = NEN
+	}
+
+	provinces = {
+		12530
+	}
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,55 @@
+BEL_civil_war_escalation_category = {
+
+	BEL_civil_war_escalation_pakt_mission = {
+		icon = GFX_decision_icon_default
+		days_mission_timeout = 16
+
+		#fire_only_once = yes
+
+		#is_good = yes
+
+		allowed = { hidden_trigger = { always = no } }
+
+		available = { hidden_trigger = { always = no } }
+
+		timeout_effect = {
+			GRR = { add_to_faction = FLA }
+			hidden_effect = {
+				ENG = {
+					diplomatic_relation = {
+						country = GRR
+						relation = guarantee
+						active = no
+					}
+				}
+			}
+		}
+	}
+
+	BEL_civil_war_escalation_inter_mission = {
+		icon = GFX_decision_icon_default
+		days_mission_timeout = 16
+
+		#fire_only_once = yes
+
+		#is_good = yes
+
+		allowed = { hidden_trigger = { always = no } }
+
+		available = { hidden_trigger = { always = no } }
+
+		timeout_effect = {
+			SOV = { add_to_faction = WAL }
+			hidden_effect = {
+				ENG = {
+					diplomatic_relation = {
+						country = GRR
+						relation = guarantee
+						active = no
+					}
+				}
+			}
+		}
+	}
+
+}

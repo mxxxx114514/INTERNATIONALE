@@ -1,0 +1,20 @@
+state={
+	id=911
+	name="STATE_911"
+	provinces={
+		3488 
+	}
+	manpower=10000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 2
+			3488 = { dam = 1 }
+		}
+		add_core_of = GER
+		add_claim_by = BEL
+	}
+}

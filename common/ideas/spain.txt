@@ -1,0 +1,25 @@
+ideas = {
+
+	hidden_ideas = {
+		spain_death_before_surrender_capitulation = {
+
+			name = SPR_death_before_surrender
+
+			picture = generic_build_infrastructure
+
+			allowed = {
+				original_tag = SPR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				surrender_limit = 0.1
+				army_attack_factor = 0.25
+				max_dig_in_factor = -0.8
+			}
+		}
+	}
+}

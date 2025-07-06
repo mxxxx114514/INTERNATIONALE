@@ -1,0 +1,467 @@
+###########################
+# Europe Events
+###########################
+
+add_namespace = europe
+
+country_event = { #European Liberty Pact
+	id = europe.1
+	is_triggered_only = yes
+
+	title = europe.1.t
+	desc = europe.1.desc
+	picture = GFX_event_europe_1
+
+	option = {
+		name = europe.1.a
+		ai_chance = { base = 10 }
+		add_ideas = european_liberty_pact
+		every_other_country = {
+			limit = { has_idea = european_liberty_pact }
+			diplomatic_relation = { country = PREV relation = non_aggression_pact }
+		}
+	}
+
+	option = {
+		name = europe.1.b
+		ai_chance = { base = 3 }
+		#trigger = { is_ai = no }
+	}
+	
+}
+
+country_event = { #Anglo German Alliance #ENG event, invitation from GER
+	id = europe.2
+	is_triggered_only = yes
+
+	title = europe.2.t
+	desc = europe.2.desc
+	picture = GFX_event_europe_2
+
+	option = {
+		name = europe.2.a
+		ai_chance = {
+			base = 40
+		}
+		GER = {
+			country_event = europe.8
+		}
+	}
+
+	option = {
+		name = europe.2.b
+		ai_chance = {
+			base = 10
+		}
+		GER = {
+			country_event = europe.9
+		}
+	}
+}
+
+country_event = { #GER/GRR event: ENG intervention
+	id = europe.3
+	is_triggered_only = yes
+
+	title = europe.3.t
+	desc = europe.3.desc
+	picture = GFX_event_europe_3
+
+	option = { #Join Anti-IN Pact
+		name = europe.3.a
+		ai_chance = {
+			base = 10000
+		}
+		ENG = { set_faction_name = anti_in_pact }
+		#IF = {
+			#limit = { { country_exists = USF } }
+			#ENG = { add_to_faction = USF }
+		#}
+		set_global_flag = anti_in_pact_created_flag
+		IF = {
+			limit = {
+				country_exists = GRR
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = GRR
+				}
+				leave_faction = yes
+				ENG = { add_to_faction = PREV }
+			}
+			GRR = {
+				dismantle_faction = yes
+				hidden_effect = {
+					IF = {
+						limit = { is_ai = yes }
+						add_ideas = GER_defend_homeland
+					}
+				}
+			}
+			ENG = { add_to_faction = GRR }
+		}
+		ELSE_IF = {
+			limit = {
+				country_exists = TRR
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = TRR
+				}
+				leave_faction = yes
+				ENG = { add_to_faction = PREV }
+			}
+			TRR = {
+				dismantle_faction = yes
+			}
+			ENG = { add_to_faction = TRR }
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_in_faction_with = ENG
+					tag = ENG
+				}
+			}
+			add_ideas = cln_member_idea
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = war_news.38
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = { #Decline
+		name = europe.3.b
+		trigger = { is_ai = no }
+		custom_effect_tooltip = make_angry_tt
+		ENG = {
+			add_opinion_modifier = {
+				target = GRR
+				modifier = IN_offered_help_refused
+			}
+		}
+		hidden_effect = {
+			ENG = {
+				diplomatic_relation = {
+					country = GRR
+					relation = non_aggression_pact
+					active = no
+				}
+				every_country = {
+					limit = {
+						OR = {
+							tag = GRR
+							is_in_faction_with = GRR
+						}
+						has_volunteers_amount_from = {
+							tag = ENG
+							count > 0
+						}
+					}
+					ENG = { recall_volunteers_from = PREV }
+				}
+				create_wargoal = {
+					target = GRR
+					type = puppet_wargoal_focus
+				}
+				add_ai_strategy = {
+					type = declare_war
+					id = GRR
+					value = 1000
+				}
+				set_global_flag = ww2_ENG_invade_GRR
+			}
+		}
+	}
+}
+
+country_event = { #PRG event: ENG invitation
+	id = europe.4
+	is_triggered_only = yes
+
+	title = europe.4.t
+	desc = europe.4.desc
+	picture = GFX_event_europe_4
+
+	option = { #Join Anti-IN Pact
+		name = europe.4.a
+		ai_chance = {
+			base = 10000
+		}
+		ENG = { set_faction_name = anti_in_pact }
+		#IF = {
+			#limit = { { country_exists = USF } }
+			#ENG = { add_to_faction = USF }
+		#}
+		set_global_flag = anti_in_pact_created_flag
+		PRG = {
+			set_country_flag = p_entente_member
+			every_country = {
+				limit = { is_in_faction_with = PREV }
+				set_country_flag = p_entente_member
+			}
+			dismantle_faction = yes
+		}
+		every_country = {
+			limit = {
+				has_country_flag = p_entente_member
+				NOT = { is_in_faction_with = SOV }
+			}
+			ENG = { add_to_faction = PREV }
+			add_ideas = cln_member_idea
+		}
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = war_news.39
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = { #Decline
+		name = europe.4.b
+		ENG = {
+			add_opinion_modifier = {
+				target = CZE
+				modifier = IN_offered_help_refused
+			}
+		}
+	}
+}
+
+country_event = { #GER/GRR event: TUR/TRR intervention
+	id = europe.5
+	is_triggered_only = yes
+
+	title = europe.5.t
+	desc = europe.5.desc
+	picture = GFX_event_europe_5
+
+	option = { #Accept
+		name = europe.5.a
+		ai_chance = {
+			base = 10000
+		}
+		GRR = {
+			faction_leader = {
+				add_to_faction = TRR
+			}
+		}
+		#TRR = { set_country_flag = pakt_member } 
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = war_news.37
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = { #Decline
+		name = europe.5.b
+		TRR = {
+			add_opinion_modifier = {
+				target = GRR
+				modifier = IN_offered_help_refused
+			}
+		}
+	}
+}
+
+country_event = { #GER/GRR event: POL intervention
+	id = europe.6
+	is_triggered_only = yes
+
+	title = europe.6.t
+	desc = europe.6.desc
+	picture = GFX_event_europe_6
+
+	option = { #Accept
+		name = europe.6.a
+		ai_chance = {
+			base = 10000
+		}
+		POL = {
+			dismantle_faction = yes
+		}
+		GRR = {
+			faction_leader = {
+				add_to_faction = POL
+				IF = {
+					limit = { NOT = { LIT = { is_in_faction_with = GRR } } }
+					add_to_faction = LIT
+				}
+			}
+		}
+		#POL = { set_country_flag = pakt_member } 
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = war_news.36
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = { #Decline
+		name = europe.6.b
+		trigger = { always = no }
+		POL = {
+			add_opinion_modifier = {
+				target = GRR
+				modifier = IN_offered_help_refused
+			}
+			dismantle_faction = yes
+			ENG = {
+				add_to_faction = POL
+				IF = {
+					limit = { NOT = { LIT = { is_in_faction_with = GRR } } }
+					add_to_faction = LIT
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Iron Curtain
+	id = europe.7
+	is_triggered_only = yes
+
+	title = europe.7.t
+	desc = europe.7.desc
+	picture = GFX_event_europe_7
+
+	option = { #GRR
+		name = europe.7.a
+		trigger = { tag = GRR }
+		GRR = {
+			IF = {
+				limit = { is_liberal_ideology = yes }
+				add_opinion_modifier = { target = ENG modifier = cold_war_1 }
+				add_opinion_modifier = { target = USA modifier = cold_war_1 }
+				add_opinion_modifier = { target = NFR modifier = cold_war_1 }
+				reverse_add_opinion_modifier = { target = ENG modifier = cold_war_1 }
+				reverse_add_opinion_modifier = { target = USA modifier = cold_war_1 }
+				reverse_add_opinion_modifier = { target = NFR modifier = cold_war_1 }
+			}
+			ELSE_IF = {
+				limit = { has_government = neutrality }
+				add_opinion_modifier = { target = ENG modifier = cold_war_2 }
+				add_opinion_modifier = { target = USA modifier = cold_war_2 }
+				add_opinion_modifier = { target = NFR modifier = cold_war_2 }
+				reverse_add_opinion_modifier = { target = ENG modifier = cold_war_2 }
+				reverse_add_opinion_modifier = { target = USA modifier = cold_war_2 }
+				reverse_add_opinion_modifier = { target = NFR modifier = cold_war_2 }
+			}
+			ELSE_IF = {
+				limit = { has_government = fascism }
+				add_opinion_modifier = { target = ENG modifier = cold_war_3 }
+				add_opinion_modifier = { target = USA modifier = cold_war_3 }
+				add_opinion_modifier = { target = NFR modifier = cold_war_3 }
+				reverse_add_opinion_modifier = { target = ENG modifier = cold_war_3 }
+				reverse_add_opinion_modifier = { target = USA modifier = cold_war_3 }
+				reverse_add_opinion_modifier = { target = NFR modifier = cold_war_3 }
+			}
+		}
+		custom_effect_tooltip = GRR_endgame_tt
+
+	}
+
+	option = { #NOT GRR
+		name = europe.7.b
+		trigger = { NOT = { tag = GRR } }
+		GRR = {
+			IF = {
+				limit = { is_liberal_ideology = yes }
+				add_opinion_modifier = { target = ENG modifier = cold_war_1 }
+				add_opinion_modifier = { target = USA modifier = cold_war_1 }
+				add_opinion_modifier = { target = NFR modifier = cold_war_1 }
+				reverse_add_opinion_modifier = { target = ENG modifier = cold_war_1 }
+				reverse_add_opinion_modifier = { target = USA modifier = cold_war_1 }
+				reverse_add_opinion_modifier = { target = NFR modifier = cold_war_1 }
+			}
+			ELSE_IF = {
+				limit = { has_government = neutrality }
+				add_opinion_modifier = { target = ENG modifier = cold_war_2 }
+				add_opinion_modifier = { target = USA modifier = cold_war_2 }
+				add_opinion_modifier = { target = NFR modifier = cold_war_2 }
+				reverse_add_opinion_modifier = { target = ENG modifier = cold_war_2 }
+				reverse_add_opinion_modifier = { target = USA modifier = cold_war_2 }
+				reverse_add_opinion_modifier = { target = NFR modifier = cold_war_2 }
+			}
+			ELSE_IF = {
+				limit = { has_government = fascism }
+				add_opinion_modifier = { target = ENG modifier = cold_war_3 }
+				add_opinion_modifier = { target = USA modifier = cold_war_3 }
+				add_opinion_modifier = { target = NFR modifier = cold_war_3 }
+				reverse_add_opinion_modifier = { target = ENG modifier = cold_war_3 }
+				reverse_add_opinion_modifier = { target = USA modifier = cold_war_3 }
+				reverse_add_opinion_modifier = { target = NFR modifier = cold_war_3 }
+			}
+		}
+		
+	}
+}
+
+country_event = { #Anglo German Alliance #GER event, ENG accept
+	id = europe.8
+	is_triggered_only = yes
+
+	title = europe.8.t
+	desc = europe.8.desc
+
+	option = {
+		name = europe.8.a
+		ENG = {
+			give_guarantee = GER
+			diplomatic_relation = {
+				country = GER
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		GER = {
+			give_guarantee = ENG 
+			add_political_power = 50
+		}
+		set_global_flag = GER_anglo_german_alliance_flag
+	}
+
+}
+
+country_event = { #Anglo German Alliance #ENG event, invitation from GER
+	id = europe.9
+	is_triggered_only = yes
+
+	title = europe.9.t
+	desc = europe.9.desc
+
+	option = {
+		name = europe.9.a
+		GER = {
+			add_political_power = -150
+		}
+	}
+
+}

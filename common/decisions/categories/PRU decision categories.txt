@@ -1,0 +1,9 @@
+#################
+#### PRU ####
+#################
+PRU_invade_ECU_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = PRU }
+}

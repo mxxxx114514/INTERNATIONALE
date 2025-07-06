@@ -1,0 +1,30 @@
+GER_ai_strategy_plan = {
+	name = "GER_ai_strategy_plan"
+
+	allowed = {
+		tag = GRR
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_national_focuses = {
+		GER_situation_in_europe
+		GER_economy
+		GER_military
+		GER_economy_1_0
+		GER_economy_1_1
+		GER_economy_1_2
+		GER_economy_1_3
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+	}
+}

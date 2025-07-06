@@ -1,0 +1,123 @@
+armor_generic = {
+
+	role = armor
+	
+	upgrade_prio = {
+		factor = 1000
+	}
+
+	medium_armor_default = {
+		enable = { NOT = { enable = { has_country_flag = AI_artillery_focus_flag } } }
+		replace_with = medium_armor_mech_35
+		upgrade_prio = {
+			base = 1000
+		}
+		reinforce_prio = 2
+
+		target_template = {
+			regiments = {
+				medium_armor = 8
+				infantry = 9
+			}
+			support = {
+				artillery = 1
+				engineer = 1
+				anti_air = 1
+				anti_tank = 1
+				logistics_company = 1
+			}
+		}
+	}
+
+	medium_armor_art = {
+		enable = { has_country_flag = AI_artillery_focus_flag }
+		replace_with = medium_armor_mech_35_art
+		upgrade_prio = {
+			base = 10
+			modifier = {
+				add = 4000
+				has_country_flag = AI_artillery_focus_flag
+			}
+		}
+		reinforce_prio = 2
+
+		target_template = {
+			regiments = {
+				medium_armor = 5
+				medium_sp_artillery_brigade = 3
+				infantry = 8
+			}
+			support = {
+				artillery = 1
+				engineer = 1
+				anti_air = 1
+				anti_tank = 1
+				logistics_company = 1
+			}
+		}
+	}
+
+	medium_armor_mech_35 = {
+		enable = { has_tech = mechanised_infantry NOT = { has_country_flag = has_country_flag = AI_artillery_focus_flag } }
+		upgrade_prio = {
+			base = 1000
+			modifier = {
+				factor = 0
+				has_equipment = { mechanized_equipment < 1500 }
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AI_artillery_focus_flag
+			}
+		}
+		reinforce_prio = 2
+		can_upgrade_in_field = { 
+			always = yes
+		}
+
+		target_template = {
+			regiments = {
+				medium_armor = 8
+				medium_tank_destroyer_brigade = 1
+				mechanized = 8
+			}
+			support = {
+				engineer = 1
+				logistics_company = 1
+				anti_air = 1
+				maintenance_company = 1
+				artillery = 1
+			}
+		}
+	}
+
+	medium_armor_mech_35_art = {
+		enable = { has_tech = mechanised_infantry has_country_flag = has_country_flag = AI_artillery_focus_flag }
+		upgrade_prio = {
+			base = 1000
+			modifier = {
+				factor = 0
+				has_equipment = { mechanized_equipment < 1500 }
+			}
+		}
+		can_upgrade_in_field = { 
+			always = yes
+		}
+
+		target_template = {
+			regiments = {
+				medium_armor = 3
+				medium_sp_artillery_brigade = 3
+				medium_tank_destroyer_brigade = 1
+				mechanized = 8
+			}
+			support = {
+				engineer = 1
+				logistics_company = 1
+				anti_air = 1
+				maintenance_company = 1
+				artillery = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,540 @@
+defined_text = {
+	name = GetAUSFate
+	text = {
+		trigger = {
+			check_variable = { GER.GER_AUS_public_support > 80 }
+			check_variable = { GER.GER_AUS_integration_degree > 80 }
+		}
+		localization_key = GER_AUS_fate_integration
+	}
+	text = {
+		trigger = {
+			check_variable = { GER.GER_AUS_public_support < 20 }
+			check_variable = { GER.GER_AUS_integration_degree < 20 }
+		}
+		localization_key = GER_AUS_fate_independence
+	}
+	text = {
+		localization_key = GER_AUS_fate_status_quo
+	}
+}
+
+defined_text = {
+	name = GetDandlDeathDesc
+	text = {
+		trigger = {
+			has_government = neutrality
+		}
+		localization_key = GER_dandl_success_desc
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = neutrality }
+		}
+		localization_key = GER_dandl_failure_desc
+	}
+}
+
+defined_text = {
+	name = GetQuiddeDeathDesc
+	text = {
+		trigger = {
+			is_liberal_ideology = yes
+		}
+		localization_key = GER_quidde_success_desc
+	}
+	text = {
+		trigger = {
+			is_liberal_ideology = no
+		}
+		localization_key = GER_quidde_failure_desc
+	}
+}
+
+defined_text = {
+	name = GER_complete_military_focus_tt_scripted_loc
+	text = {
+		trigger = {
+			NOT = {
+				AND = {
+					OR = {
+						has_completed_focus = GER_lib_2_4
+						has_completed_focus = GER_imp_2_3
+						has_completed_focus = GER_nat_2_3
+					}
+					OR = {
+						has_completed_focus = GER_navy_4
+						has_completed_focus = GER_air_4
+						AND = {
+							has_completed_focus = GER_army_0_0_3
+							has_completed_focus = GER_army_0_1_3
+						}
+						AND = {
+							has_completed_focus = GER_army_1_0_3
+							has_completed_focus = GER_army_1_1_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = GER_complete_military_focus_tt_available
+	}
+	text = {
+		trigger = {
+			AND = {
+				OR = {
+					has_completed_focus = GER_lib_2_4
+					has_completed_focus = GER_imp_2_3
+					has_completed_focus = GER_nat_2_3
+				}
+				OR = {
+					has_completed_focus = GER_navy_4
+					has_completed_focus = GER_air_4
+					AND = {
+						has_completed_focus = GER_army_0_0_3
+						has_completed_focus = GER_army_0_1_3
+					}
+					AND = {
+						has_completed_focus = GER_army_1_0_3
+						has_completed_focus = GER_army_1_1_3
+					}
+				}
+			}
+		}
+		localization_key = GER_complete_military_focus_tt_unavailable
+	}
+}
+
+defined_text = {
+	name = GetReichstagPartyName
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 0 }
+		}
+		localization_key = GER_reichstag_party_name_0
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 1 }
+		}
+		localization_key = GER_reichstag_party_name_1
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 2 }
+		}
+		localization_key = GER_reichstag_party_name_2
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 3 }
+		}
+		localization_key = GER_reichstag_party_name_3
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 4 }
+		}
+		localization_key = GER_reichstag_party_name_4
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 5 }
+		}
+		localization_key = GER_reichstag_party_name_5
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 6 }
+		}
+		localization_key = GER_reichstag_party_name_6
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 7 }
+		}
+		localization_key = GER_reichstag_party_name_7
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 8 }
+		}
+		localization_key = GER_reichstag_party_name_8
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 9 }
+		}
+		localization_key = GER_reichstag_party_name_9
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 10 }
+		}
+		localization_key = GER_reichstag_party_name_10
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 11 }
+		}
+		localization_key = GER_reichstag_party_name_11
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 12 }
+		}
+		localization_key = GER_reichstag_party_name_12
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 13 }
+		}
+		localization_key = GER_reichstag_party_name_13
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 14 }
+		}
+		localization_key = GER_reichstag_party_name_14
+	}
+	text = {
+		trigger = {
+			check_variable = { reichstag_seat_frame^seat_idx = 15 }
+		}
+		localization_key = GER_reichstag_party_name_15
+	}
+}
+
+defined_text = {
+	name = GetKPDSeats
+	text = {
+		trigger = {
+			GER_reichstag_KPD_in_government = yes
+		}
+		localization_key = GER_reichstag_KPD_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_KPD_in_government = no
+		}
+		localization_key = GER_reichstag_KPD_off
+	}
+}
+
+defined_text = {
+	name = GetSAPDSeats
+	text = {
+		trigger = {
+			GER_reichstag_SAPD_in_government = yes
+		}
+		localization_key = GER_reichstag_SAPD_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_SAPD_in_government = no
+		}
+		localization_key = GER_reichstag_SAPD_off
+	}
+}
+
+defined_text = {
+	name = GetSPDSeats
+	text = {
+		trigger = {
+			GER_reichstag_SPD_in_government = yes
+		}
+		localization_key = GER_reichstag_SPD_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_SPD_in_government = no
+		}
+		localization_key = GER_reichstag_SPD_off
+	}
+}
+
+defined_text = {
+	name = GetDDPSeats
+	text = {
+		trigger = {
+			GER_reichstag_DDP_in_government = yes
+		}
+		localization_key = GER_reichstag_DDP_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_DDP_in_government = no
+		}
+		localization_key = GER_reichstag_DDP_off
+	}
+}
+
+defined_text = {
+	name = GetZSeats
+	text = {
+		trigger = {
+			GER_reichstag_Z_in_government = yes
+		}
+		localization_key = GER_reichstag_Z_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_Z_in_government = no
+		}
+		localization_key = GER_reichstag_Z_off
+	}
+}
+
+defined_text = {
+	name = GetBVPSeats
+	text = {
+		trigger = {
+			GER_reichstag_BVP_in_government = yes
+		}
+		localization_key = GER_reichstag_BVP_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_BVP_in_government = no
+		}
+		localization_key = GER_reichstag_BVP_off
+	}
+}
+
+defined_text = {
+	name = GetDBPSeats
+	text = {
+		trigger = {
+			GER_reichstag_DBP_in_government = yes
+		}
+		localization_key = GER_reichstag_DBP_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_DBP_in_government = no
+		}
+		localization_key = GER_reichstag_DBP_off
+	}
+}
+
+defined_text = {
+	name = GetPPSeats
+	text = {
+		trigger = {
+			GER_reichstag_PP_in_government = yes
+		}
+		localization_key = GER_reichstag_PP_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_PP_in_government = no
+		}
+		localization_key = GER_reichstag_PP_off
+	}
+}
+
+defined_text = {
+	name = GetDVPSeats
+	text = {
+		trigger = {
+			GER_reichstag_DVP_in_government = yes
+		}
+		localization_key = GER_reichstag_DVP_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_DVP_in_government = no
+		}
+		localization_key = GER_reichstag_DVP_off
+	}
+}
+
+defined_text = {
+	name = GetWPSeats
+	text = {
+		trigger = {
+			GER_reichstag_WP_in_government = yes
+		}
+		localization_key = GER_reichstag_WP_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_WP_in_government = no
+		}
+		localization_key = GER_reichstag_WP_off
+	}
+}
+
+defined_text = {
+	name = GetDNVPSeats
+	text = {
+		trigger = {
+			GER_reichstag_DNVP_in_government = yes
+		}
+		localization_key = GER_reichstag_DNVP_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_DNVP_in_government = no
+		}
+		localization_key = GER_reichstag_DNVP_off
+	}
+}
+
+defined_text = {
+	name = GetNSDAPSeats
+	text = {
+		trigger = {
+			GER_reichstag_NSDAP_in_government = yes
+		}
+		localization_key = GER_reichstag_NSDAP_on
+	}
+	text = {
+		trigger = {
+			GER_reichstag_NSDAP_in_government = no
+		}
+		localization_key = GER_reichstag_NSDAP_off
+	}
+}
+
+defined_text = {
+	name = GetGERSpendingStatus
+	text = {
+		trigger = {
+			check_variable = { GER_spending_net > 0 }
+		}
+		localization_key = GER_surplus
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_spending_net = 0 }
+		}
+		localization_key = GER_balanced
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_spending_net < 0 }
+		}
+		localization_key = GER_deficit
+	}
+}
+
+defined_text = {
+	name = GetGERMilitarySpending
+	text = {
+		trigger = {
+			check_variable = { GER_military_spending = 5 }
+		}
+		localization_key = GER_level_5
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_military_spending = 4 }
+		}
+		localization_key = GER_level_4
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_military_spending = 3 }
+		}
+		localization_key = GER_level_3
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_military_spending = 2 }
+		}
+		localization_key = GER_level_2
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_military_spending = 1 }
+		}
+		localization_key = GER_level_1
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_military_spending = 0 }
+		}
+		localization_key = GER_level_0
+	}
+}
+
+defined_text = {
+	name = GetGERIndustrySpending
+	text = {
+		trigger = {
+			check_variable = { GER_industry_spending = 5 }
+		}
+		localization_key = GER_level_5
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_industry_spending = 4 }
+		}
+		localization_key = GER_level_4
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_industry_spending = 3 }
+		}
+		localization_key = GER_level_3
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_industry_spending = 2 }
+		}
+		localization_key = GER_level_2
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_industry_spending = 1 }
+		}
+		localization_key = GER_level_1
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_industry_spending = 0 }
+		}
+		localization_key = GER_level_0
+	}
+}
+
+defined_text = {
+	name = GetGERWelfareSpending
+	text = {
+		trigger = {
+			check_variable = { GER_welfare_spending = 5 }
+		}
+		localization_key = GER_level_5
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_welfare_spending = 4 }
+		}
+		localization_key = GER_level_4
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_welfare_spending = 3 }
+		}
+		localization_key = GER_level_3
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_welfare_spending = 2 }
+		}
+		localization_key = GER_level_2
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_welfare_spending = 1 }
+		}
+		localization_key = GER_level_1
+	}
+	text = {
+		trigger = {
+			check_variable = { GER_welfare_spending = 0 }
+		}
+		localization_key = GER_level_0
+	}
+}

@@ -1,0 +1,80 @@
+﻿l_simp_chinese:
+ ST: " "
+ ND: " "
+ RD: " "
+ TH: " "
+ WAR_NAME: "$ORDER$$FIRST$—$SECOND$之战"
+ CIVIL_WAR_NAME: "$ORDER$$SECOND$内战"
+ WAR_TAKE_CORE_NAME: "$ORDER$$FIRST$收复$STATE$之战"
+ WAR_TAKE_CLAIM_NAME: "$ORDER$$FIRST$攻略$STATE$之战"
+ INDEPENDENCE_WAR_NAME: "$ORDER$$FIRST$独立战争"
+ create_puppet_wargoal_usa: "§Y[ROOT.GetNameDef]§!获得§H傀儡（国策）§!战争目标"
+ 
+ IN_south_western_war_threat: "西南战争"
+ IN_mid_east_TUR_invasion_threat: "土耳其入侵新月"
+ IN_baltic_crisis_threat: "波罗的危机"
+ IN_baltic_crisis_war_threat: "波罗的战争"
+ IN_SPR_civil_war_threat: "西班牙内战"
+ IN_BW4_BUL_coup: "保加利亚政变"
+ IN_BW4_CZE_intervenes: "布拉格协约干预保加利亚"
+ IN_BW4_HUN_intervenes: "匈牙利干预巴尔干"
+ IN_algerian_uprising_threat: "阿尔及利亚起义"
+ IN_FIN_civil_war_threat: "芬兰内战"
+ IN_SAF_civil_war_threat: "南非内战"
+ IN_GER_invade_POL_threat: "索取波兹南"
+ IN_BEL_civil_war_threat: "比利时内战"
+ IN_WW2_threat: "第二次世界大战"
+
+#西南战争
+ WAR_NAME_CHI_YUN: "西南战争"
+ WAR_NAME_CHI_SZC: "西南战争"
+ WAR_NAME_CHI_GXC: "西南战争"
+
+#波罗的起义
+ WAR_NAME_BAL_EST: "波罗的起义"
+ WAR_NAME_BAL_LAT: "波罗的起义"
+
+#阿尔及利亚起义
+ WAR_NAME_NFR_ALG: "阿尔及利亚起义"
+ WAR_NAME_ALG_NFR: "阿尔及利亚起义"
+
+#第四次巴尔干战争
+ WAR_NAME_HUN_ROM: "第四次巴尔干战争"
+ WAR_NAME_HUN_CZE: "第四次巴尔干战争"
+ WAR_NAME_SOV_CZE: "第四次巴尔干战争"
+ WAR_NAME_CZE_HUN: "第四次巴尔干战争"
+ WAR_NAME_CZE_BUL: "第四次巴尔干战争"
+ WAR_NAME_BUL_CZE: "第四次巴尔干战争"
+ WAR_NAME_SER_BUL: "第四次巴尔干战争"
+ WAR_NAME_GRE_BUL: "第四次巴尔干战争"
+ WAR_NAME_ROM_BUL: "第四次巴尔干战争"
+ WAR_NAME_SER_HUN: "第四次巴尔干战争"
+ WAR_NAME_GRE_HUN: "第四次巴尔干战争"
+ WAR_NAME_ROM_HUN: "第四次巴尔干战争"
+
+#秘鲁-厄瓜多尔战争
+ WAR_NAME_PRU_ECU: "帕斯塔萨争夺战"
+ WAR_NAME_ECU_PRU: "帕斯塔萨争夺战"
+
+#二次北伐战争
+ WAR_NAME_CHI_MAN: "二次北伐战争"
+ WAR_NAME_CHI_JAP: "二次北伐战争"
+ WAR_NAME_MAN_CHI: "二次北伐战争"
+ WAR_NAME_JAP_CHI: "二次北伐战争"
+
+#爱尔兰叛乱
+ WAR_NAME_IRE_IRN: "爱尔兰叛乱"
+ WAR_NAME_IRN_IRE: "爱尔兰叛乱"
+
+#第二次世界大战
+ WAR_NAME_SOV_GER: "第二次世界大战"
+ WAR_NAME_SOV_ENG: "第二次世界大战"
+ WAR_NAME_FRA_GER: "第二次世界大战"
+ WAR_NAME_FRA_ENG: "第二次世界大战"
+ WAR_NAME_FRA_USA: "第二次世界大战"
+ WAR_NAME_ENG_FRA: "第二次世界大战"
+ WAR_NAME_ITA_GER: "第二次世界大战"
+ WAR_NAME_CHI_GER: "第二次世界大战"
+ WAR_NAME_USA_SOV: "第二次世界大战"
+ WAR_NAME_SOV_USA: "第二次世界大战"
+ WAR_NAME_ENG_SOV: "第二次世界大战"

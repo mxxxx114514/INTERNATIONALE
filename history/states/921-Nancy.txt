@@ -1,0 +1,28 @@
+state={
+	id=921
+	name="STATE_921"
+	provinces={
+		521 11516 
+	}
+	history = {
+		owner = FRA
+		victory_points = {
+			11516 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 5
+			521 = {
+				bunker = 3
+			}
+
+		}
+		add_core_of = FRA
+		add_claim_by = NFR
+	}
+	manpower=121301
+	state_category=city
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

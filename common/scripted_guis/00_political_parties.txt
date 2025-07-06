@@ -1,0 +1,25 @@
+scripted_gui = {
+
+	coalition_indicator = {
+		context_type = player_context
+		parent_window_name = coalition_pol_party_bg_anchor
+		window_name = "coalition_pol_party_bg"
+
+		ai_enabled = {
+			always = no
+		}
+
+		triggers = {
+			coalition_pol_party_bg_autsoc_visible = { has_country_flag = autsoc_coalition_flag }
+			coalition_pol_party_bg_revsoc_visible = { has_country_flag = revsoc_coalition_flag }
+			coalition_pol_party_bg_libsoc_visible = { has_country_flag = libsoc_coalition_flag }
+			coalition_pol_party_bg_socdem_visible = { has_country_flag = socdem_coalition_flag }
+			coalition_pol_party_bg_soclib_visible = { has_country_flag = soclib_coalition_flag }
+			coalition_pol_party_bg_marlib_visible = { has_country_flag = marlib_coalition_flag }
+			coalition_pol_party_bg_condem_visible = { has_country_flag = condem_coalition_flag }
+			coalition_pol_party_bg_autdem_visible = { has_country_flag = autdem_coalition_flag }
+			coalition_pol_party_bg_pataut_visible = { has_country_flag = pataut_coalition_flag }
+			coalition_pol_party_bg_natpop_visible = { has_country_flag = natpop_coalition_flag }
+		}
+	}
+}

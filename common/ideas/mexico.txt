@@ -1,0 +1,1408 @@
+ideas = {
+
+	hidden_ideas = {
+
+		MEX_losing_civil_war = {
+			modifier = {
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				army_speed_factor = -0.5
+				army_org_factor = -0.5
+			}
+		}
+
+		MEX_civil_war_player_debuff = {
+			available = { is_ai = no }
+			modifier = {
+				army_defence_factor = -0.1
+				army_org_factor = -0.25
+				army_org_regain = -0.25
+			}
+		}
+
+		MEX_civil_war_offensive = {
+			modifier = {
+				army_attack_factor = 0.2
+				army_speed_factor = 0.2
+				army_org_factor = 0.2
+				army_org_regain = 0.2
+			}
+		}
+
+	}
+
+	country = {
+
+		MEX_legacy_of_1910_war = {
+			name = MEX_legacy_of_1910_war
+			picture = MEX_legacy_of_1910_war
+			modifier = {
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.15
+			}
+		}
+
+		MEX_the_next_diaz = {
+			name = MEX_the_next_diaz
+			picture = MEX_the_next_diaz
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+
+		MEX_the_next_diaz_1 = {
+			name = MEX_the_next_diaz_1
+			picture = MEX_the_next_diaz
+			modifier = {
+				stability_factor = -0.2
+			}
+		}
+
+		MEX_catholic_opposition = {
+			name = MEX_catholic_opposition
+			picture = MEX_catholic_opposition
+			modifier = {
+				recruitable_population_factor = -0.5
+				industrial_capacity_factory = -0.5
+			}
+		}
+
+		MEX_catholic_opposition_1 = {
+			name = MEX_catholic_opposition
+			picture = MEX_catholic_opposition
+			modifier = {
+				recruitable_population_factor = -0.4
+				industrial_capacity_factory = -0.4
+			}
+		}
+
+		MEX_catholic_opposition_2 = {
+			name = MEX_catholic_opposition
+			picture = MEX_catholic_opposition
+			modifier = {
+				recruitable_population_factor = -0.3
+				industrial_capacity_factory = -0.3
+			}
+		}
+
+		MEX_catholic_opposition_3 = {
+			name = MEX_catholic_opposition
+			picture = MEX_catholic_opposition
+			modifier = {
+				recruitable_population_factor = -0.2
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+		MEX_catholic_opposition_4 = {
+			name = MEX_catholic_opposition
+			picture = MEX_catholic_opposition
+			modifier = {
+				recruitable_population_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		MEX_war_reconstruction = {
+			name = MEX_war_reconstruction
+			picture = GER_extremism
+			modifier = {
+				repair_speed_buildings_factor = 0.2
+				repair_speed_infrastructure_factor = 0.2
+				repair_speed_industrial_complex_factor = 0.2
+				repair_speed_arms_factory_factor = 0.2
+
+			}
+		}
+
+		MEX_mountains = {
+			name = MEX_mountains
+			picture = GER_extremism
+			modifier = {
+				stability_factor = -0.05
+				weekly_manpower = -10
+
+			}
+		}
+
+		MEX_national_peasants_workers_union = {
+			name = MEX_national_peasants_workers_union
+			picture = GER_extremism
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.1
+
+			}
+		}
+
+		MEX_national_autonomous_university = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.05
+
+			}
+		}
+
+		MEX_national_autonomous_university_0 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+
+			}
+		}
+
+		MEX_national_autonomous_university_1 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.1
+
+			}
+		}
+
+		MEX_national_autonomous_university_00 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+				political_power_gain = 0.1
+
+			}
+		}
+
+		MEX_national_autonomous_university_10 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = 0.1
+
+			}
+		}
+
+		MEX_national_autonomous_university_01 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+				democratic_drift = 0.02
+
+			}
+		}
+
+		MEX_national_autonomous_university_11 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = 0.1
+				democratic_drift = 0.02
+
+			}
+		}
+
+		MEX_national_autonomous_university_000 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.1
+				political_power_gain = 0.1
+
+			}
+		}
+
+		MEX_national_autonomous_university_100 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.1
+				stability_factor = 0.05
+				political_power_gain = 0.1
+
+			}
+		}
+
+		MEX_national_autonomous_university_010 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.1
+				democratic_drift = 0.02
+
+			}
+		}
+
+		MEX_national_autonomous_university_110 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				democratic_drift = 0.02
+
+			}
+		}
+
+		MEX_national_autonomous_university_001 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+				political_power_gain = 0.1
+				consumer_goods_factor = 0.05
+
+			}
+		}
+
+		MEX_national_autonomous_university_101 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = 0.1
+				consumer_goods_factor = 0.05
+
+			}
+		}
+
+		MEX_national_autonomous_university_011 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+				democratic_drift = 0.02
+				consumer_goods_factor = 0.05
+
+			}
+		}
+
+		MEX_national_autonomous_university_111 = {
+			name = MEX_national_autonomous_university
+			picture = GER_extremism
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = 0.1
+				democratic_drift = 0.02
+				consumer_goods_factor = 0.05
+
+			}
+		}
+
+		MEX_socialist_education = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				
+			}
+		}
+
+		MEX_socialist_education_0 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.04
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+
+		MEX_socialist_education_1 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.08
+				stability_factor = 0.1
+				research_speed_factor = 0.1
+			}
+		}
+
+		MEX_socialist_education_00 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.04
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				social_democratic_drift = 0.05
+			}
+		}
+
+		MEX_socialist_education_10 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.08
+				stability_factor = 0.1
+				research_speed_factor = 0.1
+				social_democratic_drift = 0.05
+			}
+		}
+
+		MEX_socialist_education_01 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.04
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				auth_communism_drift = 0.02
+				communism_drift = 0.02
+				socialism_drift = 0.02
+				social_democratic_drift = 0.02
+			}
+		}
+
+		MEX_socialist_education_11 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.08
+				stability_factor = 0.1
+				research_speed_factor = 0.1
+				auth_communism_drift = 0.02
+				communism_drift = 0.02
+				socialism_drift = 0.02
+				social_democratic_drift = 0.02
+			}
+		}
+
+		MEX_socialist_education_000 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.04
+				stability_factor = 0.05
+				research_speed_factor = 0.1
+				social_democratic_drift = 0.05
+				political_power_gain = 0.1
+			}
+		}
+
+		MEX_socialist_education_100 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.08
+				stability_factor = 0.1
+				research_speed_factor = 0.15
+				social_democratic_drift = 0.05
+				political_power_gain = 0.1
+			}
+		}
+
+		MEX_socialist_education_010 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.04
+				stability_factor = 0.05
+				research_speed_factor = 0.1
+				auth_communism_drift = 0.02
+				communism_drift = 0.02
+				socialism_drift = 0.02
+				social_democratic_drift = 0.02
+				political_power_gain = 0.1
+			}
+		}
+
+		MEX_socialist_education_110 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.08
+				stability_factor = 0.1
+				research_speed_factor = 0.15
+				auth_communism_drift = 0.02
+				communism_drift = 0.02
+				socialism_drift = 0.02
+				social_democratic_drift = 0.02
+				political_power_gain = 0.1
+			}
+		}
+
+		MEX_socialist_education_001 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.04
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				social_democratic_drift = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		MEX_socialist_education_101 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.08
+				stability_factor = 0.1
+				research_speed_factor = 0.1
+				social_democratic_drift = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		MEX_socialist_education_011 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.04
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				auth_communism_drift = 0.02
+				communism_drift = 0.02
+				socialism_drift = 0.02
+				social_democratic_drift = 0.02
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		MEX_socialist_education_111 = {
+			name = MEX_socialist_education
+			picture = GER_extremism
+			modifier = {
+				consumer_goods_factor = 0.08
+				stability_factor = 0.1
+				research_speed_factor = 0.1
+				auth_communism_drift = 0.02
+				communism_drift = 0.02
+				socialism_drift = 0.02
+				social_democratic_drift = 0.02
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		MEX_academic_freedom = {
+			name = MEX_academic_freedom
+			picture = GER_extremism
+			modifier = {
+				political_power_gain = 0.1
+				research_speed_factor = 0.05
+
+			}
+		}
+
+		MEX_academic_freedom_1 = {
+			name = MEX_academic_freedom
+			picture = GER_extremism
+			modifier = {
+				political_power_gain = 0.1
+				research_speed_factor = 0.1
+				stability_factor = 0.05
+
+			}
+		}
+
+		MEX_academic_freedom_2 = {
+			name = MEX_academic_freedom
+			picture = GER_extremism
+			modifier = {
+				political_power_gain = 0.1
+				research_speed_factor = 0.15
+				stability_factor = 0.1
+
+			}
+		}
+
+		MEX_peoples_opposition = {
+			name = MEX_peoples_opposition
+			picture = GER_extremism
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+
+			}
+		}
+
+		MEX_divided_party = {
+			name = MEX_divided_party
+			picture = GER_extremism
+			modifier = {
+				political_power_gain = -0.2
+
+			}
+		}
+
+		MEX_divided_party_1 = {
+			name = MEX_divided_party
+			picture = GER_extremism
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = 0.05
+
+			}
+		}
+
+		MEX_neutral_military = {
+			name = MEX_neutral_military
+			picture = GER_extremism
+			modifier = {
+				training_time_army_factor = -0.1
+				army_org_factor = 0.05
+				max_dig_in_factor = 0.1
+
+			}
+		}
+
+		MEX_political_military = {
+			name = MEX_political_military
+			picture = GER_extremism
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_speed_factor = 0.05
+
+			}
+		}
+
+		MEX_long_live_the_national_revolution = {
+			name = MEX_long_live_the_national_revolution
+			picture = GER_extremism
+			modifier = {
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		MEX_towards_the_world = {
+			name = MEX_towards_the_world
+			picture = GER_extremism
+			modifier = {
+				political_power_gain = 0.25
+				improve_relations_maintain_cost_factor = -0.15
+				opinion_gain_monthly_same_ideology_factor = 0.5
+			}
+		}
+
+		MEX_legacy_of_sonora_triumvirate = {
+			name = MEX_legacy_of_sonora_triumvirate
+			picture = GER_extremism
+			modifier = {
+				party_popularity_stability_factor = 0.1
+			}
+		}
+
+		MEX_civil_armed_groups = {
+			name = MEX_civil_armed_groups
+			picture = GER_extremism
+			modifier = {
+				political_power_cost = 0.05
+				resistance_target = -0.5
+				resistance_target_on_our_occupied_states = 0.5
+			}
+		}
+
+		MEX_civil_war_idea = {
+			name = MEX_civil_war_idea
+			picture = MEX_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				surrender_limit = 0.15
+				hidden_modifier = {
+					surrender_limit = 0.5
+				}
+			}
+			targeted_modifier = { 
+				tag = NMX
+				attack_bonus_against = 2.25
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		MEX_civil_war_idea_1 = {
+			name = MEX_civil_war_idea
+			picture = MEX_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				surrender_limit = 0.15
+				hidden_modifier = {
+					surrender_limit = 0.5
+				}
+			}
+			targeted_modifier = { 
+				tag = MGS
+				attack_bonus_against = 2.25
+				breakthrough_bonus_against = 5
+			}
+			targeted_modifier = { 
+				tag = COM
+				attack_bonus_against = 2.25
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		MEX_brothers_at_odds = {
+			name = MEX_brothers_at_odds
+			picture = MEX_brothers_at_odds
+			modifier = {
+				political_power_cost = 0.1
+			}
+		}
+
+		MEX_brothers_at_odds_1 = {
+			name = MEX_brothers_at_odds
+			picture = MEX_brothers_at_odds
+			modifier = {
+				political_power_cost = 0.1
+			}
+			targeted_modifier = { 
+				tag = NMX
+				attack_bonus_against = 0.1
+			}
+		}
+
+		MEX_legitimate_government = {
+			name = MEX_legitimate_government
+			picture = MEX_legitimate_government
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+			}
+		}
+
+		MEX_practice_makes_perfection = {
+			name = MEX_practice_makes_perfection
+			picture = MEX_practice_makes_perfection
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+
+		MEX_practice_makes_perfection_1 = {
+			name = MEX_practice_makes_perfection
+			picture = MEX_practice_makes_perfection
+			modifier = {
+				army_attack_factor = 0.15
+				army_org_factor = 0.1
+				army_defence_factor = 0.05
+			}
+		}
+
+		NMX_civil_war_idea = {
+			name = NMX_civil_war_idea
+			picture = NMX_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				#surrender_limit = 0.5
+			}
+			targeted_modifier = { 
+				tag = MEX
+				attack_bonus_against = 2.25
+				breakthrough_bonus_against = 5
+			}
+			targeted_modifier = { 
+				tag = MCA
+				attack_bonus_against = 2.25
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		NMX_civil_war_idea_1 = {
+			name = NMX_civil_war_idea
+			picture = NMX_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				#surrender_limit = 0.5
+			}
+			targeted_modifier = { 
+				tag = MGS
+				attack_bonus_against = 2.25
+				breakthrough_bonus_against = 5
+			}
+			targeted_modifier = { 
+				tag = COM
+				attack_bonus_against = 2.25
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		NMX_betrayal_of_allies = {
+			name = NMX_betrayal_of_allies
+			picture = NMX_betrayal_of_allies
+			modifier = {
+				war_support_factor = 0.05
+				army_attack_factor = 0.15
+				army_core_attack_factor = 0.1
+			}
+		}
+
+		NMX_the_second_revolution = {
+			name = NMX_the_second_revolution
+			picture = NMX_the_second_revolution
+			modifier = {
+				army_defence_factor = 0.1
+				surrender_limit = -0.1
+			}
+		}
+
+		NMX_the_second_revolution_1 = {
+			name = NMX_the_second_revolution
+			picture = NMX_the_second_revolution
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+				surrender_limit = -0.1
+			}
+		}
+
+		NMX_the_second_revolution_21 = {
+			name = NMX_the_second_revolution
+			picture = NMX_the_second_revolution
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+				surrender_limit = -0.1
+			}
+			targeted_modifier = { 
+				tag = MEX
+				attack_bonus_against = 0.1
+			}
+		}
+
+		NMX_the_second_revolution_22 = {
+			name = NMX_the_second_revolution
+			picture = NMX_the_second_revolution
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+				surrender_limit = -0.1
+			}
+			targeted_modifier = { 
+				tag = MCA
+				attack_bonus_against = 0.1
+			}
+		}
+
+		NMX_the_second_revolution_31 = {
+			name = NMX_the_second_revolution
+			picture = NMX_the_second_revolution
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+				surrender_limit = -0.1
+			}
+			targeted_modifier = { 
+				tag = MEX
+				attack_bonus_against = 0.1
+			}
+		}
+
+		NMX_the_second_revolution_32 = {
+			name = NMX_the_second_revolution
+			picture = NMX_the_second_revolution
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.05
+				surrender_limit = -0.1
+			}
+			targeted_modifier = { 
+				tag = MCA
+				attack_bonus_against = 0.1
+			}
+		}
+
+		NMX_the_second_revolution_41 = {
+			name = NMX_the_second_revolution
+			picture = NMX_the_second_revolution
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.05
+				army_speed_factor = 0.15
+				surrender_limit = -0.1
+			}
+			targeted_modifier = { 
+				tag = MEX
+				attack_bonus_against = 0.1
+			}
+		}
+
+		NMX_the_second_revolution_42 = {
+			name = NMX_the_second_revolution
+			picture = NMX_the_second_revolution
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.05
+				army_speed_factor = 0.15
+				surrender_limit = -0.1
+			}
+			targeted_modifier = { 
+				tag = MCA
+				attack_bonus_against = 0.1
+			}
+		}
+
+		NMX_legacy_of_madero = {
+			name = NMX_legacy_of_madero
+			picture = NMX_legacy_of_madero
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+
+		NMX_legacy_of_madero_1 = {
+			name = NMX_legacy_of_madero
+			picture = NMX_legacy_of_madero
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+
+		NMX_the_great_rain = {
+			name = NMX_the_great_rain
+			picture = NMX_the_great_rain
+			modifier = {
+				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		NMX_pressure_to_surrender = {
+			name = NMX_pressure_to_surrender
+			picture = NMX_pressure_to_surrender
+			modifier = {
+				surrender_limit = -0.15
+				army_attack_factor = -0.1
+			}
+		}
+
+		MCA_civil_war_idea = {
+			name = MCA_civil_war_idea
+			picture = MCA_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				surrender_limit = 0.15
+				hidden_modifier = {
+					surrender_limit = 0.5
+				}
+			}
+			targeted_modifier = { 
+				tag = NMX
+				attack_bonus_against = 2.25
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		MCA_peasants_army = {
+			name = MCA_peasants_army
+			picture = MCA_peasants_army
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		MCA_peasants_army_1 = {
+			name = MCA_peasants_army
+			picture = MCA_peasants_army
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_artillery_attack_factor = 0.05
+			}
+		}
+
+		MCA_new_northern_army = {
+			name = MCA_new_northern_army
+			picture = MCA_new_northern_army
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				army_speed_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_artillery_attack_factor = 0.15
+			}
+		}
+
+		MCA_new_northern_army_1 = {
+			name = MCA_new_northern_army
+			picture = MCA_new_northern_army
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				army_speed_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_artillery_attack_factor = 0.1
+			}
+			targeted_modifier = { 
+				tag = NMX
+				attack_bonus_against = 0.15
+			}
+		}
+
+		MCA_land_and_liberty = {
+			name = MCA_land_and_liberty
+			picture = MCA_land_and_liberty
+			modifier = {
+				army_core_defence_factor = 0.1
+				surrender_limit = 0.5
+			}
+		}
+
+		MCA_land_and_liberty_1 = {
+			name = MCA_land_and_liberty
+			picture = MCA_land_and_liberty
+			modifier = {
+				army_core_defence_factor = 0.1
+				surrender_limit = 0.5
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		MCA_survive_in_the_chaos = {
+			name = MCA_survive_in_the_chaos
+			picture = MCA_survive_in_the_chaos
+			modifier = {
+				conscription = 0.01
+			}
+		}
+
+		MCA_survive_in_the_chaos_1 = {
+			name = MCA_survive_in_the_chaos
+			picture = MCA_survive_in_the_chaos
+			modifier = {
+				stability_factor = 0.05
+				conscription = 0.01
+			}
+		}
+
+		MGS_civil_war_idea = {
+			name = MGS_civil_war_idea
+			picture = MGS_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				hidden_modifier = {
+					surrender_limit = 0.25
+				}
+			}
+			targeted_modifier = { 
+				tag = COM
+				attack_bonus_against = 5
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		MGS_civil_war_idea_1 = {
+			name = MGS_civil_war_idea
+			picture = MGS_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				hidden_modifier = {
+					surrender_limit = 0.25
+				}
+			}
+			targeted_modifier = { 
+				tag = COM
+				attack_bonus_against = 5
+				breakthrough_bonus_against = 5
+			}
+			targeted_modifier = { 
+				tag = MEX
+				attack_bonus_against = 5
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		MGS_civil_war_idea_2 = {
+			name = MGS_civil_war_idea
+			picture = MGS_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				hidden_modifier = {
+					surrender_limit = 0.25
+				}
+			}
+			targeted_modifier = { 
+				tag = COM
+				attack_bonus_against = 5
+				breakthrough_bonus_against = 5
+			}
+			targeted_modifier = { 
+				tag = NMX
+				attack_bonus_against = 5
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		MGS_low_organization = {
+			name = MGS_low_organization
+			picture = MGS_low_organization
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_factor = -0.1
+			}
+		}
+
+		MGS_low_organization_1 = {
+			name = MGS_low_organization
+			picture = MGS_low_organization
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.1
+				army_org_factor = -0.1
+			}
+		}
+
+		MGS_low_organization_21 = {
+			name = MGS_low_organization
+			picture = MGS_low_organization
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.15
+				army_org_factor = -0.125
+			}
+		}
+
+		MGS_low_organization_22 = {
+			name = MGS_low_organization
+			picture = MGS_low_organization
+			modifier = {
+				army_defence_factor = -0.05
+				army_org_factor = -0.05
+			}
+		}
+
+		MGS_low_organization_31 = {
+			name = MGS_low_organization
+			picture = MGS_low_organization
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_org_factor = -0.125
+			}
+		}
+
+		MGS_low_organization_32 = {
+			name = MGS_low_organization
+			picture = MGS_low_organization
+			modifier = {
+				army_org_factor = -0.05
+			}
+		}
+
+		MGS_national_fanaticism = {
+			name = MGS_national_fanaticism
+			picture = MGS_national_fanaticism
+			modifier = {
+				conscription = 0.1
+				war_support_factor = 0.35
+				stability_factor = -0.15
+				mobilization_speed = 2.5
+			}
+		}
+
+		MGS_national_fanaticism_1 = {
+			name = MGS_national_fanaticism
+			picture = MGS_national_fanaticism
+			modifier = {
+				conscription = 0.1
+				war_support_factor = 0.35
+				stability_factor = -0.1
+				mobilization_speed = 2.5
+			}
+		}
+
+		MGS_national_fanaticism_21 = {
+			name = MGS_national_fanaticism
+			picture = MGS_national_fanaticism
+			modifier = {
+				conscription = 0.15
+				war_support_factor = 0.35
+				stability_factor = -0.15
+				mobilization_speed = 3
+			}
+		}
+
+		MGS_national_fanaticism_22 = {
+			name = MGS_national_fanaticism
+			picture = MGS_national_fanaticism
+			modifier = {
+				conscription = 0.5
+				war_support_factor = 0.35
+				stability_factor = -0.1
+				mobilization_speed = 2
+			}
+		}
+
+		MGS_national_fanaticism_31 = {
+			name = MGS_national_fanaticism
+			picture = MGS_national_fanaticism
+			modifier = {
+				conscription = 0.15
+				war_support_factor = 0.35
+				stability_factor = -0.15
+				mobilization_speed = 3
+				army_attack_factor = 0.1
+			}
+		}
+
+		MGS_national_fanaticism_32 = {
+			name = MGS_national_fanaticism
+			picture = MGS_national_fanaticism
+			modifier = {
+				conscription = 0.5
+				war_support_factor = 0.35
+				stability_factor = -0.1
+				mobilization_speed = 2
+				army_attack_factor = 0.1
+			}
+		}
+
+		MGS_work_hard = {
+			name = MGS_work_hard
+			picture = MGS_work_hard
+			modifier = {
+				industrial_capacity_factory = 0.5
+			}
+		}
+
+		COM_civil_war_idea = {
+			name = COM_civil_war_idea
+			picture = COM_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				hidden_modifier = {
+					surrender_limit = 0.25
+				}
+			}
+			targeted_modifier = { 
+				tag = MGS
+				attack_bonus_against = 5
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		COM_civil_war_idea_1 = {
+			name = COM_civil_war_idea
+			picture = COM_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				hidden_modifier = {
+					surrender_limit = 0.25
+				}
+			}
+			targeted_modifier = { 
+				tag = MGS
+				attack_bonus_against = 5
+				breakthrough_bonus_against = 5
+			}
+			targeted_modifier = { 
+				tag = MEX
+				attack_bonus_against = 5
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		COM_civil_war_idea_2 = {
+			name = COM_civil_war_idea
+			picture = COM_civil_war_idea
+			modifier = {
+				industrial_capacity_factory = 7
+				consumer_goods_factor = -0.95
+				supply_consumption_factor = -0.9
+				max_dig_in_factor = -0.85
+				#army_defence_factor = -0.85
+				army_speed_factor = 0.35
+				ai_focus_aggressive_factor = 1.0
+				hidden_modifier = {
+					surrender_limit = 0.25
+				}
+			}
+			targeted_modifier = { 
+				tag = MGS
+				attack_bonus_against = 5
+				breakthrough_bonus_against = 5
+			}
+			targeted_modifier = { 
+				tag = NMX
+				attack_bonus_against = 5
+				breakthrough_bonus_against = 5
+			}
+		}
+
+		COM_peasants_workers_unite = {
+			name = COM_peasants_workers_unite
+			picture = COM_peasants_workers_unite
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+			}
+		}
+
+		COM_peasants_workers_unite_1 = {
+			name = COM_peasants_workers_unite
+			picture = COM_peasants_workers_unite
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				conscription = 0.01
+			}
+		}
+
+		COM_peasants_workers_unite_2 = {
+			name = COM_peasants_workers_unite
+			picture = COM_peasants_workers_unite
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				conscription = 0.01
+				army_attack_factor = 0.05
+			}
+		}
+
+		COM_poor_army = {
+			name = COM_poor_army
+			picture = COM_poor_army
+			modifier = {
+				army_attack_factor = -0.1
+				army_org_factor = -0.1
+			}
+		}
+
+		COM_good_army = {
+			name = COM_good_army
+			picture = COM_good_army
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				supply_consumption_factor = -0.05
+				army_speed_factor = 0.05
+			}
+		}
+
+		COM_revolution_reborn = {
+			name = COM_revolution_reborn
+			picture = COM_revolution_reborn
+			targeted_modifier = { 
+				tag = MGS
+				attack_bonus_against = 0.15
+			}
+		}
+
+		COM_revolution_reborn_1 = {
+			name = COM_revolution_reborn
+			picture = COM_revolution_reborn
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+
+		COM_the_final_blow = {
+			name = COM_the_final_blow
+			picture = COM_the_final_blow
+			modifier = { 
+				army_attack_factor = 0.1
+			}
+		}
+
+		COM_ruling_coalition = {
+			name = COM_ruling_coalition
+			picture = COM_ruling_coalition
+			modifier = { 
+				stability_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+
+		mex_shisuhua_jundui = {
+			name = mex_shisuhua_jundui
+			picture = mex_shisuhua_jundui
+			modifier = {
+				army_org_factor = 0.1
+				army_defence_factor = 0.1
+				stability_factor = -0.03
+			}
+		}
+
+	}
+
+}

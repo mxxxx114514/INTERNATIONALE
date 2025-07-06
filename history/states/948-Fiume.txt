@@ -1,0 +1,27 @@
+state={
+	id=948
+	name="STATE_948"
+
+	history={
+		owner = CRO
+		add_core_of = CRO
+		add_claim_by = ITA
+		add_claim_by = SPM
+		victory_points = { #Fiume (Rijeka)
+			11564 1 
+		}
+		buildings = {
+			11564 = {
+				naval_base = 2
+			}
+		}
+	}
+
+	provinces={
+		11564
+	}
+	manpower=75000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,27 @@
+#################
+#### MEX ####
+#################
+MEX_legacy_of_revolution_category = {
+	allowed = { tag = MEX }
+}
+MEX_left_right_conflict = {
+	allowed = { tag = MEX }
+	#available = { NOT = { has_country_flag = MEX_left_right_conflict_disabled } }
+}
+MEX_cristero_war_category = {
+	icon = ""
+	picture = ""
+	priority = 100
+	allowed = { always = no }
+	scripted_gui = MEX_cristero_war_scripted_gui
+}
+MEX_civil_war_category = {
+	allowed = { always = yes }
+}
+MEX_UNAM_category = {
+	allowed = { always = yes }
+}
+MEX_six_year_plan_category = {
+	allowed = { always = yes }
+}
+

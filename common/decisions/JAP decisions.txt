@@ -1,0 +1,186 @@
+JAP_intervene_ww2_category = {
+
+	JAP_peace_with_CHI = {
+		allowed = { tag = JAP }
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 50
+		days_remove = 3
+		visible = {
+			has_war_with = CHI
+		}
+		available = {
+			MAN = { has_capitulated = yes }
+			CHI = { surrender_progress < 0.95 }
+			525 = { is_controlled_by = CHI }
+			527 = { is_controlled_by = CHI }
+		}
+		remove_effect = {
+			white_peace = CHI
+			CHI = {
+				annex_country = { target = MAN }
+				every_state = {
+					limit = { is_claimed_by = CHI is_owned_by = JAP }
+					transfer_state_to = CHI
+				}
+			}
+			every_country = {
+				limit = { is_in_faction_with = JAP is_chinese_tag = yes }
+				CHI = {
+					annex_country = { target = PREV }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	JAP_invade_SOV = {
+		allowed = { tag = JAP }
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 50
+		days_remove = 3
+		visible = {
+			has_global_flag = ww2
+			OR = {
+				SOV = { surrender_progress > 0.3 }
+				date > 1942.3.1
+			}
+			has_government = despotism
+			has_war = no
+			country_exists = SOV
+		}
+		remove_effect = {
+			set_global_flag = JAP_invade_SOV_flag
+			declare_war_on = {
+				target = SOV
+				type = annex_everything
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.50
+					days = 1
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	JAP_join_CLN = {
+		allowed = { tag = JAP }
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 50
+		days_remove = 3
+		visible = {
+			has_global_flag = ww2
+			date > 1942.3.1
+			is_liberal_ideology = yes
+			has_war = no
+			ENG = { is_subject = no is_commie_ideology = no }
+		}
+		remove_effect = {
+			set_global_flag = JAP_invade_SOV_flag
+			add_ideas = cln_member_idea
+			set_country_flag = sphere_member
+			#set_global_flag = JAP_join_CLN_flag
+			every_country = {
+				limit = {
+					is_in_faction_with = JAP
+				}
+				set_country_flag = sphere_member
+				add_ideas = cln_member_idea
+				leave_faction = yes
+				ENG = { faction_leader = { add_to_faction = PREV.PREV } }
+			}
+			dismantle_faction = yes
+			ENG = {
+				faction_leader = {
+					add_to_faction = JAP
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	JAP_create_pacific_axis = {
+		allowed = { tag = JAP }
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 50
+		days_remove = 3
+		visible = {
+			has_global_flag = ww2
+			has_government = fascism
+			USA = { has_cosmetic_tag = USA_snp }
+			#has_war = no
+		}
+		remove_effect = {
+			USA = {
+				create_faction = pacific_axis
+				add_to_faction = SIA
+				IF = {
+					limit = { VIN = { is_subject = no } }
+					add_to_faction = VIN
+				}
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = JAP
+				}
+				USA = { add_to_faction = PREV }
+			}
+			USA = { add_to_faction = JAP }
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	JAP_invade_CLN = {
+		allowed = { tag = JAP }
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 50
+		days_remove = 3
+		visible = {
+			has_global_flag = ww2
+			NOT = { has_global_flag = fall_of_CLN }
+			country_exists = GBR
+			has_government = fascism
+			OR = {
+				country_exists = GRU
+				date > 1941.3.1
+			}
+			has_war = no
+			NOT = {
+				AST = { is_in_faction_with = JAP }
+			}
+			NOT = {
+				NZL = { is_in_faction_with = JAP }
+			}
+		}
+		remove_effect = {
+			add_to_faction = SIA
+			IF = {
+				limit = { VIN = { NOT = { has_cosmetic_tag = VIN_NFR_indochina } } }
+				add_to_faction = VIN
+			}
+			declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+}

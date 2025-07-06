@@ -1,0 +1,379 @@
+spriteTypes = {
+
+	## Tallinn Pakt
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_GER"
+		texturefile = "gfx/flags/small/GER.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_GER_kaiserreich"
+		texturefile = "gfx/flags/small/GER_kaiserreich.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_GER_hugenberg"
+		texturefile = "gfx/flags/small/GER_hugenberg.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_BAL"
+		texturefile = "gfx/flags/small/BAL.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_EST"
+		texturefile = "gfx/flags/small/EST.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_LAT"
+		texturefile = "gfx/flags/small/LAT.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_LIT"
+		texturefile = "gfx/flags/small/LIT.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_AUS"
+		texturefile = "gfx/flags/small/AUS.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_AUF"
+		texturefile = "gfx/flags/small/AUS_bundesstaat.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_AUK"
+		texturefile = "gfx/flags/small/AUS_communism.tga"
+		legacy_lazy_load = no
+	}
+
+	## Entente
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_ENG"
+		texturefile = "gfx/flags/small/ENG.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_NFR"
+		texturefile = "gfx/flags/small/NFR.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_CAN_UK"
+		texturefile = "gfx/flags/small/CAN_UK.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_RAJ_UK"
+		texturefile = "gfx/flags/small/RAJ_UK.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_AST"
+		texturefile = "gfx/flags/small/AST.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_NZL"
+		texturefile = "gfx/flags/small/NZL.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_POR_monarchy"
+		texturefile = "gfx/flags/small/POR_monarchy.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_SPM"
+		texturefile = "gfx/flags/small/SPM_neutrality.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_IRE"
+		texturefile = "gfx/flags/small/IRE.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_IRE_rebellion"
+		texturefile = "gfx/flags/small/IRE_rebellion.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_IRE_ENG"
+		texturefile = "gfx/flags/small/IRE_ENG.tga"
+		legacy_lazy_load = no
+	}
+
+	## Revolutionary Internationale
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_SOV"
+		texturefile = "gfx/flags/small/SOV.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_RUS_SOV"
+		texturefile = "gfx/flags/small/RUS_communism.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_UKR_SOV"
+		texturefile = "gfx/flags/small/UKR_communism.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_BLR_SOV"
+		texturefile = "gfx/flags/small/BLR_communism.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_CAU_SOV"
+		texturefile = "gfx/flags/small/CAU_communism.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_FRA"
+		texturefile = "gfx/flags/small/FRA.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_ITA"
+		texturefile = "gfx/flags/small/ITA.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_HUN_communism"
+		texturefile = "gfx/flags/small/HUN_communism.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_BUL_communism"
+		texturefile = "gfx/flags/small/BUL_communism.tga"
+		legacy_lazy_load = no
+	}
+
+	## Poland
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_POL"
+		texturefile = "gfx/flags/small/POL.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_GGN"
+		texturefile = "gfx/flags/small/POL_protectorate.tga"
+		legacy_lazy_load = no
+	}
+
+	## Spain
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_SPA"
+		texturefile = "gfx/flags/small/SPR_nationalist_spain_fascism.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_SPB"
+		texturefile = "gfx/flags/small/SPR_carlist_spain_neutrality.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_SPC"
+		texturefile = "gfx/flags/small/SPR_socialism.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_SPD"
+		texturefile = "gfx/flags/small/SPR.tga"
+		legacy_lazy_load = no
+	}
+
+	## Finland
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_WFI"
+		texturefile = "gfx/flags/small/FIN_neutrality.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_RFI"
+		texturefile = "gfx/flags/small/FIN_communism.tga"
+		legacy_lazy_load = no
+	}
+
+	## Prague Entente 
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_CZE"
+		texturefile = "gfx/flags/small/CZE.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_SER_despotism"
+		texturefile = "gfx/flags/small/SER_despotism.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_ROM"
+		texturefile = "gfx/flags/small/ROM.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_GRE"
+		texturefile = "gfx/flags/small/GRE.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_ALB"
+		texturefile = "gfx/flags/small/ALB.tga"
+		legacy_lazy_load = no
+	}
+
+	## East Asia
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_JAP"
+		texturefile = "gfx/flags/small/JAP.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_CHI"
+		texturefile = "gfx/flags/small/CHI.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_MAN"
+		texturefile = "gfx/flags/small/MAN_fengtian.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_GMJ"
+		texturefile = "gfx/flags/small/GMJ.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_SHX"
+		texturefile = "gfx/flags/small/SHX.tga"
+		legacy_lazy_load = no
+	}
+
+	## Northern Africa
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_ALG"
+		texturefile = "gfx/flags/small/ALG.tga"
+		legacy_lazy_load = no
+	}
+
+	## South Africa
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_USF"
+		texturefile = "gfx/flags/small/SAF.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_SSF"
+		texturefile = "gfx/flags/small/SAF_communism.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_BOR"
+		texturefile = "gfx/flags/small/SAF_BOR.tga"
+		legacy_lazy_load = no
+	}
+
+	## Americas
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_USA"
+		texturefile = "gfx/flags/small/USA.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_USA_socialists"
+		texturefile = "gfx/flags/small/USA_socialists.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_USA_neoconfederates"
+		texturefile = "gfx/flags/small/USA_neoconfederates.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_USA_snp"
+		texturefile = "gfx/flags/small/USA_snp.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_MEX"
+		texturefile = "gfx/flags/small/MEX.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_PRU"
+		texturefile = "gfx/flags/small/PRU.tga"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_IN_game_rule_flag_ECU"
+		texturefile = "gfx/flags/small/ECU.tga"
+		legacy_lazy_load = no
+	}
+	
+}

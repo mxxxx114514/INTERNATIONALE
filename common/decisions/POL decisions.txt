@@ -1,0 +1,48 @@
+POL_intervene_ww2_category = {
+
+	POL_intervene_ww2 = {
+		allowed = { tag = POL }
+		icon = ger_mefo_bills
+		visible = {
+			date > 1940.4.10
+			country_exists = GRR
+			country_exists = POL
+			NOT = { is_in_faction_with = GRR }
+			is_subject = no
+			is_commie_ideology = no
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			set_country_flag = intermarium_member
+			GRR = { country_event = europe.6 }
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+}
+POL_war_with_GER_category = {
+	POL_peace_with_GER = {
+		allowed = { tag = POL }
+		icon = ger_mefo_bills
+		visible = {
+			has_global_flag = GER_invade_POL_flag
+			NOT = { has_global_flag = ww2 }
+			GRR = {
+				has_war_with = POL
+			}
+			OR = {
+				GRR = { surrender_progress > 0.15 }
+				date > 1940.3.5
+			}
+		}
+		complete_effect = {
+			GRR = { country_event = germany.22 }
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+}

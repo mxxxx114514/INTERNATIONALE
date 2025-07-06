@@ -1,0 +1,175 @@
+###########################
+# Belgian Events
+###########################
+
+add_namespace = belgium
+
+# Wallonian Revolt
+news_event = {
+	id = belgium.1
+	title = belgium.1.t
+	desc = belgium.1.desc
+	picture = GFX_report_event_wallonian_uprising
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1940.3.15
+	}
+
+	hidden = yes
+
+	immediate = {
+		BEL = {
+			add_named_threat = {
+				threat = 15
+				name = IN_BEL_civil_war_threat
+			}
+		}
+		SOV = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = GER
+				value = 1000
+			}
+		}
+		FRA = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = GER
+				value = 1000
+			}
+		}
+		ITA = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = GER
+				value = 1000
+			}
+		}
+		ENG = { diplomatic_relation = { country = BEL relation = guarantee active = no } }
+		GER = { diplomatic_relation = { country = BEL relation = guarantee active = no } }
+		NFR = { diplomatic_relation = { country = BEL relation = guarantee active = no } }
+		HOL = { diplomatic_relation = { country = BEL relation = guarantee active = no } }
+		create_dynamic_country = {
+			original_tag = BEL
+			set_cosmetic_tag = WAL
+			load_focus_tree = wallonia_tree
+			transfer_state = 34
+			transfer_state = 923
+			load_oob = "WAL_civil_war"
+			set_politics = {
+				ruling_party = communism
+			}
+			set_popularities = {
+				auth_communism = 10
+				communism = 58
+				socialism = 25
+				social_democratic = 7
+			}
+			add_ideas = generic_surrender_buff_10
+		}
+		BEL = {
+			set_cosmetic_tag = FLA
+			load_focus_tree = flanders_tree
+			delete_unit = { state = 6 disband = no }
+			delete_unit = { state = 34 disband = no }
+			delete_unit = { state = 295 disband = no }
+			delete_unit = { state = 923 disband = no }
+			load_oob = "FLA_civil_war"
+			set_politics = {
+				ruling_party = democratic
+			}
+			add_popularity = {
+				ideology = auth_communism
+				popularity = -0.5
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.5
+			}
+			add_popularity = {
+				ideology = socialism
+				popularity = -0.5
+			}
+			add_popularity = {
+				ideology = social_democratic
+				popularity = -0.05
+			}
+			add_ideas = generic_surrender_buff_10
+		}
+		WAL = {
+			declare_war_on = {
+				target = FLA
+				type = annex_everything
+			}
+		}
+		SOV = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = WAL
+				value = 1000
+			}
+		}
+		FRA = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = WAL
+				value = 1000
+			}
+		}
+		ITA = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = WAL
+				value = 1000
+			}
+		}
+		ENG = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = FLA
+				value = 1000
+			}
+		}
+		GER = {
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = FLA
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = SOV
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = FRA
+				value = 1000
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = ITA
+				value = 1000
+			}
+		}
+		set_global_flag = belgian_civil_war
+		every_country = {
+			limit = { is_ai = no }
+			news_event = {
+				id = war_news.34
+				days = 1
+			}
+		}
+		GRR = { activate_mission = BEL_civil_war_escalation_pakt_mission }
+		SOV = { activate_mission = BEL_civil_war_escalation_inter_mission }
+
+		GRR = {
+			country_event = {
+				id = germany.21
+				days = 7
+			}
+		}
+	}
+}

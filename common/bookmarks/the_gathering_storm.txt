@@ -1,0 +1,73 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+
+		"SOV"={
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = communism	
+		}
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = communism
+		}
+		"ITA"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = auth_communism		
+		}
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = despotism
+			ideas = {
+				GER_unstable_democracy
+				GER_unorganized_army
+				GER_depressed_economic_crisis_idea
+			}
+			focuses = {
+				GER_liberalism_success
+				GER_imperialism_success
+				GER_nationalism_success
+			}
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				ENG_britannia_rules_the_waves
+				ENG_maintainer_of_world_order
+				ENG_imperial_sunset
+			}
+		}
+		"USA"={
+			history = "USA_GATHERING_STORM_DESC"
+			ideology = liberal
+		}
+		"JAP"={
+			history = "JAP_GATHERING_STORM_DESC"
+			ideology = despotism			
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+		"MEX"={
+			minor = yes
+			history = "MEX_GATHERING_STORM_DESC"
+			ideology = social_democratic
+			ideas = {
+				MEX_legacy_of_1910_war
+				MEX_the_next_diaz
+				MEX_catholic_opposition
+			}
+			focuses = {
+				
+			}
+		}
+
+	}
+}

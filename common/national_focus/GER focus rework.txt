@@ -1,0 +1,3201 @@
+focus_tree = { #GRR changed to GRR temporarily avoid collisions
+	id = germany_focus_rework
+	country = {
+		factor = 0
+		#modifier = {
+		#	add = 10
+		#	tag = GRR
+		#}
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 2500 }
+
+	focus = {
+		id = GRR_after_hindenberg
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 5
+		y = 0
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_golden_twenties
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_after_hindenberg
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_after_hindenberg }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_terrible_thirties
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_after_hindenberg
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_after_hindenberg }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_secure_ludendorff
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_after_hindenberg
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_golden_twenties }
+		prerequisite = { focus = GRR_terrible_thirties }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_anti_liberal
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_secure_ludendorff
+		x = -2
+		y = 1
+		prerequisite = { focus = GRR_secure_ludendorff }
+		allow_branch = { has_completed_focus = GRR_secure_ludendorff }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_anti_monarchist
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_secure_ludendorff
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_secure_ludendorff }
+		allow_branch = { has_completed_focus = GRR_secure_ludendorff }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_anti_nationalist
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_secure_ludendorff
+		x = 2
+		y = 1
+		prerequisite = { focus = GRR_secure_ludendorff }
+		allow_branch = { has_completed_focus = GRR_secure_ludendorff }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_berlin_martial_law
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_secure_ludendorff
+		x = -1
+		y = 2
+		prerequisite = { focus = GRR_anti_liberal }
+		prerequisite = { focus = GRR_anti_monarchist }
+		prerequisite = { focus = GRR_anti_nationalist }
+		allow_branch = {
+			has_completed_focus = GRR_anti_liberal
+			has_completed_focus = GRR_anti_monarchist
+			has_completed_focus = GRR_anti_nationalist
+		}
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_ludendorff_regime_secured
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_berlin_martial_law
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_berlin_martial_law }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_ludendorff_overthrown
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_berlin_martial_law
+		x = 2
+		y = 1
+		prerequisite = { focus = GRR_berlin_martial_law }
+		mutually_exclusive = { focus = GRR_ludendorff_regime_secured }
+		allow_branch = { has_country_flag = GRR_ludendorff_overthrown_flag }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_establish_reichstag_council
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_ludendorff_overthrown
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_ludendorff_overthrown }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_keep_oppress_KPD
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_establish_reichstag_council
+		x = -5
+		y = 1
+		prerequisite = { focus = GRR_establish_reichstag_council }
+		mutually_exclusive = { focus = GRR_legalize_KPD }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_legalize_KPD
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_establish_reichstag_council
+		x = -3
+		y = 1
+		prerequisite = { focus = GRR_establish_reichstag_council }
+		mutually_exclusive = { focus = GRR_keep_oppress_KPD }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_Z_support_democracy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_establish_reichstag_council
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_establish_reichstag_council }
+		mutually_exclusive = { focus = GRR_Z_support_monarchy }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_Z_support_monarchy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_establish_reichstag_council
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_establish_reichstag_council }
+		mutually_exclusive = { focus = GRR_Z_support_democracy }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_ban_far_right
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_establish_reichstag_council
+		x = 3
+		y = 1
+		prerequisite = { focus = GRR_establish_reichstag_council }
+		mutually_exclusive = { focus = GRR_all_rightist_coalition }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_all_rightist_coalition
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_establish_reichstag_council
+		x = 5
+		y = 1
+		prerequisite = { focus = GRR_establish_reichstag_council }
+		mutually_exclusive = { focus = GRR_ban_far_right }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {x
+		id = GRR_election
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_establish_reichstag_council
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_keep_oppress_KPD focus = GRR_legalize_KPD }
+		prerequisite = { focus = GRR_Z_support_democracy focus = GRR_Z_support_monarchy }
+		prerequisite = { focus = GRR_ban_far_right focus = GRR_all_rightist_coalition }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_political
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 24
+		y = 0
+		available = { always = no }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_SPD_kabinnet
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political
+		x = -8
+		y = 1
+		prerequisite = { focus = GRR_political }
+		mutually_exclusive = { focus = GRR_political_DDP_kabinnet }
+		mutually_exclusive = { focus = GRR_political_Z_kabinnet }
+		available = { always = no }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_DDP_kabinnet
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_political }
+		mutually_exclusive = { focus = GRR_political_SPD_kabinnet }
+		mutually_exclusive = { focus = GRR_political_Z_kabinnet }
+		available = { always = no }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_Z_kabinnet
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political
+		x = 8
+		y = 1
+		prerequisite = { focus = GRR_political }
+		mutually_exclusive = { focus = GRR_political_SPD_kabinnet }
+		mutually_exclusive = { focus = GRR_political_DDP_kabinnet }
+		available = { always = no }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_ceasefire_with_KPD
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_SPD_kabinnet
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_SPD_kabinnet }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_stabilize_party_left
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_SPD_kabinnet
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_SPD_kabinnet }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_release_leftist_prisoners
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_SPD_kabinnet
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_ceasefire_with_KPD }
+		prerequisite = { focus = GRR_political_stabilize_party_left }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_anti_totaliterianism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_release_leftist_prisoners
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_release_leftist_prisoners }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_unemployment_benefits
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_reinforce_labor_unions
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_release_leftist_prisoners }
+		prerequisite = { focus = GRR_political_reinforce_labor_unions }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_centralize_government
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_release_leftist_prisoners
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_anti_totaliterianism }
+		prerequisite = { focus = GRR_political_unemployment_benefits }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_administrative_reforms
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_centralize_government
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_centralize_government }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_votes_from_workers
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_reinforce_labor_unions
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_unemployment_benefits }
+		prerequisite = { focus = GRR_political_higher_taxes_on_the_rich }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_local_autonomous_workers_councils
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_centralize_government
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_centralize_government }
+		prerequisite = { focus = GRR_political_votes_from_workers }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_higher_taxes_on_the_rich
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_reinforce_labor_unions
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_release_leftist_prisoners }
+		prerequisite = { focus = GRR_political_reinforce_labor_unions }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_nationalize_infrastructure
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_DDP_kabinnet
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_SPD_kabinnet focus = GRR_political_DDP_kabinnet }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_support_middle_class
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_higher_taxes_on_the_rich
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_higher_taxes_on_the_rich focus = GRR_political_modernize_rural_areas }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_popular_front
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_higher_taxes_on_the_rich
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_votes_from_workers }
+		prerequisite = { focus = GRR_political_war_on_unemployment }
+		prerequisite = { focus = GRR_political_support_middle_class }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_welfare_state
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_unemployment_benefits
+		x = 0
+		y = 3
+		prerequisite = { focus = GRR_political_administrative_reforms }
+		prerequisite = { focus = GRR_political_local_autonomous_workers_councils }
+		prerequisite = { focus = GRR_political_popular_front }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_cartel_coorperation
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_DDP_kabinnet
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_DDP_kabinnet }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_improve_financial_status
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_cartel_coorperation
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_cartel_coorperation }
+		prerequisite = { focus = GRR_political_stabilize_bank }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_price_monitoring
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_improve_financial_status
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_improve_financial_status focus = GRR_political_reichstag_confidence }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_rural_industry
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_nationalize_infrastructure
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_nationalize_infrastructure }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_federal_railway
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_nationalize_infrastructure
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_nationalize_infrastructure }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_construct_autobahn
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_nationalize_infrastructure
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_rural_industry }
+		prerequisite = { focus = GRR_political_federal_railway }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_war_on_unemployment
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_rural_industry
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_modernize_rural_areas }
+		prerequisite = { focus = GRR_political_construct_autobahn }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_fund_industries
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_construct_autobahn
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_improve_financial_status }
+		prerequisite = { focus = GRR_political_construct_autobahn }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_reformed_market_economy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_improve_financial_status
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_price_monitoring }
+		prerequisite = { focus = GRR_political_fund_industries }
+		prerequisite = { focus = GRR_political_military_economic_office }
+		prerequisite = { focus = GRR_political_war_on_unemployment }
+		completion_reward = {
+			
+		}
+
+	}
+
+
+	focus = {
+		id = GRR_political_reform_staatssozialismus
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_SPD_kabinnet
+		x = 3
+		y = 1
+		prerequisite = { focus = GRR_political_SPD_kabinnet }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_reinforce_labor_unions
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_reform_staatssozialismus
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_reform_staatssozialismus }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_junker_property_expropriation
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_reform_staatssozialismus
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_reform_staatssozialismus }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_cultural_progressivism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_SPD_kabinnet
+		x = 5
+		y = 1
+		prerequisite = { focus = GRR_political_SPD_kabinnet focus = GRR_political_DDP_kabinnet }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_modernize_rural_areas
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_cultural_progressivism
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_cultural_progressivism }
+		prerequisite = { focus = GRR_political_junker_property_expropriation focus = GRR_political_rural_industry }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_support_from_president
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_DDP_kabinnet
+		x = 3
+		y = 1
+		prerequisite = { focus = GRR_political_Z_kabinnet focus = GRR_political_DDP_kabinnet }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_stabilize_bank
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_support_from_president
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_support_from_president }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_deflation_policies
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_support_from_president
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_support_from_president }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_reichstag_confidence
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_support_from_president
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_stabilize_bank }
+		prerequisite = { focus = GRR_political_deflation_policies }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_protect_small_businesses
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_deflation_policies
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_deflation_policies }
+		completion_reward = {
+			
+		}
+
+	}
+	
+	focus = {
+		id = GRR_political_military_economic_office
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_deflation_policies
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_reichstag_confidence }
+		prerequisite = { focus = GRR_political_protect_small_businesses }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_traditional_econnomy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_women_return_home
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_protect_small_businesses }
+		prerequisite = { focus = GRR_political_traditional_family_values }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_christian_values
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_Z_kabinnet
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_Z_kabinnet }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_women_return_home
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_christian_values
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_christian_values }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_empower_church_organizations
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_christian_values
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_christian_values }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_traditional_family_values
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_women_return_home
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_women_return_home }
+		prerequisite = { focus = GRR_political_empower_church_organizations }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_religous_propaganda
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_empower_church_organizations
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_traditional_family_values }
+		prerequisite = { focus = GRR_political_cencorship }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_center_right_coalition
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_Z_kabinnet
+		x = 3
+		y = 1
+		prerequisite = { focus = GRR_political_Z_kabinnet }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_legacy_of_stresseman
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_center_right_coalition
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_political_center_right_coalition }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_mollify_DNVP
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_center_right_coalition
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_political_center_right_coalition }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_christian_social_peoples_party
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_center_right_coalition
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_legacy_of_stresseman }
+		prerequisite = { focus = GRR_political_mollify_DNVP }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_cencorship
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_center_right_coalition
+		x = -2
+		y = 2
+		prerequisite = { focus = GRR_political_empower_church_organizations }
+		prerequisite = { focus = GRR_political_legacy_of_stresseman }
+		prerequisite = { focus = GRR_political_mollify_DNVP }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_counter_SPD
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_legacy_of_stresseman
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_cencorship }
+		prerequisite = { focus = GRR_political_christian_social_peoples_party }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_conservatism_rules
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political_traditional_family_values
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_political_traditional_econnomy }
+		prerequisite = { focus = GRR_political_religous_propaganda }
+		prerequisite = { focus = GRR_political_counter_SPD }
+		prerequisite = { focus = GRR_political_fund_industries }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_political_success
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_political
+		x = -1
+		y = 8
+		prerequisite = { focus = GRR_political_welfare_state focus = GRR_political_reformed_market_economy focus = GRR_political_conservatism_rules }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_situation_in_europe
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 45
+		y = 0
+		allow_branch = { has_completed_focus = GRR_election }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_across_the_atlantic
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_situation_in_europe
+		x = -5
+		y = 1
+		prerequisite = { focus = GRR_situation_in_europe }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_support_german_americans
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_across_the_atlantic
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_diplo_across_the_atlantic }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_reach_MEX
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_across_the_atlantic
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_diplo_support_german_americans }
+		prerequisite = { focus = GRR_diplo_GRR_USA_economic_cooperation }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_mission_to_JAP
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_across_the_channel
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_diplo_entente_coorperation }
+		prerequisite = { focus = GRR_diplo_support_german_americans }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_pact_against_SOV
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_mission_to_JAP
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_diplo_mission_to_JAP }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_GRR_USA_economic_cooperation
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_across_the_atlantic
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_diplo_across_the_atlantic }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_across_the_channel
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_situation_in_europe
+		x = -3
+		y = 1
+		prerequisite = { focus = GRR_situation_in_europe }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_mission_to_NFR
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_situation_in_europe
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_situation_in_europe }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_TUR_war
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_situation_in_europe
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_situation_in_europe }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_SPR_war
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_situation_in_europe
+		x = 3
+		y = 1
+		prerequisite = { focus = GRR_situation_in_europe }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_align_SPR
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_SPR_war
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_diplo_SPR_war }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_reach_POR
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_SPR_war
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_diplo_SPR_war }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_align_TUR
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_TUR_war
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_diplo_TUR_war }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_balkan_war
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_align_TUR
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_diplo_align_TUR }
+		prerequisite = { focus = GRR_diplo_entente_coorperation }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_reintegrate_sudetenland
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_balkan_war
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_diplo_balkan_war }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_reintegrate_burgunland
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_balkan_war
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_diplo_balkan_war }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_entente_coorperation
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_across_the_channel
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_diplo_across_the_channel }
+		prerequisite = { focus = GRR_diplo_mission_to_NFR }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_SAF_war
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_entente_coorperation
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_diplo_entente_coorperation }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_our_old_colonies
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_SAF_war
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_diplo_SAF_war }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_ALG_war
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_entente_coorperation
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_diplo_entente_coorperation }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_align_HOL
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_situation_in_europe
+		x = 5
+		y = 1
+		prerequisite = { focus = GRR_situation_in_europe }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_LUX_question
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_align_HOL
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_diplo_align_HOL }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_eupen_malmedy_issue
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_align_HOL
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_diplo_align_HOL }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_anti_WAL
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_align_HOL
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_diplo_LUX_question }
+		prerequisite = { focus = GRR_diplo_eupen_malmedy_issue }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_pact_against_FRA
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_anti_WAL
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_diplo_anti_WAL }
+		prerequisite = { focus = GRR_diplo_reach_POR }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_baltic_cooperation
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_situation_in_europe
+		x = 7
+		y = 1
+		prerequisite = { focus = GRR_situation_in_europe }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_support_WFI
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_baltic_cooperation
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_diplo_baltic_cooperation }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_trade_with_SWE
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_baltic_cooperation
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_diplo_baltic_cooperation }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_align_scandinavia
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_trade_with_SWE
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_diplo_trade_with_SWE }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_befriend_POL
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_situation_in_europe
+		x =9
+		y = 1
+		prerequisite = { focus = GRR_situation_in_europe }
+		mutually_exclusive = { focus = GRR_diplo_eastern_expansion }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_eastern_expansion
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_situation_in_europe
+		x = 11
+		y = 1
+		prerequisite = { focus = GRR_situation_in_europe }
+		mutually_exclusive = { focus = GRR_diplo_befriend_POL }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_upper_silesia
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_befriend_POL
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_diplo_befriend_POL focus = GRR_diplo_eastern_expansion }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_west_prussia
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_befriend_POL
+		x = 3
+		y = 1
+		prerequisite = { focus = GRR_diplo_befriend_POL focus = GRR_diplo_eastern_expansion }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_invite_POL
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_befriend_POL
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_diplo_west_prussia }
+		prerequisite = { focus = GRR_diplo_upper_silesia }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_support_SOV_separatist
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_invite_POL
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_diplo_invite_POL }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_demand_poznan
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_eastern_expansion
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_diplo_eastern_expansion }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_reintegrate_poznan
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_demand_poznan
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_diplo_demand_poznan }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_diplo_support_POL_protectorate
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_diplo_demand_poznan
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_diplo_demand_poznan }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_military
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 9
+		y = 9
+		allow_branch = { has_completed_focus = GRR_election }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_army
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_military
+		x = -3
+		y = 1
+		prerequisite = { focus = GRR_military }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_restructuring
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army
+		x = -3
+		y = 1
+		prerequisite = { focus = GRR_army }
+		allow_branch = { always = no }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_reestablish_states_army
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_restructuring
+		x = -2
+		y = 1
+		prerequisite = { focus = GRR_army_restructuring }
+		mutually_exclusive = { focus = GRR_army_federalize_the_reichswehr }
+		mutually_exclusive = { focus = GRR_army_create_wehrmacht }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_reintroduce_imperial_traditions
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_reestablish_states_army
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_army_reestablish_states_army }
+		available = { has_country_flag = GRR_imperialism_path_flag }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_officers_superiority
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_reintroduce_imperial_traditions
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_army_reintroduce_imperial_traditions }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_federalize_the_reichswehr
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_restructuring
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_army_restructuring }
+		mutually_exclusive = { focus = GRR_army_reestablish_states_army }
+		mutually_exclusive = { focus = GRR_army_create_wehrmacht }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_professional_elite
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_federalize_the_reichswehr
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_army_federalize_the_reichswehr }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_create_wehrmacht
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_restructuring
+		x = 2
+		y = 1
+		prerequisite = { focus = GRR_army_restructuring }
+		mutually_exclusive = { focus = GRR_army_reestablish_states_army }
+		mutually_exclusive = { focus = GRR_army_federalize_the_reichswehr }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_propaganda_efforts
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_create_wehrmacht
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_army_create_wehrmacht }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_utilize_drugs
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_propaganda_efforts
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_army_propaganda_efforts }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_inspirations_from_prussia
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_federalize_the_reichswehr
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_army_reestablish_states_army focus = GRR_army_federalize_the_reichswehr }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_open_to_lower_class
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_federalize_the_reichswehr
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_army_create_wehrmacht focus = GRR_army_federalize_the_reichswehr }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_imperial_general_staff
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_reestablish_states_army
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_army_reintroduce_imperial_traditions }
+		prerequisite = { focus = GRR_army_inspirations_from_prussia }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_ww1_experiences
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_reintroduce_imperial_traditions
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_army_officers_superiority }
+		prerequisite = { focus = GRR_army_imperial_general_staff }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_party_command_army
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_create_wehrmacht
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_army_propaganda_efforts }
+		prerequisite = { focus = GRR_army_open_to_lower_class }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_total_war
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_propaganda_efforts
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_army_utilize_drugs}
+		prerequisite = { focus = GRR_army_party_command_army }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_combined_commands
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_professional_elite
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_army_professional_elite }
+		prerequisite = { focus = GRR_army_inspirations_from_prussia }
+		prerequisite = { focus = GRR_army_open_to_lower_class }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_high_standards
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_professional_elite
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_army_professional_elite }
+		prerequisite = { focus = GRR_army_inspirations_from_prussia }
+		prerequisite = { focus = GRR_army_open_to_lower_class }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_auftragstaktik
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_imperial_general_staff
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_army_ww1_experiences focus = GRR_army_combined_commands focus = GRR_army_high_standards focus = GRR_army_total_war }
+		mutually_exclusive = { focus = GRR_army_befehlstaktik }
+		available = {
+			OR = {
+				has_completed_focus = GRR_army_ww1_experiences
+				AND = {
+					has_completed_focus = GRR_army_combined_commands
+					has_completed_focus = GRR_army_high_standards
+				}
+				has_completed_focus = GRR_army_total_war
+			}
+		}
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_befehlstaktik
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_party_command_army
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_army_ww1_experiences focus = GRR_army_combined_commands focus = GRR_army_high_standards focus = GRR_army_total_war }
+		mutually_exclusive = { focus = GRR_army_auftragstaktik }
+		available = {
+			OR = {
+				has_completed_focus = GRR_army_ww1_experiences
+				AND = {
+					has_completed_focus = GRR_army_combined_commands
+					has_completed_focus = GRR_army_high_standards
+				}
+				has_completed_focus = GRR_army_total_war
+			}
+		}
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_theory_development
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army
+		x = 6
+		y = 1
+		prerequisite = { focus = GRR_army }
+		allow_branch = { always = no }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_reformers
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_theory_development
+		x = -2
+		y = 1
+		prerequisite = { focus = GRR_army_theory_development }
+		mutually_exclusive = { focus = GRR_army_conservatives }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_mobile_warfare
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_reformers
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_army_reformers }
+		mutually_exclusive = { focus = GRR_army_superior_firepower }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_mobile_warfare_2
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_mobile_warfare
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_army_mobile_warfare }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_superior_firepower
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_reformers
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_army_reformers }
+		mutually_exclusive = { focus = GRR_army_mobile_warfare }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_superior_firepower_2
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_superior_firepower
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_army_superior_firepower }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_reformers_2
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_reformers
+		x = 0
+		y = 3
+		prerequisite = { focus = GRR_army_mobile_warfare_2 focus = GRR_army_superior_firepower_2 }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_reformers_3
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_reformers_2
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_army_reformers_2 }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_conservatives
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_theory_development
+		x = 2
+		y = 1
+		prerequisite = { focus = GRR_army_theory_development }
+		mutually_exclusive = { focus = GRR_army_reformers }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_conservatives_2
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_conservatives
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_army_conservatives }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_grand_battleplan
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_conservatives_2
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_army_conservatives_2 }
+		mutually_exclusive = { focus = GRR_army_mass_assault }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_grand_battleplan_2
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_grand_battleplan
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_army_grand_battleplan }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_mass_assault
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_conservatives_2
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_army_conservatives_2 }
+		mutually_exclusive = { focus = GRR_army_grand_battleplan }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_mass_assault_2
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_mass_assault
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_army_mass_assault }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_conservatives_3
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_conservatives_2
+		x = 0
+		y = 3
+		prerequisite = { focus = GRR_army_grand_battleplan_2 focus = GRR_army_mass_assault_2 }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_towards_new_era
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_theory_development
+		x = 0
+		y = 6
+		prerequisite = { focus = GRR_army_reformers_3 focus = GRR_army_conservatives_3 }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_equipment_development
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army
+		x = 12
+		y = 1
+		prerequisite = { focus = GRR_army }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_equipment_infantry
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_equipment_development
+		x = -2
+		y = 1
+		prerequisite = { focus = GRR_army_equipment_development }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_equipment_artillery
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_equipment_development
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_army_equipment_development }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_equipment_anti_air
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_equipment_artillery
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_army_equipment_artillery }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_equipment_anti_tank
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_equipment_artillery
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_army_equipment_artillery }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_equipment_rockets
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_equipment_artillery
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_army_equipment_artillery }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_armor
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_equipment_development
+		x = 2
+		y = 1
+		prerequisite = { focus = GRR_army_equipment_development }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_medium_armor
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_armor
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_army_armor }
+		mutually_exclusive = { focus = GRR_army_heavy_armor }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_armor_reliability
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_armor
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_army_armor }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_heavy_armor
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_armor
+		x = 2
+		y = 2
+		prerequisite = { focus = GRR_army_armor_reliability }
+		mutually_exclusive = { focus = GRR_army_medium_armor }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_army_mechanized
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_army_equipment_anti_tank
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_army_medium_armor focus = GRR_army_heavy_armor }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_navy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_military
+		x = 16
+		y = 1
+		prerequisite = { focus = GRR_military }
+		completion_reward = {
+			
+		}
+
+	}
+	
+	focus = {
+		id = GRR_navy_dockyards
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_navy
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_navy }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_navy_ships
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_navy_dockyards
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_navy_dockyards }
+		mutually_exclusive = { focus = GRR_navy_submarines }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_navy_ships_2
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_navy_ships
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_navy_ships }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_navy_submarines
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_navy_dockyards
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_navy_dockyards }
+		mutually_exclusive = { focus = GRR_navy_ships }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_navy_submarines_2
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_navy_submarines
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_navy_submarines }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_military
+		x = 14
+		y = 6
+		prerequisite = { focus = GRR_military }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_strategic_destruction
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air
+		x = -6
+		y = 1
+		prerequisite = { focus = GRR_air }
+		mutually_exclusive = { focus = GRR_air_battlefield_support focus = GRR_air_operational_integrity }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_heavy_planes
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air_strategic_destruction
+		x = -1
+		y = 1
+		prerequisite = { focus = GRR_air_strategic_destruction }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_target_enemy_factories
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air_strategic_destruction
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_air_strategic_destruction }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_battlefield_support
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air
+		x = -3
+		y = 1
+		prerequisite = { focus = GRR_air }
+		mutually_exclusive = { focus = GRR_air_strategic_destruction focus = GRR_air_operational_integrity }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_build_CAS
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air_battlefield_support
+		x = -1
+		y = 2
+		prerequisite = { focus = GRR_air_battlefield_support }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_aces
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air_battlefield_support
+		x = 1
+		y = 2
+		prerequisite = { focus = GRR_air_battlefield_support }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_operational_integrity
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air
+		x = 0
+		y = 1
+		prerequisite = { focus = GRR_air }
+		mutually_exclusive = { focus = GRR_air_strategic_destruction focus = GRR_air_battlefield_support }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_tactical_bombing
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air_operational_integrity
+		x = 1
+		y = 1
+		prerequisite = { focus = GRR_air_operational_integrity }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_target_enemy_airbase
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air_operational_integrity
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_air_operational_integrity }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_radios
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air
+		x = -5
+		y = 2
+		prerequisite = { focus = GRR_air }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_anti_air
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air
+		x = -1
+		y = 2
+		prerequisite = { focus = GRR_air }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_parachutes
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air_radios
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_air_radios }
+		prerequisite = { focus = GRR_air_anti_air }
+		prerequisite = { focus = GRR_air_heavy_planes focus = GRR_air_build_CAS focus = GRR_air_tactical_bombing }
+		prerequisite = { focus = GRR_air_target_enemy_factories focus = GRR_air_aces focus = GRR_air_target_enemy_airbase }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_air_naval_bombers
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = GRR_air_anti_air
+		x = 0
+		y = 2
+		prerequisite = { focus = GRR_air_radios }
+		prerequisite = { focus = GRR_air_anti_air }
+		prerequisite = { focus = GRR_air_heavy_planes focus = GRR_air_build_CAS focus = GRR_air_tactical_bombing }
+		prerequisite = { focus = GRR_air_target_enemy_factories focus = GRR_air_aces focus = GRR_air_target_enemy_airbase }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = GRR_economy
+		icon = GFX_goal_unknown
+		cost = 4
+		x = 38
+		y = 9
+		allow_branch = { has_completed_focus = GRR_election }
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+		}
+
+	}
+
+	focus = {
+		id = GRR_paris_conference
+		icon = GFX_goal_unknown
+		cost = 4.00
+		x = 85
+		y = 3
+		available = { always = no }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_question_on_the_west
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_paris_conference
+		x = -3
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_paris_conference }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_eradicate_walloon_resistance
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_question_on_the_west
+		x = -3
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_question_on_the_west }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_entente_belgium
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_eradicate_walloon_resistance
+		x = -5
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_eradicate_walloon_resistance }
+		mutually_exclusive = { focus = GRR_neutral_belgium }
+		mutually_exclusive = { focus = GRR_german_belgium }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_neutral_belgium
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_eradicate_walloon_resistance
+		x = -3
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_eradicate_walloon_resistance }
+		mutually_exclusive = { focus = GRR_entente_belgium }
+		mutually_exclusive = { focus = GRR_german_belgium }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_german_belgium
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_eradicate_walloon_resistance
+		x = -1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_eradicate_walloon_resistance }
+		mutually_exclusive = { focus = GRR_entente_belgium }
+		mutually_exclusive = { focus = GRR_neutral_belgium }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_return_alsace
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_question_on_the_west
+		x = -1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_question_on_the_west }
+		mutually_exclusive = { focus = GRR_retain_east_alsace }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_recognize_french_sovereignty
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_return_alsace
+		x = -1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_return_alsace }
+		mutually_exclusive = { focus = GRR_alsace_free_state }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_alsace_free_state
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_return_alsace
+		x = 1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_return_alsace }
+		mutually_exclusive = { focus = GRR_recognize_french_sovereignty }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_retain_east_alsace
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_return_alsace
+		x = 2
+		y = 0
+		available = { always = no }
+		prerequisite = { focus = GRR_question_on_the_west }
+		mutually_exclusive = { focus = GRR_return_alsace }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_dual_nationality
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_retain_east_alsace
+		x = -2
+		y = 2
+		available = { always = no }
+		prerequisite = { focus = GRR_retain_east_alsace }
+		mutually_exclusive = { focus = GRR_germanization_policies }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_germanization_policies
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_retain_east_alsace
+		x = 0
+		y = 2
+		available = { always = no }
+		prerequisite = { focus = GRR_retain_east_alsace }
+		mutually_exclusive = { focus = GRR_dual_nationality }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_eagle_rises_in_the_west
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_dual_nationality
+		x = 1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_dual_nationality focus = GRR_germanization_policies }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_demand_more
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_retain_east_alsace
+		x = 1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_retain_east_alsace }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_burgundy_special_area
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_demand_more
+		x = 1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_demand_more }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_peace_monument
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_eradicate_walloon_resistance
+		x = 0
+		y = 2
+		available = { always = no }
+		prerequisite = { focus = GRR_entente_belgium focus = GRR_neutral_belgium focus = GRR_german_belgium }
+		prerequisite = { focus = GRR_recognize_french_sovereignty focus = GRR_alsace_free_state }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_regain_locarno_spirit
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_peace_monument
+		x = 0
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_peace_monument }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_coal_and_steel
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_paris_conference
+		x = 5
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_paris_conference }
+		mutually_exclusive = { focus = GRR_national_sovereignty }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_demilitarize_border
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_coal_and_steel
+		x = 1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_coal_and_steel }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_common_travel_area
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_demilitarize_border
+		x = -1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_demilitarize_border }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_german_dominance
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_coal_and_steel
+		x = -1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_coal_and_steel }
+		mutually_exclusive = { focus = GRR_german_french_axis }
+		mutually_exclusive = { focus = GRR_community_of_equals }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_german_french_axis
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_coal_and_steel
+		x = -3
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_coal_and_steel }
+		mutually_exclusive = { focus = GRR_german_dominance }
+		mutually_exclusive = { focus = GRR_community_of_equals }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_community_of_equals
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_coal_and_steel
+		x = -5
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_coal_and_steel }
+		mutually_exclusive = { focus = GRR_german_dominance }
+		mutually_exclusive = { focus = GRR_german_french_axis }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_decentralized_banks
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_german_french_axis
+		x = -1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_coal_and_steel }
+		mutually_exclusive = { focus = GRR_frankfurt_central_bank }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_frankfurt_central_bank
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_german_french_axis
+		x = 1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_coal_and_steel }
+		mutually_exclusive = { focus = GRR_decentralized_banks }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_luxmbourg_as_capital_of_europe
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_frankfurt_central_bank
+		x = 0
+		y = 1
+		available = { always = no }
+		#prerequisite = { focus = GRR_common_travel_area }
+		prerequisite = { focus = GRR_decentralized_banks focus = GRR_frankfurt_central_bank }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_embrace_european_unity
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_luxmbourg_as_capital_of_europe
+		x = 0
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_luxmbourg_as_capital_of_europe }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_national_sovereignty
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_coal_and_steel
+		x = 2
+		y = 0
+		available = { always = no }
+		prerequisite = { focus = GRR_paris_conference }
+		mutually_exclusive = { focus = GRR_coal_and_steel }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_security_council
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_national_sovereignty
+		x = 1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_national_sovereignty }
+		mutually_exclusive = { focus = GRR_equilibrium_of_terror }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_equilibrium_of_terror
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_national_sovereignty
+		x = 3
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_national_sovereignty }
+		mutually_exclusive = { focus = GRR_security_council }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_limited_disarmament
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_security_council
+		x = -1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_security_council focus = GRR_equilibrium_of_terror }
+		mutually_exclusive = { focus = GRR_no_restrictions }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_no_restrictions
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_security_council
+		x = 1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_security_council focus = GRR_equilibrium_of_terror }
+		mutually_exclusive = { focus = GRR_limited_disarmament }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_reestablish_embassy
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_limited_disarmament
+		x = -1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_limited_disarmament focus = GRR_no_restrictions }
+		mutually_exclusive = { focus = GRR_secret_diplomacy }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_secret_diplomacy
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_limited_disarmament
+		x = 1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_limited_disarmament focus = GRR_no_restrictions }
+		mutually_exclusive = { focus = GRR_reestablish_embassy }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_german_pride
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_reestablish_embassy
+		x = 1
+		y = 1
+		available = { always = no }
+		prerequisite = { focus = GRR_reestablish_embassy focus = GRR_secret_diplomacy }
+		completion_reward = {
+
+		}
+
+	}
+
+	focus = {
+		id = GRR_second_treaty_of_versailles
+		icon = GFX_goal_unknown
+		cost = 4.00
+		relative_position_id = GRR_paris_conference
+		x = 0
+		y = 6
+		available = { always = no }
+		prerequisite = { focus = GRR_regain_locarno_spirit focus = GRR_eagle_rises_in_the_west }
+		prerequisite = { focus = GRR_embrace_european_unity focus = GRR_german_pride }
+		completion_reward = {
+
+		}
+
+	}
+
+
+
+
+
+
+}

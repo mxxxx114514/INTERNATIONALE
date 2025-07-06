@@ -1,0 +1,21 @@
+focus_tree = {
+	id = flanders_tree
+	country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 3000 }
+
+	focus = {
+		id = FLA_declare
+		icon = GFX_goal_unknown
+		x = 0
+		y = 0
+		cost = 2
+		will_lead_to_war_with = FRA
+		completion_reward = {
+			
+		}
+
+	}
+}

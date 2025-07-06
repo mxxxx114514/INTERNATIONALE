@@ -1,0 +1,44 @@
+PRU_invade_ECU_category = {
+	PRU_invade_ECU = {
+		allowed = { tag = PRU }
+		icon = ger_mefo_bills
+		visible = {
+			date > 1938.6.3
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			ECU = {
+				add_ideas = generic_surrender_debuff_5
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = PRU_ECU_outcome
+							option = PRU_ECU_OUTCOME_ECU_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+			}
+			declare_war_on = { target = ECU type = annex_everything }
+			add_timed_idea = {
+				idea = PRU_war_for_pastaza
+				days = 365
+			}
+			add_ideas = generic_surrender_debuff_5
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = PRU_ECU_outcome
+						option = PRU_ECU_OUTCOME_PRU_VICTORY
+					}
+				}
+				add_ideas = win_this_war_idea
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+}

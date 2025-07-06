@@ -1,0 +1,31 @@
+state={
+	id=927
+	name="STATE_927"
+	provinces={
+		4904 13266 13267 13272 13343 13345 13347
+	}
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 1
+			#arms_factory = 2
+			4904 = {
+				naval_base = 2
+			}
+			13267 = {
+				naval_base = 1
+			}
+
+		}
+		add_core_of = MEX
+		victory_points = {
+			4904 2
+		}
+
+	}
+	manpower=280000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+
+}

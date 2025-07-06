@@ -1,0 +1,88 @@
+generic_remove_unowned_cores = {
+	THIS = {
+		hidden_effect = {
+			every_core_state = {
+				limit = {
+					NOT = { is_owned_by = PREV }
+				}
+				remove_core_of = PREV
+			}
+		}
+	}
+}
+generic_remove_uncontrolled_cores = {
+	THIS = {
+		hidden_effect = {
+			every_core_state = {
+				limit = {
+					NOT = { is_controlled_by = PREV }
+				}
+				remove_core_of = PREV
+			}
+		}
+	}
+}
+generic_remove_unowned_claims = {
+	THIS = {
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_claimed_by = PREV
+					NOT = { is_owned_by = PREV }
+				}
+				remove_claim_by = PREV
+			}
+		}
+	}
+}
+generic_add_owned_claims = {
+	THIS = {
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					NOT = { is_claimed_by = PREV }
+				}
+				add_claim_by = PREV
+			}
+		}
+	}
+}
+generic_add_owned_cores = {
+	THIS = {
+		hidden_effect = {
+			every_owned_state = {
+				limit = {
+					NOT = { is_core_of = PREV }
+				}
+				add_core_of = PREV
+			}
+		}
+	}
+}
+generic_fix_core_claims = {
+	generic_add_owned_cores = yes
+	generic_add_owned_claims = yes
+	generic_remove_unowned_cores = yes
+	generic_remove_unowned_claims = yes
+}
+IN_set_major = {
+	set_major = yes
+	create_faction = test
+	dismantle_faction = yes
+}
+generic_clear_all_coalition_flags = {
+	clr_country_flag = autsoc_coalition_flag
+	clr_country_flag = revsoc_coalition_flag
+	clr_country_flag = libsoc_coalition_flag
+	clr_country_flag = socdem_coalition_flag
+	clr_country_flag = soclib_coalition_flag
+	clr_country_flag = marlib_coalition_flag
+	clr_country_flag = condem_coalition_flag
+	clr_country_flag = autdem_coalition_flag
+	clr_country_flag = pataut_coalition_flag
+	clr_country_flag = natpop_coalition_flag
+}
+generic_update_focus_tree = {
+	mark_focus_tree_layout_dirty = yes
+	custom_effect_tooltip = new_focus_tree_tt
+}

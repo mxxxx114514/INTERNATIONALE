@@ -1,0 +1,424 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_event_war_news_1"
+		texturefile = "gfx/event_pictures/war_news/war_news.1.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_2"
+		texturefile = "gfx/event_pictures/war_news/war_news.2.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_3"
+		texturefile = "gfx/event_pictures/war_news/war_news.3.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_4"
+		texturefile = "gfx/event_pictures/war_news/war_news.4.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_5"
+		texturefile = "gfx/event_pictures/war_news/war_news.5.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_6"
+		texturefile = "gfx/event_pictures/war_news/war_news.6.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_7"
+		texturefile = "gfx/event_pictures/war_news/war_news.7.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_8"
+		texturefile = "gfx/event_pictures/war_news/war_news.8.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_9"
+		texturefile = "gfx/event_pictures/war_news/war_news.9.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_10"
+		texturefile = "gfx/event_pictures/war_news/war_news.10.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_11"
+		texturefile = "gfx/event_pictures/war_news/war_news.11.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_12"
+		texturefile = "gfx/event_pictures/war_news/war_news.12.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_13"
+		texturefile = "gfx/event_pictures/war_news/war_news.13.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_14"
+		texturefile = "gfx/event_pictures/war_news/war_news.14.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_15"
+		texturefile = "gfx/event_pictures/war_news/war_news.15.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_16"
+		texturefile = "gfx/event_pictures/war_news/war_news.16.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_17"
+		texturefile = "gfx/event_pictures/war_news/war_news.17.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_18"
+		texturefile = "gfx/event_pictures/war_news/war_news.18.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_19"
+		texturefile = "gfx/event_pictures/war_news/war_news.19.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_20"
+		texturefile = "gfx/event_pictures/war_news/war_news.20.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_21"
+		texturefile = "gfx/event_pictures/war_news/war_news.21.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_22"
+		texturefile = "gfx/event_pictures/war_news/war_news.22.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_23"
+		texturefile = "gfx/event_pictures/war_news/war_news.23.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_24"
+		texturefile = "gfx/event_pictures/war_news/war_news.24.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_25"
+		texturefile = "gfx/event_pictures/war_news/war_news.25.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_26"
+		texturefile = "gfx/event_pictures/war_news/war_news.26.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_27"
+		texturefile = "gfx/event_pictures/war_news/war_news.27.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_28"
+		texturefile = "gfx/event_pictures/war_news/war_news.28.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_29"
+		texturefile = "gfx/event_pictures/war_news/war_news.29.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_30"
+		texturefile = "gfx/event_pictures/war_news/war_news.30.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_31"
+		texturefile = "gfx/event_pictures/war_news/war_news.31.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_32"
+		texturefile = "gfx/event_pictures/war_news/war_news.32.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_33"
+		texturefile = "gfx/event_pictures/war_news/war_news.33.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_34"
+		texturefile = "gfx/event_pictures/war_news/war_news.34.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_35"
+		texturefile = "gfx/event_pictures/war_news/war_news.35.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_36"
+		texturefile = "gfx/event_pictures/war_news/war_news.36.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_37"
+		texturefile = "gfx/event_pictures/war_news/war_news.37.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_38"
+		texturefile = "gfx/event_pictures/war_news/war_news.38.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_39"
+		texturefile = "gfx/event_pictures/war_news/war_news.39.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_40"
+		texturefile = "gfx/event_pictures/war_news/war_news.40.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_41"
+		texturefile = "gfx/event_pictures/war_news/war_news.41.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_42"	
+		texturefile = "gfx/event_pictures/war_news/war_news.42.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_43"
+		texturefile = "gfx/event_pictures/war_news/war_news.43.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_44"
+		texturefile = "gfx/event_pictures/war_news/war_news.44.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_45"
+		texturefile = "gfx/event_pictures/war_news/war_news.45.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_46"
+		texturefile = "gfx/event_pictures/war_news/war_news.46.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_47"
+		texturefile = "gfx/event_pictures/war_news/war_news.47.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_48"
+		texturefile = "gfx/event_pictures/war_news/war_news.48.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_49"
+		texturefile = "gfx/event_pictures/war_news/war_news.49.png"
+	}
+
+	spriteType = {
+		name = "GFX_event_war_news_50"
+		texturefile = "gfx/event_pictures/war_news/war_news.50.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_1"
+        texturefile = "gfx/event_pictures/germany/germany.1.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_2"
+        texturefile = "gfx/event_pictures/germany/germany.2.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_3"
+        texturefile = "gfx/event_pictures/germany/germany.3.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_4"
+        texturefile = "gfx/event_pictures/germany/germany.4.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_5"
+        texturefile = "gfx/event_pictures/germany/germany.5.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_6"
+        texturefile = "gfx/event_pictures/germany/germany.6.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_7"
+        texturefile = "gfx/event_pictures/germany/germany.7.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_8"
+        texturefile = "gfx/event_pictures/germany/germany.8.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_9"
+        texturefile = "gfx/event_pictures/germany/germany.9.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_10"
+        texturefile = "gfx/event_pictures/germany/germany.10.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_11"
+        texturefile = "gfx/event_pictures/germany/germany.11.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_12"
+        texturefile = "gfx/event_pictures/germany/germany.12.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_13"
+        texturefile = "gfx/event_pictures/germany/germany.13.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_14"
+        texturefile = "gfx/event_pictures/germany/germany.14.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_15"
+        texturefile = "gfx/event_pictures/germany/germany.15.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_16"
+        texturefile = "gfx/event_pictures/germany/germany.16.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_17"
+        texturefile = "gfx/event_pictures/germany/germany.17.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_18"
+        texturefile = "gfx/event_pictures/germany/germany.18.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_19"
+        texturefile = "gfx/event_pictures/germany/germany.19.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_20"
+        texturefile = "gfx/event_pictures/germany/germany.20.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_germany_21"
+        texturefile = "gfx/event_pictures/germany/germany.21.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_GER_news_1"
+        texturefile = "gfx/event_pictures/GER_news/GER_news.1.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_GER_news_2"
+        texturefile = "gfx/event_pictures/GER_news/GER_news.2.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_GER_news_3"
+        texturefile = "gfx/event_pictures/GER_news/GER_news.3.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_GER_news_4"
+        texturefile = "gfx/event_pictures/GER_news/GER_news.4.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_GER_news_5"
+        texturefile = "gfx/event_pictures/GER_news/GER_news.5.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_GER_news_6"
+        texturefile = "gfx/event_pictures/GER_news/GER_news.6.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_europe_1"
+        texturefile = "gfx/event_pictures/europe/europe.1.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_europe_2"
+        texturefile = "gfx/event_pictures/europe/europe.2.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_europe_3"
+        texturefile = "gfx/event_pictures/europe/europe.3.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_europe_4"
+        texturefile = "gfx/event_pictures/europe/europe.4.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_europe_5"
+        texturefile = "gfx/event_pictures/europe/europe.5.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_europe_6"
+        texturefile = "gfx/event_pictures/europe/europe.6.png"
+	}
+
+	spriteType = {
+        name = "GFX_event_europe_7"
+        texturefile = "gfx/event_pictures/europe/europe.7.png"
+	}
+
+
+}

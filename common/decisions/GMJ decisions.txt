@@ -1,0 +1,58 @@
+GMJ_intervene_category = {
+
+	GMJ_intervene = {
+		allowed = { tag = GMJ }
+		icon = ger_mefo_bills
+		visible = {
+			always = yes
+		}
+		available = {
+			date > 1939.6.1
+			CHI = { has_war_with = MAN }
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+		complete_effect = {
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = CHI
+				value = 1000
+			}
+		}
+		remove_effect = {
+			every_country = {
+				limit = { is_subject_of = GMJ }
+				every_owned_state = {
+					add_core_of = GMJ
+				}
+				GMJ = { annex_country = { target = PREV } }
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.49
+					days = 1
+				}
+			}
+			#create_faction = northwestern_guominjun
+			GMJ = {
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Bubing Shi\" start_experience_factor = 0.3 start_equipment_factor = 0.3" 
+						owner = PREV
+						count = 5
+					}
+				}
+				declare_war_on = {
+					target = CHI
+					type = annex_everything
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+}

@@ -1,0 +1,157 @@
+###########################
+# austria
+###########################
+
+add_namespace = austria
+
+country_event = { #Engelbert assassinated (AUS)
+	id = austria.1
+	title = austria.1.t
+	desc = austria.1.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.1.a
+		kill_country_leader = yes
+		promote_character = AUS_kurt_schuschnigg
+		add_stability = -0.1
+		add_political_power = -25
+		set_country_flag = AUS_engelbert_dead
+		#activate_targeted_decision = { target = AUS decision = AUS_increase_fascism }
+		activate_targeted_decision = { target = AUS decision = AUS_coup }
+		activate_targeted_decision = { target = AUS decision = AUS_begin_civil_war }
+		every_country = {
+			limit = { is_ai = no }
+			news_event = {
+				id = austria_news.1
+				days = 1
+			}
+		}
+		GRR = {
+			country_event = {
+				id = austria.2
+				days = 3
+			}
+		}
+
+	}
+}
+
+country_event = { #Engelbert assassinated (GRR)
+	id = austria.2
+	title = austria.2.t
+	desc = austria.2.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.2.a
+		activate_targeted_decision = { target = GRR decision = GER_collaborate_with_SDAPO }
+		activate_targeted_decision = { target = GRR decision = GER_fund_moderate_CSP }
+		activate_targeted_decision = { target = GRR decision = GER_support_GDVP }
+		activate_targeted_decision = { target = GRR decision = GER_arm_AUS_opposition }
+		hidden_effect = {
+			set_variable = { GER_AUR_guns = 0 }
+			set_variable = { GER_AUR_divisions = 14 }
+			set_variable = { GER_collaborate_with_SDAPO_count = 0 }
+			set_variable = { GER_fund_moderate_CSP_count = 0 }
+			set_variable = { GER_support_GDVP_count = 0 }
+		}
+		
+	}
+}
+
+country_event = { #Beginning of Austrian Civil War (GRR)
+	id = austria.3
+	title = austria.3.t
+	desc = austria.3.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.3.a
+		effect_tooltip = {
+			send_embargo = AUF
+			send_embargo = AUK
+			diplomatic_relation = {
+				country = AUF
+				relation = guarantee
+				active = no
+			}
+			diplomatic_relation = {
+				country = AUF
+				relation = non_aggression_pact
+				active = no
+			}
+			diplomatic_relation = {
+				country = AUR
+				relation = non_aggression_pact
+			}
+			give_guarantee = AUR
+			add_relation_modifier = {
+				target = AUR
+				modifier = volunteer_limit_plus_two
+			}
+		}
+		custom_effect_tooltip = BLANK_LINE
+		IF = {
+			limit = { is_liberal_ideology = yes }
+			custom_effect_tooltip = GER_AUR_start_rep_tt
+		}
+		ELSE = { custom_effect_tooltip = GER_AUR_start_nat_tt }
+		
+	}
+}
+
+country_event = { #AUR Victory (GRR)
+	id = austria.4
+	title = austria.4.t
+	desc = austria.4.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.4.a
+		set_autonomy = {
+			target = AUR
+			autonomy_state = autonomy_freistaat
+		}
+		hidden_effect = {
+			AUR = {
+				set_cosmetic_tag = AUS_freistaat
+				set_politics = {
+					ruling_party = democratic
+				}
+				set_popularities = {
+					socialism = 2
+					social_democratic = 39
+					social_liberal = 3
+					liberal = 3
+					democratic = 38
+					neutrality = 6
+					despotism = 9
+				}
+				set_party_name = {
+					ideology = neutrality
+					long_name = AUS_neutrality_party_long
+					name = AUS_neutrality_party
+				}
+				clr_country_flag = socdem_coalition_flag
+				clr_country_flag = soclib_coalition_flag
+				clr_country_flag = marlib_coalition_flag
+				clr_country_flag = condem_coalition_flag
+				clr_country_flag = pataut_coalition_flag
+				set_country_flag = autdem_coalition_flag
+				set_country_flag = marlib_coalition_flag
+				set_country_flag = soclib_coalition_flag
+				set_capital = { state = 4 }
+			}
+		}
+		
+	}
+}

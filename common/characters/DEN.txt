@@ -1,0 +1,451 @@
+characters={
+
+#########################
+#########################
+#### COUNTRY LEADERS ####
+#########################
+#########################
+
+#### DEMOCRATIC ####
+
+	DEN_thorvald_stauning = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name = DEN_thorvald_stauning
+			portraits={
+				civilian={
+					large = GFX_portrait_Thorvald_Stauning
+					small = GFX_portrait_DEN_thorvald_stauning_small
+				}
+			}
+			country_leader = {
+				ideology = social_democratic_subtype
+				traits = { DEN_socialdemokrat }
+				expire = "1965.1.1.1"
+				id = -1
+			}
+
+			advisor = {
+				slot = political_advisor
+				idea_token = DEN_thorvald_stauning
+				allowed = {
+					original_tag = DEN
+					#Already checked for DLC in the instance
+				}
+				available = {
+					is_country_leader = no
+				}
+				traits = {
+					resolute_social_democrat 
+				}
+				ai_will_do = {
+					base = 5
+				}
+				on_add = {
+					owner = {
+						DEN_advisor_medium_BOP_decrease_effect = yes
+					}
+				}
+				on_remove = {
+					owner = {
+						DEN_advisor_medium_BOP_increase_effect = yes
+					}
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name = DEN_thorvald_stauning
+			portraits={
+				civilian={
+					large=GFX_portrait_Thorvald_Stauning
+				}
+			}
+			country_leader={
+				ideology=social_democratic_subtype
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+
+#### NON-ALIGNED ####
+
+	DEN_knud_bach = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name = DEN_knud_bach
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_knud_bach
+					small = GFX_portrait_DEN_knud_bach_small
+				}
+			}
+			country_leader = {
+				ideology = oligarchism
+				traits = { DEN_rightwing_populist}
+				expire = "1965.1.1.1"
+				id = -1
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = DEN_knud_bach
+				allowed = {
+					original_tag = DEN
+					#Already checked for DLC in the instance
+				}
+				available = {
+					is_country_leader = no
+				}
+				visible = {
+					NOT = { 
+						OR = {
+							has_country_leader = {
+								ruling_only = yes
+								character = DEN_christian_x
+							}
+							AND = {
+								has_country_leader = {
+									ruling_only = yes
+									character = DEN_frits_clausen
+								}
+								has_completed_focus = DEN_ask_for_support
+							}
+							AND = {
+								has_country_leader = {
+									ruling_only = yes
+									character = DEN_cay_lembcke
+								}
+								has_completed_focus = DEN_seize_power
+							}
+						}
+					}
+				}
+				traits = {
+					landbrugsminister 
+				}
+				ai_will_do = {
+					base = 5
+					modifier = {
+						factor = 0
+						DEN_historical_ai = yes
+					}
+					modifier = {
+						factor = 10
+						DEN_royal_ai = yes
+					}
+				}
+				on_add = {
+					owner = {
+						DEN_advisor_medium_BOP_increase_effect = yes
+					}
+				}
+				on_remove = {
+					owner = {
+						DEN_advisor_medium_BOP_decrease_effect = yes
+					}
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name = DEN_knud_bach
+			portraits = {
+				civilian={
+					large = GFX_Portrait_Europe_Generic_1
+				}
+			}
+			country_leader = {
+				ideology = moderatism
+				expire = "1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+	DEN_knud_bach_2 = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name = DEN_knud_bach
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_knud_bach
+					small = GFX_portrait_DEN_knud_bach_small
+				}
+			}
+			country_leader = {
+				ideology = oligarchism
+				traits = { DEN_rightwing_populist}
+				expire = "1965.1.1.1"
+				id = -1
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = DEN_knud_bach
+				cost = 0
+				allowed = {
+					original_tag = DEN
+					#Already checked for DLC in the instance
+				}
+				available = {
+					is_country_leader = no
+				}
+				visible = {
+					has_country_leader = {
+						ruling_only = yes
+						character = DEN_christian_x
+					}
+				}
+				traits = {
+					landbrugsminister 
+				}
+				ai_will_do = {
+					base = 5
+					modifier = {
+						factor = 0
+						DEN_historical_ai = yes
+					}
+					modifier = {
+						factor = 10
+						DEN_royal_ai = yes
+					}
+				}
+				on_add = {
+					owner = {
+						DEN_advisor_medium_BOP_increase_effect = yes
+					}
+				}
+				on_remove = {
+					owner = {
+						DEN_advisor_medium_BOP_decrease_effect = yes
+					}
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name = DEN_knud_bach
+			portraits = {
+				civilian={
+					large = GFX_portrait_Europe_Generic_1
+				}
+			}
+			country_leader = {
+				ideology = moderatism
+				expire = "1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+	DEN_knud_bach_3 = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name = DEN_knud_bach
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_knud_bach
+					small = GFX_portrait_DEN_knud_bach_small
+				}
+			}
+			country_leader = {
+				ideology = oligarchism
+				traits = { DEN_rightwing_populist}
+				expire = "1965.1.1.1"
+				id = -1
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = DEN_knud_bach
+				cost = 50
+				allowed = {
+					original_tag = DEN
+					#Already checked for DLC in the instance
+				}
+				available = {
+					is_country_leader = no
+				}
+				visible = {
+					OR = {
+						AND = {
+							has_country_leader = {
+								ruling_only = yes
+								character = DEN_frits_clausen
+							}
+							has_completed_focus = DEN_ask_for_support
+						}
+						AND = {
+							has_country_leader = {
+								ruling_only = yes
+								character = DEN_cay_lembcke
+							}
+							has_completed_focus = DEN_seize_power
+						}
+					}
+				}
+				traits = {
+					landbrugsminister 
+				}
+				ai_will_do = {
+					base = 5
+					modifier = {
+						factor = 0
+						DEN_historical_ai = yes
+					}
+				}
+				on_add = {
+					owner = {
+						DEN_advisor_medium_BOP_increase_effect = yes
+					}
+				}
+				on_remove = {
+					owner = {
+						DEN_advisor_medium_BOP_decrease_effect = yes
+					}
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name = DEN_knud_bach
+			portraits = {
+				civilian={
+					large = GFX_portrait_Europe_Generic_1
+				}
+			}
+			country_leader = {
+				ideology = moderatism
+				expire = "1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+
+	DEN_christian_x = {
+		name = DEN_christian_x
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DEN_christian_x
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { DEN_the_king }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	DEN_freedom_council = {
+		name = DEN_freedom_council
+		portraits = {
+			civilian = {
+				large = GFX_portrait_DEN_freedom_council
+			}
+		}
+		country_leader = {
+			ideology = centrism
+			traits = { DEN_freedom_council_traits }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+#### COMMUNIST ####
+
+	DEN_aksel_larsen = {
+		instance = {
+			allowed = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			name = DEN_aksel_larsen
+			portraits = {
+				civilian = {
+					large = GFX_portrait_DEN_aksel_larsen
+					small = GFX_portrait_DEN_aksel_larsen_small
+				}
+			}
+			country_leader={
+				ideology=leninism
+				traits = { DEN_kommunist }
+				expire="1965.1.1.1"
+				id=-1
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = DEN_aksel_larsen
+				allowed = {
+					original_tag = DEN
+					#Already checked for DLC in the instance
+				}
+				available = {
+					is_country_leader = no
+					NOT = {
+						has_government = fascism
+						has_character_flag = DEN_political_agitator_flag
+						has_country_flag = DEN_banned_communism_flag
+					}
+				}
+				ai_will_do = {
+					base = 5
+					modifier = {
+						factor = 0
+						DEN_historical_ai = yes
+					}
+					modifier = {
+						factor = 0
+						OR = {
+							DEN_rearming_ai = yes
+							DEN_royal_ai = yes					
+							DEN_fascist_ai = yes
+						}
+					}
+				}
+				traits = {
+					communist_revolutionary 
+				}
+				on_add = {
+					owner = {
+						DEN_advisor_low_BOP_decrease_effect = yes
+					}
+				}
+				on_remove = {
+					owner = {
+						DEN_advisor_low_BOP_increase_effect = yes
+					}
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = { has_dlc = "Arms Against Tyranny" }
+			}
+			name = DEN_aksel_larsen
+			portraits={
+				civilian={
+					large=GFX_portrait_Aksel_Larsen
+				}
+			}
+			country_leader={
+				ideology=leninism
+				expire="1965.1.1.1"
+				id=-1
+			}
+		}
+	}
+
+}

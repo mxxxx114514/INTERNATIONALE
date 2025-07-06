@@ -1,0 +1,32 @@
+division_template = {
+	name = "Iraqi Infantry Division"			# Infantry Division
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		location = 2097
+		division_template = "Iraqi Infantry Division"
+		start_experience_factor = 0.5
+	}
+	division = {
+		location = 2089
+		division_template = "Iraqi Infantry Division"
+		start_experience_factor = 0.5
+	}
+	division = {
+		location = 8001
+		division_template = "Iraqi Infantry Division"
+		start_experience_factor = 0.5
+	}
+}

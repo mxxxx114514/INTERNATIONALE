@@ -1,0 +1,10 @@
+#################
+#### CZE ####
+#################
+CZE_intervene_bw4_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = CZE NOT = { tag = BOH } }
+	visible = { has_global_flag = BUL_coup }
+}

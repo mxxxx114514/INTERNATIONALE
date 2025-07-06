@@ -1,0 +1,15 @@
+defined_text = {
+	name = poland_german_soviet_game_desc
+	text = {
+		trigger = { tag = POL }
+		localization_key = POL_GER_SOV_polish_desc
+	}
+	text = {
+		trigger = { tag = GER }
+		localization_key = POL_GER_SOV_german_desc
+	}
+	text = {
+		trigger = { tag = SOV }
+		localization_key = POL_GER_SOV_soviet_desc
+	}
+}

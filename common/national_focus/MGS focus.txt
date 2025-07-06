@@ -1,0 +1,236 @@
+focus_tree = {
+	id = MGS_focus
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2200 }
+
+	focus = {
+		id = MGS_the_immortal_eagle
+		icon = GFX_focus_unknown
+		x = 1
+		y = 0
+		cost = 2
+		completion_reward = {
+			add_war_support = 0.1
+		}
+
+	}
+
+	focus = {
+		id = MGS_united_under_the_general
+		icon = GFX_focus_unknown
+		relative_position_id = MGS_the_immortal_eagle
+		x = 0
+		y = 1
+		prerequisite = { focus = MGS_the_immortal_eagle }
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MGS_low_organization
+				add_idea = MGS_low_organization_1
+			}
+		}
+
+	}
+
+	focus = {
+		id = MGS_promote_nationalism
+		icon = GFX_focus_unknown
+		relative_position_id = MGS_united_under_the_general
+		x = -3
+		y = 1
+		prerequisite = { focus = MGS_united_under_the_general }
+		cost = 2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MGS_national_fanaticism
+				add_idea = MGS_national_fanaticism_1
+			}
+		}
+
+	}
+
+	focus = {
+		id = MGS_monitor_factories
+		icon = GFX_focus_unknown
+		relative_position_id = MGS_united_under_the_general
+		x = -1
+		y = 1
+		prerequisite = { focus = MGS_united_under_the_general }
+		cost = 2
+		completion_reward = {
+			add_timed_idea = {
+				idea = MGS_work_hard
+				days = 21
+			}
+		}
+
+	}
+
+	focus = {
+		id = MGS_organize_anti_communist_youth_league
+		icon = GFX_focus_unknown
+		relative_position_id = MGS_united_under_the_general
+		x = -2
+		y = 2
+		prerequisite = { focus = MGS_promote_nationalism }
+		prerequisite = { focus = MGS_monitor_factories }
+		cost = 2
+		completion_reward = {
+			928 = {
+				create_unit = {
+					division = "division_template = \"Brigada Agrarista\" start_experience_factor = 0.65 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 3
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = MGS_forced_conscription
+		icon = GFX_focus_unknown
+		relative_position_id = MGS_united_under_the_general
+		x = 1
+		y = 1
+		prerequisite = { focus = MGS_united_under_the_general }
+		mutually_exclusive = { focus = MGS_quality_over_quantity }
+		cost = 2
+		available = { has_completed_focus = MGS_promote_nationalism }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MGS_national_fanaticism_1
+				add_idea = MGS_national_fanaticism_21
+			}
+			swap_ideas = {
+				remove_idea = MGS_low_organization_1
+				add_idea = MGS_low_organization_21
+			}
+		}
+
+	}
+
+	focus = {
+		id = MGS_quality_over_quantity
+		icon = GFX_focus_unknown
+		relative_position_id = MGS_united_under_the_general
+		x = 3
+		y = 1
+		prerequisite = { focus = MGS_united_under_the_general }
+		mutually_exclusive = { focus = MGS_forced_conscription }
+		cost = 2
+		available = { has_completed_focus = MGS_promote_nationalism }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MGS_national_fanaticism_1
+				add_idea = MGS_national_fanaticism_22
+			}
+			swap_ideas = {
+				remove_idea = MGS_low_organization_1
+				add_idea = MGS_low_organization_22
+			}
+		}
+
+	}
+
+	focus = {
+		id = MGS_stabilize_front_line
+		icon = GFX_focus_unknown
+		relative_position_id = MGS_united_under_the_general
+		x = 2
+		y = 2
+		prerequisite = { focus = MGS_quality_over_quantity focus = MGS_forced_conscription }
+		cost = 2
+		completion_reward = {
+			effect_tooltip = {
+				swap_ideas = {
+					remove_idea = MGS_low_organization_21
+					add_idea = MGS_low_organization_31
+				}
+			}
+			hidden_effect = {
+				IF = {
+					limit = { has_idea = MGS_low_organization_21 }
+					swap_ideas = {
+						remove_idea = MGS_low_organization_21
+						add_idea = MGS_low_organization_31
+					}
+				}
+				ELSE_IF = {
+					limit = { has_idea = MGS_low_organization_22 }
+					swap_ideas = {
+						remove_idea = MGS_low_organization_22
+						add_idea = MGS_low_organization_32
+					}
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = MGS_invite_abascal
+		icon = GFX_focus_unknown
+		relative_position_id = MGS_united_under_the_general
+		x = 0
+		y = 3
+		prerequisite = { focus = MGS_organize_anti_communist_youth_league }
+		prerequisite = { focus = MGS_stabilize_front_line }
+		cost = 2
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = MGS_create_militia
+		icon = GFX_focus_unknown
+		relative_position_id = MGS_invite_abascal
+		x = 0
+		y = 1
+		prerequisite = { focus = MGS_invite_abascal }
+		cost = 2
+		completion_reward = {
+			928 = {
+				create_unit = {
+					division = "division_template = \"Brigada Agrarista\" start_experience_factor = 0.65 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 6
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = MGS_dreams_of_the_nation
+		icon = GFX_focus_unknown
+		relative_position_id = MGS_create_militia
+		x = 0
+		y = 1
+		prerequisite = { focus = MGS_create_militia }
+		cost = 2
+		completion_reward = {
+			IF = {
+				limit = { has_idea = MGS_national_fanaticism_21 }
+				swap_ideas = {
+					remove_idea = MGS_national_fanaticism_21
+					add_idea = MGS_national_fanaticism_31
+				}
+			}
+			IF = {
+				limit = { has_idea = MGS_national_fanaticism_22 }
+				swap_ideas = {
+					remove_idea = MGS_national_fanaticism_22
+					add_idea = MGS_national_fanaticism_32
+				}
+			}
+			activate_mission = MGS_unify_south_mexico_mission
+		}
+
+	}
+
+}

@@ -1,0 +1,65 @@
+#################
+#### GERMANY ####
+#################
+GER_expand_tallinn_pakt_category = {
+	icon = ""
+	picture = ""
+	allowed = { tag = GRR }
+	visible = {
+		GRR = { has_completed_focus = GER_expand_tallinn_pakt }
+	}
+	priority = 1
+}
+
+GER_centralization_power_balance_decisions = {
+	icon = ""
+	picture = ""
+	allowed = { tag = GRR }
+	available = { is_ai = no }
+}
+
+GER_intervene_AUS_category = {
+	icon = ""
+	picture = ""
+	allowed = { tag = GRR }
+	priority = 10
+}
+
+GER_government_category = {
+	icon = ""
+	picture = ""
+	allowed = { tag = GRR }
+	#allowed = { always = no }
+	priority = 100
+}
+
+GER_reichstag_category = {
+	icon = ""
+	picture = ""
+	allowed = { tag = GRR }
+	#allowed = { always = no }
+	priority = 20
+
+	scripted_gui = GER_reichstag_gui
+}
+
+GER_defense_lines_category = {
+	allowed = { tag = GRR }
+	visible = { NOT = { has_global_flag = international_surrender } }
+	priority = 20
+}
+
+GER_eastern_conquests_category = {
+	allowed = { tag = GRR }
+	priority = 20
+}
+
+GER_demands_from_the_people_category = {
+	allowed = { tag = GRR }
+	available = { hidden_trigger = { is_ai = no } }
+	priority = 100
+}
+
+GER_industrial_construction_category = {
+	allowed = { tag = GRR }
+}

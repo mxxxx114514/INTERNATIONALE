@@ -1,0 +1,101 @@
+###########################
+# ENG News Events
+###########################
+
+add_namespace = ENG_news
+
+news_event = { #乔治五世去世
+	id = ENG_news.1
+	title = ENG_news.1.t
+	desc = ENG_news.1.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ENG_news.1.a
+		trigger = { tag = ENG }
+
+	}
+
+	option = {
+		name = ENG_news.1.b
+		trigger = { NOT = { tag = ENG } }
+
+	}
+
+}
+
+news_event = { #爱德华八世退位
+	id = ENG_news.2
+	title = ENG_news.2.t
+	desc = ENG_news.2.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ENG_news.2.a
+		trigger = { tag = ENG }
+
+	}
+
+	option = {
+		name = ENG_news.2.b
+		trigger = { NOT = { tag = ENG } }
+
+	}
+
+}
+
+news_event = { #英国保守党赢得选举
+	id = ENG_news.3
+	title = ENG_news.3.t
+	desc = ENG_news.3.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ENG_news.3.a
+		trigger = { tag = ENG }
+
+	}
+
+	option = {
+		name = ENG_news.3.b
+		trigger = { NOT = { tag = ENG } is_commie_ideology = no }
+
+	}
+
+	option = {
+		name = ENG_news.3.c
+		trigger = { NOT = { tag = ENG } is_commie_ideology = yes }
+
+	}
+
+}
+
+news_event = { #英国自由党-社民党联盟赢得选举
+	id = ENG_news.4
+	title = ENG_news.4.t
+	desc = ENG_news.4.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ENG_news.4.a
+		trigger = { tag = ENG }
+
+	}
+
+	option = {
+		name = ENG_news.4.b
+		trigger = { NOT = { tag = ENG } is_commie_ideology = no }
+
+	}
+
+	option = {
+		name = ENG_news.4.c
+		trigger = { NOT = { tag = ENG } is_commie_ideology = yes }
+
+	}
+
+}

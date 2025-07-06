@@ -1,0 +1,33 @@
+NOR_diplomacy_category = {
+
+	NOR_join_entente = {
+		allowed = { tag = NOR }
+		icon = ger_mefo_bills
+		visible = {
+			date > 1938.6.24
+		}
+		fire_only_once = yes
+		complete_effect = {
+			effect_tooltip = {
+				ENG = {
+					country_event = generic.2
+				}
+			}
+			hidden_effect = {
+				IF = {
+					limit = { ENG = { is_ai = yes } NOR = { is_ai = yes } }
+					ENG = { add_to_faction = NOR }
+				}
+				ELSE = {
+					ENG = {
+						country_event = generic.2
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+}

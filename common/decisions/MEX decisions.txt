@@ -1,0 +1,1455 @@
+####################################
+# 墨西哥合众国 MEX DECISIONS         #
+# by NekawaH，普鲁塔科·埃利亚斯·卡列斯 #
+####################################
+
+MEX_legacy_of_revolution_category = {
+
+	MEX_legacy_of_revolution_test = {
+		allowed = { tag = MEX }
+		fire_only_once = no
+		cost = 25
+		complete_effect = {
+		}
+	}
+
+}
+
+MEX_left_right_conflict = {
+
+	MEX_allow_gatherings = {
+		allowed = { tag = MEX }
+		icon = ger_mefo_bills
+		days_remove = 21	
+		cost = 25
+		remove_effect = {
+			add_power_balance_value = {
+				id = MEX_left_right_bop
+				value = -0.05
+				tooltip_side = MEX_left_side_bop
+			}
+			add_popularity = {
+				ideology = socialism
+				popularity = 0.05
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	MEX_disrupt_gold_shirts_speech = {
+		allowed = { tag = MEX }
+		icon = ger_mefo_bills
+		days_remove = 30	
+		cost = 50
+		remove_effect = {
+			add_power_balance_value = {
+				id = MEX_left_right_bop
+				value = -0.08
+				tooltip_side = MEX_left_side_bop
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	MEX_dismantal_gold_shirts_divisions = {
+		allowed = { tag = MEX }
+		icon = ger_mefo_bills
+		days_remove = 70	
+		cost = 50
+		remove_effect = {
+			random_owned_controlled_state = {
+				MEX = {
+					delete_unit = { state = PREV disband = yes }
+				}
+			}
+			add_power_balance_value = {
+				id = MEX_left_right_bop
+				value = -0.15
+				tooltip_side = MEX_left_side_bop
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	MEX_populist_propaganda = {
+		allowed = { tag = MEX }
+		icon = ger_mefo_bills
+		days_remove = 21	
+		cost = 25
+		remove_effect = {
+			add_power_balance_value = {
+				id = MEX_left_right_bop
+				value = 0.05
+				tooltip_side = MEX_right_side_bop
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	MEX_oppress_worker_strikes = {
+		allowed = { tag = MEX }
+		icon = ger_mefo_bills
+		days_remove = 70	
+		cost = 75
+		remove_effect = {
+			add_power_balance_value = {
+				id = MEX_left_right_bop
+				value = 0.1
+				tooltip_side = MEX_right_side_bop
+			}
+			add_popularity = {
+				ideology = socialism
+				popularity = -0.05
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+	}
+	
+}
+
+MEX_cristero_war_category = {
+
+	MEX_cristero_war_test_1 = {
+		allowed = { always = no }
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			set_country_flag = MEX_cristero_war_end
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	MEX_cristero_war_test_2 = {
+		allowed = { always = no }
+		available = { is_ai = no }
+		complete_effect = {
+			MEX_calculate_total_cristero_strength = yes
+			add_political_power = MEX_cristero_army_total_strength
+			set_variable = {
+				var = MEX_cristero_threshold
+				value = 30
+			}
+			every_owned_state = {
+				limit = {
+					MEX_state_cristero_army_strength_greater_than_threshold = yes
+				}
+				set_demilitarized_zone = yes
+			}
+		}
+	}
+
+	MEX_cristero_war_clear_cristero_army = {
+		allowed = { always = no }
+		available = {
+			hidden_trigger = { is_ai = no }
+			MEX_selected_cristero_army_strength_greater_than_0 = yes
+			OR = { MEX_selected_cristero_army_can_clear_with_army = yes MEX_selected_cristero_army_is_demilitarized_zone = no }
+		}
+		days_remove = MEX_cristero_war_clear_cristero_army_cooldown
+		remove_effect = {
+			set_variable = {
+				var = MEX_cristero_add
+				value = MEX_cristero_war_clear_cristero_army_strength
+			}
+			add_to_variable = { MEX.MEX_cristero_GOV_damage = MEX.MEX_cristero_war_clear_cristero_army_strength }
+			MEX_selected_cristero_army_strength_add = yes
+			IF = {
+				limit = {
+					MEX_selected_cristero_army_strength_greater_than_35 = no
+				}
+				MEX_selected_cristero_army_strength_clear_demilitarized = yes
+			}
+		}
+	}
+
+	MEX_cristero_war_spread_mission = {
+		allowed = { always = no }
+		days_mission_timeout = 24
+
+		available = {
+			hidden_trigger = {
+				has_completed_focus = MEX_pol2_6
+			}
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = MEX_cristero_war_spread_tt
+			IF = {
+				limit = { has_country_flag = MEX_villa_in_government }
+				IF = {
+					limit = {
+						check_variable = {
+							MEX_cristero_LDN_damage < MEX_cristero_GOV_damage
+						}
+					}
+					add_to_variable = { MEX_LDN_balance = 1 }
+					custom_effect_tooltip = MEX_LDN_win_tt
+				}
+				ELSE_IF = {
+					limit = {
+						check_variable = {
+							MEX_cristero_GOV_damage < MEX_cristero_LDN_damage
+						}
+					}
+					add_to_variable = { MEX_LDN_balance = -1 }
+					custom_effect_tooltip = MEX_GOV_win_tt
+				}
+				ELSE = {
+					custom_effect_tooltip = MEX_GOV_LDN_tie_tt
+				}
+			}
+			#hidden_effect = {
+				set_variable = { MEX_cristero_GOV_damage = 0 }
+				set_variable = { MEX_cristero_LDN_damage = 0 }
+				set_variable = { MEX_cristero_threshold = 25 }
+				random_owned_controlled_state = {
+					limit = { MEX_state_cristero_army_strength_greater_than_threshold = yes is_demilitarized_zone = no }
+					#set_demilitarized_zone = yes
+					IF = {
+						limit = {
+							any_neighbor_state = {
+								NOT = { has_state_flag = MEX_cristero_temp_state_flag }
+								is_demilitarized_zone = yes
+							}
+						}
+						random_neighbor_state = {
+							limit = {
+								NOT = { has_state_flag = MEX_cristero_temp_state_flag }
+								is_demilitarized_zone = yes
+							}
+							set_state_flag = MEX_cristero_temp_state_flag
+						}
+					}
+					IF = {
+						limit = {
+							any_neighbor_state = {
+								NOT = { has_state_flag = MEX_cristero_temp_state_flag }
+								is_demilitarized_zone = yes
+							}
+						}
+						set_variable = {
+							var = MEX.MEX_cristero_add
+							value = 10
+						}
+						MEX_state_cristero_army_strength_add = yes
+					}
+					set_variable = {
+						var = MEX.MEX_cristero_add
+						value = 10
+					}
+					MEX_state_cristero_army_strength_add = yes
+					set_demilitarized_zone = yes
+					damage_building = {
+						type = infrastructure
+						damage = 1
+					}
+					damage_building = {
+						type = industrial_complex
+						damage = 1
+					}
+					damage_building = {
+						type = arms_factory
+						damage = 1
+					}
+				}
+				set_variable = {
+					var = MEX_cristero_threshold
+					value = 10
+				}
+				hidden_effect = {
+					random_owned_controlled_state = {
+						limit = {
+							MEX_state_cristero_army_strength_greater_than_threshold = yes
+							is_demilitarized_zone = no
+							any_neighbor_state = {
+								is_demilitarized_zone = yes
+							}
+						}
+						set_variable = {
+							var = MEX.MEX_cristero_add
+							value = 5
+						}
+						MEX_state_cristero_army_strength_add = yes
+					}
+					every_owned_state = {
+						clr_state_flag = MEX_cristero_temp_state_flag
+					}
+				}
+				MEX = { activate_mission = MEX_cristero_war_spread_mission }
+			#}
+		}
+	}
+
+	MEX_cristero_war_clear_ai_mission = {
+		allowed = { always = no }
+		days_mission_timeout = 12
+
+		available = {
+			hidden_trigger = {
+				has_completed_focus = MEX_pol2_6
+			}
+		}
+
+		timeout_effect = {
+			set_variable = {
+				var = MEX.MEX_cristero_threshold
+				value = 15
+			}
+			random_owned_controlled_state = {
+				limit = { MEX_state_cristero_army_strength_greater_than_threshold = yes }
+				set_variable = {
+					var = MEX.MEX_cristero_add
+					value = -15
+				}
+				add_to_variable = { MEX.MEX_cristero_GOV_damage = MEX.MEX_cristero_add }
+				MEX_state_cristero_army_strength_add = yes
+				set_variable = {
+					var = MEX.MEX_cristero_threshold
+					value = 35
+				}
+				IF = {
+					limit = {
+						MEX_state_cristero_army_strength_greater_than_threshold = no
+					}
+					set_demilitarized_zone = no
+				}
+			}
+			set_variable = {
+				var = MEX.MEX_cristero_threshold
+				value = 35
+			}
+			every_owned_state = {
+				IF = {
+					limit = { MEX_state_cristero_army_strength_greater_than_threshold = no }
+					set_demilitarized_zone = no
+				}
+			}
+			MEX = { activate_mission = MEX_cristero_war_clear_ai_mission }
+		}
+	}
+
+	MEX_cristero_war_LDN_clear_mission = {
+		allowed = { always = no }
+		days_mission_timeout = 12
+
+		available = {
+			hidden_trigger = {
+				has_completed_focus = MEX_pol2_6
+			}
+		}
+
+		timeout_effect = {
+			set_variable = {
+				var = MEX.MEX_cristero_threshold
+				value = 5
+			}
+			custom_effect_tooltip = MEX_LDN_action_tt
+			random_owned_controlled_state = {
+				limit = { MEX_state_cristero_army_strength_greater_than_threshold = yes MEX_is_northern_state = yes }
+				set_variable_to_random = {
+					var = MEX.MEX_cristero_add
+					min = -20
+					max = -5
+					integer = yes
+				}
+				add_to_variable = { MEX.MEX_cristero_LDN_damage = MEX.MEX_cristero_add }
+				MEX_state_cristero_army_strength_add = yes
+			}
+			MEX = { activate_mission = MEX_cristero_war_LDN_clear_mission }
+		}
+	}
+
+	MEX_PAN_establishment_mission = {
+		allowed = { hidden_trigger = { always = no } }
+		days_mission_timeout = 14
+
+		available = { always = no }
+
+		timeout_effect = {
+			set_party_name = {
+				ideology = democratic
+				long_name = MEX_democratic_party_pan
+				name = MEX_democratic_party_pan
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = MEX_PAN_strength_effect_positive
+			}
+			add_stability = MEX_PAN_strength_effect_negative
+			add_war_support = MEX_PAN_strength_effect_negative
+			set_country_flag = MEX_PAN_established_flag
+		}
+	}
+
+	MEX_defame_PAN_leadership = {
+		allowed = { always = no }
+		visible = { NOT = { has_country_flag = MEX_PAN_established_flag } }
+		days_remove = 2
+		fire_only_once = yes
+		cost = 10
+		remove_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.01
+			}
+			MEX_damage_PAN_strength = yes
+			custom_effect_tooltip = MEX_UNAM_PAN_punishment_tt
+
+			MEX_UNAM_subtract_enrollment_100 = yes
+		}
+		ai_will_do = { base = 500 }
+	}
+
+	MEX_obstruct_PAN_establishment_process = {
+		allowed = { always = no }
+		visible = { NOT = { has_country_flag = MEX_PAN_established_flag } }
+		days_remove = 2
+		fire_only_once = yes
+		cost = 10
+		remove_effect = {
+			add_stability = -0.05
+			MEX_damage_PAN_strength = yes
+			add_days_mission_timeout = {
+				mission = MEX_PAN_establishment_mission
+				days = 7
+			}
+		}
+		ai_will_do = { base = 500 }
+	}
+
+	MEX_propagate_all_people_party = {
+		allowed = { always = no }
+		visible = { NOT = { has_country_flag = MEX_PAN_established_flag } }
+		days_remove = 2
+		fire_only_once = yes
+		cost = 15
+		remove_effect = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.03
+			}
+			MEX_PLM_R_loyalty_subtract = yes
+			MEX_PLM_E_loyalty_add = yes
+			MEX_damage_PAN_strength = yes
+		}
+		ai_will_do = { base = 500 }
+	}
+
+	MEX_utilize_PNA_against_PAN = {
+		allowed = { always = no }
+		visible = { NOT = { has_country_flag = MEX_PAN_established_flag } }
+		days_remove = 2
+		fire_only_once = yes
+		cost = 15
+		remove_effect = {
+			add_popularity = {
+				ideology = socialism
+				popularity = 0.03
+			}
+			add_power_balance_value = {
+				id = MEX_left_right_bop
+				value = -0.05
+				tooltip_side = MEX_left_side_bop
+			}
+			MEX_PNA_loyalty_add = yes
+			MEX_PLM_E_loyalty_subtract = yes
+			MEX_damage_PAN_strength = yes
+		}
+		ai_will_do = { base = 500 }
+	}
+
+	MEX_utilize_ARM_against_PAN = {
+		allowed = { always = no }
+		visible = { NOT = { has_country_flag = MEX_PAN_established_flag } }
+		days_remove = 2
+		fire_only_once = yes
+		cost = 10
+		remove_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_power_balance_value = {
+				id = MEX_left_right_bop
+				value = 0.05
+				tooltip_side = MEX_right_side_bop
+			}
+			MEX_PLM_R_loyalty_subtract = yes
+			MEX_PLM_E_loyalty_subtract = yes
+			MEX_damage_PAN_strength = yes
+		}
+		ai_will_do = { base = 500 }
+	}
+
+}
+
+MEX_six_year_plan_category = {
+
+	MEX_capital_veracruz_line = {
+		allowed = { always = no }
+		days_remove = 120
+		fire_only_once = yes
+		cost = 30
+		remove_effect = {
+			add_to_variable = { MEX_six_year_plan_construction = 0.03 }
+			custom_effect_tooltip = MEX_six_year_plan_add_construction_1_tt
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 13278 13279 8089 13349 12810 }
+				start_state = 13278
+				target_state = 12810
+			}
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 13278 13279 13283 13284 13356 13291 }
+				start_state = 13278
+				target_state = 13291
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+
+	MEX_tabasco_chiapas_line = {
+		allowed = { always = no }
+		days_remove = 120
+		fire_only_once = yes
+		cost = 30
+		remove_effect = {
+			add_to_variable = { MEX_six_year_plan_construction = 0.03 }
+			custom_effect_tooltip = MEX_six_year_plan_add_construction_1_tt
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 13262 13329 12753 }
+				start_state = 13262
+				target_state = 12753
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+
+	MEX_sonora_chihuahua_line = {
+		allowed = { always = no }
+		days_remove = 120
+		fire_only_once = yes
+		cost = 30
+		remove_effect = {
+			add_to_variable = { MEX_six_year_plan_construction = 0.03 }
+			custom_effect_tooltip = MEX_six_year_plan_add_construction_1_tt
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 4908 8033 7935 10830 }
+				start_state = 4908
+				target_state = 10830
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+
+	MEX_sinaloa_durango_line = {
+		allowed = { always = no }
+		days_remove = 120
+		fire_only_once = yes
+		cost = 30
+		remove_effect = {
+			add_to_variable = { MEX_six_year_plan_construction = 0.03 }
+			custom_effect_tooltip = MEX_six_year_plan_add_construction_1_tt
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 8057 10871 13375 8003 }
+				start_state = 8057
+				target_state = 8003
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+
+	MEX_coahuila_aguascalientes_line = {
+		allowed = { always = no }
+		days_remove = 120
+		fire_only_once = yes
+		cost = 30
+		remove_effect = {
+			add_to_variable = { MEX_six_year_plan_construction = 0.03 }
+			custom_effect_tooltip = MEX_six_year_plan_add_construction_1_tt
+			build_railway = {
+				level = 1
+				build_only_on_allied = yes
+				fallback = yes
+				path = { 12835 13301 10738 10172 }
+				start_state = 12835
+				target_state = 10172
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+
+	MEX_increase_construction = {
+		allowed = { always = no }
+		days_remove = 60
+		available = {
+			check_variable = { MEX_six_year_plan_construction < 0.5 }
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			add_to_variable = { MEX_six_year_plan_construction = 0.1 }
+			custom_effect_tooltip = MEX_six_year_plan_add_construction_2_tt
+			add_to_variable = { MEX_six_year_plan_cost = 0.1 }
+			custom_effect_tooltip = MEX_six_year_plan_add_cost_2_tt
+		}
+	}
+
+	MEX_increase_research = {
+		allowed = { always = no }
+		days_remove = 60
+		available = {
+			check_variable = { MEX_six_year_plan_construction < 0.15 }
+		}
+		fire_only_once = yes
+		cost = 25
+		complete_effect = {
+			add_to_variable = { MEX_six_year_plan_research = 0.05 }
+			custom_effect_tooltip = MEX_six_year_plan_add_research_2_tt
+			add_to_variable = { MEX_six_year_plan_cost = 0.1 }
+			custom_effect_tooltip = MEX_six_year_plan_add_cost_2_tt
+		}
+	}
+	
+	MEX_develop_mexico_city = {
+		allowed = { always = no }
+		days_remove = 60
+		cost = 25
+		modifier = {
+			civilian_factory_use = 3
+		}
+		available = { num_of_civilian_factories_available_for_projects > 2 }
+		fire_only_once = yes
+		complete_effect = {
+			277 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			940 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			942 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = { base = 50 }
+	}
+
+	MEX_develop_baja_california = {
+		allowed = { always = no }
+		days_remove = 60
+		cost = 25
+		modifier = {
+			civilian_factory_use = 2
+		}
+		available = { num_of_civilian_factories_available_for_projects > 1 }
+		fire_only_once = yes
+		complete_effect = {
+			484 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			925 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = { base = 20 }
+	}
+
+	MEX_develop_northwest = {
+		allowed = { always = no }
+		days_remove = 60
+		cost = 25
+		modifier = {
+			civilian_factory_use = 3
+		}
+		available = { num_of_civilian_factories_available_for_projects > 2 }
+		fire_only_once = yes
+		complete_effect = {
+			479 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			480 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			930 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = { base = 200 }
+	}
+
+	MEX_develop_yucatan = {
+		allowed = { always = no }
+		days_remove = 60
+		cost = 25
+		modifier = {
+			civilian_factory_use = 3
+		}
+		available = { num_of_civilian_factories_available_for_projects > 2 }
+		fire_only_once = yes
+		complete_effect = {
+			474 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			926 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			927 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = { base = 20 }
+	}
+
+}
+
+MEX_UNAM_category = {
+
+	MEX_UNAM_test = {
+		allowed = { always = no }
+		days_remove = 60
+		cost = 25
+		complete_effect = {
+			
+		}
+	}
+
+	MEX_UNAM_develop_university_city = {
+		allowed = { always = no }
+		days_remove = 60
+		cost = 25
+		modifier = {
+			civilian_factory_use = 2
+		}
+		available = { num_of_civilian_factories_available_for_projects > 1 }
+		fire_only_once = yes
+		complete_effect = {
+			add_stability = 0.05
+			MEX_UNAM_improve_social_attitude_1 = yes
+			add_to_variable = { MEX_six_year_plan_research = 0.02 }
+			add_to_variable = { MEX_six_year_plan_cost = 0.02 }
+			custom_effect_tooltip = MEX_six_year_plan_add_research_1_tt
+			custom_effect_tooltip = MEX_six_year_plan_add_cost_1_tt
+
+		}
+		ai_will_do = { base = 100 }
+	}
+
+	MEX_UNAM_develop_associated_middle_schools = {
+		allowed = { always = no }
+		days_remove = 60
+		cost = 25
+		modifier = {
+			political_power_cost = 0.1
+		}
+		available = { num_of_civilian_factories_available_for_projects > 1 }
+		fire_only_once = yes
+		complete_effect = {
+			add_stability = 0.05
+			add_to_variable = { MEX_six_year_plan_research = 0.02 }
+			add_to_variable = { MEX_six_year_plan_cost = 0.02 }
+			custom_effect_tooltip = MEX_six_year_plan_add_research_1_tt
+			custom_effect_tooltip = MEX_six_year_plan_add_cost_1_tt
+			add_popularity = {
+				ideology = social_democratic
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.03
+			}
+			
+		}
+		ai_will_do = { base = 100 }
+	}
+
+	MEX_UNAM_suppress_catholic_student_union = {
+		allowed = { always = no }
+		days_remove = 14
+		cost = 25
+		visible = { NOT = { has_country_flag = MEX_UNAM_headmaster_replaced_flag } }
+		complete_effect = {
+			add_stability = -0.01
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.02
+			}
+			random_list = {
+				50 = {
+					country_event = {
+						id = mexico_unam.2
+						days = 1
+					}
+				}
+				25 = {
+					country_event = {
+						id = mexico_unam.3
+						days = 1
+					}
+				}
+				25 = {
+					country_event = {
+						id = mexico_unam.4
+						days = 1
+					}
+				}
+			}
+		}
+		ai_will_do = { base = 100 }
+	}
+
+	MEX_UNAM_push_for_socialist_education = {
+		allowed = { always = no }
+		days_remove = 7
+		cost = 25
+		visible = { NOT = { has_country_flag = MEX_UNAM_headmaster_replaced_flag } }
+		modifier = {
+			political_power_cost = 0.2
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = social_democratic
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = socialism
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.02
+			}
+		}
+		ai_will_do = { base = 100 }
+	}
+
+	MEX_UNAM_replace_headmaster = {
+		allowed = { always = no }
+		cost = 25
+		available = { democratic < 0.15 }
+		fire_only_once = yes
+		complete_effect = {
+			country_event = mexico_unam.26
+		}
+		ai_will_do = { base = 2000 }
+	}
+
+	MEX_UNAM_research_funding = {
+		allowed = { always = no }
+		cost = 50
+		days_remove = 180
+		modifier = {
+			political_power_cost = 0.1
+			research_speed_factor = 0.1
+		}
+		remove_effect = {
+			MEX_UNAM_improve_social_attitude_2 = yes
+
+		}
+		ai_will_do = { base = 100 }
+	}
+
+	MEX_UNAM_enrollment_expansion = {
+		allowed = { always = no }
+		cost = 25
+		days_remove = 45
+		modifier = {
+			political_power_cost = 0.1
+		}
+		remove_effect = {
+			MEX_UNAM_add_enrollment_100 = yes
+			MEX_UNAM_improve_social_attitude_1 = yes
+
+		}
+		ai_will_do = { base = 100 }
+	}
+
+	MEX_UNAM_promote_higher_education = {
+		allowed = { always = no }
+		cost = 25
+		days_remove = 60
+		modifier = {
+			political_power_cost = 0.1
+		}
+		remove_effect = {
+			MEX_UNAM_improve_social_attitude_2 = yes
+			add_stability = 0.05
+
+		}
+		ai_will_do = { base = 100 }
+	}
+
+	MEX_UNAM_relax_academic_political_cencorships = {
+		allowed = { always = no }
+		cost = 15
+		fire_only_once = yes
+		complete_effect = {
+			MEX_improve_academic_freedom = yes
+			add_popularity = {
+				ideology = social_democratic
+				popularity = -0.05
+			}
+		}
+		ai_will_do = { base = 1000 }
+	}
+
+	MEX_UNAM_allow_independent_forums = {
+		allowed = { always = no }
+		cost = 15
+		fire_only_once = yes
+		complete_effect = {
+			MEX_improve_academic_freedom = yes
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.02
+			}
+		}
+		ai_will_do = { base = 1000 }
+	}
+
+	MEX_UNAM_openly_accept_criticism = {
+		allowed = { always = no }
+		cost = 15
+		fire_only_once = yes
+		complete_effect = {
+			MEX_improve_academic_freedom = yes
+			add_stability = -0.05
+			add_popularity = {
+				ideology = social_democratic
+				popularity = -0.05
+			}
+		}
+		ai_will_do = { base = 1000 }
+	}
+
+}
+
+MEX_civil_war_category = {
+
+	MEX_release_MCA = {
+		allowed = { tag = MEX }
+		available = {
+			country_exists = MEX
+			NOT = { country_exists = MCA }
+			owns_state = 484
+			owns_state = 925
+			has_war = no
+		}
+		visible = {
+			has_country_flag = MEX_civil_war_flag
+		}
+		fire_only_once = yes
+		days_remove = 3
+		remove_effect = {
+			MEX_pancho_villa = { set_nationality = MCA }
+			MCA = {
+				transfer_state = 484
+				transfer_state = 925
+				promote_character = { character = MEX_pancho_villa ideology = socialism_subtype }
+			}
+			set_autonomy = {
+				target = MCA
+				autonomy_state = autonomy_autonomous_governorate
+			}
+			MCA = {
+				hidden_effect = {
+					generic_fix_core_claims = yes
+					set_politics = {
+						ruling_party = socialism
+					}
+					set_popularities = {
+						auth_communism = 10
+						communism = 25
+						socialism = 45
+						social_democratic = 20
+					}
+				}
+			}
+			hidden_effect = {
+				generic_fix_core_claims = yes
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	MEX_release_YUC = {
+		allowed = { tag = MEX }
+		available = {
+			country_exists = MEX
+			country_exists = MCA
+			NOT = { country_exists = YUC }
+			owns_state = 474
+			owns_state = 475
+			owns_state = 926
+			owns_state = 927
+			owns_state = 928
+			has_war = no
+		}
+		visible = {
+			has_country_flag = MEX_civil_war_flag
+		}
+		fire_only_once = yes
+		days_remove = 3
+		remove_effect = {
+			YUC = {
+				set_cosmetic_tag = yucatan
+				transfer_state = 474
+				transfer_state = 926
+				transfer_state = 927
+			}
+			set_autonomy = {
+				target = YUC
+				autonomy_state = autonomy_autonomous_governorate
+			}
+			YUC = {
+				hidden_effect = {
+					set_capital = { state = 474 }
+					generic_fix_core_claims = yes
+					IF = {
+						limit = { tag = COM }
+						set_politics = {
+							ruling_party = socialism
+						}
+						set_popularities = {
+							communism = 20
+							socialism = 42
+							social_democratic = 38
+						}
+						set_country_flag = socdem_coalition_flag
+					}
+					ELSE = {
+						set_politics = {
+							ruling_party = fascism
+						}
+						set_popularities = {
+							despotism = 20
+							fascism = 80
+						}
+					}
+				}
+			}
+			transfer_state = 928
+			transfer_state = 475
+			hidden_effect = {
+				generic_fix_core_claims = yes
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	MEX_defeat_NMX_mission = {
+		allowed = { always = no }
+		available = {
+			NOT = { country_exists = NMX }
+		}
+		fire_only_once = yes
+		days_mission_timeout = 30
+		timeout_effect = {
+			add_stability = -0.25
+			add_war_support = -0.25
+			add_timed_idea = {
+				idea = MEX_losing_civil_war
+				days = 21
+			}
+			hidden_effect = { remove_ideas = MEX_civil_war_offensive }
+		}
+		complete_effect = {
+			add_stability = 0.2
+			add_war_support = 0.1
+			every_state = {
+				limit = { is_core_of = NMX NOT = { is_core_of = MEX } }
+				add_core_of = MEX
+			}
+			hidden_effect = { remove_ideas = MEX_civil_war_offensive }
+		}
+	}
+	MGS_join_MEX = {
+		allowed = { tag = MGS }
+		visible = { NOT = { has_cosmetic_tag = yucatan } }
+		available = {
+			country_exists = MGS
+			country_exists = MEX
+			NOT = { country_exists = COM }
+			NOT = { country_exists = NMX }
+			has_country_flag = loyal_to_MEX_flag
+		}
+		fire_only_once = yes
+		days_remove = 3
+		remove_effect = {
+			MEX = { country_event = MEX_civilwar.2 }
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	MGS_invade_MEX = {
+		allowed = { tag = MGS }
+		available = {
+			country_exists = MGS
+			country_exists = MEX
+			NOT = { country_exists = COM }
+			NOT = { country_exists = NMX }
+			NOT = { has_country_flag = loyal_to_MEX_flag }
+		}
+		fire_only_once = yes
+		days_remove = 3
+		remove_effect = {
+			declare_war_on = {
+				target = MEX
+				type = annex_everything
+			}
+			swap_ideas = {
+				remove_idea = MGS_civil_war_idea
+				add_idea = MGS_civil_war_idea_1
+			}
+			hidden_effect = {
+				MEX = {
+					swap_ideas = {
+						remove_idea = MEX_civil_war_idea
+						add_idea = MEX_civil_war_idea_1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	MGS_unify_south_mexico_mission = {
+		allowed = { always = no }
+		available = {
+			NOT = { country_exists = MGS }
+		}
+		fire_only_once = yes
+		days_mission_timeout = 21
+		is_good = no
+		timeout_effect = {
+			add_stability = -0.25
+			add_war_support = -0.25
+			add_timed_idea = {
+				idea = MEX_losing_civil_war
+				days = 21
+			}
+		}
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			every_state = {
+				limit = { is_core_of = COM }
+				add_core_of = MGS
+			}
+		}
+	}
+	COM_unify_south_mexico_mission = {
+		allowed = { always = no }
+		available = {
+			NOT = { country_exists = MGS }
+		}
+		fire_only_once = yes
+		days_mission_timeout = 21
+		is_good = no
+		timeout_effect = {
+			add_stability = -0.25
+			add_war_support = -0.25
+			add_timed_idea = {
+				idea = MEX_losing_civil_war
+				days = 21
+			}
+		}
+		complete_effect = {
+			complete_national_focus = COM_peasants_and_workers_are_happy
+		}
+	}
+	COM_join_MEX = {
+		allowed = { tag = COM }
+		visible = { NOT = { has_cosmetic_tag = yucatan } }
+		available = {
+			country_exists = COM
+			country_exists = MEX
+			NOT = { country_exists = NMX }
+			NOT = { country_exists = MGS }
+			has_country_flag = loyal_to_MEX_flag
+		}
+		fire_only_once = yes
+		days_remove = 3
+		remove_effect = {
+			IF = {
+				limit = { NOT = { has_completed_focus = COM_peasants_and_workers_are_happy } }
+				complete_national_focus = COM_peasants_and_workers_are_happy
+			}
+			MEX = { country_event = MEX_civilwar.2 }
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	COM_invade_MEX = {
+		allowed = { tag = COM }
+		available = {
+			country_exists = COM
+			country_exists = MEX
+			NOT = { country_exists = MGS }
+			NOT = { country_exists = NMX }
+			NOT = { has_country_flag = loyal_to_MEX_flag }
+		}
+		fire_only_once = yes
+		days_remove = 3
+		remove_effect = {
+			declare_war_on = {
+				target = MEX
+				type = annex_everything
+			}
+			swap_ideas = {
+				remove_idea = COM_civil_war_idea
+				add_idea = COM_civil_war_idea_1
+			}
+			hidden_effect = {
+				MEX = {
+					swap_ideas = {
+						remove_idea = MEX_civil_war_idea
+						add_idea = MEX_civil_war_idea_1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	NMX_invade_south = {
+		allowed = { tag = NMX }
+		available = {
+			country_exists = NMX
+			NOT = { country_exists = MEX }
+			NOT = { country_exists = MCA }
+			OR = {
+				country_exists = MGS
+				country_exists = COM
+			}
+		}
+		fire_only_once = yes
+		days_remove = 3
+		remove_effect = {
+			declare_war_on = {
+				target = MGS
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = COM
+				type = annex_everything
+			}
+			swap_ideas = {
+				remove_idea = NMX_civil_war_idea
+				add_idea = NMX_civil_war_idea_1
+			}
+			hidden_effect = {
+				MGS = {
+					swap_ideas = {
+						remove_idea = MGS_civil_war_idea
+						add_idea = MGS_civil_war_idea_2
+					}
+				}
+				COM = {
+					swap_ideas = {
+						remove_idea = COM_civil_war_idea
+						add_idea = COM_civil_war_idea_2
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	NMX_capture_mexico_city = {
+		allowed = { always = no }
+		fire_only_once = yes
+		complete_effect = {
+			activate_mission = NMX_capture_mexico_city_mission
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	NMX_capture_mexico_city_mission = {
+		allowed = { always = no }
+		available = {
+			controls_province = 13278
+		}
+		fire_only_once = yes
+		days_mission_timeout = 30
+		is_good = no
+		timeout_effect = {
+			add_stability = -0.25
+			add_war_support = -0.25
+			add_timed_idea = {
+				idea = MEX_losing_civil_war
+				days = 21
+			}
+			hidden_effect = { remove_ideas = MEX_civil_war_offensive }
+		}
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_state_core = 277
+			hidden_effect = { remove_ideas = MEX_civil_war_offensive }
+		}
+	}
+	NMX_unify_mexico = {
+		allowed = { always = no }
+		fire_only_once = yes
+		complete_effect = {
+			activate_mission = NMX_unify_mexico_mission
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	NMX_unify_mexico_mission = {
+		allowed = { always = no }
+		available = {
+			NOT = { country_exists = MEX }
+			NOT = { country_exists = MCA }
+		}
+		fire_only_once = yes
+		days_mission_timeout = 45
+		timeout_effect = {
+			add_stability = -0.25
+			add_war_support = -0.25
+			IF = {
+				limit = { has_idea = NMX_civil_war_idea }
+				remove_idea = NMX_civil_war_idea
+			}
+		}
+		complete_effect = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			every_owned_state = {
+				add_core_of = NMX
+			}
+		}
+	}
+}

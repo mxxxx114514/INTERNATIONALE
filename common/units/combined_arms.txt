@@ -1,0 +1,89 @@
+sub_units = {
+
+	combined_arms_battalion = {
+		abbreviation = "CBA"
+		sprite = mechanized
+		map_icon_category = infantry
+
+		priority = 610
+		ai_priority = 200
+		active = yes
+
+		type = {
+			mechanized
+		}
+		
+		group = mobile
+
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+			category_vehicle_infantry
+			category_mobile_and_mobile_combat_sup
+		}
+
+		combat_width = 4
+
+		#Abilities
+		soft_attack = -0.25
+		hard_attack = -0.25
+		air_attack = -0.15
+		breakthrough = -0.3
+		#defense = 0.15
+		#recon = 0.25
+		#initiative = 0.05
+		training_time = 180
+		suppression = 2
+		weight = 1.3
+		armor_value = -0.68
+		ap_attack = -0.9
+		hardness = -0.78
+		
+		#Size Definitions
+		max_strength = 40
+		max_organisation = 60
+		default_morale = 0.35
+		manpower = 750
+
+		supply_consumption = 0.2
+
+		# this is what moves us and sets speed
+		transport = medium_tank_chassis
+
+		need = {
+			mechanized_equipment = 50
+			infantry_equipment = 75
+			medium_tank_chassis = 45
+			medium_tank_artillery_chassis = 20
+			medium_tank_destroyer_chassis = 10
+			medium_tank_aa_chassis = 10
+			support_equipment = 30
+		}
+
+		forest = {
+			attack = -0.2
+			movement = -0.1
+		}
+		mountain = {
+			attack = -0.1
+		}
+		jungle = {
+			attack = -0.3
+		}
+		marsh = {
+			attack = -0.15
+		}
+		urban = {
+			attack = -0.2
+			defence = -0.05
+		}
+		river = {
+			attack = -0.2
+			movement = -0.2
+		}
+		amphibious = {
+			attack = -0.3
+		}
+	}
+}

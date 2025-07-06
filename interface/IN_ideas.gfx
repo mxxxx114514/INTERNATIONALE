@@ -1,0 +1,343 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_idea_IN_fall_offensive"
+		texturefile = "gfx/interface/ideas/IN/愚人节攻势.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_extremism"
+		texturefile = "gfx/interface/ideas/GER/极端主义盛行.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_political_chaos"
+		texturefile = "gfx/interface/ideas/GER/政治混乱.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_unstable_democracy"
+		texturefile = "gfx/interface/ideas/GER/脆弱的民主.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_new_liberalism"
+		texturefile = "gfx/interface/ideas/GER/德国新式自由主义.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_liberal_reforms"
+		texturefile = "gfx/interface/ideas/GER/自由化改革.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_revive_militarism"
+		texturefile = "gfx/interface/ideas/GER/军事主义复兴.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_depressed_economic_crisis_idea"
+		texturefile = "gfx/interface/ideas/GER/严重萧条的经济.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_unorganized_army"
+		texturefile = "gfx/interface/ideas/GER/军队纪律散漫.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_USA_collab"
+		texturefile = "gfx/interface/ideas/GER/德美经济合作.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_JAP_collab"
+		texturefile = "gfx/interface/ideas/GER/德日经济合作.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_ENG_collab"
+		texturefile = "gfx/interface/ideas/GER/德英经济合作.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_lib_market"
+		texturefile = "gfx/interface/ideas/GER/自由化国家市场的果实.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_firm_defense"
+		texturefile = "gfx/interface/ideas/GER/坚定守住，就有办法.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_increase_conscription"
+		texturefile = "gfx/interface/ideas/GER/民兵团.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_planning"
+		texturefile = "gfx/interface/ideas/GER/充分战前计划.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_reichstag_army_act"
+		texturefile = "gfx/interface/ideas/GER/扩军法案.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_encirclement_and_defense"
+		texturefile = "gfx/interface/ideas/GER/包围与防御.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_attack_and_breakthrough"
+		texturefile = "gfx/interface/ideas/GER/进攻与突破.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_military_industrial_compound"
+		texturefile = "gfx/interface/ideas/GER/军工复合体.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_defenders_of_the_reich"
+		texturefile = "gfx/interface/ideas/GER/国家的守卫者.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_the_new_reichswehr"
+		texturefile = "gfx/interface/ideas/GER/新式国防军.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_research"
+		texturefile = "gfx/interface/ideas/GER/注重科学.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GER_construction"
+		texturefile = "gfx/interface/ideas/GER/注重建设.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_national_econ_committee"
+		texturefile = "gfx/interface/ideas/GER/国家经济委员会精神.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_nat_rearmament"
+		texturefile = "gfx/interface/ideas/GER/重整军备.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_nat_construction"
+		texturefile = "gfx/interface/ideas/GER/大量公共建设项目.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_imp_political"
+		texturefile = "gfx/interface/ideas/GER/复辟帝国政治.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_imp_constitution"
+		texturefile = "gfx/interface/ideas/GER/帝国新宪法.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_imp_economy"
+		texturefile = "gfx/interface/ideas/GER/帝国新经济.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_militarist_revival_idea"
+		texturefile = "gfx/interface/ideas/GER/军事主义复兴.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_panzer"
+		texturefile = "gfx/interface/ideas/GER/德国装甲部队.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_absolute_defense_line"
+		texturefile = "gfx/interface/ideas/GER/德意志绝对防御战线.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_european_liberty_pact"
+		texturefile = "gfx/interface/ideas/GER/欧洲自由协定.png"
+	}
+
+	#spriteType = {
+	#	name = "GFX_idea_GER_army_tax_idea
+	#	texturefile = "gfx/interface/ideas/GER/自愿国军税.png
+	#}
+
+	spriteType = {
+		name = "GFX_idea_GER_crush_HUN"
+		texturefile = "gfx/interface/ideas/GER/集中击溃匈牙利.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_crush_ITA"
+		texturefile = "gfx/interface/ideas/GER/集中击溃意大利.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_crush_FRA"
+		texturefile = "gfx/interface/ideas/GER/集中击溃法国.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_crush_SOV"
+		texturefile = "gfx/interface/ideas/GER/集中击溃苏联.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_battle_or_death_idea"
+		texturefile = "gfx/interface/ideas/GER/非战即死.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_POL_in_faction"
+		texturefile = "gfx/interface/ideas/GER/华沙倒向柏林.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_commie_opposition"
+		texturefile = "gfx/interface/ideas/GER/共产党的反对.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_pillar_of_europe"
+		texturefile = "gfx/interface/ideas/GER/欧洲顶梁柱.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_internationale_buff"
+		texturefile = "gfx/interface/ideas/IN/革命之火.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_cln_member_idea"
+		texturefile = "gfx/interface/ideas/CLN/commonwealth_of_liberal_nations.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_POL_war_army"
+		texturefile = "gfx/interface/ideas/POL/POL_army_war.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MEX_legacy_of_1910_war"
+		texturefile = "gfx/interface/ideas/MEX/1910内战伤痛.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MEX_the_next_diaz"
+		texturefile = "gfx/interface/ideas/MEX/下一个迪亚斯.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MEX_catholic_opposition"
+		texturefile = "gfx/interface/ideas/MEX/天主教的反对.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MEX_civil_war_idea"
+		texturefile = "gfx/interface/ideas/MEX/内战热情中央政府.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_NMX_civil_war_idea"
+		texturefile = "gfx/interface/ideas/MEX/内战热情革命共和国.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MCA_civil_war_idea"
+		texturefile = "gfx/interface/ideas/MEX/内战热情北方联合阵线.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MGS_civil_war_idea"
+		texturefile = "gfx/interface/ideas/MEX/内战热情金衫军.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_COM_civil_war_idea"
+		texturefile = "gfx/interface/ideas/MEX/内战热情世工家.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_MEX_six_year_plan"
+		texturefile = "gfx/interface/ideas/MEX/六年计划.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ENG_britannia_rules_the_waves"
+		texturefile = "gfx/interface/ideas/ENG/不列颠尼亚统治海洋.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ENG_maintainer_of_world_order"
+		texturefile = "gfx/interface/ideas/ENG/世界秩序的维护者.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ENG_economic_stagnation"
+		texturefile = "gfx/interface/ideas/ENG/经济停滞.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ENG_long_tory_reign"
+		texturefile = "gfx/interface/ideas/ENG/托利党的长期执政.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ENG_imperial_sunset"
+		texturefile = "gfx/interface/ideas/ENG/夕阳西下的帝国.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_IN_winter_0"
+		texturefile = "gfx/interface/ideas/IN/攻势停滞.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CHI_defence_idea"
+		texturefile = "gfx/interface/ideas/CHI/CHI_defence_idea.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_PRU_war"
+		texturefile = "gfx/interface/ideas/PRU/PRU_unrest_2.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_government"
+		texturefile = "gfx/interface/ideas/generic/generic_government.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_heavy_industry"
+		texturefile = "gfx/interface/ideas/generic/generic_heavy_industry.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_medium_industry"
+		texturefile = "gfx/interface/ideas/generic/generic_medium_industry.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_army"
+		texturefile = "gfx/interface/ideas/generic/generic_army.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_legislature"
+		texturefile = "gfx/interface/ideas/generic/generic_empowered_legislature.png"
+	}
+
+}

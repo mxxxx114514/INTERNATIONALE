@@ -1,0 +1,200 @@
+###########################
+# Finnish events
+###########################
+
+add_namespace = finland
+
+news_event = {
+	id = finland.1
+	#title = finland.1.t
+	title = ""
+	#desc = finland.1.desc
+	desc = ""
+	#picture = GFX_news_event_BEL_civil_war
+
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1938.2.3
+		NOT = { has_global_flag = finnish_civil_war }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = finnish_civil_war
+			FIN = {
+				add_named_threat = {
+					threat = 10
+					name = IN_FIN_civil_war_threat
+				}
+				IF = {
+					limit = { has_war_with = POL }
+					white_peace = POL
+				}
+				set_country_flag = white_finland
+				add_ideas = generic_surrender_debuff_2
+				set_capital = { state = 149 }
+				every_owned_state = {
+					FIN = {
+						delete_unit = { state = PREV disband = yes }
+					}
+				}
+				leave_faction = yes
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = FCW_outcome
+							option = FCW_OUTCOME_WFI_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+			}
+			create_dynamic_country = {
+				original_tag = FIN
+				set_cosmetic_tag = RFI_red_finland
+				set_country_flag = red_finland
+				transfer_state = 111
+				transfer_state = 146
+				set_capital = { state = 111 }
+				set_politics = {
+					ruling_party = communism
+				}
+				set_popularities = {
+					communism = 100
+				}
+				#add_ideas = internationale_buff_2
+				declare_war_on = {
+					target = FIN
+					type = civil_war
+				}
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = FCW_outcome
+							option = FCW_OUTCOME_RFI_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+			}
+			RFI = {
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Jalkaväkidivisioona\" start_experience_factor = 1.0" 
+						owner = PREV
+						count = 11
+					}
+				}
+			}
+			WFI = {
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Jalkaväkidivisioona\" start_experience_factor = 1.0" 
+						owner = PREV
+						count = 6
+					}
+				}
+			}
+			146 = {
+				create_unit = {
+					division = "division_template = \"Jalkaväkidivisioona\" start_experience_factor = 1.0" 
+					owner = RFI
+					count = 10
+				}
+			}
+			GRR = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = WFI
+					value = 1000
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = { original_tag = IRE }
+					NOT = { original_tag = SAF }
+					OR = {
+						tag = ENG
+						is_in_faction_with = ENG
+					}
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = WFI
+					value = 1000
+				}
+			}
+			SOV = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = RFI
+					value = 1000
+				}
+			}
+			FRA = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = RFI
+					value = 1000
+				}
+			}
+			ITA = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = RFI
+					value = 1000
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.29
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+news_event = {
+	id = finland.3
+	#title = finland.3.t
+	title = " "
+	#desc = finland.3.desc
+	desc = " "
+	#picture = GFX_news_event_BEL_civil_war
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1939.11.1
+		country_exists = RFI
+		NOT = { has_global_flag = ww2 }
+		OR = {
+			has_game_rule = {
+				rule = FCW_outcome
+				option = DEFAULT
+			}
+			has_game_rule = {
+				rule = FCW_outcome
+				option = FCW_OUTCOME_RFI_VICTORY
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	immediate = {
+		hidden_effect = {
+			SOV = {
+				add_to_faction = RFI
+			}
+		}
+	}
+
+	option = {
+		#name = finland.3.a
+		name = " "
+	}
+}

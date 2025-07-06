@@ -1,0 +1,9 @@
+#################
+#### BEL ####
+#################
+BEL_civil_war_escalation_category = {
+	icon = ""
+	picture = ""
+	priority = 10000000
+	allowed = { always = no }
+}

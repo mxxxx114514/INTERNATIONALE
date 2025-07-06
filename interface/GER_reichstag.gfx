@@ -1,0 +1,13 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_GER_reichstag_seat"
+		texturefile = "gfx/interface/scripted_guis/GER/GER_reichstag_parties.png"
+		noOfFrames = 15
+	}
+	spriteType = {
+		name = "GFX_GER_reichstag_highlight"
+		texturefile = "gfx/interface/scripted_guis/GER/GER_reichstag_coalitions.png"
+		noOfFrames = 15
+	}
+
+}

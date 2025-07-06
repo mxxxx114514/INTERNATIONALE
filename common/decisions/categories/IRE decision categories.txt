@@ -1,0 +1,9 @@
+#################
+#### IRE ####
+#################
+IRE_rebel_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = IRE }
+}

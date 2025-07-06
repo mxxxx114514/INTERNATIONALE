@@ -1,0 +1,314 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_possible_country = {
+				limit = { is_chinese_tag = no NOT = { tag = USA } }
+				set_rule = { can_send_volunteers = yes }
+			}
+			every_possible_country = {
+				#add_dynamic_modifier = {
+					#modifier = what_so_ever_idea_blah_nekawah
+				#}
+				add_dynamic_modifier = {
+					modifier = AI_modifiers
+				}
+				generic_add_owned_claims = yes
+				set_variable = {
+					var = popularity_pp_var
+					value = party_popularity@THIS
+				}
+				set_variable = {
+					var = coalition_pp_var
+					value = 0
+				}
+				add_dynamic_modifier = {
+					modifier = popularity_pp_buff
+				}
+				add_dynamic_modifier = {
+					modifier = coalition_pp_buff
+				}
+			}
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = SOV_moscow_mayor
+						option = BREAKUP
+					}
+				}
+				set_global_flag = SOV_BREAKUP
+				SOV = {
+					every_owned_state = {
+						limit = { NOT = { state = 219 } NOT = { state = 945 } }
+						transfer_state_to = RUS
+					}
+					add_ideas = generic_surrender_buff_11
+				}
+				UKR = {
+					set_cosmetic_tag = UKR_SOV
+					every_core_state = {
+						limit = {
+							is_owned_by = RUS
+							NOT = { state = 94 }
+							NOT = { state = 194 }
+							NOT = { state = 218 }
+						}
+						transfer_state_to = UKR
+					}
+					#generic_remove_unowned_cores = yes
+					#generic_remove_unowned_claims = yes
+				}
+				BLR = {
+					set_cosmetic_tag = BLR_SOV
+					every_core_state = {
+						limit = {
+							is_owned_by = RUS
+							NOT = { state = 207 }
+							NOT = { state = 241 }
+						}
+						transfer_state_to = BLR
+					}
+					#generic_remove_unowned_cores = yes
+					#generic_remove_unowned_claims = yes
+				}
+				CAU = {
+					set_cosmetic_tag = CAU_SOV
+					transfer_state = 229
+					transfer_state = 230
+					transfer_state = 231
+					transfer_state = 826
+					generic_remove_unowned_cores = yes
+					generic_remove_unowned_claims = yes
+				}
+				RUS = {
+					set_cosmetic_tag = RUS_SOV
+					#generic_remove_unowned_cores = yes
+					#generic_remove_unowned_claims = yes
+					every_owned_state = {
+						limit = { is_core_of = KAZ }
+						add_core_of = RUS
+					}
+				}
+				BUK = {
+					set_cosmetic_tag = BUK_SOV
+					every_core_state = {
+						limit = {
+							is_owned_by = RUS
+						}
+						transfer_state_to = BUK
+					}
+				}
+				KHI = {
+					set_cosmetic_tag = KHI_SOV
+					every_core_state = {
+						limit = {
+							is_owned_by = RUS
+						}
+						transfer_state_to = KHI
+					}
+				}
+				SOV = {
+					set_autonomy = { target = RUS autonomy_state = autonomy_soviet_ssr }
+					set_autonomy = { target = UKR autonomy_state = autonomy_soviet_ssr }
+					set_autonomy = { target = BLR autonomy_state = autonomy_soviet_ssr }
+					set_autonomy = { target = CAU autonomy_state = autonomy_soviet_ssr }
+					set_autonomy = { target = BUK autonomy_state = autonomy_soviet_associate }
+					set_autonomy = { target = KHI autonomy_state = autonomy_soviet_associate }
+					generic_remove_unowned_cores = yes
+					generic_remove_unowned_claims = yes
+				}
+			}
+			every_country = {
+				limit = { is_chinese_tag = yes }
+				add_ideas = china_poor_army
+			}
+			every_country = {
+				limit = {
+					OR = {
+						#always = yes
+						tag = GRR
+						tag = ENG
+						tag = USA
+						tag = SOV
+						tag = FRA
+						tag = ITA
+						tag = POL
+						tag = NFR
+						tag = JAP
+						tag = TUR
+					}
+				}
+				add_major_buff = yes
+				set_country_flag = major_flag
+				create_intelligence_agency = yes
+			}
+			BEL = {
+				add_dynamic_modifier = {
+					modifier = BEL_wallonian_socialism
+				}
+			}
+			POL = {
+				add_opinion_modifier = {
+					target = SOV
+					modifier = world_war_pain_3
+				}
+				reverse_add_opinion_modifier = {
+					target = SOV
+					modifier = world_war_pain_3
+				}
+				add_opinion_modifier = {
+					target = RUS
+					modifier = world_war_pain_3
+				}
+				reverse_add_opinion_modifier = {
+					target = RUS
+					modifier = world_war_pain_3
+				}
+			}
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = POL_diplomacy
+						option = POL_DIPLOMACY_POL
+					}
+				}
+				add_to_variable = {
+					var = POL.POL_POL_influence
+					value = 100
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_game_rule = {
+						rule = POL_diplomacy
+						option = POL_DIPLOMACY_GER
+					}
+				}
+				add_to_variable = {
+					var = POL.POL_GER_influence
+					value = 100
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_game_rule = {
+						rule = POL_diplomacy
+						option = POL_DIPLOMACY_SOV
+					}
+				}
+				add_to_variable = {
+					var = POL.POL_SOV_influence
+					value = 100
+				}
+			}
+			ENG = {
+				add_ideas = generic_send_more_volunteers_idea
+				add_dynamic_modifier = { modifier = ENG_labour_influence }
+				add_dynamic_modifier = { modifier = ENG_libdem_influence }
+				add_dynamic_modifier = { modifier = ENG_tories_influence }
+				add_dynamic_modifier = { modifier = ENG_natpop_influence }
+				every_other_country = {
+					limit = { is_in_faction_with = ENG }
+					add_ideas = generic_send_more_volunteers_idea
+					IF = {
+						limit = {
+							NOT = {
+								has_country_flag = major_flag
+							}
+						}
+						add_minor_buff = yes
+					}
+				}
+			}
+			CHI = {
+				#add_dynamic_modifier = {
+				#	modifier = AI_minor_buff
+				#}
+			}
+			SOV = {
+				add_dynamic_modifier = {
+					modifier = AI_last_to_surrender_1
+				}
+				add_dynamic_modifier = {
+					modifier = AI_last_to_surrender_2
+				}
+			}
+			FRA = {
+				add_dynamic_modifier = {
+					modifier = AI_buff_2
+				}
+			}
+			ITA = {
+				add_dynamic_modifier = {
+					modifier = AI_buff_2
+				}
+			}
+			JAP = {
+				country_event = { id = japan.1 days = 56 }
+			}
+			MEX = {
+				add_dynamic_modifier = { modifier = MEX_revsoc_influence }
+				add_dynamic_modifier = { modifier = MEX_libsoc_restrictions }
+				add_dynamic_modifier = { modifier = MEX_socdem_influence }
+				add_dynamic_modifier = { modifier = MEX_socdem_influence_calles }
+				add_dynamic_modifier = { modifier = MEX_soclib_influence }
+				add_dynamic_modifier = { modifier = MEX_condem_influence }
+				add_dynamic_modifier = { modifier = MEX_condem_restrictions }
+				add_dynamic_modifier = { modifier = MEX_condem_influence_camacho }
+				add_dynamic_modifier = { modifier = MEX_condem_restrictions_camacho }
+				add_dynamic_modifier = { modifier = MEX_autdem_influence }
+				add_dynamic_modifier = { modifier = MEX_autdem_influence_calles }
+				add_dynamic_modifier = { modifier = MEX_natpop_influence }
+				give_resource_rights = {
+					receiver = USA
+					state = 480
+					resources = { oil }
+				}
+				give_resource_rights = {
+					receiver = USA
+					state = 479
+					resources = { oil }
+				}
+				give_resource_rights = {
+					receiver = USA
+					state = 930
+					resources = { oil }
+				}
+				give_resource_rights = {
+					receiver = USA
+					state = 477
+					resources = { oil }
+				}
+				give_resource_rights = {
+					receiver = USA
+					state = 476
+					resources = { oil }
+				}
+			}
+			every_possible_country = {
+				every_possible_country = {
+					limit = { NOT = { tag = PREV } }
+					IF = {
+						limit = { has_government = PREV }
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_same_ideology
+						}
+					}
+					ELSE_IF = {
+						limit = { is_similar_ideology = yes }
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_similar_ideology
+						}
+					}
+					ELSE = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_different_ideology
+						}
+					}
+				}
+			}
+		}
+	}
+}

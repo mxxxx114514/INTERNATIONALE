@@ -1,0 +1,161 @@
+SPA = { #Falangist Spain
+	original_tag = SPR
+	has_country_flag = SPR_nationalist_spain_flag_IN
+}
+SPB = { #Carlist Spain
+	original_tag = SPR
+	has_country_flag = SPR_carlist_spain_flag_IN
+}
+SPC = { #Socialist Spain
+	original_tag = SPR
+	OR = {
+		has_country_flag = SPR_anarchist_spain_flag_IN
+		has_cosmetic_tag = SPC_iberia
+	}
+}
+SPD = { #Republican Spain
+	original_tag = SPR
+	has_country_flag = SPR_republican_spain_flag_IN
+}
+SPE = { #Unified non-socialist Spain
+	original_tag = SPR
+	NOT = { has_country_flag = SPR_anarchist_spain_flag_IN }
+	IF = {
+		limit = { country_exists = SPD }
+		tag = SPD
+	}
+	ELSE_IF = {
+		limit = { country_exists = SPA }
+		tag = SPA
+	}
+	ELSE_IF = {
+		limit = { country_exists = SPB }
+		tag = SPB
+	}
+	ELSE = {
+		tag = SPD
+	}
+}
+FLA = { #Flanders
+	original_tag = BEL
+	has_cosmetic_tag = FLA
+}
+WAL = { #Wallonia
+	original_tag = BEL
+	has_cosmetic_tag = WAL
+}
+RFI = { #Red Finland
+	original_tag = FIN
+	has_country_flag = red_finland
+}
+WFI = { #White Finland
+	original_tag = FIN
+	has_country_flag = white_finland
+}
+#MCW = { #MCW is now its own tag
+#	original_tag = SOV
+#	has_country_flag = SOV_MCW
+#}
+MOS = {
+	original_tag = SOV
+	has_country_flag = SOV_MCW
+}
+GRR = { #Regular non-socialist Germany
+	original_tag = GER
+	has_country_flag = GER_GRR
+}
+GRU = { #Socialist Germany (IN puppet)
+	original_tag = GER
+	has_country_flag = GER_GRU
+}
+BOR = { #Boer Republic
+	original_tag = SAF
+	has_country_flag = SAF_BOR
+}
+SSF = { #Socialist South Africa
+	original_tag = SAF
+	has_country_flag = SAF_SSF
+}
+USF = { #Union of South Africa
+	original_tag = SAF
+	has_country_flag = SAF_USF
+}
+BOH = { #Bohemia-Moravia (German puppet)
+	original_tag = CZE
+	has_cosmetic_tag = CZE_protectorate
+}
+GGN = { #Protectorate of Poland (German puppet)
+	original_tag = POL
+	has_cosmetic_tag = POL_protectorate
+}
+TRR = { #Republic of Turkey
+	original_tag = TUR
+	has_country_flag = TUR_TRR
+}
+TRS = { #Socialist Turkey
+	original_tag = TUR
+	has_country_flag = TUR_TRS
+}
+FNG = { #Fengtian
+	original_tag = MAN
+	has_cosmetic_tag = MAN_fengtian
+}
+PRG = { #Prague Entente Leader
+	OR = {
+		original_tag = CZE
+		original_tag = ROM
+		original_tag = GRE
+		original_tag = SER
+	}
+	has_country_flag = p_entente_leader
+}
+GBR = { #United Kingdom
+	original_tag = ENG
+	is_subject = no
+	is_commie_ideology = no
+}
+GBP = { #Puppet Britain
+	original_tag = ENG
+	is_subject = yes
+	is_commie_ideology = no
+}
+UOB = { #Socialist Britain
+	original_tag = ENG
+	has_country_flag = ENG_UOB
+	is_commie_ideology = yes
+}
+IRN = {
+	original_tag = IRE
+	has_country_flag = IRE_ENG_flag
+}
+IRR = {
+	original_tag = IRE
+	has_country_flag = IRE_rebellion_flag
+}
+YUC = {
+	OR = {
+		tag = MGS
+		tag = COM
+	}
+	#has_cosmetic_tag = yucatan
+	has_country_flag = loyal_to_MEX_flag
+}
+AUF = {
+	original_tag = AUS
+	has_country_flag = AUS_AUF_flag
+}
+AUR = {
+	original_tag = AUS
+	has_country_flag = AUS_AUR_flag
+}
+AUK = {
+	original_tag = AUS
+	has_country_flag = AUS_AUK_flag
+}
+
+# operative operation target
+# only set for majors who has agency
+# set on on_weekly
+MOT = {
+	variable = generic_operation_target
+}

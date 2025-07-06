@@ -1,0 +1,110 @@
+defined_text = { 
+    name = Core_state_status
+	
+	text = {
+		trigger = { 
+            FROM = {
+                is_core_of = ROOT
+                is_owned_and_controlled_by = ROOT
+            }
+        }
+		localization_key = CSS_Core_own
+	}
+	text = {
+		trigger = { 
+            FROM = {
+                is_core_of = ROOT
+                is_controlled_by = ROOT
+                NOT = {
+                    is_owned_by = ROOT
+                }
+            }
+        }
+		localization_key = CSS_Core_control_not_own
+	}
+    text = {
+		trigger = { 
+            FROM = {
+                is_core_of = ROOT
+                NOT = {
+                    is_controlled_by = ROOT
+                }
+            }
+        }
+		localization_key = CSS_Core_not_control
+	}
+    text = {
+		trigger = { 
+            FROM = {
+                is_claimed_by = ROOT
+                is_owned_and_controlled_by = ROOT
+            }
+        }
+		localization_key = CSS_Claim_own
+	}
+    text = {
+		trigger = { 
+            FROM = {
+                is_claimed_by = ROOT
+                is_controlled_by = ROOT
+                NOT = {
+                    is_owned_by = ROOT
+                }
+            }
+        }
+		localization_key = CSS_Claim_controll_not_own
+	}
+    text = {
+		trigger = { 
+            FROM = {
+                is_claimed_by = ROOT
+                NOT = {
+                    is_controlled_by = ROOT
+                }
+            }
+        }
+		localization_key = CSS_Claim_not_control
+	}
+    text = {
+		trigger = { 
+            FROM = {
+                is_owned_and_controlled_by = ROOT
+            }
+        }
+		localization_key = CSS_Normal_control_and_own
+	}
+    text = {
+		trigger = { 
+            FROM = {
+                is_controlled_by = ROOT
+            }
+        }
+		localization_key = CSS_Normal_control_not_own
+	}
+    text = {
+		trigger = { 
+            FROM = {
+                is_owned_by = ROOT
+                NOT = {
+                    is_controlled_by = ROOT
+                }
+            }
+        }
+		localization_key = CSS_Normal_own_not_control
+	}
+    # text = {
+	# 	trigger = { 
+    #         FROM = {
+    #             is_core_of = ROOT
+    #             is_controlled_by = ROOT
+    #             NOT = {
+    #                 is_owned_by = ROOT
+    #             }
+    #         }
+    #     }
+	# 	localization_key = CSS_Core_control_not_own
+	# }
+    text = {
+		localization_key = CSS_other
+	}
+}

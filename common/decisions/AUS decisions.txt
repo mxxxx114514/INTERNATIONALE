@@ -1,0 +1,434 @@
+AUS_civil_war_category = {
+
+	AUS_increase_fascism = {
+		allowed = { tag = AUS }
+		icon = ger_mefo_bills
+		cost = 25
+		available = {
+			NOT = { has_cosmetic_tag = AUS_bundesstaat }
+			hidden_trigger = { has_country_flag = AUS_engelbert_dead }
+		}
+		visible = {
+			NOT = { has_global_flag = AUS_civil_war_flag }
+		}
+		days_remove = 21
+		remove_effect = {
+			add_popularity = {
+				ideology = auth_communism
+				popularity = 0.01
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.01
+			}
+			add_popularity = {
+				ideology = socialism
+				popularity = 0.01
+			}
+			IF = {
+				limit = {
+					democratic > 0.02
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.01
+				}
+			}
+			IF = {
+				limit = {
+					neutrality > 0.02
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.01
+				}
+			}
+			IF = {
+				limit = {
+					despotism > 0.02
+				}
+				add_popularity = {
+					ideology = despotism
+					popularity = -0.01
+				}
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	AUS_coup = {
+		allowed = { always = no }
+		icon = ger_mefo_bills
+		cost = 25
+		available = { fascism > 0.45 }
+		fire_only_once = yes
+		complete_effect = {
+			set_cosmetic_tag = AUS_bundesstaat
+			set_politics = { ruling_party = fascism }
+			clr_country_flag = natpop_coalition_flag
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = austria_news.2
+					days = 1
+				}
+			}
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = GER_AUS_relations_bad
+				}
+				reverse_add_opinion_modifier = {
+					target = GER
+					modifier = GER_AUS_relations_bad
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+	AUS_begin_civil_war = {
+		allowed = { always = no }
+		icon = ger_mefo_bills
+		cost = 25
+		available = { has_cosmetic_tag = AUS_bundesstaat }
+		fire_only_once = yes
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				set_global_flag = AUS_civil_war_flag
+				set_country_flag = AUS_AUF_flag
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+				create_dynamic_country = {
+					original_tag = AUS
+					set_country_flag = AUS_AUR_flag
+					set_cosmetic_tag = AUS_national_unity_government
+					transfer_state = 153
+					set_politics = {
+						ruling_party = neutrality
+					}
+					set_popularities = {
+						social_democratic = 26
+						social_liberal = 3
+						liberal = 4
+						democratic = 22
+						neutrality = 36
+						despotism = 9
+					}
+					set_party_name = {
+						ideology = neutrality
+						long_name = AUS_neutrality_party_national_unity_government_long
+						name = AUS_neutrality_party_national_unity_government
+					}
+					set_country_flag = socdem_coalition_flag
+					set_country_flag = soclib_coalition_flag
+					set_country_flag = marlib_coalition_flag
+					set_country_flag = condem_coalition_flag
+					set_country_flag = pataut_coalition_flag
+					set_capital = { state = 153 }
+					reserve_dynamic_country = yes
+					every_owned_state = {
+						create_unit = {
+							division = "division_template = \"Infanterie Division\" start_experience_factor = 0.3 start_equipment_factor = 1.0" 
+							owner = PREV
+							count = var:GRR.GER_AUR_divisions
+						}
+					}
+					activate_targeted_decision = { target = AUR decision = AUR_join_GER }
+					IF = {
+						limit = {
+							has_game_rule = {
+								rule = AUS_civil_war_outcome
+								option = AUS_CIVIL_WAR_OUTCOME_AUR_VICTORY
+							}
+						}
+						add_ideas = win_this_war_idea
+					}
+				}
+				create_dynamic_country = {
+					original_tag = AUS
+					set_country_flag = AUS_AUK_flag
+					set_cosmetic_tag = AUS_revolutionary_front
+					transfer_state = 152
+					transfer_state = 39
+					set_politics = {
+						ruling_party = socialism
+					}
+					set_popularities = {
+						auth_communism = 9
+						communism = 29
+						socialism = 37
+						social_democratic = 20
+						social_liberal = 2
+						liberal = 1
+						democratic = 2
+					}
+					set_country_flag = socdem_coalition_flag
+					set_country_flag = revsoc_coalition_flag
+					set_country_flag = autsoc_coalition_flag
+					set_capital = { state = 152 }
+					reserve_dynamic_country = yes
+					every_owned_state = {
+						create_unit = {
+							division = "division_template = \"Infanterie Division\" start_experience_factor = 0.73 start_equipment_factor = 0.8" 
+							owner = PREV
+							count = 10
+						}
+					}
+					activate_targeted_decision = { target = AUK decision = AUK_join_IN }
+					IF = {
+						limit = {
+							has_game_rule = {
+								rule = AUS_civil_war_outcome
+								option = AUS_CIVIL_WAR_OUTCOME_AUK_VICTORY
+							}
+						}
+						add_ideas = win_this_war_idea
+					}
+				}
+				AUF = {
+					declare_war_on = { target = AUR type = civil_war }
+					declare_war_on = { target = AUK type = civil_war }
+					every_owned_state = {
+						create_unit = {
+							division = "division_template = \"Infanterie Division\" start_experience_factor = 0.85 start_equipment_factor = 1.0" 
+							owner = PREV
+							count = 14
+						}
+					}
+					add_opinion_modifier = {
+						target = GRR
+						modifier = betrayed_alliance
+					}
+					reverse_add_opinion_modifier = {
+						target = GRR
+						modifier = betrayed_alliance
+					}
+					IF = {
+						limit = {
+							has_game_rule = {
+								rule = AUS_civil_war_outcome
+								option = AUS_CIVIL_WAR_OUTCOME_AUF_VICTORY
+							}
+						}
+						add_ideas = win_this_war_idea
+					}
+				}
+				AUR = {
+					declare_war_on = { target = AUK type = civil_war }
+				}
+				GRR = {
+					send_embargo = AUF
+					send_embargo = AUK
+					send_equipment = { target = AUR type = infantry_equipment amount = var:GER_AUR_guns }
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = AUR
+						value = 1000
+					}
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = AUR
+						value = 1000
+					}
+					diplomatic_relation = {
+						country = AUF
+						relation = guarantee
+						active = no
+					}
+					diplomatic_relation = {
+						country = AUF
+						relation = non_aggression_pact
+						active = no
+					}
+					diplomatic_relation = {
+						country = AUR
+						relation = non_aggression_pact
+					}
+					give_guarantee = AUR
+					add_relation_modifier = {
+						target = AUR
+						modifier = volunteer_limit_plus_two
+					}
+					country_event = {
+						id = austria.3
+						days = 2
+					}
+				}
+				SWI = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = AUR
+						value = 100
+					}
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = AUR
+						value = 100
+					}
+				}
+				POL = {
+					IF = {
+						limit = { is_commie_ideology = no }
+						add_ai_strategy = {
+							type = send_volunteers_desire
+							id = AUR
+							value = 100
+						}
+						add_ai_strategy = {
+							type = send_lend_lease_desire
+							id = AUR
+							value = 100
+						}
+					}
+				}
+				CZE = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = AUR
+						value = 100
+					}
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = AUR
+						value = 100
+					}
+				}
+				SER = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = AUR
+						value = 100
+					}
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = AUR
+						value = 100
+					}
+				}
+				SOV = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = AUK
+						value = 100
+					}
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = AUK
+						value = 100
+					}
+				}
+				FRA = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = AUK
+						value = 100
+					}
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = AUK
+						value = 100
+					}
+				}
+				ITA = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = AUK
+						value = 100
+					}
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = AUK
+						value = 100
+					}
+				}
+				HUN = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = AUK
+						value = 100
+					}
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = AUK
+						value = 100
+					}
+				}
+				every_country = {
+					limit = { is_ai = no }
+					news_event = {
+						id = austria_news.3
+						days = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+	AUK_join_IN = {
+		icon = ger_mefo_bills
+		cost = 0
+		visible = { tag = AUK }
+		available = { has_war = no NOT = { country_exists = AUF } NOT = { country_exists = AUR } }
+		fire_only_once = yes
+		complete_effect = {
+			remove_ideas = win_this_war_idea
+			set_cosmetic_tag = AUS_commie
+			set_capital = { state = 4 }
+			SOV = { add_to_faction = AUK }
+			ITA = {
+				transfer_state = 39
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+	AUR_join_GER = {
+		icon = ger_mefo_bills
+		cost = 0
+		visible = { tag = AUR }
+		available = { has_war = no NOT = { country_exists = AUF } NOT = { country_exists = AUK } }
+		fire_only_once = yes
+		complete_effect = {
+			remove_ideas = win_this_war_idea
+			GER = {
+				country_event = austria.4
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+	AUF_win = {
+		icon = ger_mefo_bills
+		cost = 0
+		visible = { tag = AUF }
+		available = { has_war = no NOT = { country_exists = AUR } NOT = { country_exists = AUK } }
+		fire_only_once = yes
+		complete_effect = {
+			remove_ideas = win_this_war_idea
+			
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+}

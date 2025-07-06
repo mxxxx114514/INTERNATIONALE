@@ -1,0 +1,64 @@
+on_actions = {
+	on_weekly = {
+		effect = {
+			every_country = {
+				set_variable = {
+					var = popularity_pp_var
+					value = party_popularity@THIS
+				}
+				set_variable = {
+					var = coalition_pp_var
+					value = 0
+				}
+				IF = {
+					limit = { has_country_flag = autsoc_coalition_flag }
+					add_to_variable = { coalition_pp_var = party_popularity@auth_communism }
+				}
+				IF = {
+					limit = { has_country_flag = revsoc_coalition_flag }
+					add_to_variable = { coalition_pp_var = party_popularity@communism }
+				}
+				IF = {
+					limit = { has_country_flag = libsoc_coalition_flag }
+					add_to_variable = { coalition_pp_var = party_popularity@socialism }
+				}
+				IF = {
+					limit = { has_country_flag = socdem_coalition_flag }
+					add_to_variable = { coalition_pp_var = party_popularity@social_democratic }
+				}
+				IF = {
+					limit = { has_country_flag = soclib_coalition_flag }
+					add_to_variable = { coalition_pp_var = party_popularity@social_liberal }
+				}
+				IF = {
+					limit = { has_country_flag = marlib_coalition_flag }
+					add_to_variable = { coalition_pp_var = party_popularity@liberal }
+				}
+				IF = {
+					limit = { has_country_flag = condem_coalition_flag }
+					add_to_variable = { coalition_pp_var = party_popularity@democratic }
+				}
+				IF = {
+					limit = { has_country_flag = autdem_coalition_flag }
+					add_to_variable = { coalition_pp_var = party_popularity@neutrality }
+				}
+				IF = {
+					limit = { has_country_flag = pataut_coalition_flag }
+					add_to_variable = { coalition_pp_var = party_popularity@despotism }
+				}
+				IF = {
+					limit = { has_country_flag = natpop_coalition_flag }
+					add_to_variable = { coalition_pp_var = party_popularity@fascism }
+				}
+				divide_variable = {
+					var = popularity_pp_var
+					value = 1.5
+				}
+				divide_variable = {
+					var = coalition_pp_var
+					value = 2.5
+				}
+			}
+		}
+	}
+}

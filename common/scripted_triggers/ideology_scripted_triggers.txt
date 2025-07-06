@@ -1,0 +1,161 @@
+
+is_enemy_ideology = {
+	OR = {
+		AND = {
+			has_government = communism
+			ROOT = {
+				OR = {
+					has_government = fascism
+					has_government = democratic
+				}
+			}
+		}
+		AND = {
+			has_government = democratic
+			ROOT = {
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+		}
+		AND = {
+			has_government = fascism
+			ROOT = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+		}
+	}
+}
+
+is_similar_ideology = {
+	OR = {
+		AND = {
+			has_government = auth_communism
+			PREV = {
+				OR = {
+					has_government = communism
+					has_government = socialism
+				}
+			}
+		}
+		AND = {
+			has_government = communism
+			PREV = {
+				OR = {
+					has_government = auth_communism
+					has_government = socialism
+				}
+			}
+		}
+		AND = {
+			has_government = socialism
+			PREV = {
+				OR = {
+					has_government = auth_communism
+					has_government = communism
+					#has_government = social_democratic
+				}
+			}
+		}
+		AND = {
+			has_government = social_democratic
+			PREV = {
+				OR = {
+					#has_government = socialism
+					has_government = social_liberal
+				}
+			}
+		}
+		AND = {
+			has_government = social_liberal
+			PREV = {
+				OR = {
+					has_government = social_democratic
+					has_government = liberal
+				}
+			}
+		}
+		AND = {
+			has_government = liberal
+			PREV = {
+				OR = {
+					has_government = social_liberal
+					has_government = democratic
+				}
+			}
+		}
+		AND = {
+			has_government = democratic
+			PREV = {
+				OR = {
+					has_government = liberal
+					has_government = neutrality
+				}
+			}
+		}
+		AND = {
+			has_government = neutrality
+			PREV = {
+				OR = {
+					has_government = democratic
+					has_government = despotism
+				}
+			}
+		}
+		AND = {
+			has_government = despotism
+			PREV = {
+				OR = {
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+		AND = {
+			has_government = fascism
+			PREV = {
+				OR = {
+					has_government = despotism
+				}
+			}
+		}
+	}
+}
+
+is_commie_ideology = {
+	OR = {
+		has_government = auth_communism
+		has_government = communism
+		has_government = socialism
+	}
+}
+
+is_liberal_ideology = {
+	OR = {
+		has_government = social_democratic
+		has_government = social_liberal
+		has_government = liberal
+		has_government = democratic
+	}
+}
+
+is_reactionary_ideology = {
+	OR = {
+		has_government = neutrality
+		has_government = despotism
+		has_government = fascism
+	}
+}
+
+is_capitalist_faction = {
+	OR = {
+		is_in_faction_with = GRR
+		is_in_faction_with = ENG
+		#tag = USA
+	}
+}
+

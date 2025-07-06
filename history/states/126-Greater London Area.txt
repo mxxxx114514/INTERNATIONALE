@@ -1,0 +1,41 @@
+state={
+	id=126
+	name="STATE_126"
+	manpower=9824296
+	
+	state_category = megalopolis
+
+	history={
+		owner = ENG
+		victory_points = {
+			6103 50 
+		}
+		buildings = {
+			infrastructure = 5 #was: 9
+			arms_factory = 4
+			industrial_complex = 5
+			dockyard = 2
+			anti_air_building = 5
+			radar_station = 1
+			air_base = 10
+			11374 = {
+				naval_base = 10
+			}
+			6103 = {
+				land_facility = 1
+				naval_facility = 1
+				air_facility = 1
+				landmark_big_ben = {
+			        level = 1
+			    }
+			}
+		}
+		add_core_of = ENG
+	}
+
+	provinces={
+		6103 9239 11333 11374 
+	}
+
+	local_supplies=0.0 
+}

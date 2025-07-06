@@ -1,0 +1,9 @@
+﻿ZZZ_TNK = {
+	name = "Armored Divisions"
+
+	for_countries = { ENG NFR GER POL SOV FRA ITA HUN USA JAP }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	fallback_name = "%d. Armored Division"
+}

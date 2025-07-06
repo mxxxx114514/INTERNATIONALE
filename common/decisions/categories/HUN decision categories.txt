@@ -1,0 +1,10 @@
+#################
+#### HUN ####
+#################
+HUN_intervene_bw4_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = HUN }
+	visible = { has_global_flag = fourth_balkan_war }
+}

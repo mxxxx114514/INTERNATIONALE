@@ -1,0 +1,149 @@
+###########################
+# National French Events
+###########################
+
+add_namespace = natfrance
+
+news_event = { #Algerian Uprising
+	id = natfrance.1
+	#title = natfrance.1.t
+	title = ""
+	#desc = natfrance.1.desc
+	desc = ""
+	fire_only_once = yes
+	hidden = yes
+
+	trigger = {
+		date > 1937.6.24
+		NOT = { has_global_flag = algerian_uprising }
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = algerian_uprising
+			ALG = {
+				transfer_state = 513
+				transfer_state = 514
+				transfer_state = 460
+				every_owned_state = {
+					limit = { impassable = no }
+					create_unit = {
+						division = "division_template = \"Division d'Infanterie\" start_experience_factor = 0.5" 
+						owner = PREV
+						count = 10
+					}
+				}
+				declare_war_on = {
+					target = NFR
+					type = annex_everything
+				}
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = ALG_uprising_outcome
+							option = ALG_UPRISING_OUTCOME_ALG_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+			}
+			NFR = {
+				add_named_threat = {
+					threat = 5
+					name = IN_algerian_uprising_threat
+				}
+				leave_faction = yes
+				add_state_claim = 460
+				add_state_claim = 514
+				every_owned_state = {
+					limit = { impassable = no }
+					create_unit = {
+						division = "division_template = \"Division d'Infanterie\" start_experience_factor = 0.6" 
+						owner = PREV
+						count = 2
+					}
+				}
+				random_owned_state = {
+					limit = { impassable = no }
+					create_unit = {
+						division = "division_template = \"Division d'Infanterie\" start_experience_factor = 0.6" 
+						owner = PREV
+						count = 1
+					}
+				}
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = ALG_uprising_outcome
+							option = ALG_UPRISING_OUTCOME_NFR_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						is_in_faction_with = ENG
+					}
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = NFR
+					value = 1000
+				}
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = war_news.22
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = natfrance.1.a
+	}
+}
+news_event = {
+	id = natfrance.2
+	fire_only_once = yes
+	hidden = yes
+
+	is_tiggered_only = yes
+
+	trigger = {
+		has_global_flag = algerian_uprising
+		NOT = { country_exists = ALG }
+	}
+
+	immediate = {
+		hidden_effect = {
+			NFR = {
+				remove_state_claim = 460
+				remove_state_claim = 514
+			}
+			ENG = {
+				add_to_faction = NFR
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = war_news.23
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = natfrance.2.a
+	}
+}

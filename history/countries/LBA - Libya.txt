@@ -1,0 +1,92 @@
+capital = 448
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 25
+	fascism = 20
+	communism = 5
+	neutrality = 50
+}
+
+ENG = { give_guarantee = LBA }
+NFR = { give_guarantee = LBA }
+GER = { give_guarantee = LBA }
+BEL = { give_guarantee = LBA }
+POR = { give_guarantee = LBA }
+TUR = { give_guarantee = LBA }
+SPR = { give_guarantee = LBA }
+SPM = { give_guarantee = LBA }
+BCR = { give_guarantee = LBA }
+EGY = { give_guarantee = LBA }
+HEJ = { give_guarantee = LBA }
+SAU = { give_guarantee = LBA }
+MOR = { give_guarantee = LBA }
+TUN = { give_guarantee = LBA }
+ETH = { give_guarantee = LBA }
+give_military_access = ENG
+give_military_access = NFR
+give_military_access = BCR
+give_military_access = MOR
+give_military_access = EGY
+give_military_access = TUN
+
+create_country_leader = {
+	name = "Bashir es Sadawi"
+	desc = ""
+	picture = GFX_portrait_Bashir_es_Sadawi
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ettore Bastico"
+	desc = ""
+	picture = GFX_portrait_Ettore_Bastico
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Idris Senussi"
+	desc = ""
+	picture = GFX_portrait_Idris_Senussi
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Hassan as-Senussi"
+	desc = ""
+	picture = GFX_portrait_Hassan_as_Senussi
+	ideology = leninism
+	traits = {
+		#
+	}
+}

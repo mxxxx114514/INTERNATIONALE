@@ -1,0 +1,30 @@
+state={
+	id=931
+	name="STATE_931"
+	provinces={
+		4887 8032 12755 13270 13317 13319 13342 13351
+	}
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 1
+			8032 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = MEX
+		victory_points = {
+			4887 3
+		}
+		victory_points = {
+			8032 1
+		}
+		set_demilitarized_zone = yes
+
+	}
+	manpower=1070000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+
+}

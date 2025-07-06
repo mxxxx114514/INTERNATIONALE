@@ -1,0 +1,9 @@
+#################
+#### NFR ####
+#################
+NFR_return_home_category = {
+	icon = ""
+	picture = ""
+	priority = 1000
+	allowed = { tag = NFR }
+}

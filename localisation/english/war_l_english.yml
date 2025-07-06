@@ -1,0 +1,41 @@
+﻿l_english:
+ ST:0 "st"
+ ND:0 "nd"
+ RD:0 "rd"
+ TH:0 "th"
+ WAR_NAME:0 "$ORDER$$FIRST$-$SECOND$ War"
+ CIVIL_WAR_NAME:0 "$ORDER$$SECOND$ Civil War"
+ WAR_TAKE_CORE_NAME:0 "$ORDER$$FIRST$ reclamation of $STATE$"
+ WAR_TAKE_CLAIM_NAME:0 "$ORDER$$FIRST$ Aggression for $STATE$"
+ INDEPENDENCE_WAR_NAME:0 "$ORDER$$FIRST$ War of Independence"
+ create_puppet_wargoal_usa:0 "§HPuppet (Focus)§! wargoal gained by §Y[ROOT.GetNameDef]§!"
+
+#South Western War
+ WAR_NAME_CHI_YUN: "South Western War"
+ WAR_NAME_CHI_SZC: "South Western War"
+ WAR_NAME_CHI_GXC: "South Western War"
+
+#Baltic Uprising
+ WAR_NAME_BAL_EST: "Baltic Uprising"
+ WAR_NAME_BAL_LAT: "Baltic Uprising"
+
+#Fourth Balkan War
+ WAR_NAME_HUN_ROM: "Fourth Balkan War"
+ WAR_NAME_HUN_CZE: "Fourth Balkan War"
+ WAR_NAME_SOV_CZE: "Fourth Balkan War"
+
+#Second World War
+ WAR_NAME_SOV_GER: "Second World War"
+ WAR_NAME_SOV_ENG: "Second World War"
+ WAR_NAME_FRA_GER: "Second World War"
+ WAR_NAME_FRA_ENG: "Second World War"
+ WAR_NAME_ENG_FRA: "Second World War"
+ WAR_NAME_ITA_GER: "Second World War"
+ WAR_NAME_CHI_GER: "Second World War"
+ WAR_NAME_USA_SOV: "Second World War"
+ WAR_NAME_SOV_USA: "Second World War"
+ WAR_NAME_SOV_ENG: "Second World War"
+ WAR_NAME_ENG_SOV: "Second World War"
+
+ WAR_NAME_FRA_NFR: "Reclamation of the French Homeland"
+ WAR_NAME_NFR_FRA: "War for African Liberation"

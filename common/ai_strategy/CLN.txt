@@ -1,0 +1,392 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+CLN_support_CZE = {
+	allowed = {
+		OR = {
+			tag = ENG
+			tag = NFR
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = POR
+			tag = GRR
+			tag = POL
+			tag = BAL
+			tag = LIT
+			tag = WFI
+		}
+
+	}
+
+	enable = {
+		has_global_flag = fourth_balkan_war
+		CZE = { OR = { has_war_with = HUN has_war_with = BUL has_war_with = YUG } }
+	}
+
+	abort = {
+		OR = {
+			has_global_flag = fourth_balkan_war_HUN_victory
+			has_global_flag = fourth_balkan_war_CZE_victory
+			CZE = { is_commie_ideology = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CZE
+		value = 150
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = CZE
+		value = 150
+	}
+
+}
+CLN_support_ROM = {
+	allowed = {
+		OR = {
+			tag = ENG
+			tag = NFR
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = POR
+			tag = GRR
+			tag = POL
+			tag = BAL
+			tag = LIT
+			tag = WFI
+		}
+
+	}
+
+	enable = {
+		has_global_flag = fourth_balkan_war
+		ROM = { OR = { has_war_with = HUN has_war_with = BUL has_war_with = YUG } }
+	}
+
+	abort = {
+		OR = {
+			has_global_flag = fourth_balkan_war_HUN_victory
+			has_global_flag = fourth_balkan_war_CZE_victory
+			ROM = { is_commie_ideology = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ROM
+		value = 150
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = ROM
+		value = 150
+	}
+
+}
+CLN_support_SER = {
+	allowed = {
+		OR = {
+			tag = ENG
+			tag = NFR
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = POR
+			tag = GRR
+			tag = POL
+			tag = BAL
+			tag = LIT
+			tag = WFI
+		}
+
+	}
+
+	enable = {
+		has_global_flag = fourth_balkan_war
+		SER = { OR = { has_war_with = HUN has_war_with = BUL has_war_with = YUG } }
+	}
+
+	abort = {
+		OR = {
+			has_global_flag = fourth_balkan_war_HUN_victory
+			has_global_flag = fourth_balkan_war_CZE_victory
+			SER = { is_commie_ideology = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SER
+		value = 150
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SER
+		value = 150
+	}
+
+}
+CLN_support_GRE = {
+	allowed = {
+		OR = {
+			tag = ENG
+			tag = NFR
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = POR
+			tag = GRR
+			tag = POL
+			tag = BAL
+			tag = LIT
+			tag = WFI
+		}
+
+	}
+
+	enable = {
+		has_global_flag = fourth_balkan_war
+		GRE = { OR = { has_war_with = HUN has_war_with = BUL has_war_with = YUG } }
+	}
+
+	abort = {
+		OR = {
+			has_global_flag = fourth_balkan_war_HUN_victory
+			has_global_flag = fourth_balkan_war_CZE_victory
+			GRE = { is_commie_ideology = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = GRE
+		value = 150
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = GRE
+		value = 150
+	}
+
+}
+CLN_support_SLV = {
+	allowed = {
+		OR = {
+			tag = ENG
+			tag = NFR
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = POR
+			tag = GRR
+			tag = POL
+			tag = BAL
+			tag = LIT
+			tag = WFI
+		}
+
+	}
+
+	enable = {
+		has_global_flag = fourth_balkan_war
+		SLV = { OR = { has_war_with = HUN has_war_with = BUL has_war_with = YUG } }
+	}
+
+	abort = {
+		OR = {
+			has_global_flag = fourth_balkan_war_HUN_victory
+			has_global_flag = fourth_balkan_war_CZE_victory
+			SLV = { is_commie_ideology = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SLV
+		value = 150
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SLV
+		value = 150
+	}
+
+}
+CLN_support_CRO = {
+	allowed = {
+		OR = {
+			tag = ENG
+			tag = NFR
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = POR
+			tag = GRR
+			tag = POL
+			tag = BAL
+			tag = LIT
+			tag = WFI
+		}
+
+	}
+
+	enable = {
+		has_global_flag = fourth_balkan_war
+		CRO = { OR = { has_war_with = HUN has_war_with = BUL has_war_with = YUG } }
+	}
+
+	abort = {
+		OR = {
+			has_global_flag = fourth_balkan_war_HUN_victory
+			has_global_flag = fourth_balkan_war_CZE_victory
+			CRO = { is_commie_ideology = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = CRO
+		value = 150
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = CRO
+		value = 150
+	}
+
+}
+CLN_support_ALB = {
+	allowed = {
+		OR = {
+			tag = ENG
+			tag = NFR
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = POR
+			tag = GRR
+			tag = POL
+			tag = BAL
+			tag = LIT
+			tag = WFI
+		}
+
+	}
+
+	enable = {
+		has_global_flag = fourth_balkan_war
+		ALB = { OR = { has_war_with = HUN has_war_with = BUL has_war_with = YUG } }
+	}
+
+	abort = {
+		OR = {
+			has_global_flag = fourth_balkan_war_HUN_victory
+			has_global_flag = fourth_balkan_war_CZE_victory
+			ALB = { is_commie_ideology = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ALB
+		value = 150
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = ALB
+		value = 150
+	}
+
+}
+CLN_support_NFR = {
+	enable = {
+		#has_global_flag = algerian_uprising
+		#NFR = { has_war_with = ALG }
+		is_commie_ideology = no
+		OR = {
+			tag = ENG
+			#tag = NFR
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = POR
+			tag = GRR
+			tag = POL
+			tag = BAL
+			tag = LIT
+			tag = WFI
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = NFR
+		value = 150
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = NFR
+		value = 150
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = NFR
+		value = 150
+	}
+
+}
+
+CLN_invade_FRA_SPC = {
+	allowed = {
+		OR = {
+			tag = ENG
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = USA
+		}
+
+	}
+
+	enable = {
+		has_war_with = FRA
+		has_war_with = SPC
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = FRA
+		value = 100
+	}
+
+	ai_strategy = {
+		type = invade
+		id = SPC
+		value = 100
+	}
+
+}

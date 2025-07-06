@@ -1,0 +1,85 @@
+﻿capital = 6
+
+oob = "BEL_1936"
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "BEL_1936_air_bba"
+	else = {
+		set_air_oob = "BEL_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+		}
+	}
+}
+
+set_research_slots = 3
+set_stability = 0.8
+set_war_support = 0.3 #we see what you are doing there Adolf
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+}
+
+recruit_character = BEL_hubert_pierlot
+recruit_character = BEL_joseph_jacquemotte
+recruit_character = BEL_mcl_keyaerts
+recruit_character = BEL_georges_timmermans
+recruit_character = BEL_gilles_wyvekens
+recruit_character = BEL_fritz_conrad
+recruit_character = BEL_raoul_overstraeten
+recruit_character = BEL_georges_deffontaine
+recruit_character = BEL_victor_strydonck_burkel
+recruit_character = BEL_georges_vereecken
+recruit_character = BEL_jules_pire
+recruit_character = BEL_oscar_michiels
+recruit_character = BEL_charles_bastin
+recruit_character = BEL_yvan_gerard
+recruit_character = BEL_rene_lagrou
+recruit_character = BEL_leon_degrelle
+recruit_character = BEL_fritz_lob
+recruit_character = BEL_jules_iserentant
+recruit_character = BEL_victor_van_strydonck_de_burkel
+recruit_character = BEL_paul-henri_spaak
+recruit_character = BEL_gaston_eyskens
+recruit_character = BEL_paul_van_zeeland
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.11.27"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	auth_communism = 3
+	communism = 15
+	socialism = 7
+	social_democratic = 10
+	social_liberal = 15
+	liberal = 5
+	democratic = 30
+	neutrality = 7
+	despotism = 5
+	fascism = 3
+}
+
+ENG = { give_guarantee = BEL }
+GER = { give_guarantee = BEL }
+NFR = { give_guarantee = BEL }
+HOL = { give_guarantee = BEL }
+diplomatic_relation = { country = ENG relation = non_aggression_pact }
+diplomatic_relation = { country = GER relation = non_aggression_pact }
+diplomatic_relation = { country = NFR relation = non_aggression_pact }
+diplomatic_relation = { country = HOL relation = non_aggression_pact }
+
+set_convoys = 80
+set_stability = 0.75

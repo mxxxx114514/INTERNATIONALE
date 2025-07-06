@@ -1,0 +1,67 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+AUF_HATES_GRR = {
+	enable = {
+		tag = AUF
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = GRR
+		value = 1000
+	}
+
+}
+
+GRR_HATES_AUF = {
+	enable = {
+		tag = GRR
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = AUF
+		value = 1000
+	}
+
+}
+
+AUK_HATES_GRR = {
+	enable = {
+		tag = AUK
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = GRR
+		value = 1000
+	}
+
+}
+
+GRR_HATES_AUK = {
+	enable = {
+		tag = GRR
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = AUK
+		value = 1000
+	}
+
+}

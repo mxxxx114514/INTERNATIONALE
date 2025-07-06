@@ -1,0 +1,36 @@
+
+state={
+	id=480
+	name="STATE_480"
+	manpower = 827826
+	
+	state_category = town
+	
+	resources={
+		oil=8
+	}
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = MEX
+		#victory_points = {
+		#	2060 3
+		#}
+		#victory_points = {
+		#	12811 1
+		#}
+
+	}
+
+	provinces={
+		2060 2104 7973 10746 10800 12811 12835 13323 13324 13325
+	}
+	
+
+	local_supplies=0.0 
+}

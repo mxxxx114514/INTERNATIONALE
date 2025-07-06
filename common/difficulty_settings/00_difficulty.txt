@@ -1,0 +1,92 @@
+difficulty_settings = {
+	difficulty_setting = {
+		key = "custom_diff_strong_INT"
+		modifier = diff_strong_ai_generic
+		countries = { SOV FRA ITA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_PKT"
+		modifier = diff_strong_ai_generic
+		countries = { GER EST LAT LIT }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_ENT"
+		modifier = diff_strong_ai_generic
+		countries = { ENG NFR CAN RAJ AST NZL POR SPM }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_SOV"
+		modifier = diff_strong_ai_generic
+		countries = { SOV }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_FRA"
+		modifier = diff_strong_ai_generic
+		countries = { FRA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_ITA"
+		modifier = diff_strong_ai_generic
+		countries = { ITA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_GER"
+		modifier = diff_strong_ai_generic
+		countries = { GER }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_ENG"
+		modifier = diff_strong_ai_generic
+		countries = { ENG }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_NFR"
+		modifier = diff_strong_ai_generic
+		countries = { NFR }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_POL"
+		modifier = diff_strong_ai_generic
+		countries = { POL }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_USA"
+		modifier = diff_strong_ai_generic
+		countries = { USA }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_JAP"
+		modifier = diff_strong_ai_generic
+		countries = { JAP }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_CHI"
+		modifier = diff_strong_ai_generic
+		countries = { CHI }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_MAN"
+		modifier = diff_strong_ai_generic
+		countries = { MAN }
+		multiplier = 2.0
+	}
+	difficulty_setting = {
+		key = "custom_diff_strong_GMJ"
+		modifier = diff_strong_ai_generic
+		countries = { GMJ }
+		multiplier = 2.0
+	}
+}

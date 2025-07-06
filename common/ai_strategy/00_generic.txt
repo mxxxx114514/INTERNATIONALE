@@ -1,0 +1,367 @@
+BEFORE_1938 = {
+	abort_when_not_enabled = yes
+    enable = {
+		OR = {
+			date > 1938.2.1
+			AND = {
+				arms_factory > 50
+				date > 1937.7.1
+			}
+		}
+    }
+	
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 65
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_chassis
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = light_tank_chassis
+		value = -50
+	}
+	ai_strategy = {
+		type = research_weight_factor
+		id = interwar_artillery
+		value = 2000
+	}
+	ai_strategy = {
+		type = research_weight_factor
+		id = artillery1
+		value = 2000
+	}
+	ai_strategy = {
+		type = research_weight_factor
+		id = gwtank_chassis
+		value = 2000
+	}
+	ai_strategy = {
+		type = research_weight_factor
+		id = basic_medium_tank_chassis
+		value = 2000
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = convoy
+		value = 1
+	}
+}
+AFTER_1938 = {
+	abort_when_not_enabled = yes
+	enable = {
+		NOT = {
+			OR = {
+				date > 1938.2.1
+				AND = {
+					arms_factory > 50
+					date > 1937.7.1
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = -1000
+	}
+	ai_strategy = {
+		type = building_target
+		id = dockyard
+		value = 50
+	}
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 1000
+	}
+   	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 80
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = anti_air
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = infantry
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = support
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized
+		value = 3
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = mechanized
+		value = 15
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 1000
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_tank_chassis
+		value = 200
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories_archetype
+		id = medium_tank_chassis
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = medium_tank_destroyer_chassis
+		value = 20
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = convoy
+		value = 1
+	}
+}
+
+SP_ARTILLERY_PRODUCTION = {
+	abort_when_not_enabled = yes
+	enable = {
+		AND = {
+			date > 1938.6.1
+			num_of_military_factories > 40
+			has_country_flag = AI_artillery_focus_flag
+		}
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = medium_tank_artillery_chassis
+		value = 5
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = medium_tank_artillery_chassis
+		value = 20
+	}
+}
+
+PROD_EQUIP_UPGRADE_production_line_upgrades = {
+	enable = { always = yes }
+	abort = { always = no }
+	
+	ai_strategy = { type = production_upgrade_desire_offset id = light_tank_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = light_tank_artillery_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = light_tank_destroyer_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = light_tank_aa_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = light_tank_amphibious_chassis_2 value = 100 }
+
+	ai_strategy = { type = production_upgrade_desire_offset id = medium_tank_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = medium_tank_artillery_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = medium_tank_destroyer_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = medium_tank_aa_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = medium_tank_amphibious_chassis_2 value = 100 }
+
+	ai_strategy = { type = production_upgrade_desire_offset id = heavy_tank_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = heavy_tank_artillery_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = heavy_tank_destroyer_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = heavy_tank_aa_chassis_2 value = 100 }
+	ai_strategy = { type = production_upgrade_desire_offset id = heavy_tank_amphibious_chassis_2 value = 100 }
+}
+
+UNIT_PRODUCTION_EARLY = {
+	enable = {
+		OR = {
+			num_divisions < 150
+			arms_factory < 50
+			date < 1937.7.1
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 200
+	}
+}
+UNIT_PRODUCTION_LATE = {
+	enable = {
+		num_divisions > 50
+		OR = {
+			date > 1938.2.1
+			AND = {
+				arms_factory > 50
+				date > 1937.7.1
+			}
+		}
+		OR = {
+			has_tech = basic_medium_tank
+			has_tech = basic_medium_tank_chassis
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_army
+		id = armor
+		value = 250
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 1000
+	}
+}
+
+MECHANIZED_PRODUCTION = {
+	enable = { num_of_military_factories > 150 date > 1941.1.1 }
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = mechanized_equipment
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = amphibious_mechanized_equipment
+		value = -1000
+	}
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = mechanized
+		value = 30
+	}
+	
+}
+SUPPORT_POL_ANTI_GER = {
+	enable = {
+		has_global_flag = GER_invade_POL_flag
+		GRR = {
+			has_war_with = POL
+		}
+		GRR = {
+			is_ai = no
+		}
+		NOT = { tag = USA }
+		NOT = { tag = JAP }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = POL
+		value = 1145
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = GER
+		value = 1000
+	}
+
+}
+DONT_HELP_GER_AGAINST_POL = {
+	enable = {
+		has_global_flag = GER_invade_POL_flag
+		GRR = { has_war_with = POL }
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = GER
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = EST
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = LAT
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = LIT
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = BOH
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = GER
+		value = 1000
+	}
+
+}
+SPEND_PP_WISELY = {
+	enable = { always = yes }
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation
+		value = -999
+	}
+}
+BUILD_NAVY = {
+	enable = { always = yes }
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = 10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 25
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 120
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 40
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = 10
+	}
+}

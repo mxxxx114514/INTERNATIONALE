@@ -1,0 +1,15 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			SOV = {
+				IF = {
+					limit = { is_ai = yes }
+					set_division_template_lock = {
+						division_template = "Mekhanizirovaniy Korpus"
+						is_locked = yes
+					}
+				}
+			}
+		}
+	}
+}

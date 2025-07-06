@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_AUS_engelbert_dollfuss"
+		texturefile = "gfx/leaders/AUS/GFX_portrait_AUS_engelbert_dollfuss.png"
+	}
+}

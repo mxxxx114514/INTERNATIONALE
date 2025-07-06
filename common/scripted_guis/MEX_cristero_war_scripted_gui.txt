@@ -1,0 +1,140 @@
+scripted_gui = {
+
+	MEX_cristero_war_scripted_gui = {
+		context_type = decision_category
+		window_name = "MEX_cristero_war_scripted_gui"
+
+		effects = {
+			MEX_states_mexico_city_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_mexico_city
+			}
+			MEX_states_nuevo_leon_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_nuevo_leon
+			}
+			MEX_states_jalisco_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_jalisco
+			}
+			MEX_states_mexico_state_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_mexico_state
+			}
+			MEX_states_veracruz_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_veracruz
+			}
+			MEX_states_baja_california_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_baja_california
+			}
+			MEX_states_guanajuato_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_guanajuato
+			}
+			MEX_states_san_luis_potosi_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_san_luis_potosi
+			}
+			MEX_states_durango_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_durango
+			}
+			MEX_states_sinaloa_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_sinaloa
+			}
+			MEX_states_tamaulipas_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_tamaulipas
+			}
+			MEX_states_coahuila_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_coahuila
+			}
+			MEX_states_chihuahua_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_chihuahua
+			}
+			MEX_states_baja_california_sur_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_baja_california_sur
+			}
+			MEX_states_sonora_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_sonora
+			}
+			MEX_states_zacatecas_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_zacatecas
+			}
+			MEX_states_nayarit_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_nayarit
+			}
+			MEX_states_aguascalientes_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_aguascalientes
+			}
+			MEX_states_guerrero_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_guerrero
+			}
+			MEX_states_morelos_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_morelos
+			}
+			MEX_states_tlaxcala_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_tlaxcala
+			}
+			MEX_states_puebla_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_puebla
+			}
+			MEX_states_hidalgo_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_hidalgo
+			}
+			MEX_states_oaxaca_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_oaxaca
+			}
+			MEX_states_tabasco_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_tabasco
+			}
+			MEX_states_queretaro_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_queretaro
+			}
+			MEX_states_campeche_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_campeche
+			}
+			MEX_states_chiapas_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_chiapas
+			}
+			MEX_states_colima_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_colima
+			}
+			MEX_states_michoacan_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_michoacan
+			}
+			MEX_states_quintana_roo_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_quintana_roo
+			}
+			MEX_states_yucatan_click = {
+				MEX_clear_all_cristero_war_state_flags = yes
+				set_country_flag = MEX_clicked_on_yucatan
+			}
+		}
+
+	}
+
+}

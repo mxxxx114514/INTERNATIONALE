@@ -1,0 +1,115 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+MEX_SUPPORT_MGS = {
+	enable = {
+		tag = MEX
+		country_exists = MGS
+		MGS = {
+			has_country_flag = loyal_to_MEX_flag
+		}
+		COM = {
+			NOT = { has_country_flag = loyal_to_MEX_flag }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MGS
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = MGS
+		value = 1000
+	}
+
+}
+
+MEX_SUPPORT_COM = {
+	enable = {
+		tag = MEX
+		country_exists = COM
+		COM = {
+			has_country_flag = loyal_to_MEX_flag
+		}
+		MGS = {
+			NOT = { has_country_flag = loyal_to_MEX_flag }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = COM
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = COM
+		value = 1000
+	}
+
+}
+
+MGS_LIKES_MEX = {
+	enable = {
+		tag = MGS
+		country_exists = MEX
+		MGS = {
+			has_country_flag = loyal_to_MEX_flag
+		}
+		COM = {
+			NOT = { has_country_flag = loyal_to_MEX_flag }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = MEX
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = MEX
+		value = 1000
+	}
+
+}
+
+COM_LIKES_MEX = {
+	enable = {
+		tag = COM
+		country_exists = MEX
+		COM = {
+			has_country_flag = loyal_to_MEX_flag
+		}
+		MGS = {
+			NOT = { has_country_flag = loyal_to_MEX_flag }
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = MEX
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = MEX
+		value = 1000
+	}
+
+}

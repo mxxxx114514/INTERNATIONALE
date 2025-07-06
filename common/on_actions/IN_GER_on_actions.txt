@@ -1,0 +1,165 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			GRR = {
+				GER_calculate_spending_modifiers = yes
+				add_dynamic_modifier = {
+					modifier = GER_ai_buff_idea
+				}
+				add_dynamic_modifier = {
+					modifier = GER_maintain_st
+				}
+				add_dynamic_modifier = {
+					modifier = GER_maintain_ws
+				}
+				add_dynamic_modifier = {
+					modifier = GER_far_left_influence
+				}
+				add_dynamic_modifier = {
+					modifier = GER_sapd_influence
+				}
+				add_dynamic_modifier = {
+					modifier = GER_spd_influence
+				}
+				add_dynamic_modifier = {
+					modifier = GER_ddp_influence
+				}
+				add_dynamic_modifier = {
+					modifier = GER_no_marlib_infleunce
+				}
+				add_dynamic_modifier = {
+					modifier = GER_marlib_infleunce
+				}
+				add_dynamic_modifier = {
+					modifier = GER_catholic_influence
+				}
+				add_dynamic_modifier = {
+					modifier = GER_monarchist_influence
+				}
+				add_dynamic_modifier = {
+					modifier = GER_far_right_influence
+				}
+				add_dynamic_modifier = {
+					modifier = GER_POL_in_faction #Enabled conditionally
+				}
+				add_dynamic_modifier = {
+					modifier = GER_commie_opposition
+				}
+				IF = {
+					limit = {
+						is_ai = no
+					}
+					add_dynamic_modifier = { modifier = GER_military_spending_modifier }
+					add_dynamic_modifier = { modifier = GER_industry_spending_modifier }
+					add_dynamic_modifier = { modifier = GER_welfare_spending_modifier }
+				}
+				country_event = { id = germany.10 hours = 6 }
+
+				add_opinion_modifier = {
+					target = SOV
+					modifier = world_war_pain_3
+				}
+				add_opinion_modifier = {
+					target = RUS
+					modifier = world_war_pain_3
+				}
+				add_opinion_modifier = {
+					target = FRA
+					modifier = world_war_pain_3
+				}
+				add_opinion_modifier = {
+					target = ITA
+					modifier = world_war_pain_3
+				}
+				add_opinion_modifier = {
+					target = ENG
+					modifier = world_war_pain_1
+				}
+				add_opinion_modifier = {
+					target = NFR
+					modifier = world_war_pain_1
+				}
+				add_opinion_modifier = {
+					target = JAP
+					modifier = world_war_pain_1
+				}
+				reverse_add_opinion_modifier = {
+					target = SOV
+					modifier = world_war_pain_3
+				}
+				reverse_add_opinion_modifier = {
+					target = RUS
+					modifier = world_war_pain_3
+				}
+				reverse_add_opinion_modifier = {
+					target = FRA
+					modifier = world_war_pain_3
+				}
+				reverse_add_opinion_modifier = {
+					target = ITA
+					modifier = world_war_pain_3
+				}
+				reverse_add_opinion_modifier = {
+					target = ENG
+					modifier = world_war_pain_1
+				}
+				reverse_add_opinion_modifier = {
+					target = NFR
+					modifier = world_war_pain_1
+				}
+				reverse_add_opinion_modifier = {
+					target = JAP
+					modifier = world_war_pain_1
+				}
+
+				reverse_add_opinion_modifier = {
+					target = EST
+					modifier = GER_1920_eastern_intervention
+				}
+				reverse_add_opinion_modifier = {
+					target = LAT
+					modifier = GER_1920_eastern_intervention
+				}
+				reverse_add_opinion_modifier = {
+					target = LIT
+					modifier = GER_1920_eastern_intervention
+				}
+				reverse_add_opinion_modifier = {
+					target = FIN
+					modifier = GER_1920_eastern_intervention
+				}
+				reverse_add_opinion_modifier = {
+					target = POL
+					modifier = GER_1920_eastern_intervention
+				}
+				IF = {
+					limit = { is_ai = yes }
+					set_division_template_lock = {
+						division_template = "Panzer-Division"
+						is_locked = yes
+					}
+				}
+				activate_mission = GER_allocate_spending_mission
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			GRR = {
+				# Commie opposition
+				IF = {
+					limit = { has_completed_focus = GER_election }
+					#add_political_power = -1000
+					set_variable = { GER_commie_influence = 0 }
+					#subtract_from_variable = { GER_commie_influence = party_popularity@socialism }
+					subtract_from_variable = { GER_commie_influence = party_popularity@communism }
+					subtract_from_variable = { GER_commie_influence = party_popularity@auth_communism }
+					divide_variable = { GER_commie_influence = 1.5 }
+				}
+
+				# Spending
+				GER_calculate_spending_modifiers = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_CHI_song_qingling"
+		texturefile = "gfx/leaders/CHI/GFX_portrait_CHI_song_qingling.png"
+	}
+
+}

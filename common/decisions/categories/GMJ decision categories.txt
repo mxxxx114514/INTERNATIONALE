@@ -1,0 +1,9 @@
+#################
+#### GMJ ####
+#################
+GMJ_intervene_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = GMJ }
+}

@@ -1,0 +1,313 @@
+ideas = {
+	hidden_ideas = {
+		win_this_war_idea = {
+			modifier = {
+				army_attack_factor = 5
+				army_defence_factor = 5
+				army_speed_factor = 0.25
+				breakthrough_factor = 5
+				supply_consumption_factor = -0.99
+				surrender_limit = 1.0
+				conscription = 0.15
+				ai_focus_aggressive_factor = 1.0
+			}
+		}
+		generic_send_more_volunteers_idea = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				send_volunteer_divisions_required = -0.75
+				send_volunteer_size = 1
+			}
+		}
+		
+		generic_more_supplies_idea = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				supply_consumption_factor = -0.5
+				ai_focus_aggressive_factor = 1.0
+			}
+		}
+
+		generic_surrender_debuff_9 = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				surrender_limit = -0.9
+			}
+		}
+
+		generic_surrender_debuff_5 = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				surrender_limit = -0.5
+			}
+		}
+
+		generic_surrender_debuff_4 = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				surrender_limit = -0.4
+			}
+		}
+
+		generic_surrender_debuff_3 = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				surrender_limit = -0.3
+			}
+		}
+
+		generic_surrender_debuff_2 = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				surrender_limit = -0.2
+			}
+		}
+
+		generic_surrender_debuff_1 = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				surrender_limit = -0.1
+			}
+		}
+
+		generic_surrender_debuff_05 = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				surrender_limit = -0.05
+			}
+		}
+
+		generic_surrender_buff_1 = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				surrender_limit = 0.1
+			}
+		}
+
+		generic_surrender_buff_10 = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				surrender_limit = 1.0
+			}
+		}
+
+		generic_surrender_buff_11 = {
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_agrarian_society
+				
+			removal_cost = -1
+				
+			modifier = {
+				surrender_limit = 1.1
+			}
+		}
+
+		generic_more_army_75 = {
+			modifier = {
+				ai_desired_divisions_factor = 0.75
+			}
+		}
+
+		generic_more_army_50 = {
+			modifier = {
+				ai_desired_divisions_factor = 0.5
+			}
+		}
+
+		generic_more_army_25 = {
+			modifier = {
+				ai_desired_divisions_factor = 0.25
+			}
+		}
+
+		generic_more_army_20 = {
+			modifier = {
+				ai_desired_divisions_factor = 0.2
+			}
+		}
+
+		generic_more_army_15 = {
+			modifier = {
+				ai_desired_divisions_factor = 0.15
+			}
+		}
+
+		generic_less_army_70 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.7
+			}
+		}
+
+		generic_less_army_65 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.65
+			}
+		}
+
+		generic_less_army_60 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.6
+			}
+		}
+
+		generic_less_army_55 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.55
+			}
+		}
+
+		generic_less_army_50 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.5
+			}
+		}
+
+		generic_less_army_45 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.45
+			}
+		}
+
+		generic_less_army_40 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.4
+			}
+		}
+
+		generic_less_army_35 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.35
+			}
+		}
+
+		generic_less_army_30 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.3
+			}
+		}
+
+		generic_less_army_25 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.25
+			}
+		}
+
+		generic_less_army_20 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.2
+			}
+		}
+
+		generic_less_army_15 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.15
+			}
+		}
+
+		generic_less_army_10 = {
+			modifier = {
+				ai_desired_divisions_factor = -0.1
+			}
+		}
+
+		batallion_combat_groups = {
+			modifier = {
+				combat_width_factor = -0.25
+				army_speed_factor = 9.0
+				supply_consumption_factor = -0.25
+			}
+		}
+	}
+}

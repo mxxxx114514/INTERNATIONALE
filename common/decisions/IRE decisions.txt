@@ -1,0 +1,111 @@
+IRE_rebel_category = {
+
+	IRE_rebel_against_ENG = {
+		allowed = { tag = IRE }
+		icon = ger_mefo_bills
+		visible = {
+			NOT = { has_global_flag = IRE_rebellion_global_flag }
+			date > 1939.7.16
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_global_flag = IRE_rebellion_global_flag
+			set_country_flag = IRE_rebellion_flag
+			leave_faction = yes
+			set_cosmetic_tag = IRE_rebellion
+			set_politics = {
+				ruling_party = communism
+			}
+			set_popularities = {
+				fascism = 25
+				socialism = 10
+				auth_communism = 25
+				communism = 40
+			}
+			IF = {
+				limit = {
+					has_game_rule = {
+						rule = IRE_IRN_outcome
+						option = IRE_IRN_OUTCOME_IRE_VICTORY
+					}
+				}
+				add_ideas = win_this_war_idea
+			}
+			create_dynamic_country = {
+				original_tag = IRE
+				set_country_flag = IRE_ENG_flag
+				set_cosmetic_tag = IRE_northern
+				transfer_state = 119
+				set_politics = {
+					ruling_party = despotism
+				}
+				set_popularities = {
+					despotism = 70
+					neutrality = 15
+					democratic = 15
+				}
+				set_capital = { state = 119 }
+				division_template = {
+					name = "Infantry Division"		
+					division_names_group = IRE_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+				}
+				119 = {
+					create_unit = {
+						division = "division_template = \"Infantry Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0" 
+						owner = PREV
+						count = 13
+					}
+				}
+				generic_remove_unowned_cores = yes
+				add_state_claim = 113
+				add_state_claim = 134
+				add_state_claim = 135
+				add_ai_strategy = {
+					type = befriend
+					id = "ENG"			
+					value = 200
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "ENG"			
+					value = 200
+				}
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = IRE_IRN_outcome
+							option = IRE_IRN_OUTCOME_IRN_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+			}
+			every_owned_state = {
+				create_unit = {
+					division = "division_template = \"Infantry Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75" 
+					owner = PREV
+					count = 3
+				}
+			}
+			declare_war_on = {
+				target = IRN
+				type = annex_everything
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+}

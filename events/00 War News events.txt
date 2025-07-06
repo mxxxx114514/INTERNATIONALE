@@ -1,0 +1,2479 @@
+###########################
+# War News events
+###########################
+
+add_namespace = war_news
+
+#西南战争
+news_event = {
+	id = war_news.1
+	title = war_news.1.t
+	desc = war_news.1.desc
+	picture = GFX_event_war_news_1
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.1.a
+		trigger = {
+			is_commie_ideology = yes
+			NOT = { tag = CHI }
+		}
+	}
+
+	option = {
+		name = war_news.1.b
+		trigger = {
+			is_commie_ideology = no
+			NOT = {
+				OR = {
+					tag = YUN
+					tag = SZC
+					tag = GXC
+				}
+			}
+		}
+	}
+
+	option = {
+		name = war_news.1.c
+		trigger = {
+			OR = {
+				tag = YUN
+				tag = SZC
+				tag = GXC
+			}
+		}
+	}
+
+	option = {
+		name = war_news.1.d
+		trigger = {
+			OR = {
+				tag = CHI
+			}
+		}
+	}
+}
+
+#英属新月沃地崩溃
+
+news_event = {
+	id = war_news.2
+	title = war_news.2.t
+	desc = war_news.2.desc
+	picture = GFX_event_war_news_2
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.2.a
+		trigger = {
+			tag = ENG
+		}
+
+	}
+
+	option = {
+		name = war_news.2.b
+		trigger = {
+			NOT = { tag = ENG }
+		}
+
+	}
+
+}
+
+#土耳其入侵新月
+
+news_event = {
+	id = war_news.3
+	title = war_news.3.t
+	desc = war_news.3.desc
+	picture = GFX_event_war_news_3
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.3.a
+		trigger = { tag = TUR }
+
+	}
+
+	option = {
+		name = war_news.3.b
+		trigger = { NOT = { tag = TUR } }
+
+	}
+
+}
+
+#波罗的危机
+
+news_event = {
+	id = war_news.4
+	title = war_news.4.t
+	desc = war_news.4.desc
+	picture = GFX_event_war_news_4
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.4.a
+		trigger = {
+			OR = {
+				tag = GER
+				tag = BAL
+				tag = LIT
+				tag = WFI
+			}
+		}
+
+	}
+
+	option = {
+		name = war_news.4.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = GER
+					tag = BAL
+					tag = LIT
+					tag = WFI
+				}
+			}
+		}
+
+	}
+
+
+}
+
+#波罗的起义
+
+news_event = {
+	id = war_news.5
+	title = war_news.5.t
+	desc = war_news.5.desc
+	picture = GFX_event_war_news_5
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.5.a
+		trigger = {
+			OR = {
+				tag = GER
+				tag = BAL
+				tag = LIT
+				tag = WFI
+			}
+		}
+
+	}
+
+	option = {
+		name = war_news.5.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = GER
+					tag = BAL
+					tag = LIT
+					tag = WFI
+				}
+			}
+		}
+
+	}
+
+
+}
+
+#波罗的危机和平平息
+
+news_event = {
+	id = war_news.6
+	title = war_news.6.t
+	desc = war_news.6.desc
+	picture = GFX_event_war_news_6
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.6.a
+		trigger = {
+			OR = {
+				tag = GER
+				tag = BAL
+				tag = LIT
+				tag = WFI
+			}
+		}
+
+	}
+
+	option = {
+		name = war_news.6.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = GER
+					tag = BAL
+					tag = LIT
+					tag = WFI
+				}
+			}
+		}
+
+	}
+
+
+}
+
+#波罗的起义被镇压
+
+news_event = {
+	id = war_news.7
+	title = war_news.7.t
+	desc = war_news.7.desc
+	picture = GFX_event_war_news_7
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.7.a
+		trigger = {
+			OR = {
+				tag = GER
+				tag = BAL
+				tag = LIT
+				tag = WFI
+			}
+		}
+
+	}
+
+	option = {
+		name = war_news.7.b
+		trigger = {
+			NOT = {
+				OR = {
+					tag = GER
+					tag = BAL
+					tag = LIT
+					tag = WFI
+				}
+			}
+		}
+
+	}
+
+
+}
+
+#西班牙内战爆发
+
+news_event = {
+	id = war_news.8
+	title = war_news.8.t
+	desc = war_news.8.desc
+	picture = GFX_event_war_news_8
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.8.a
+		trigger = {
+			tag = SPA
+		}
+
+	}
+
+	option = {
+		name = war_news.8.b
+		trigger = {
+			tag = SPB
+		}
+
+	}
+
+	option = {
+		name = war_news.8.c
+		trigger = {
+			tag = SPC
+		}
+
+	}
+
+	option = {
+		name = war_news.8.d
+		trigger = {
+			tag = SPD
+		}
+
+	}
+
+	option = {
+		name = war_news.8.e
+		trigger = {
+			is_commie_ideology = yes
+			NOT = { original_tag = SPR }
+		}
+
+	}
+
+	option = {
+		name = war_news.8.f
+		trigger = {
+			is_commie_ideology = no
+			NOT = { original_tag = SPR }
+		}
+
+	}
+
+
+}
+
+#西班牙内战-共和国胜利
+
+news_event = {
+	id = war_news.9
+	title = war_news.9.t
+	desc = war_news.9.desc
+	picture = GFX_event_war_news_9
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.9.a
+		trigger = {
+			tag = SPD
+		}
+
+	}
+
+	option = {
+		name = war_news.9.b
+		trigger = {
+			NOT = {
+				tag = SPD
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.9.c
+		trigger = {
+			NOT = {
+				tag = SPD
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+
+}
+
+#西班牙内战-人民阵线胜利
+
+news_event = {
+	id = war_news.10
+	title = war_news.10.t
+	desc = war_news.10.desc
+	picture = GFX_event_war_news_10
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.10.a
+		trigger = {
+			tag = SPC
+		}
+
+	}
+
+	option = {
+		name = war_news.10.b
+		trigger = {
+			NOT = {
+				tag = SPC
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.10.c
+		trigger = {
+			NOT = {
+				tag = SPC
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+
+}
+
+#西班牙内战-长枪党胜利
+
+news_event = {
+	id = war_news.11
+	title = war_news.11.t
+	desc = war_news.11.desc
+	picture = GFX_event_war_news_11
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.11.a
+		trigger = {
+			tag = SPA
+		}
+
+	}
+
+	option = {
+		name = war_news.11.b
+		trigger = {
+			NOT = {
+				tag = SPA
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.11.c
+		trigger = {
+			NOT = {
+				tag = SPA
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+
+}
+
+#西班牙内战-卡洛斯胜利
+
+news_event = {
+	id = war_news.12
+	title = war_news.12.t
+	desc = war_news.12.desc
+	picture = GFX_event_war_news_12
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.12.a
+		trigger = {
+			tag = SPB
+		}
+
+	}
+
+	option = {
+		name = war_news.12.b
+		trigger = {
+			NOT = {
+				tag = SPB
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.12.c
+		trigger = {
+			NOT = {
+				tag = SPB
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+
+}
+
+#葡萄牙占领加利西亚
+
+news_event = {
+	id = war_news.13
+	title = war_news.13.t
+	desc = war_news.13.desc
+	picture = GFX_event_war_news_13
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.13.a
+		trigger = {
+			tag = POR
+		}
+
+	}
+
+	option = {
+		name = war_news.13.b
+		trigger = {
+			tag = SPC
+		}
+
+	}
+
+	option = {
+		name = war_news.13.c
+		trigger = {
+			NOT = { tag = POR }
+			NOT = { tag = SPC }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.13.d
+		trigger = {
+			NOT = { tag = POR }
+			NOT = { tag = SPC }
+			is_commie_ideology = no
+		}
+
+	}
+
+
+}
+
+#保加利亚政变
+
+news_event = {
+	id = war_news.14
+	title = war_news.14.t
+	desc = war_news.14.desc
+	picture = GFX_event_war_news_14
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.14.a
+		trigger = {
+			tag = BUL
+		}
+
+	}
+
+	option = {
+		name = war_news.14.b
+		trigger = {
+			NOT = { tag = BUL }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.14.c
+		trigger = {
+			NOT = { tag = BUL }
+			is_commie_ideology = no
+		}
+
+	}
+
+
+
+}
+
+#布拉格协约干预
+
+news_event = {
+	id = war_news.15
+	title = war_news.15.t
+	desc = war_news.15.desc
+	picture = GFX_event_war_news_15
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.15.a
+		trigger = {
+			tag = BUL
+		}
+
+	}
+
+	option = {
+		name = war_news.15.b
+		trigger = {
+			OR = {
+				tag = CZE
+				is_in_faction_with = CZE
+			}
+		}
+
+	}
+
+	option = {
+		name = war_news.15.c
+		trigger = {
+			NOT = { tag = BUL }
+			NOT = {
+				OR = {
+					tag = CZE
+					is_in_faction_with = CZE
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.15.d
+		trigger = {
+			NOT = { tag = BUL }
+			NOT = {
+				OR = {
+					tag = CZE
+					is_in_faction_with = CZE
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+
+
+}
+
+#匈牙利干预
+
+news_event = {
+	id = war_news.16
+	title = war_news.16.t
+	desc = war_news.16.desc
+	picture = GFX_event_war_news_16
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.16.a
+		trigger = {
+			tag = BUL
+		}
+
+	}
+
+	option = {
+		name = war_news.16.b
+		trigger = {
+			tag = HUN
+		}
+
+	}
+
+	option = {
+		name = war_news.16.c
+		trigger = {
+			OR = {
+				tag = CZE
+				is_in_faction_with = CZE
+			}
+		}
+
+	}
+
+	option = {
+		name = war_news.16.d
+		trigger = {
+			NOT = { tag = BUL }
+			NOT = { tag = HUN }
+			NOT = {
+				OR = {
+					tag = CZE
+					is_in_faction_with = CZE
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.16.e
+		trigger = {
+			NOT = { tag = BUL }
+			NOT = { tag = HUN }
+			NOT = {
+				OR = {
+					tag = CZE
+					is_in_faction_with = CZE
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#巴尔干战争-匈保协定胜利
+
+news_event = {
+	id = war_news.17
+	title = war_news.17.t
+	desc = war_news.17.desc
+	picture = GFX_event_war_news_17
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.17.a
+		trigger = {
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.17.b
+		trigger = {
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#巴尔干战争-布拉格协约/巴尔干协约胜利
+
+news_event = {
+	id = war_news.18
+	title = war_news.18.t
+	desc = war_news.18.desc
+	picture = GFX_event_war_news_18
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.18.a
+		trigger = {
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.18.b
+		trigger = {
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#德国占领捷克
+
+news_event = {
+	id = war_news.19
+	title = war_news.19.t
+	desc = war_news.19.desc
+	picture = GFX_event_war_news_19
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.19.a
+		trigger = {
+			tag = GER
+		}
+
+	}
+
+	option = {
+		name = war_news.19.b
+		trigger = {
+			is_commie_ideology = yes
+			NOT = { tag = GER }
+		}
+
+	}
+
+	option = {
+		name = war_news.19.c
+		trigger = {
+			is_commie_ideology = no
+			NOT = { tag = GER }
+		}
+
+	}
+
+}
+
+#第三国际干预西班牙内战
+
+news_event = {
+	id = war_news.20
+	title = war_news.20.t
+	desc = war_news.20.desc
+	picture = GFX_event_war_news_20
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.20.a
+		trigger = {
+			tag = SPC
+		}
+
+	}
+
+	option = {
+		name = war_news.20.b
+		trigger = {
+			original_tag = SPR
+			NOT = { tag = SPC }
+		}
+
+	}
+
+	option = {
+		name = war_news.20.c
+		trigger = {
+			NOT = { original_tag = SPR }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.20.d
+		trigger = {
+			NOT = { original_tag = SPR }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#第三国际干预巴尔干战争
+
+news_event = {
+	id = war_news.21
+	title = war_news.21.t
+	desc = war_news.21.desc
+	picture = GFX_event_war_news_21
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.21.a
+		trigger = {
+			OR = {
+				tag = HUN
+				tag = BUL
+			}
+		}
+
+	}
+
+	option = {
+		name = war_news.21.b
+		trigger = {
+			has_war_with = HUN
+		}
+
+	}
+
+	option = {
+		name = war_news.21.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = HUN
+					tag = BUL
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.21.d
+		trigger = {
+			NOT = {
+				has_war_with = HUN
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#阿尔及利亚起义爆发
+
+news_event = {
+	id = war_news.22
+	title = war_news.22.t
+	desc = war_news.22.desc
+	picture = GFX_event_war_news_22
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.22.a
+		trigger = {
+			tag = NFR
+		}
+
+	}
+
+	option = {
+		name = war_news.22.b
+		trigger = {
+			tag = ALG
+		}
+
+	}
+
+	option = {
+		name = war_news.22.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = NFR
+					tag = ALG
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.22.d
+		trigger = {
+			NOT = {
+				OR = {
+					tag = NFR
+					tag = ALG
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#阿尔及利亚起义被镇压
+
+news_event = {
+	id = war_news.23
+	title = war_news.23.t
+	desc = war_news.23.desc
+	picture = GFX_event_war_news_23
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.23.a
+		trigger = {
+			tag = NFR
+		}
+
+	}
+
+	option = {
+		name = war_news.23.b
+		trigger = {
+			NOT = { tag = NFR }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.23.c
+		trigger = {
+			NOT = { tag = NFR }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#国民法国崩溃
+
+news_event = {
+	id = war_news.24
+	title = war_news.24.t
+	desc = war_news.24.desc
+	picture = GFX_event_war_news_24
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.24.a
+		trigger = {
+			tag = ALG
+		}
+
+	}
+
+	option = {
+		name = war_news.24.b
+		trigger = {
+			NOT = { tag = ALG }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.24.c
+		trigger = {
+			NOT = { tag = ALG }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#南非内战
+
+news_event = {
+	id = war_news.25
+	title = war_news.25.t
+	desc = war_news.25.desc
+	picture = GFX_event_war_news_25
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.25.a
+		trigger = {
+			tag = USF
+		}
+
+	}
+
+	option = {
+		name = war_news.25.b
+		trigger = {
+			tag = SSF
+		}
+
+	}
+
+	option = {
+		name = war_news.25.c
+		trigger = {
+			tag = BOR
+		}
+
+	}
+
+	option = {
+		name = war_news.25.d
+		trigger = {
+			NOT = { original_tag = SAF }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.25.e
+		trigger = {
+			NOT = { original_tag = SAF }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#南非内战-联邦胜利
+
+news_event = {
+	id = war_news.26
+	title = war_news.26.t
+	desc = war_news.26.desc
+	picture = GFX_event_war_news_26
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.26.a
+		trigger = {
+			tag = USF
+		}
+
+	}
+
+	option = {
+		name = war_news.26.b
+		trigger = {
+			NOT = { tag = USF }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.26.c
+		trigger = {
+			NOT = { tag = USF }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#南非内战-公社胜利
+
+news_event = {
+	id = war_news.27
+	title = war_news.27.t
+	desc = war_news.27.desc
+	picture = GFX_event_war_news_27
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.27.a
+		trigger = {
+			tag = SSF
+		}
+
+	}
+
+	option = {
+		name = war_news.27.b
+		trigger = {
+			NOT = { tag = SSF }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.27.c
+		trigger = {
+			NOT = { tag = SSF }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#南非内战-布尔胜利
+
+news_event = {
+	id = war_news.28
+	title = war_news.28.t
+	desc = war_news.28.desc
+	picture = GFX_event_war_news_28
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.28.a
+		trigger = {
+			tag = BOR
+		}
+
+	}
+
+	option = {
+		name = war_news.28.b
+		trigger = {
+			NOT = { tag = BOR }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.28.c
+		trigger = {
+			NOT = { tag = BOR }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#芬兰内战
+
+news_event = {
+	id = war_news.29
+	title = war_news.29.t
+	desc = war_news.29.desc
+	picture = GFX_event_war_news_29
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.29.a
+		trigger = {
+			tag = WFI
+		}
+
+	}
+
+	option = {
+		name = war_news.29.b
+		trigger = {
+			tag = RFI
+		}
+
+	}
+
+	option = {
+		name = war_news.29.c
+		trigger = {
+			NOT = { original_tag = FIN }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.29.d
+		trigger = {
+			NOT = { original_tag = FIN }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#芬兰内战红芬兰胜利
+
+news_event = {
+	id = war_news.30
+	title = war_news.30.t
+	desc = war_news.30.desc
+	picture = GFX_event_war_news_30
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.30.a
+		trigger = {
+			tag = RFI
+		}
+
+	}
+
+	option = {
+		name = war_news.30.b
+		trigger = {
+			NOT = { original_tag = FIN }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.30.c
+		trigger = {
+			NOT = { original_tag = FIN }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#芬兰内战白芬兰胜利
+
+news_event = {
+	id = war_news.31
+	title = war_news.31.t
+	desc = war_news.31.desc
+	picture = GFX_event_war_news_31
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.31.a
+		trigger = {
+			tag = WFI
+		}
+
+	}
+
+	option = {
+		name = war_news.31.b
+		trigger = {
+			NOT = { original_tag = FIN }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.31.c
+		trigger = {
+			NOT = { original_tag = FIN }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#国奉战争/二次北伐
+
+news_event = {
+	id = war_news.32
+	title = war_news.32.t
+	desc = war_news.32.desc
+	picture = GFX_event_war_news_32
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.32.a
+		trigger = {
+			tag = CHI
+		}
+
+	}
+
+	option = {
+		name = war_news.32.b
+		trigger = {
+			tag = MAN
+		}
+
+	}
+
+	option = {
+		name = war_news.32.c
+		trigger = {
+			tag = JAP
+		}
+
+	}
+
+	option = {
+		name = war_news.32.d
+		trigger = {
+			NOT = {
+				OR = {
+					tag = CHI
+					tag = MAN
+					tag = JAP
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.32.e
+		trigger = {
+			NOT = {
+				OR = {
+					tag = CHI
+					tag = MAN
+					tag = JAP
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#日本干预国奉战争
+
+news_event = {
+	id = war_news.33
+	title = war_news.33.t
+	desc = war_news.33.desc
+	picture = GFX_event_war_news_33
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.33.a
+		trigger = {
+			tag = CHI
+		}
+
+	}
+
+	option = {
+		name = war_news.33.b
+		trigger = {
+			tag = MAN
+		}
+
+	}
+
+	option = {
+		name = war_news.33.c
+		trigger = {
+			tag = JAP
+		}
+
+	}
+
+	option = {
+		name = war_news.33.d
+		trigger = {
+			NOT = {
+				OR = {
+					tag = CHI
+					tag = MAN
+					tag = JAP
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.33.e
+		trigger = {
+			NOT = {
+				OR = {
+					tag = CHI
+					tag = MAN
+					tag = JAP
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#比利时内战
+
+news_event = {
+	id = war_news.34
+	title = war_news.34.t
+	desc = war_news.34.desc
+	picture = GFX_event_war_news_34
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.34.a
+		trigger = {
+			tag = FLA
+		}
+
+	}
+
+	option = {
+		name = war_news.34.b
+		trigger = {
+			tag = WAL
+		}
+
+	}
+
+	option = {
+		name = war_news.34.c
+		trigger = {
+			NOT = { original_tag = BEL }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.34.d
+		trigger = {
+			NOT = { original_tag = BEL }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#二战爆发
+
+news_event = {
+	id = war_news.35
+	title = war_news.35.t
+	desc = war_news.35.desc
+	picture = GFX_event_war_news_35
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.35.a
+		trigger = {
+			is_in_faction_with = GER
+		}
+
+	}
+
+	option = {
+		name = war_news.35.b
+		trigger = {
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.35.c
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = GER
+					is_in_faction_with = SOV
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.35.d
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = GER
+					is_in_faction_with = SOV
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#波兰干预二战
+
+news_event = {
+	id = war_news.36
+	title = war_news.36.t
+	desc = war_news.36.desc
+	picture = GFX_event_war_news_36
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.36.a
+		trigger = {
+			NOT = { tag = POL }
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.36.b
+		trigger = {
+			NOT = { tag = POL }
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.36.c
+		trigger = {
+			NOT = { tag = POL }
+			NOT = {
+				has_war_with = SOV
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+	option = {
+		name = war_news.37.d
+		trigger = {
+			tag = POL
+		}
+
+	}
+
+}
+
+#土耳其干预二战
+
+news_event = {
+	id = war_news.37
+	title = war_news.37.t
+	desc = war_news.37.desc
+	picture = GFX_event_war_news_37
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.37.a
+		trigger = {
+			NOT = { tag = TUR }
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.37.b
+		trigger = {
+			NOT = { tag = TUR }
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.37.c
+		trigger = {
+			NOT = { tag = TUR }
+			NOT = {
+				has_war_with = SOV
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+	option = {
+		name = war_news.37.d
+		trigger = {
+			tag = TUR
+		}
+
+	}
+
+}
+
+#英国干预二战
+
+news_event = {
+	id = war_news.38
+	title = war_news.38.t
+	desc = war_news.38.desc
+	picture = GFX_event_war_news_38
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.38.a
+		trigger = {
+			NOT = { has_country_flag = entente_member }
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.38.b
+		trigger = {
+			NOT = { has_country_flag = entente_member }
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.38.c
+		trigger = {
+			NOT = { has_country_flag = entente_member }
+			NOT = {
+				has_war_with = SOV
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+	option = {
+		name = war_news.38.d
+		trigger = {
+			has_country_flag = entente_member
+		}
+
+	}
+
+}
+
+#布拉格协约干预二战
+
+news_event = {
+	id = war_news.39
+	title = war_news.39.t
+	desc = war_news.39.desc
+	picture = GFX_event_war_news_39
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.39.a
+		trigger = {
+			NOT = { has_country_flag = p_entente_member }
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.39.b
+		trigger = {
+			NOT = { has_country_flag = p_entente_member }
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.39.c
+		trigger = {
+			NOT = { has_country_flag = p_entente_member }
+			NOT = {
+				has_war_with = SOV
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+	option = {
+		name = war_news.39.d
+		trigger = {
+			has_country_flag = p_entente_member
+		}
+
+	}
+
+}
+
+#美国干预二战
+
+news_event = {
+	id = war_news.40
+	title = war_news.40.t
+	desc = war_news.40.desc
+	picture = GFX_event_war_news_40
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.40.a
+		trigger = {
+			NOT = { tag = USA }
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.40.b
+		trigger = {
+			NOT = { tag = USA }
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.40.c
+		trigger = {
+			NOT = { tag = USA }
+			NOT = {
+				has_war_with = SOV
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+	option = {
+		name = war_news.40.d
+		trigger = {
+			tag = USA
+		}
+
+	}
+
+}
+
+
+#德国入侵波兰
+
+news_event = {
+	id = war_news.41
+	title = war_news.41.t
+	desc = war_news.41.desc
+	picture = GFX_event_war_news_41
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.41.a
+		trigger = {
+			tag = GRR
+		}
+
+	}
+
+	option = {
+		name = war_news.41.b
+		trigger = {
+			tag = POL
+		}
+
+	}
+
+	option = {
+		name = war_news.41.c
+		trigger = {
+			NOT = { tag = GER }
+			NOT = { tag = POL }
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.41.d
+		trigger = {
+			NOT = { tag = GER }
+			NOT = { tag = POL }
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#第三国际入侵瑞士
+
+news_event = {
+	id = war_news.42
+	title = war_news.42.t
+	desc = war_news.42.desc
+	picture = GFX_event_war_news_42
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.42.a
+		trigger = {
+			NOT = { tag = SWI }
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.42.b
+		trigger = {
+			NOT = { tag = SWI }
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.42.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = SWI
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.42.d
+		trigger = {
+			NOT = {
+				OR = {
+					tag = SWI
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+	option = {
+		name = war_news.42.e
+		trigger = {
+			tag = SWI
+		}
+
+	}
+
+}
+
+#第三国际入侵北欧
+
+news_event = {
+	id = war_news.43
+	title = war_news.43.t
+	desc = war_news.43.desc
+	picture = GFX_event_war_news_43
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.43.a
+		trigger = {
+			NOT = { OR = { tag = SWE tag = NOR tag = DEN } }
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.43.b
+		trigger = {
+			NOT = { OR = { tag = SWE tag = NOR tag = DEN } }
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.43.c
+		trigger = {
+			NOT = {
+				OR = {
+					OR = { tag = SWE tag = NOR tag = DEN }
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.43.d
+		trigger = {
+			NOT = {
+				OR = {
+					OR = { tag = SWE tag = NOR tag = DEN }
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+	option = {
+		name = war_news.43.e
+		trigger = {
+			OR = { tag = SWE tag = NOR tag = DEN }
+		}
+
+	}
+
+}
+
+#塔林条约崩溃（二战）
+
+news_event = {
+	id = war_news.44
+	title = war_news.44.t
+	desc = war_news.44.desc
+	picture = GFX_event_war_news_44
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.44.a
+		trigger = {
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.44.b
+		trigger = {
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.44.c
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.44.d
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#布拉格协约崩溃（二战）
+
+news_event = {
+	id = war_news.45
+	title = war_news.45.t
+	desc = war_news.45.desc
+	picture = GFX_event_war_news_45
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.45.a
+		trigger = {
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.45.b
+		trigger = {
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.45.c
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.45.d
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#土耳其崩溃（二战）
+
+news_event = {
+	id = war_news.46
+	title = war_news.46.t
+	desc = war_news.46.desc
+	picture = GFX_event_war_news_46
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.46.a
+		trigger = {
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.46.b
+		trigger = {
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.46.c
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.46.d
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#北欧崩溃
+
+news_event = {
+	id = war_news.47
+	title = war_news.47.t
+	desc = war_news.47.desc
+	picture = GFX_event_war_news_47
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.47.a
+		trigger = {
+			is_in_faction_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.47.b
+		trigger = {
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.47.c
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.47.d
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#第三国际崩溃
+
+news_event = {
+	id = war_news.48
+	title = war_news.48.t
+	desc = war_news.48.desc
+	picture = GFX_event_war_news_48
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.48.a
+		trigger = {
+			is_commie_ideology = yes
+		}
+
+	}
+
+	option = {
+		name = war_news.48.b
+		trigger = {
+			is_commie_ideology = no
+		}
+
+	}
+
+}
+
+#国民军干预国奉战争
+
+news_event = {
+	id = war_news.49
+	title = war_news.49.t
+	desc = war_news.49.desc
+	picture = GFX_event_war_news_49
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.49.a
+		trigger = {
+			tag = CHI
+		}
+
+	}
+
+	option = {
+		name = war_news.49.b
+		trigger = {
+			tag = MAN
+		}
+
+	}
+
+	option = {
+		name = war_news.49.c
+		trigger = {
+			tag = GMJ
+		}
+
+	}
+
+	option = {
+		name = war_news.49.d
+		trigger = {
+			NOT = {
+				OR = {
+					tag = CHI
+					tag = MAN
+					tag = GMJ
+				}
+			}
+		}
+
+	}
+
+}
+
+#日本背刺苏联
+
+news_event = {
+	id = war_news.50
+	title = war_news.50.t
+	desc = war_news.50.desc
+	picture = GFX_event_war_news_50
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = war_news.50.a
+		trigger = {
+			OR = {
+				tag = JAP
+				is_in_faction_with = JAP
+			}
+		}
+
+	}
+
+	option = {
+		name = war_news.50.b
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV
+			}
+		}
+
+	}
+
+	option = {
+		name = war_news.50.c
+		trigger = {
+			has_war_with = SOV
+		}
+
+	}
+
+	option = {
+		name = war_news.50.d
+		trigger = {
+			NOT = {
+				OR = {
+					tag = JAP
+					is_in_faction_with = JAP
+					tag = SOV
+					is_in_faction_with = SOV
+					has_war_with = SOV
+				}
+			}
+		}
+
+	}
+
+}

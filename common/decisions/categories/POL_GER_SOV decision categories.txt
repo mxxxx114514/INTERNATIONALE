@@ -1,0 +1,67 @@
+poland_german_soviet_game = {
+    icon = generic_industry
+	picture = GFX_decision_cat_generic_mefo_bills
+	#visible_when_empty = yes
+
+	allowed = {
+		OR = {
+			tag = POL 
+			tag = GER
+			tag = SOV
+		}
+	}
+	visible = {
+		NOT = { has_global_flag = GER_invade_POL_flag }
+		NOT = { has_global_flag = ww2 }
+		POL = {
+			is_subject = no
+		}
+		OR = {
+			AND = {
+				check_variable = { POL.POL_influence < 100 }
+				check_variable = { POL.GER_influence < 100 }
+				#check_variable = { POL.SOV_influence < 100 }
+			}
+			check_variable = { POL.GER_poznan_influence < 100 }
+			AND = {
+				check_variable = { POL.GER_poznan_influence > 99 }
+				GER = { OR = { has_government = neutrality has_government = despotism has_government = fascism } }
+				NOT = { has_global_flag = GER_demand_poznan_flag }
+			}
+		}
+	}
+	
+	#custom_icon = {
+	#	tag = POL
+	#	value = POL_icon_value
+	#	desc = POL_full_influence_breakdown
+	#
+	#	visible = {
+	#		country_exists = POL
+	#		POL = { is_subject = no }
+	#	}
+	#}
+	
+	#custom_icon = {
+	#	tag = GER
+	#	value = GER_icon_value
+	#	desc = GER_full_influence_breakdown
+	#
+	#	visible = {
+	#		country_exists = GER
+	#		GER = { is_subject = no }
+	#	}
+	#}
+
+	#custom_icon = {
+	#	tag = SOV
+	#	value = SOV_icon_value
+	#	desc = SOV_full_influence_breakdown
+	#
+	#	visible = {
+	#		country_exists = SOV
+	#		SOV = { is_subject = no }
+	#	}
+	#}
+
+}

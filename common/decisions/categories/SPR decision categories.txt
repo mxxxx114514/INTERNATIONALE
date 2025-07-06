@@ -1,0 +1,9 @@
+#################
+#### SPR ####
+#################
+SPR_diplomacy_categories = {
+	icon = ""
+	picture = ""
+	priority = 10
+	visible = { original_tag = SPR }
+}

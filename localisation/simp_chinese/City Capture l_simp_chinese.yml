@@ -1,0 +1,42 @@
+﻿l_simp_chinese:
+ city_capture_ENG.1.t: "伦敦陷落"
+ city_capture_ENG.1.a: "我们不能再后退了！"
+ city_capture_ENG.1.b: "胜利在望！"
+ city_capture_ENG.1.c: "英国还有翻盘的机会吗？"
+
+ city_capture_GER.1.t: "柏林陷落"
+ city_capture_GER.1.a: "我们不能再后退了！"
+ city_capture_GER.1.b: "胜利在望！"
+ city_capture_GER.1.c: "德国还有翻盘的机会吗？"
+ 
+ city_capture_GER.2.t: "汉堡陷落"
+ city_capture_GER.3.t: "慕尼黑陷落"
+ city_capture_GER.4.t: "法兰克福陷落"
+ city_capture_GER.5.t: "布雷斯劳陷落"
+ city_capture_GER.6.t: "柯尼斯堡陷落"
+
+ city_capture_AUS.1.t: "维也纳陷落"
+ city_capture_AUS.1.a: "我们不能再后退了！"
+ city_capture_AUS.1.b: "胜利在望！"
+ city_capture_AUS.1.c: "音乐之城至此落入敌手"
+
+ city_capture_FRA.1.t: "巴黎陷落"
+ city_capture_FRA.1.a: "我们不能再后退了！"
+ city_capture_FRA.1.b: "胜利在望！"
+ city_capture_FRA.1.c: "二十余载红色政权落下帷幕"
+
+ city_capture_NFR.1.t: "阿尔及尔陷落"
+ city_capture_NFR.1.a: "我们不能再后退了！"
+ city_capture_NFR.1.b: "胜利在望！"
+ city_capture_NFR.1.c: "他们还能流亡到哪里？"
+
+ city_capture_ITA.1.t: "罗马陷落"
+ city_capture_ITA.1.a: "我们不能再后退了！"
+ city_capture_ITA.1.b: "胜利在望！"
+ city_capture_ITA.1.c: "永恒之城不再永恒"
+
+ city_capture_SOV.1.t: "莫斯科陷落"
+ city_capture_SOV.2.t: "列宁格勒陷落"
+ city_capture_SOV.3.t: "伏尔加格勒陷落"
+
+ city_capture_POL.1.t: "华沙陷落"

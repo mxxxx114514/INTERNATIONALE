@@ -1,0 +1,22 @@
+state={
+	id=938
+	name="STATE_938"
+	provinces={
+		2008 13287 13288 13295 13361
+	}
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = MEX
+		set_demilitarized_zone = yes
+
+	}
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+
+}

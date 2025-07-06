@@ -1,0 +1,692 @@
+###########################
+# USA Events
+###########################
+
+add_namespace = usa
+add_namespace = usa_foreign
+
+country_event = { #Jan 6 Capitol Crisis
+	id = usa.1
+	title = usa.1.t
+	desc = usa.1.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Overthrow the right wing government
+		name = usa.1.a
+		ai_chance = {
+			base = 35
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_SOCIALISTS
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_PROGRESSIVES
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_DEMOCRATS
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_NEOCONFEDERATES
+				}
+			}
+		}
+		country_event = {
+			id = usa.2
+			days = 5
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_democratic
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
+	}
+
+	option = { #Defend the right wing government
+		name = usa.1.b
+		ai_chance = {
+			base = 65
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_REPUBLICANS
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_NATIONALISTS
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_JUNTA_REP_NAT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_JUNTA
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_SNP
+				}
+			}
+		}
+		country_event = {
+			id = usa.3
+			days = 5
+		}
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+	}
+	
+}
+
+country_event = { #Organize general Strike
+	id = usa.2
+	title = usa.2.t
+	desc = usa.2.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Socialist-Progressive proposal - Left wing path [Magenta/Red]
+		name = usa.2.a
+		ai_chance = {
+			base = 30
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_SOCIALISTS
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_PROGRESSIVES
+				}
+			}
+		}
+		country_event = {
+			id = usa.6
+			days = 5
+		}
+	}
+
+	option = { #Democratic Party proposal - Democratic Party path [Orange/Blue]
+		name = usa.2.b
+		ai_chance = {
+			base = 70
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_DEMOCRATS
+				}
+			}
+		}
+		country_event = {
+			id = usa.7
+			days = 5
+		}
+
+	}
+
+	option = { #Neo-Confederates proposal - Neoconfederates path [Brown]
+		name = usa.2.c
+		ai_chance = {
+			base = 60
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_NEOCONFEDERATES
+				}
+			}
+		}
+		country_event = {
+			id = usa.11
+			days = 5
+		}
+
+	}
+	
+}
+
+country_event = { #Deploy military?
+	id = usa.3
+	title = usa.3.t
+	desc = usa.3.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Don't deploy military - Republican Party path [Yellow/Blue]
+		name = usa.3.a
+		ai_chance = {
+			base = 50
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_REPUBLICANS
+				}
+			}
+		}
+		country_event = {
+			id = usa.5
+			days = 5
+		}
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.03
+		}
+
+	}
+
+	option = { #Deploy military - Military Junta Path [Light Grey/Dark Grey]
+		name = usa.3.b
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_JUNTA_REP_NAT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_JUNTA
+				}
+			}
+		}
+		country_event = {
+			id = usa.8
+			days = 360
+		}
+		clr_country_flag = autdem_coalition_flag
+		clr_country_flag = natpop_coalition_flag
+		set_politics = {
+			ruling_party = despotism
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.25
+		}
+		set_cosmetic_tag = USA_junta
+
+	}
+
+	option = { #Deploy National Guards - Far right path [Light Grey/Brown]
+		name = usa.3.c
+		ai_chance = {
+			base = 40
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_SNP
+				}
+			}
+		}
+		country_event = {
+			id = usa.4
+			days = 5
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+
+	}
+	
+}
+
+country_event = { #Deploy military - Choose target
+	id = usa.4
+	title = usa.4.t
+	desc = usa.4.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Only secure Washington DC - National Party path [Light Grey]
+		name = usa.4.a
+		ai_chance = {
+			base = 30
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_NATIONALISTS
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		clr_country_flag = autdem_coalition_flag
+		clr_country_flag = natpop_coalition_flag
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		}
+		set_cosmetic_tag = USA_nationalists
+
+	}
+
+	option = { #Full Martial Law [Brown]
+		name = usa.4.c
+		ai_chance = {
+			base = 70
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_SNP
+				}
+			}
+		}
+		set_rule = { can_send_volunteers = yes }
+		set_politics = {
+			ruling_party = fascism
+		}
+		clr_country_flag = autdem_coalition_flag
+		clr_country_flag = natpop_coalition_flag
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = USA_fascism_party_snp_long
+			name = USA_fascism_party_snp
+		}
+		set_cosmetic_tag = USA_snp
+		hidden_effect = {
+			GRR = {
+				country_event = {
+					id = germany.32
+					days = 60
+					random_days = 30
+				}
+			}
+		}
+
+	}
+	
+}
+
+country_event = { #Republican Party election
+	id = usa.5
+	title = usa.5.t
+	desc = usa.5.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Republican path 1 [Yellow]
+		name = usa.5.a
+		clr_country_flag = autdem_coalition_flag
+		clr_country_flag = natpop_coalition_flag
+
+	}
+
+	option = { # Republican path 2 [Yellow]
+		name = usa.5.b
+		clr_country_flag = autdem_coalition_flag
+		clr_country_flag = natpop_coalition_flag
+
+	}
+	
+}
+
+country_event = { #Alliance with Communists?
+	id = usa.6
+	title = usa.6.t
+	desc = usa.6.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Alliance with communist [Red]
+		name = usa.6.a
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_SOCIALISTS
+				}
+			}
+		}
+		set_rule = { can_send_volunteers = yes }
+		set_politics = {
+			ruling_party = communism
+		}
+		clr_country_flag = autdem_coalition_flag
+		clr_country_flag = natpop_coalition_flag
+		set_country_flag = autsoc_coalition_flag
+		set_country_flag = libsoc_coalition_flag
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = auth_communism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = socialism
+			popularity = 0.1
+		}
+		set_cosmetic_tag = USA_socialists
+		hidden_effect = {
+			set_autonomy = {
+				target = PHI
+				autonomy_state = autonomous_free
+			}
+			ENG = { add_to_faction = PHI }
+			GRR = {
+				country_event = {
+					id = germany.32
+					days = 60
+					random_days = 30
+				}
+			}
+		}
+
+	}
+
+	option = { #No Alliance with communist [Magenta]
+		name = usa.6.b
+		ai_chance = {
+			base = 90
+		}
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_PROGRESSIVES
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = social_democratic
+		}
+		clr_country_flag = autdem_coalition_flag
+		clr_country_flag = natpop_coalition_flag
+		add_popularity = {
+			ideology = social_democratic
+			popularity = 0.175
+		}
+		set_cosmetic_tag = USA_progressives
+
+	}
+	
+}
+
+country_event = { #Democratic Party election
+	id = usa.7
+	title = usa.7.t
+	desc = usa.7.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Roosevelt path [Orange]
+		name = usa.7.a
+		set_politics = {
+			ruling_party = social_liberal
+		}
+		clr_country_flag = autdem_coalition_flag
+		clr_country_flag = natpop_coalition_flag
+		set_country_flag = condem_coalition_flag
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		set_cosmetic_tag = USA_democrats
+
+	}
+
+	option = { #Smith path [Blue]
+		name = usa.7.b
+		trigger = {
+			always = no
+		}
+
+	}
+	
+}
+
+country_event = { #End Military Junta?
+	id = usa.8
+	title = usa.8.t
+	desc = usa.8.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Give power to the conservatives [Light Grey]
+		name = usa.8.a
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_JUNTA_REP_NAT
+				}
+			}
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_country_flag = pataut_coalition_flag
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+		set_cosmetic_tag = USA_nationalists
+
+	}
+
+	option = { #Keep the military junta [Dark Grey]
+		name = usa.8.b
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = USA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = USA_path
+					option = USA_PATH_JUNTA
+				}
+			}
+		}
+
+	}
+	
+}
+
+country_event = { #End Great Depression
+	id = usa.9
+	title = usa.9.t
+	desc = usa.9.desc
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		date > 1938.6.1
+	}
+
+	option = {
+		name = usa.9.a
+		remove_ideas = great_depression
+
+	}
+	
+}
+
+country_event = { #Join Great War volunteers
+	id = usa.10
+	title = usa.10.t
+	desc = usa.10.desc
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		date > 1940.6.1
+	}
+
+	option = {
+		name = usa.10.a
+		set_rule = { can_send_volunteers = yes }
+
+	}
+	
+}
+
+country_event = {
+	id = usa.11
+	title = usa.11.t
+	desc = usa.11.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Neo-Confederates path [Brown]
+		name = usa.11.a
+		set_rule = { can_send_volunteers = yes }
+		set_politics = {
+			ruling_party = fascism
+		}
+		clr_country_flag = autdem_coalition_flag
+		clr_country_flag = natpop_coalition_flag
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = USA_fascism_party_neoconfederates_long
+			name = USA_fascism_party_neoconfederates
+		}
+		set_cosmetic_tag = USA_neoconfederates
+
+	}
+}
+
+country_event = {
+	id = usa_foreign.1
+	title = usa_foreign.1.t
+	desc = usa_foreign.1.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = usa_foreign.1.a
+		add_stability = -0.1
+		random_owned_controlled_state = {
+			limit = { industrial_complex > 0 }
+			remove_building = { type = industrial_complex level = 1 }
+		}
+		random_owned_controlled_state = {
+			limit = { industrial_complex > 0 }
+			remove_building = { type = industrial_complex level = 1 }
+		}
+		random_owned_controlled_state = {
+			limit = { industrial_complex > 0 }
+			remove_building = { type = industrial_complex level = 1 }
+		}
+		random_owned_controlled_state = {
+			limit = { industrial_complex > 0 }
+			remove_building = { type = industrial_complex level = 1 }
+		}
+
+	}
+	
+}

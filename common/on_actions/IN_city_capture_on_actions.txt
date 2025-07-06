@@ -1,0 +1,143 @@
+#Credit to the KR team
+on_actions = {
+
+	#ROOT is new controller
+	#FROM is old controller
+	#FROM.FROM is state ID
+
+	on_state_control_changed = {
+		effect = {
+			IF = {
+				limit = {
+					#always = no
+					has_war_with = FROM
+					FROM.FROM = {
+						is_owned_by = FROM
+						NOT = { has_state_flag = city_has_fallen_once }
+					}
+				}
+				FROM.FROM = { save_event_target_as = fallen_state }
+				# London
+				IF = {
+					limit = {
+						FROM.FROM = { state = 126 }
+						ROOT = { controls_province = 6103 }
+					}
+					news_event = city_capture_ENG.1
+				}
+				# Berlin
+				IF = {
+					limit = {
+						FROM.FROM = { state = 64 }
+						ROOT = { controls_province = 6521 }
+					}
+					news_event = city_capture_GER.1
+				}
+				# Hamburg
+				IF = {
+					limit = {
+						FROM.FROM = { state = 58 }
+						ROOT = { controls_province = 9347 }
+					}
+					news_event = city_capture_GER.2
+				}
+				# Munich
+				IF = {
+					limit = {
+						FROM.FROM = { state = 52 }
+						ROOT = { controls_province = 692 }
+					}
+					news_event = city_capture_GER.3
+				}
+				# Frankfurt
+				IF = {
+					limit = {
+						FROM.FROM = { state = 55 }
+						ROOT = { controls_province = 6488 }
+					}
+					news_event = city_capture_GER.4
+				}
+				# Breslau
+				IF = {
+					limit = {
+						FROM.FROM = { state = 66 }
+						ROOT = { controls_province = 9570 }
+					}
+					news_event = city_capture_GER.5
+				}
+				# Königsberg
+				IF = {
+					limit = {
+						FROM.FROM = { state = 763 }
+						ROOT = { controls_province = 6332 }
+					}
+					news_event = city_capture_GER.6
+				}
+				# Vienna
+				IF = {
+					limit = {
+						FROM.FROM = { state = 4 }
+						ROOT = { controls_province = 11666 }
+					}
+					news_event = city_capture_AUS.1
+				}
+				# Paris
+				IF = {
+					limit = {
+						FROM.FROM = { state = 16 }
+						ROOT = { controls_province = 11506 }
+					}
+					news_event = city_capture_FRA.1
+				}
+				# Algiers
+				IF = {
+					limit = {
+						FROM.FROM = { state = 459 }
+						ROOT = { controls_province = 1145 }
+					}
+					news_event = city_capture_NFR.1
+				}
+				# Rome
+				IF = {
+					limit = {
+						FROM.FROM = { state = 2 }
+						ROOT = { controls_province = 9904 }
+					}
+					news_event = city_capture_ITA.1
+				}
+				# Moscow
+				IF = {
+					limit = {
+						FROM.FROM = { state = 219 }
+						ROOT = { controls_province = 6380 }
+					}
+					news_event = city_capture_SOV.1
+				}
+				# Leningrad
+				IF = {
+					limit = {
+						FROM.FROM = { state = 195 }
+						ROOT = { controls_province = 3151 }
+					}
+					news_event = city_capture_SOV.2
+				}
+				# Trotskygrad
+				IF = {
+					limit = {
+						FROM.FROM = { state = 217 }
+						ROOT = { controls_province = 3529 }
+					}
+					news_event = city_capture_SOV.3
+				}
+				# Warsaw
+				IF = {
+					limit = {
+						FROM.FROM = { state = 10 }
+						ROOT = { controls_province = 3544 }
+					}
+					news_event = city_capture_POL.1
+				}
+			}
+		}
+	}
+}

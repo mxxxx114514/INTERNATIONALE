@@ -1,0 +1,482 @@
+AI_category = {
+
+	AI_tank_1 = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		visible = { is_ai = yes }
+		available = {
+			OR = {
+				date > 1938.1.1
+				AND = {
+					has_tech = basic_medium_tank_chassis
+					has_tech = artillery1
+					has_tech = interwar_antitank
+				}
+			}
+		}
+		complete_effect = {
+			set_technology = {
+				basic_medium_tank_chassis = 1
+			}
+			set_technology = {
+				artillery1 = 1
+			}
+			set_technology = {
+				interwar_antitank = 1
+			}
+			create_equipment_variant = {
+				type = medium_tank_chassis_1
+				modules = {
+					main_armament_slot = tank_medium_howitzer
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = wet_ammo_storage
+					special_type_slot_2 = tank_radio_1
+					special_type_slot_3 = sloped_armor
+					special_type_slot_4 = armor_skirts
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 14
+				}
+			}
+			create_equipment_variant = {
+				type = medium_tank_destroyer_chassis_1
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon
+					turret_type_slot = tank_medium_fixed_superstructure_turret
+					suspension_type_slot = tank_christie_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = sloped_armor
+					special_type_slot_2 = squeezebore_adaptor
+					special_type_slot_3 = armor_skirts
+					special_type_slot_4 = easy_maintenance
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 14
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	AI_tank_2 = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		visible = { is_ai = yes }
+		available = {
+			has_tech = improved_medium_tank_chassis
+			has_tech = artillery3
+			has_tech = antitank4
+		}
+		complete_effect = {
+			set_technology = {
+				improved_medium_tank_chassis = 1
+			}
+			set_technology = {
+				artillery3 = 1
+			}
+			set_technology = {
+				antitank4 = 1
+			}
+			create_equipment_variant = {
+				type = medium_tank_chassis_2
+				modules = {
+					main_armament_slot = tank_medium_howitzer_2
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_torsion_bar_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = wet_ammo_storage
+					special_type_slot_2 = tank_radio_2
+					special_type_slot_3 = sloped_armor
+					special_type_slot_4 = armor_skirts
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 14
+				}
+			}
+			create_equipment_variant = {
+				type = medium_tank_destroyer_chassis_2
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon_2
+					turret_type_slot = tank_medium_fixed_superstructure_turret
+					suspension_type_slot = tank_christie_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = sloped_armor
+					special_type_slot_2 = squeezebore_adaptor
+					special_type_slot_3 = armor_skirts
+					special_type_slot_4 = easy_maintenance
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 14
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	AI_tank_art_1 = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		visible = { is_ai = yes }
+		available = {
+			has_tech = basic_medium_tank_chassis
+			has_tech = artillery1
+			has_country_flag = AI_artillery_focus_flag
+		}
+		complete_effect = {
+			create_equipment_variant = {
+				type = medium_tank_artillery_chassis_1
+				modules = {
+					main_armament_slot = tank_medium_howitzer
+					turret_type_slot = tank_medium_fixed_superstructure_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = wet_ammo_storage
+					special_type_slot_2 = tank_radio_2
+					special_type_slot_3 = sloped_armor
+					special_type_slot_4 = armor_skirts
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 14
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	AI_tank_art_2 = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		visible = { is_ai = yes }
+		available = {
+			has_tech = basic_medium_tank_chassis
+			has_tech = artillery3
+			has_country_flag = AI_artillery_focus_flag
+		}
+		complete_effect = {
+			create_equipment_variant = {
+				type = medium_tank_artillery_chassis_2
+				modules = {
+					main_armament_slot = tank_medium_howitzer_2
+					turret_type_slot = tank_medium_fixed_superstructure_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = wet_ammo_storage
+					special_type_slot_2 = tank_radio_2
+					special_type_slot_3 = sloped_armor
+					special_type_slot_4 = armor_skirts
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 14
+					tank_nsb_armor_upgrade = 14
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	AI_tank_division_1 = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		visible = { is_ai = yes }
+		available = {
+			has_tech = basic_medium_tank_chassis
+			has_tech = artillery1
+			date > 1937.7.1
+			NOT = { has_country_flag = AI_artillery_focus_flag }
+		}
+		days_remove = 3
+		remove_effect = {
+			division_template = {
+				name = "Armored division"
+				division_names_group = ZZZ_TNK
+				#is_locked = yes
+				priority = 2
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					medium_armor = { x = 2 y = 0 }
+					medium_armor = { x = 2 y = 1 }
+					medium_armor = { x = 2 y = 2 }
+					medium_armor = { x = 2 y = 3 }
+					medium_armor = { x = 3 y = 0 }
+					medium_armor = { x = 3 y = 1 }
+					medium_armor = { x = 3 y = 2 }
+					medium_armor = { x = 3 y = 3 }
+					medium_tank_destroyer_brigade = { x = 4 y = 0 }
+					medium_tank_destroyer_brigade = { x = 4 y = 1 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+					logistics_company = { x = 0 y = 4 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	AI_tank_art_division_1 = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		visible = { is_ai = yes }
+		available = {
+			has_tech = basic_medium_tank_chassis
+			has_tech = artillery1
+			date > 1937.7.1
+			has_country_flag = AI_artillery_focus_flag
+		}
+		days_remove = 3
+		remove_effect = {
+			division_template = {
+				name = "Armored division"
+				division_names_group = ZZZ_TNK
+				#is_locked = yes
+				priority = 2
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					medium_armor = { x = 2 y = 0 }
+					medium_armor = { x = 2 y = 1 }
+					medium_armor = { x = 2 y = 2 }
+					medium_armor = { x = 2 y = 3 }
+					medium_sp_artillery_brigade = { x = 3 y = 0 }
+					medium_sp_artillery_brigade = { x = 3 y = 1 }
+					medium_sp_artillery_brigade = { x = 3 y = 2 }
+					medium_sp_artillery_brigade = { x = 3 y = 3 }
+					medium_tank_destroyer_brigade = { x = 4 y = 0 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+					logistics_company = { x = 0 y = 4 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	AI_tank_division_2 = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		visible = { is_ai = yes }
+		available = {
+			has_tech = improved_medium_tank_chassis
+			has_tech = artillery3
+			has_tech = mechanised_infantry2
+			date > 1940.1.1
+			NOT = { has_country_flag = AI_artillery_focus_flag }
+			OR = {
+				has_equipment = {
+					mechanized_equipment > 5000
+				}
+				has_equipment = {
+					mechanized_equipment_1 > 5000
+				}
+				has_equipment = {
+					mechanized_equipment_2 > 5000
+				}
+				has_equipment = {
+					mechanized_equipment_3 > 5000
+				}
+			}
+		}
+		days_remove = 3
+		remove_effect = {
+			#set_division_template_lock = {
+			#	division_template = "Armored division"
+			#	is_locked = yes
+			#}
+			division_template = {
+				name = "Armored division (mechanized)"
+				division_names_group = ZZZ_TNK
+				#is_locked = yes
+				priority = 2
+				regiments = {
+					mechanized = { x = 0 y = 0 }
+					mechanized = { x = 0 y = 1 }
+					mechanized = { x = 0 y = 2 }
+					mechanized = { x = 0 y = 3 }
+					mechanized = { x = 1 y = 0 }
+					mechanized = { x = 1 y = 1 }
+					mechanized = { x = 1 y = 2 }
+					mechanized = { x = 1 y = 3 }
+					medium_armor = { x = 2 y = 0 }
+					medium_armor = { x = 2 y = 1 }
+					medium_armor = { x = 2 y = 2 }
+					medium_armor = { x = 2 y = 3 }
+					medium_armor = { x = 3 y = 0 }
+					medium_armor = { x = 3 y = 1 }
+					medium_armor = { x = 3 y = 2 }
+					medium_armor = { x = 3 y = 3 }
+					medium_tank_destroyer_brigade = { x = 4 y = 0 }
+					medium_tank_destroyer_brigade = { x = 4 y = 1 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+					logistics_company = { x = 0 y = 4 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	AI_tank_art_division_2 = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		visible = { is_ai = yes }
+		available = {
+			has_tech = improved_medium_tank_chassis
+			has_tech = artillery3
+			has_tech = mechanised_infantry2
+			date > 1940.1.1
+			has_country_flag = AI_artillery_focus_flag
+			OR = {
+				has_equipment = {
+					mechanized_equipment > 5000
+				}
+				has_equipment = {
+					mechanized_equipment_1 > 5000
+				}
+				has_equipment = {
+					mechanized_equipment_2 > 5000
+				}
+				has_equipment = {
+					mechanized_equipment_3 > 5000
+				}
+			}
+		}
+		days_remove = 3
+		remove_effect = {
+			#set_division_template_lock = {
+			#	division_template = "Armored division"
+			#	is_locked = yes
+			#}
+			division_template = {
+				name = "Armored division (mechanized)"
+				division_names_group = ZZZ_TNK
+				#is_locked = yes
+				priority = 2
+				regiments = {
+					mechanized = { x = 0 y = 0 }
+					mechanized = { x = 0 y = 1 }
+					mechanized = { x = 0 y = 2 }
+					mechanized = { x = 0 y = 3 }
+					mechanized = { x = 1 y = 0 }
+					mechanized = { x = 1 y = 1 }
+					mechanized = { x = 1 y = 2 }
+					mechanized = { x = 1 y = 3 }
+					medium_armor = { x = 2 y = 0 }
+					medium_armor = { x = 2 y = 1 }
+					medium_armor = { x = 2 y = 2 }
+					medium_armor = { x = 2 y = 3 }
+					medium_sp_artillery_brigade = { x = 3 y = 0 }
+					medium_sp_artillery_brigade = { x = 3 y = 1 }
+					medium_sp_artillery_brigade = { x = 3 y = 2 }
+					medium_sp_artillery_brigade = { x = 3 y = 3 }
+					medium_tank_destroyer_brigade = { x = 4 y = 0 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+					logistics_company = { x = 0 y = 4 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	AI_launch_nuke = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		visible = {
+			is_ai = yes
+			has_game_rule = {
+				rule = easter_egg_content
+				option = ON
+			}
+		}
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT
+				is_ai = no
+			}
+		}
+		available = {
+			surrender_progress > 0.95
+			has_capitulated = no
+			has_war_with = FROM
+		}
+		days_remove = 7
+		remove_effect = {
+			FROM = {
+				every_controlled_state = {
+					ROOT = {
+						launch_nuke = {
+							state = PREV
+							controller = FROM
+							use_nuke = yes
+							nuke_type = thermonuclear_bomb 
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+
+	
+
+}

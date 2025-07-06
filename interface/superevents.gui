@@ -1,0 +1,84 @@
+guiTypes = {
+	containerWindowType = {
+		name = "superevents"
+		size = { width = 581 height = 427 }
+		position = { x = 0 y = -6000 }
+		show_position = { x = -27 y = -50 }
+		hide_position = { x = 0 y= -6000 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 1
+		Orientation = center
+		Origo = center
+		clipping = no	
+		moveable = yes
+
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+		iconType = {
+			name = "supereventsframe"		
+			spriteType ="GFX_supereventsframe"
+			position = { x = 0 y = -30 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "supereventspasteontobg"		
+			spriteType = "GFX_supereventspasteontobg"
+			position = { x = 23 y = -19 }
+			alwaystransparent = yes
+		}
+		###
+		iconType = {
+			name = "superevents_spanish_civilwar"		
+			quadTextureSprite = "GFX_superevents_spanish_civilwar"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		
+		buttonType ={
+			name ="superevents_button"
+			spriteType = "GFX_supereventsbutton"
+			position = { x = 125 y = 297 }
+			shortcut = "ESCAPE"
+			clicksound = click_close
+		}
+		
+		instantTextboxType = {
+			name = "superevents_title"
+			position = { x = 0 y = 0 }
+			font = "hoi_36header"
+			format = CENTER
+			borderSize = { x = 0 y = 18 }
+			text = "[GetSupereventsTitle]"
+			maxWidth = 645
+			maxHeight = 100
+			fixedsize = yes	
+			alwaystransparent = yes
+		}
+		instantTextboxType = {
+			name = "superevents_quote"
+			position = { x = -230 y = 310 }
+			font = "hoi_18mbs"
+			format = RIGHT
+			borderSize = {x = 0 y = 0}
+			text = "[GetSupereventsBody]"
+			maxWidth = 800
+			maxHeight = 893
+			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "superevents_remark"
+			position = { x = 0 y = 2 }
+			font = "hoi_24header"
+			format = CENTER
+			borderSize = { x = 0 y = 455 }
+			text = "[GetSupereventsRemark]"
+			maxWidth = 645
+			maxHeight = 893
+			fixedsize = yes
+		}
+	}
+}
+

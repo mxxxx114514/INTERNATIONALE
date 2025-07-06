@@ -1,0 +1,171 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			#every_possible_country = {  #Move to IN_startup_on_actions
+			#	every_possible_country = {
+			#		limit = { NOT = { tag = PREV } }
+			#		IF = {
+			#			limit = { has_government = PREV }
+			#			add_opinion_modifier = {
+			#				target = PREV
+			#				modifier = IN_same_ideology
+			#			}
+			#		}
+			#		ELSE_IF = {
+			#			limit = { is_similar_ideology = yes }
+			#			add_opinion_modifier = {
+			#				target = PREV
+			#				modifier = IN_similar_ideology
+			#			}
+			#		}
+			#		ELSE = {
+			#			add_opinion_modifier = {
+			#				target = PREV
+			#				modifier = IN_different_ideology
+			#			}
+			#		}
+			#	}
+			#}
+		}
+	}
+	on_government_change = {
+		effect = {
+			every_possible_country = {
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = IN_same_ideology
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = IN_similar_ideology
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = IN_different_ideology
+				}
+				ROOT = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = IN_same_ideology
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = IN_similar_ideology
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = IN_different_ideology
+					}
+				}
+				IF = {
+					limit = { has_government = ROOT }
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = IN_same_ideology
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_same_ideology
+						}
+					}
+				}
+				ELSE_IF = {
+					limit = { is_similar_ideology = yes }
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = IN_similar_ideology
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_similar_ideology
+						}
+					}
+				}
+				ELSE = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = IN_different_ideology
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_different_ideology
+						}
+					}
+				}
+			}
+		}
+	}
+	on_monthly = {
+		effect = {
+			every_possible_country = {
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = IN_same_ideology
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = IN_similar_ideology
+				}
+				remove_opinion_modifier = {
+					target = ROOT
+					modifier = IN_different_ideology
+				}
+				ROOT = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = IN_same_ideology
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = IN_similar_ideology
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = IN_different_ideology
+					}
+				}
+				IF = {
+					limit = { has_government = ROOT }
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = IN_same_ideology
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_same_ideology
+						}
+					}
+				}
+				ELSE_IF = {
+					limit = { is_similar_ideology = yes }
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = IN_similar_ideology
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_similar_ideology
+						}
+					}
+				}
+				ELSE = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = IN_different_ideology
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_different_ideology
+						}
+					}
+				}
+			}
+		}
+	}
+}

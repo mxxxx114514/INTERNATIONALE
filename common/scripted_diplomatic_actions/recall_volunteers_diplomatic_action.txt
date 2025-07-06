@@ -1,0 +1,70 @@
+
+scripted_diplomatic_actions = {
+
+	recall_volunteers = {
+	
+		allowed = {
+			ROOT = { is_ai = no }
+		}
+		visible = {
+			always = yes
+		}
+		selectable = {
+			# doing this for nicer tooltips
+			if = {
+				limit = {
+					NOT = { has_volunteers_amount_from = { tag = ROOT count > 0 } }
+				}
+				custom_trigger_tooltip = {
+					tooltip = RECALL_VOLUNTEERS_TOOLTIP
+					always = no
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = RECALL_VOLUNTEERS_TOOLTIP_G
+					always = yes
+				}
+			}
+		}
+
+		cost = 0
+		command_power = 0
+
+		show_acceptance_on_action_button = no
+
+		icon = 1
+
+		complete_effect = {
+			ROOT = { recall_volunteers_from = PREV }
+		}
+
+		ai_acceptance = {
+			condition = {
+				base = 100
+			}
+		}
+
+		ai_desire = {
+			base = 0
+			modifier = {
+				add = 1000
+				OR = {
+					PREV = { surrender_progress > 0.9 }
+					AND = {
+						PREV = { is_commie_ideology = yes }
+						ROOT = { is_commie_ideology = no }
+						NOT = { PREV = { tag = GRR has_war_with = POL } }
+					}
+					AND = {
+						PREV = { is_commie_ideology = no }
+						ROOT = { is_commie_ideology = yes }
+						NOT = { PREV = { tag = GRR has_war_with = POL } }
+					}
+					PREV = { tag = GRR has_war_with = POL }
+					PREV = { is_commie_ideology = yes has_cosmetic_tag = p_entente_member }
+				}
+			}
+		}
+	}
+}

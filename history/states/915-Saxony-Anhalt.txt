@@ -1,0 +1,29 @@
+
+state={
+	id=915
+	name="STATE_915"
+
+	history={
+		owner = GER
+		controller = GER
+		victory_points = {
+			3522 5 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+		add_core_of = GER
+
+	}
+
+	provinces={
+		425 3522 6487 6501 6582 9456 9560 11359 11545 
+	}
+	manpower=2000000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

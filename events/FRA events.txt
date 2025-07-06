@@ -1,0 +1,64 @@
+###########################
+# France events
+###########################
+
+add_namespace = france
+
+country_event = {
+	id = france.1
+	#title = france.1.t
+	title = ""
+	#desc = france.1.desc
+	desc = ""
+	#picture = GFX_news_event_BEL_civil_war
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = france.1.a
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = FRA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = FRA_path
+					option = FRA_PATH_FROSSARD
+				}
+			}
+		}
+		ai_chance = { base = 65 }
+		complete_national_focus = FRA_frossard_victory
+	}
+
+	option = {
+		name = france.1.b
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = FRA_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = FRA_path
+					option = FRA_PATH_THOREZ
+				}
+			}
+		}
+		ai_chance = { base = 35 }
+		complete_national_focus = FRA_thorez_victory
+	}
+
+	option = {
+		name = france.1.c
+		trigger = {
+			has_game_rule = {
+				rule = FRA_path
+				option = FRA_PATH_FAURE
+			}
+		}
+		complete_national_focus = FRA_faure_victory
+	}
+}

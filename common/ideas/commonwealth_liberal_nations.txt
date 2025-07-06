@@ -1,0 +1,20 @@
+ideas = {
+	country = {
+		cln_member_idea = {
+			allowed = {
+				always = yes
+			}
+			available = {
+				NOT = { has_global_flag = fall_of_CLN }
+				is_commie_ideology = no
+			}
+
+			picture = cln_member_idea
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+			}
+		}
+	}
+
+}

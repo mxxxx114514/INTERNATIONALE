@@ -1,0 +1,65 @@
+###########################
+# Saudi Arabia
+###########################
+
+add_namespace = saudi
+add_namespace = saudi_foreign
+
+# Saudi ask for support (GER/JAP event) 
+country_event = {
+	id = saudi_foreign.1
+	title = saudi_foreign.1.t
+	desc = saudi_foreign.1.desc
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = saudi_foreign.1.a
+		set_country_flag = supported_SAU_flag
+		custom_effect_tooltip = SAU_supported_if_win_tt
+		add_political_power = -5
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 500
+			target = SAU
+		}
+		
+	}
+
+	option = {
+		name = saudi_foreign.1.b
+		trigger = { is_ai = no }
+		SAU = {
+			add_opinion_modifier = { target = ROOT modifier = refused_help }
+		}
+		
+	}
+}
+
+country_event = {
+	id = saudi_foreign.2
+	title = saudi_foreign.2.t
+	desc = saudi_foreign.2.desc
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = saudi_foreign.2.a
+		add_political_power = 25
+		give_guarantee = SAU
+		SAU = {
+			diplomatic_relation = {
+				country = ROOT
+				relation = docking_rights
+				active = yes
+			}
+			give_military_access = ROOT
+			diplomatic_relation = { country = ROOT relation = non_aggression_pact }
+		}
+		
+	}
+}

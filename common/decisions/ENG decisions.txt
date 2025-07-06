@@ -1,0 +1,482 @@
+ENG_intervene_ww2_category = {
+
+	ENG_ww2_support_GRR = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			OR = {
+				AND = {
+					date > 1940.6.1
+					OR = { has_global_flag = GER_anglo_german_alliance_flag GRR = { is_ai = yes } }
+				}
+				date > 1940.8.1
+			}
+			OR = {
+				country_exists = GRR
+				country_exists = TRR
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			IF = {
+				limit = {
+					country_exists = GRR
+				}
+				GRR = { country_event = europe.3 }
+			}
+			ELSE_IF = {
+				limit = {
+					country_exists = TRR
+				}
+				TRR = { country_event = europe.3 }
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	ENG_ww2_invite_PRG = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			date > 1941.2.1
+			country_exists = SER
+			has_war_with = SOV
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			PRG = {
+				country_event = europe.4
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	ENG_surrender_to_USA = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			has_war_with = USA
+			USA = {
+				NOT = {
+					is_in_faction_with = JAP
+				}
+				NOT = {
+					is_in_faction_with = SOV
+				}
+			}
+		}
+		available = {
+			CAN = { has_capitulated = yes }
+		}
+		fire_only_once = yes
+		cost = 10
+		complete_effect = {
+			white_peace = USA
+			USA = {
+				annex_country = { target = CAN }
+			}
+			every_owned_state = {
+				limit = {
+					OR = { is_on_continent = north_america is_on_continent = south_america }
+				}
+				transfer_state_to = USA
+			}
+			#add_to_faction = USA #For testing
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	ENG_surrender_to_JAP = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			has_war_with = JAP
+			JAP = {
+				NOT = {
+					is_in_faction_with = USA
+				}
+			}
+		}
+		available = {
+			MAL = { has_capitulated = yes }
+			DEI = { has_capitulated = yes }
+			AST = { has_capitulated = yes }
+			NZL = { has_capitulated = yes }
+			IF = {
+				limit = { VIN = { is_in_faction_with = NFR } }
+				VIN = { has_capitulated = yes }
+			}
+			IF = {
+				limit = { PHI = { is_in_faction_with = ENG } }
+				PHI = { has_capitulated = yes }
+			}
+			every_state = {
+				limit = {
+					is_owned_by = RAJ
+					is_core_of = BRM
+				}
+				is_controlled_by = JAP
+			}
+		}
+		fire_only_once = yes
+		cost = 10
+		complete_effect = {
+			white_peace = JAP
+			HOL = {
+				set_autonomy = {
+					target = DEI
+					autonomy_state = autonomy_free
+				}
+			}
+			ENG = {
+				set_autonomy = {
+					target = MAL
+					autonomy_state = autonomy_free
+				}
+				set_autonomy = {
+					target = AST
+					autonomy_state = autonomy_free
+				}
+			}
+			MAL = {
+				drop_cosmetic_tag = yes
+			}
+			INS = {
+				annex_country = { target = DEI }
+			}
+			NFR = {
+				set_autonomy = {
+					target = VIN
+					autonomy_state = autonomy_free
+				}
+			}
+			VIN = { drop_cosmetic_tag = yes }
+			BRM = {
+				every_core_state = { transfer_state_to = BRM }
+			}
+			IF = {
+				limit = { PHI = { is_in_faction_with = ENG } }
+				JAP = {
+					set_autonomy = {
+						target = PHI
+						autonomy_state = autonomy_wtt_imperial_subject
+					}
+				}
+			}
+			JAP = {
+				add_to_faction = SIA
+				set_autonomy = {
+					target = INS
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				set_autonomy = {
+					target = MAL
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				set_autonomy = {
+					target = AST
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				set_autonomy = {
+					target = NZL
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				set_autonomy = {
+					target = VIN
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				set_autonomy = {
+					target = BRM
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				every_country = {
+					limit = { is_in_faction_with = ENG }
+					white_peace = JAP
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	ENG_surrender_to_pacific_axis = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			has_war_with = JAP
+			has_war_with = USA
+			USA = {
+				is_in_faction_with = JAP
+			}
+		}
+		available = {
+			MAL = { has_capitulated = yes }
+			DEI = { has_capitulated = yes }
+			AST = { has_capitulated = yes }
+			NZL = { has_capitulated = yes }
+			IF = {
+				limit = { VIN = { is_in_faction_with = NFR } }
+				VIN = { has_capitulated = yes }
+			}
+			IF = {
+				limit = { PHI = { is_in_faction_with = ENG } }
+				PHI = { has_capitulated = yes }
+			}
+			every_state = {
+				limit = {
+					is_owned_by = RAJ
+					is_core_of = BRM
+				}
+				is_controlled_by = JAP
+			}
+			CAN = { has_capitulated = yes }
+
+		}
+		fire_only_once = yes
+		cost = 10
+		complete_effect = {
+			white_peace = JAP
+			HOL = {
+				set_autonomy = {
+					target = DEI
+					autonomy_state = autonomy_free
+				}
+			}
+			ENG = {
+				set_autonomy = {
+					target = MAL
+					autonomy_state = autonomy_free
+				}
+				set_autonomy = {
+					target = AST
+					autonomy_state = autonomy_free
+				}
+			}
+			MAL = {
+				drop_cosmetic_tag = yes
+			}
+			INS = {
+				annex_country = { target = DEI }
+			}
+			NFR = {
+				set_autonomy = {
+					target = VIN
+					autonomy_state = autonomy_free
+				}
+			}
+			VIN = { drop_cosmetic_tag = yes }
+			BRM = {
+				every_core_state = { transfer_state_to = BRM }
+			}
+			IF = {
+				limit = { PHI = { is_in_faction_with = ENG } }
+				JAP = {
+					set_autonomy = {
+						target = PHI
+						autonomy_state = autonomy_wtt_imperial_subject
+					}
+				}
+			}
+			JAP = {
+				add_to_faction = SIA
+				set_autonomy = {
+					target = INS
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				set_autonomy = {
+					target = MAL
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				set_autonomy = {
+					target = AST
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				set_autonomy = {
+					target = NZL
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				set_autonomy = {
+					target = VIN
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+				set_autonomy = {
+					target = BRM
+					autonomy_state = autonomy_wtt_imperial_subject
+				}
+			}
+			white_peace = USA
+			USA = {
+				annex_country = { target = CAN }
+			}
+			every_owned_state = {
+				limit = {
+					OR = { is_on_continent = north_america is_on_continent = south_america }
+				}
+				transfer_state_to = USA
+			}
+			USA = {
+				declare_war = {
+					target = SOV
+					type = annex_everything
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	ENG_surrender_to_IN = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			has_war_with = SOV
+			surrender_progress > 0.81
+		}
+		fire_only_once = yes
+		cost = 0
+		complete_effect = {
+			hidden_effect = {
+				news_event = britaincollapse.1
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+}
+
+ENG_decolonization_category = {
+	ENG_treaty_with_YEM = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			has_government = social_liberal
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			YEM = {
+				transfer_state = 659
+				give_military_access = ENG
+				diplomatic_relation = { country = ENG relation = non_aggression_pact }
+			}
+			give_guarantee = YEM
+			diplomatic_relation = {
+				country = YEM
+				relation = docking_rights
+				active = yes
+			}
+			generic_remove_unowned_claims = yes
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	ENG_treaty_with_SOM = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			has_government = social_liberal
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			SOM = {
+				transfer_state = 269
+				give_military_access = ENG
+				diplomatic_relation = { country = ENG relation = non_aggression_pact }
+			}
+			give_guarantee = SOM
+			diplomatic_relation = {
+				country = SOM
+				relation = docking_rights
+				active = yes
+			}
+			generic_remove_unowned_claims = yes
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	ENG_treaty_with_UAE = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			has_government = social_liberal
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			UAE = {
+				transfer_state = 658
+				give_military_access = ENG
+				diplomatic_relation = { country = ENG relation = non_aggression_pact }
+			}
+			give_guarantee = UAE
+			diplomatic_relation = {
+				country = UAE
+				relation = docking_rights
+				active = yes
+			}
+			generic_remove_unowned_claims = yes
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	ENG_treaty_with_QAT = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			has_government = social_liberal
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			QAT = {
+				transfer_state = 765
+				give_military_access = ENG
+				diplomatic_relation = { country = ENG relation = non_aggression_pact }
+			}
+			give_guarantee = QAT
+			diplomatic_relation = {
+				country = QAT
+				relation = docking_rights
+				active = yes
+			}
+			generic_remove_unowned_claims = yes
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+	ENG_return_CAN_territory = {
+		allowed = { tag = ENG }
+		icon = ger_mefo_bills
+		visible = {
+			has_government = social_liberal
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			CAN = {
+				transfer_state = 331
+				transfer_state = 332
+			}
+			generic_remove_unowned_claims = yes
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+}

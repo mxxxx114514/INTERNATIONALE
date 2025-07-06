@@ -1,0 +1,21 @@
+state={
+	id=941
+	name="STATE_941"
+	provinces={
+		7913 13283 13284 13292
+	}
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		add_core_of = MEX
+
+	}
+	manpower=700000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+
+}

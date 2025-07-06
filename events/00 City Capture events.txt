@@ -1,0 +1,754 @@
+###########################
+# City Capture Events
+###########################
+
+# the owner (FROM.FROM), the conqueror (FROM), the country receiving the event (THIS)
+
+add_namespace = city_capture_ENG
+add_namespace = city_capture_GER
+add_namespace = city_capture_AUS
+add_namespace = city_capture_FRA
+add_namespace = city_capture_NFR
+add_namespace = city_capture_ITA
+add_namespace = city_capture_HUN
+add_namespace = city_capture_SER
+add_namespace = city_capture_ROM
+add_namespace = city_capture_CZE
+add_namespace = city_capture_GRE
+add_namespace = city_capture_SOV
+add_namespace = city_capture_POL
+
+# Fall of London
+news_event = {
+	id = city_capture_ENG.1
+	title = city_capture_ENG.1.t
+
+	picture = GFX_news_event_capture_london
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_ENG.1.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_ENG.1.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_ENG.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Berlin
+news_event = {
+	id = city_capture_GER.1
+	title = city_capture_GER.1.t
+
+	picture = GFX_news_event_capture_berlin
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_GER.1.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.1.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Hamburg
+news_event = {
+	id = city_capture_GER.2
+	title = city_capture_GER.2.t
+
+	picture = GFX_news_event_capture_hamburg
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_GER.2.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.2.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.2.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Munich
+news_event = {
+	id = city_capture_GER.3
+	title = city_capture_GER.3.t
+
+	picture = GFX_news_event_capture_munich
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_GER.3.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.3.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.3.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Frankfurt
+news_event = {
+	id = city_capture_GER.4
+	title = city_capture_GER.4.t
+
+	picture = GFX_news_event_capture_frankfurt
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_GER.4.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.4.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.4.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Breslau
+news_event = {
+	id = city_capture_GER.5
+	title = city_capture_GER.5.t
+
+	picture = GFX_news_event_capture_breslau
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_GER.5.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.5.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.5.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Königsberg
+news_event = {
+	id = city_capture_GER.6
+	title = city_capture_GER.6.t
+
+	picture = GFX_news_event_capture_konigsberg
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_GER.6.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.6.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_GER.6.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Vienna
+news_event = {
+	id = city_capture_AUS.1
+	title = city_capture_AUS.1.t
+
+	picture = GFX_news_event_capture_vienna
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_AUS.1.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_AUS.1.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_AUS.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Paris
+news_event = {
+	id = city_capture_FRA.1
+	title = city_capture_FRA.1.t
+
+	picture = GFX_news_event_capture_paris
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_FRA.1.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_FRA.1.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_FRA.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Algiers
+news_event = {
+	id = city_capture_NFR.1
+	title = city_capture_NFR.1.t
+
+	picture = GFX_news_event_capture_algiers
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_NFR.1.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_NFR.1.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_NFR.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Rome
+news_event = {
+	id = city_capture_ITA.1
+	title = city_capture_ITA.1.t
+
+	picture = GFX_news_event_capture_rome
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_ITA.1.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_ITA.1.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_ITA.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Moscow
+news_event = {
+	id = city_capture_SOV.1
+	title = city_capture_SOV.1.t
+
+	picture = GFX_news_event_capture_moscow
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_SOV.1.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_SOV.1.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_SOV.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Leningrad
+news_event = {
+	id = city_capture_SOV.2
+	title = city_capture_SOV.2.t
+
+	picture = GFX_news_event_capture_leningrad
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_SOV.2.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_SOV.2.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_SOV.2.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Trotskygrad
+news_event = {
+	id = city_capture_SOV.3
+	title = city_capture_SOV.3.t
+
+	picture = GFX_news_event_capture_trotskygrad
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_SOV.3.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_SOV.3.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_SOV.3.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}
+
+# Fall of Warsaw
+news_event = {
+	id = city_capture_POL.1
+	title = city_capture_POL.1.t
+
+	picture = GFX_news_event_capture_warsaw
+
+	major = yes
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:fallen_state = { set_state_flag = city_has_fallen_once }
+	}
+
+	option = {
+		name = city_capture_POL.1.a
+		trigger = {
+			OR = {
+				tag = FROM.FROM
+				has_war_together_with = FROM.FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_POL.1.b
+		trigger = {
+			OR = {
+				tag = FROM
+				has_war_together_with = FROM
+			}
+		}
+	}
+
+	option = {
+		name = city_capture_POL.1.c
+		trigger = {
+			NOT = {
+				OR = {
+					tag = FROM.FROM
+					has_war_together_with = FROM.FROM
+					tag = FROM
+					has_war_together_with = FROM
+				}
+			}
+		}
+	}
+}

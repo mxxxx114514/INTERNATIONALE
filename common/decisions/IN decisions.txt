@@ -1,0 +1,218 @@
+IN_invade = {
+
+	IN_invade_north_europe = {
+		allowed = { always = yes }
+		icon = ger_mefo_bills
+		available = {
+			has_global_flag = ww2
+			is_faction_leader = yes
+			OR = {
+				tag = SOV
+				tag = FRA
+				tag = ITA
+			}
+		}
+		visible = { has_global_flag = ww2 date > 1940.6.15 }
+		fire_only_once = yes
+		cost = 50
+		days_remove = 7
+		remove_effect = {
+			IF = {
+				limit = {
+					DEN = {
+						NOT = { is_in_faction_with = SOV }
+						is_commie_ideology = no
+					}
+				}
+				declare_war_on = {
+					target = DEN
+				}
+				IF = {
+					limit = {
+						has_global_flag = anti_in_pact_created_flag
+					}
+					ENG = {
+						add_to_faction = DEN
+					}
+					DEN = { add_ideas = cln_member_idea }
+				}
+			}
+			IF = {
+				limit = {
+					SWE = {
+						NOT = { is_in_faction_with = SOV }
+						is_commie_ideology = no
+					}
+				}
+				declare_war_on = {
+					target = SWE
+				}
+				IF = {
+					limit = {
+						has_global_flag = anti_in_pact_created_flag
+					}
+					ENG = {
+						add_to_faction = SWE
+					}
+					SWE = { add_ideas = cln_member_idea }
+				}
+			}
+			IF = {
+				limit = {
+					NOR = {
+						NOT = { is_in_faction_with = SOV }
+						is_commie_ideology = no
+					}
+				}
+				declare_war_on = {
+					target = NOR
+				}
+				IF = {
+					limit = {
+						has_global_flag = anti_in_pact_created_flag
+					}
+					ENG = {
+						add_to_faction = NOR
+					}
+					NOR = { add_ideas = cln_member_idea }
+				}
+			}
+			remove_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					news_event = {
+						id =  war_news.43
+						days = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+	IN_invade_SWI = {
+		allowed = { always = yes }
+		icon = ger_mefo_bills
+		available = {
+			has_global_flag = ww2
+			is_faction_leader = yes
+			OR = {
+				tag = SOV
+				tag = FRA
+				tag = ITA
+			}
+		}
+		visible = { has_global_flag = ww2 date > 1940.6.15 }
+		fire_only_once = yes
+		cost = 50
+		days_remove = 7
+		remove_effect = {
+			SOV = {
+				declare_war_on = {
+					target = SWI
+				}
+			}
+			set_global_flag = international_SWI_invasion
+			IF = {
+				limit = {
+					has_global_flag = anti_in_pact_created_flag
+				}
+				ENG = {
+					add_to_faction = SWI
+					SWI = { add_ideas = cln_member_idea }
+				}
+			}
+			SOV = {
+				declare_war_on = {
+					target = SWI
+				}
+			}
+			FRA = {
+				declare_war_on = {
+					target = SWI
+				}
+			}
+			ITA = {
+				declare_war_on = {
+					target = SWI
+				}
+			}
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					news_event = {
+						id =  war_news.42
+						days = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+	IN_invade_HOL = {
+		allowed = { always = yes }
+		icon = ger_mefo_bills
+		available = {
+			has_global_flag = ww2
+			is_faction_leader = yes
+			OR = {
+				tag = SOV
+				tag = FRA
+				tag = ITA
+			}
+		}
+		visible = { has_global_flag = ww2 HOL = { is_commie_ideology = no } date > 1940.6.15 NOT = { has_war_with = HOL } }
+		fire_only_once = yes
+		cost = 50
+		days_remove = 7
+		remove_effect = {
+			declare_war_on = {
+				target = HOL
+			}
+			set_global_flag = international_HOL_invasion
+			hidden_effect = {
+				IF = {
+					limit = {
+						has_global_flag = anti_in_pact_created_flag
+					}
+					ENG = {
+						add_to_faction = HOL
+					}
+					HOL = { add_ideas = cln_member_idea }
+				}
+			}
+			
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+	FRA_invade_COR = {
+		allowed = { always = yes }
+		icon = ger_mefo_bills
+		available = {
+			tag = FRA
+		}
+		visible = { country_exists = COR }
+		fire_only_once = yes
+		cost = 25
+		days_remove = 7
+		remove_effect = {
+			declare_war_on = {
+				target = COR
+				type = annex_everything
+			}
+			
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+}

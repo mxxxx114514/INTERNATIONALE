@@ -1,0 +1,33 @@
+
+state={
+	id=481
+	name="STATE_481"
+	manpower = 955094
+	
+	state_category = town
+	
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			8057 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = MEX
+		#victory_points = {
+		#	8057 10
+		#}
+		#victory_points = {
+		#	10895 5
+		#}
+	}
+
+	provinces={
+		1945 8057 10895 13303 13365 13372
+	}
+	
+
+	local_supplies=6.0 
+}

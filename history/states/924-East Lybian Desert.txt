@@ -1,0 +1,22 @@
+state={
+	id=924
+	name="STATE_924"
+	provinces={
+		1057 1060 1140 4191 10104 10754 10785 11951 
+	}
+	history={
+		owner = EGY
+		buildings = {
+			infrastructure = 0
+
+		}
+		add_core_of = EGY
+		add_core_of = LBA
+
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=wasteland
+	impassable = yes
+}

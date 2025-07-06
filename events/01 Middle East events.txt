@@ -1,0 +1,302 @@
+###########################
+# Middle East temp
+###########################
+
+add_namespace = mid_east
+
+news_event = {
+	id = mid_east.1
+	#title = mid_east.1.t
+	title = ""
+	#desc = mid_east.1.desc
+	desc = ""
+	#picture = GFX_news_event_BEL_civil_war
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1936.1.15
+		NOT = { has_global_flag = mid_east_collapse }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = mid_east_collapse
+			ENG_winston_churchill = { set_nationality = ENG }
+			KUR = {
+				transfer_state = 350
+				transfer_state = 352
+				transfer_state = 676
+				transfer_state = 920
+				350 = {
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division KUR\" start_experience_factor = 0.5" 
+						owner = PREV
+						count = 1
+					}
+				}
+				676 = {
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division KUR\" start_experience_factor = 0.5" 
+						owner = PREV
+						count = 1
+					}
+				}
+			}
+			SYR = {
+				transfer_state = 799
+				transfer_state = 677
+				transfer_state = 680
+				transfer_state = 554
+				transfer_state = 553
+				every_owned_state = {
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division SYR\" start_experience_factor = 0.5" 
+						owner = PREV
+						count = 1
+					}
+				}
+			}
+			PAL = {
+				transfer_state = 454
+			}
+			IRQ = {
+				transfer_state = 291
+				transfer_state = 656
+				load_oob = "IRQ_1936"
+				IN_set_major = yes
+			}
+			CYP = {
+				transfer_state = 183
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Infantry Division\" start_experience_factor = 0.5" 
+						owner = PREV
+						count = 1
+					}
+				}
+			}
+			JOR = {
+				transfer_state = 454
+				transfer_state = 455
+				load_oob = "JOR_1936"
+				IN_set_major = yes
+			}
+			SAU = {
+				create_faction = saudi_arabia
+				add_manpower = 200000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 20000
+					producer = SAU
+				}
+			}
+			HEJ = {
+				create_faction = hashim_arabia
+				add_manpower = 200000
+				add_to_faction = JOR
+				add_to_faction = IRQ
+				declare_war_on = {
+					target = SAU
+					type = annex_everything
+				}
+			}
+			GER = {
+				country_event = {
+					id = saudi_foreign.1
+					days = 2
+				}
+			}
+			JAP = {
+				country_event = {
+					id = saudi_foreign.1
+					days = 2
+				}
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = war_news.2
+					days = 1
+				}
+			}
+			ENG_winston_churchill = { set_nationality = ENG }
+		}
+	}
+}
+
+news_event = {
+	id = mid_east.2
+	#title = mid_east.2.t
+	title = ""
+	#desc = mid_east.2.desc
+	desc = ""
+	#picture = GFX_news_event_BEL_civil_war
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = mid_east_collapse
+		NOT = { has_global_flag = mid_east_TUR_invasion }
+		date > 1936.2.1
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = mid_east_TUR_invasion
+			TUR = {
+				add_named_threat = {
+					threat = 5
+					name = IN_mid_east_TUR_invasion_threat
+				}
+				add_timed_idea = {
+					idea = generic_more_supplies_idea
+					days = 480
+				}
+				add_state_claim = 677
+				add_state_claim = 920
+				add_state_claim = 183
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Piyade Tümeni\" start_experience_factor = 1.0" 
+						owner = PREV
+						count = 1
+					}
+				}
+				declare_war_on = {
+					target = KUR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = SYR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = CYP
+					type = annex_everything
+				}
+			}
+			GRE = {
+				add_ideas = generic_send_more_volunteers_idea
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = CYP
+					value = 1000
+				}
+			}
+			GER = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = TUR
+					value = 1000
+				}
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = war_news.3
+					days = 1
+				}
+			}
+			SYR = {
+				load_oob = "SYR_1936"
+			}
+			KUR = {
+				load_oob = "KUR_1936"
+			}
+		}
+	}
+}
+
+news_event = {
+	id = mid_east.3
+	#title = mid_east.3.t
+	title = ""
+	#desc = mid_east.3.desc
+	desc = ""
+	#picture = GFX_news_event_BEL_civil_war
+
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = mid_east_TUR_invasion
+		date > 1936.12.1
+		country_exists = CYP
+		CYP = { has_war_with = TUR }
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	immediate = {
+		hidden_effect = {
+			TUR = { white_peace = CYP }
+			set_global_flag = TUR_invade_CYP_failed
+			GRE = {
+				annex_country = {
+					target = CYP
+					transfer_troops = yes
+				}
+				add_state_core = 183
+			}
+		}
+	}
+}
+
+news_event = {
+	id = mid_east.4
+
+	fire_only_once = yes
+
+	hidden = yes
+	
+	trigger = {
+		SAU = { has_war_with = HEJ }
+		IRQ = { has_capitulated = yes }
+		JOR = { has_capitulated = yes }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			SAU = {
+				white_peace = ROOT
+				HEJ = { dismantle_faction = yes }
+				set_cosmetic_tag = SAU_nejd_and_hejaz
+				annex_country = { target = HEJ }
+				annex_country = { target = JOR }
+				transfer_state = 656
+				dismantle_faction = yes
+			}
+			PAL = { transfer_state = 454 add_state_claim = 454 add_state_core = 454 }
+			GER = {
+				IF = {
+					limit = { has_country_flag = supported_SAU_flag }
+					country_event = {
+						id = saudi_foreign.2
+						days = 1
+					}
+				}
+			}
+			JAP = {
+				IF = {
+					limit = { has_country_flag = supported_SAU_flag }
+					country_event = {
+						id = saudi_foreign.2
+						days = 1
+					}
+				}
+			}
+		}
+	}
+}

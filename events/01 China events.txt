@@ -1,0 +1,224 @@
+###########################
+# China events
+###########################
+
+add_namespace = china
+
+#china.1 is free! it used to be south western war
+
+#china.2 china.3 china.4 is free! they used to be scripted peace
+
+news_event = { #LKMT invasion of Fengtian
+	id = china.5
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1939.2.8
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = CHI_invade_MAN
+			CHI = {
+				set_cosmetic_tag = CHI_lkmt
+				create_faction = chinese_revolutionary_front
+				every_country = {
+					limit = {
+						is_subject_of = CHI
+					}
+					every_owned_state = {
+						add_core_of = CHI
+					}
+					CHI = {
+						annex_country = {
+							target = PREV
+						}
+					}
+				}
+				declare_war_on = {
+					target = MAN
+					type = annex_everything
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Juntuán\" start_experience_factor = 0.35 start_equipment_factor = 0.5" 
+						owner = PREV
+						count = 3
+					}
+					create_unit = {
+						division = "division_template = \"Sanjiao Jun\" start_experience_factor = 0.35 start_equipment_factor = 0.5" 
+						owner = PREV
+						count = 3
+					}
+					MAN = {
+						add_state_claim = PREV
+					}
+				}
+			}
+			MAN = {
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Bubing Shi\" start_experience_factor = 0.35 start_equipment_factor = 0.5" 
+						owner = PREV
+						count = 10
+					}
+				}
+			}
+			JAP = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = MAN
+					value = 1000
+				}
+			}
+			SOV = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = CHI
+					value = 1000
+				}
+			}
+			FRA = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = CHI
+					value = 1000
+				}
+			}
+			ITA = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = CHI
+					value = 1000
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.32
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = china.5.a
+	}
+}
+
+news_event = { #Japan intervenes
+	id = china.6
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = CHI_invade_MAN
+		MAN = { surrender_progress > 0.5 }
+	}
+
+	immediate = {
+		hidden_effect = {
+			JAP = {
+				add_to_faction = MAN
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.33
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = china.6.a
+	}
+}
+
+country_event = { #SHX chooses side
+	id = china.7
+
+	#hidden = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1937.11.2
+		tag = SHX
+	}
+
+	option = {
+		name = china.7.a
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = SHX_diplomacy
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = SHX_diplomacy
+					option = SHX_DIPLOMACY_CHI
+				}
+			}
+		}
+		CHI = {
+			set_autonomy = {
+				target = SHX
+				autonomy_state = autonomy_associated_governorate
+			}
+		}
+		set_cosmetic_tag = SHX_lkmt
+	}
+
+	option = {
+		name = china.7.b
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = SHX_diplomacy
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = SHX_diplomacy
+					option = SHX_DIPLOMACY_MAN
+				}
+			}
+		}
+		MAN = {
+			set_autonomy = {
+				target = SHX
+				autonomy_state = autonomy_associated_governorate
+			}
+		}
+	}
+
+	option = {
+		name = china.7.c
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = SHX_diplomacy
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = SHX_diplomacy
+					option = SHX_DIPLOMACY_GMJ
+				}
+			}
+		}
+		GMJ = {
+			set_autonomy = {
+				target = SHX
+				autonomy_state = autonomy_associated_governorate
+			}
+		}
+	}
+
+}

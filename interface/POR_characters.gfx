@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_POR_duarte_nuno"
+		texturefile = "gfx/leaders/POR/GFX_portrait_POR_duarte_nuno.dds"
+	}
+}

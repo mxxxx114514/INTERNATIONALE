@@ -1,0 +1,148 @@
+sound = {
+	name = "verdun_on_ne_passe_pas"
+	file = "superevents/verdun_on_ne_passe_pas.wav"
+}
+sound = {
+	name = "star_spangled_banner_sad"
+	file = "superevents/star_spangled_banner_sad.wav"
+}
+sound = {
+	name = "well_meet_again"
+	file = "superevents/well_meet_again.wav"
+}
+sound = {
+	name = "wo_alle_strassen_enden"
+	file = "superevents/wo_alle_strassen_enden.wav"
+}
+sound = {
+	name = "addio_mia_bella_addio"
+	file = "superevents/addio_mia_bella_addio.wav"
+}
+sound = {
+	name = "song_of_kamikaze_corps"
+	file = "superevents/song_of_kamikaze_corps.wav"
+}
+sound = {
+	name = "wide_is_my_motherland"
+	file = "superevents/wide_is_my_motherland.wav"
+}
+sound = {
+	name = "eight_hundred_heroes_theme"
+	file = "superevents/eight_hundred_heroes_theme.wav"
+}
+sound = {
+	name = "defend_the_yellow_river"
+	file = "superevents/defend_the_yellow_river.wav"
+}
+sound = {
+	name = "espana_cani"
+	file = "superevents/espana_cani.wav"
+}
+sound = {
+	name = "erika"
+	file = "superevents/erika.wav"
+}
+sound = {
+	name = "tchaikovsky_overture"
+	file = "superevents/tchaikovsky_overture.wav"
+}
+sound = {
+	name = "sacred_war"
+	file = "superevents/sacred_war.wav"
+}
+sound = {
+	name = "battotai"
+	file = "superevents/battotai.wav"
+}
+sound = {
+	name = "red_sun_in_the_sky"
+	file = "superevents/red_sun_in_the_sky.wav"
+}
+sound = {
+	name = "victory_song"
+	file = "superevents/victory_song.wav"
+}
+sound = {
+	name = "as_the_war_approaches"
+	file = "superevents/as_the_war_approaches.wav"
+}
+sound = {
+	name = "burgundian_lullaby"
+	file = "superevents/burgundian_lullaby.wav"
+}
+sound = {
+	name = "westerwaldlied"
+	file = "superevents/westerwaldlied.wav"
+}
+sound = {
+	name = "deutschlandlied"
+	file = "superevents/deutschlandlied.wav"
+}
+sound = {
+	name = "for_god_and_queen"
+	file = "superevents/for_god_and_queen.wav"
+}
+sound = {
+	name = "hungarian_dance_5"
+	file = "superevents/hungarian_dance_5.wav"
+}
+sound = { 
+	name = "soviet_storm_intro"
+	file = "superevents/soviet_storm_intro.wav"
+}
+sound = {
+	name = "chestnut_tree"
+	file = "superevents/chestnut_tree.wav"
+}
+sound = {
+	name = "edelweiss"
+	file = "superevents/edelweiss.wav"
+}
+sound = {
+	name = "lenin_is_young_again"
+	file = "superevents/lenin_is_young_again.wav"
+}
+sound = {
+	name = "we_are_friends_forever"
+	file = "superevents/we_are_friends_forever.wav"
+}
+sound = {
+	name = "the_moldau"
+	file = "superevents/the_moldau.wav"
+}
+sound = {
+	name = "yellow_rose_of_texas"
+	file = "superevents/yellow_rose_of_texas.wav"
+}
+sound = {
+	name = "song_of_the_united_front"
+	file = "superevents/song_of_the_united_front.wav"
+}
+sound = {
+	name = "battle_cry_of_freedom"
+	file = "superevents/battle_cry_of_freedom.wav"
+}
+sound = {
+	name = "chant_du_depart"
+	file = "superevents/chant_du_depart.wav"
+}
+sound = {
+	name = "quand_fera_til_jour_camarade"
+	file = "superevents/quand_fera_til_jour_camarade.wav"
+}
+sound = {
+	name = "funiculi_funicula"
+	file = "superevents/funiculi_funicula.wav"
+}
+sound = {
+	name = "marcha_de_oriamendi"
+	file = "superevents/marcha_de_oriamendi.wav"
+}
+sound = {
+	name = "mother_anarchy_loves_her_sons"
+	file = "superevents/mother_anarchy_loves_her_sons.wav"
+}
+sound = {
+	name = "united_nations_on_the_march"
+	file = "superevents/united_nations_on_the_march.wav"
+}

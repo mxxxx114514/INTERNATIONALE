@@ -1,0 +1,2827 @@
+####################################
+# 墨西哥合众国 MEX EVENTS            #
+# by NekawaH，普鲁塔科·埃利亚斯·卡列斯 #
+####################################
+
+add_namespace = mexico
+add_namespace = mexico_flavor #风味事件
+add_namespace = mexico_stage1 #一阶段——基督战争前期
+add_namespace = mexico_stage2 #二阶段——基督战争后期
+add_namespace = mexico_stage3 #三阶段——六年计划、政治
+add_namespace = mexico_stage4 #四阶段——1940选举、政治
+add_namespace = mexico_unam #墨西哥国立自治大学
+add_namespace = mexico_foreign #外交
+
+add_namespace = mexico_civilwar #内战前预备
+add_namespace = MEX_civilwar #中央政府 战时
+add_namespace = MEX_post_civilwar #中央政府 战后
+add_namespace = NMX_civilwar #卡列斯-革命共和国 战时
+add_namespace = MCA_civilwar #比利亚-联合阵线 战时
+add_namespace = MGS_civilwar #金衫军 战时
+add_namespace = COM_civilwar #世界工人之家 战时
+
+country_event = { #在石与花之间
+	id = mexico_flavor.1
+	title = mexico_flavor.1.t
+	desc = mexico_flavor.1.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_flavor.1.a
+		
+	}
+
+}
+
+
+country_event = { #开局墨西哥介绍
+	id = mexico_stage1.1
+	title = mexico_stage1.1.t
+	desc = mexico_stage1.1.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_stage1.1.a
+		add_stability = 0.03
+		hidden_effect = {
+			country_event = {
+				id = mexico_stage1.2
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = mexico_stage1.1.b
+		add_popularity = {
+			ideology = social_democratic
+			popularity = 0.03
+		}
+		hidden_effect = {
+			country_event = {
+				id = mexico_stage1.2
+				days = 3
+			}
+		}
+	}
+
+}
+
+country_event = { #卡列斯介绍
+	id = mexico_stage1.2
+	title = mexico_stage1.2.t
+	desc = mexico_stage1.2.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_stage1.2.a
+		add_stability = 0.03
+		hidden_effect = {
+			country_event = {
+				id = mexico_stage1.3
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = mexico_stage1.2.b
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		MEX_PLM_E_loyalty_add = yes
+		hidden_effect = {
+			country_event = {
+				id = mexico_stage1.3
+				days = 3
+			}
+		}
+	}
+
+}
+
+country_event = { #基督战争介绍
+	id = mexico_stage1.3
+	title = mexico_stage1.3.t
+	desc = mexico_stage1.3.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_stage1.3.a
+		add_political_power = 25
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.01
+		}
+		hidden_effect = {
+			country_event = {
+				id = mexico_stage1.4
+				days = 3
+			}
+		}
+	}
+
+}
+
+country_event = { #1934大选介绍
+	id = mexico_stage1.4
+	title = mexico_stage1.4.t
+	desc = mexico_stage1.4.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_stage1.4.a
+		add_stability = -0.03
+		add_popularity = {
+			ideology = social_democratic
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.02
+		}
+		MEX_PLM_E_loyalty_add = yes
+	}
+
+	option = {
+		name = mexico_stage1.4.b
+		add_popularity = {
+			ideology = socialism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.02
+		}
+	}
+
+}
+
+country_event = { #废墟王座
+	id = mexico_stage1.5
+	title = mexico_stage1.5.t
+	desc = mexico_stage1.5.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_stage1.5.a
+		add_trait = {
+			character = MEX_alvaro_obregon_salido
+			ideology = social_democratic_subtype
+			trait = head_of_revolutionary_pyramid
+		}
+	}
+
+}
+
+country_event = { #国家行动党准备成立
+	id = mexico_stage2.1
+	title = mexico_stage2.1.t
+	desc = mexico_stage2.1.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_stage2.1.a
+		set_variable = { MEX_PAN_strength = 10 }
+		MEX_calculate_PAN_strength_effect = yes
+		activate_mission = MEX_PAN_establishment_mission
+		activate_targeted_decision = { target = MEX decision = MEX_defame_PAN_leadership }
+		activate_targeted_decision = { target = MEX decision = MEX_obstruct_PAN_establishment_process }
+		activate_targeted_decision = { target = MEX decision = MEX_propagate_all_people_party }
+		IF = {
+			limit = { has_completed_focus = MEX_pol2_1_1 }
+			activate_targeted_decision = { target = MEX decision = MEX_utilize_PNA_against_PAN }
+		}
+		IF = {
+			limit = { has_completed_focus = MEX_pol2_1_0 }
+			activate_targeted_decision = { target = MEX decision = MEX_utilize_ARM_against_PAN }
+		}
+	}
+
+}
+
+country_event = { #与北方联盟合作
+	id = mexico_stage2.2
+	title = mexico_stage2.2.t
+	desc = mexico_stage2.2.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_stage2.2.a
+		set_variable = { MEX_LDN_loyalty = 45 }
+		set_country_flag = MEX_villa_in_government
+		add_political_power = 25
+		set_variable = { MEX_LDN_balance = 0 }
+		set_variable = { MEX_cristero_GOV_damage = 0 }
+		set_variable = { MEX_cristero_LDN_damage = 0 }
+		activate_mission = MEX_cristero_war_LDN_clear_mission
+	}
+
+}
+
+country_event = { #Calles is killed
+	id = mexico_stage3.1
+	title = mexico_stage3.1.t
+	desc = mexico_stage3.1.desc
+
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_stage3.1.a
+		add_stability = 0.05
+		retire_character = MEX_plutarco_elias_calles
+		custom_effect_tooltip = MEX_kill_calles_tt
+	}
+
+}
+
+country_event = { #Choose between MGS and COM
+	id = mexico_stage3.2
+	title = mexico_stage3.2.t
+	desc = mexico_stage3.2.desc
+
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_stage3.2.a
+		add_power_balance_value = {
+			id = MEX_left_right_bop
+			value = -0.8
+			tooltip_side = MEX_left_side_bop
+		}
+		COM = { set_country_flag = loyal_to_MEX_flag }
+		add_popularity = {
+			ideology = socialism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.1
+		}
+		ai_chance = {
+			base = party_popularity@socialism
+		}
+	}
+
+	option = {
+		name = mexico_stage3.2.b
+		add_power_balance_value = {
+			id = MEX_left_right_bop
+			value = 0.8
+			tooltip_side = MEX_left_side_bop
+		}
+		MGS = { set_country_flag = loyal_to_MEX_flag }
+		clr_country_flag = libsoc_coalition_flag
+		set_country_flag = natpop_coalition_flag
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = socialism
+			popularity = -0.1
+		}
+		#hidden_effect = {
+		#	set_party_name = {
+		#		ideology = socialism
+		#		long_name = MEX_socialism_party_zapata_long
+		#		name = MEX_socialism_party_zapata
+		#	}
+		#}
+		ai_chance = {
+			base = party_popularity@fascism
+		}
+	}
+
+}
+
+# Case 1: Huertas Lessons (Calles dead)
+# Case 2: Maybe still useful + Army no politics
+# Case 3: Maybe still useful + Army politics
+
+country_event = { #1940 election
+	id = mexico_stage4.1
+	title = mexico_stage4.1.t
+	desc = mexico_stage4.1.desc
+
+	is_triggered_only = yes
+	
+	option = { #Obregon Case 1
+		name = mexico_stage4.1.a
+		trigger = {
+			has_completed_focus = MEX_pol3_huertas_lessons
+		}
+		swap_ideas = {
+			remove_idea = MEX_the_next_diaz
+			add_idea = MEX_the_next_diaz_1
+		}
+		custom_effect_tooltip = MEX_obregon_third_term_tt
+		
+	}
+
+	option = { #Cardenas Case 1
+		name = mexico_stage4.1.b
+		trigger = {
+			has_completed_focus = MEX_pol3_huertas_lessons
+		}
+		promote_character = { character = MEX_lazaro_cardenas ideology = social_democratic }
+		activate_advisor = MEX_alvaro_obregon_salido
+		
+	}
+
+	option = { #Obregon Case 2
+		name = mexico_stage4.1.c
+		trigger = {
+			has_completed_focus = MEX_pol3_maybe_still_useful
+			has_completed_focus = MEX_pol3_army_no_politics
+		}
+		hidden_effect = { #Assassination attempt
+			country_event = {
+				id = mexico_stage4.2
+				days = 14
+				random_days = 5
+			}
+		}
+		swap_ideas = {
+			remove_idea = MEX_the_next_diaz
+			add_idea = MEX_the_next_diaz_1
+		}
+		custom_effect_tooltip = MEX_obregon_third_term_tt
+		
+	}
+
+	option = { #Cardenas Case 2
+		name = mexico_stage4.1.d
+		trigger = {
+			has_completed_focus = MEX_pol3_maybe_still_useful
+			has_completed_focus = MEX_pol3_army_no_politics
+		}
+		promote_character = { character = MEX_lazaro_cardenas ideology = social_democratic }
+		
+	}
+
+	option = { #Obregon Case 3
+		name = mexico_stage4.1.e
+		trigger = {
+			has_completed_focus = MEX_pol3_maybe_still_useful
+			has_completed_focus = MEX_pol3_army_politics
+		}
+		hidden_effect = {
+			country_event = {
+				id = mexico_stage4.3
+				days = 3
+				random_days = 2
+			}
+		}
+		swap_ideas = {
+			remove_idea = MEX_the_next_diaz
+			add_idea = MEX_the_next_diaz_1
+		}
+		custom_effect_tooltip = MEX_obregon_third_term_tt
+		
+	}
+
+	option = { #Cardenas Case 3
+		name = mexico_stage4.1.f
+		trigger = {
+			has_completed_focus = MEX_pol3_maybe_still_useful
+			has_completed_focus = MEX_pol3_army_politics
+			always = no
+		}
+		promote_character = { character = MEX_lazaro_cardenas ideology = social_democratic }
+		
+	}
+
+}
+
+country_event = { #Assassination attempt on Obregon
+	id = mexico_stage4.2
+	title = mexico_stage4.2.t
+	desc = mexico_stage4.2.desc
+
+	is_triggered_only = yes
+	
+	option = { #Obregon survives
+		name = mexico_stage4.2.a
+		add_stability = 0.05
+		
+	}
+
+	option = { #Obregon dies
+		name = mexico_stage4.2.b
+		add_stability = -0.05
+		kill_country_leader = yes
+		promote_character = { character = MEX_plutarco_elias_calles ideology = social_democratic }
+		promote_character = { character = MEX_plutarco_elias_calles ideology = auth_dem }
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.3
+		}
+		
+	}
+
+}
+
+country_event = { #Calles' proposal
+	id = mexico_stage4.3
+	title = mexico_stage4.3.t
+	desc = mexico_stage4.3.desc
+
+	is_triggered_only = yes
+	
+	option = { #Agree
+		name = mexico_stage4.3.a
+		trigger = {
+			always = no
+		}
+		retire_country_leader = yes
+		promote_character = MEX_emilio_portes_gil
+		
+	}
+
+	option = { #Reject - CIVIL WAR!
+		name = mexico_stage4.3.b
+		hidden_effect = {
+			country_event = {
+				id = mexico_civilwar.1
+				days = 5
+				random_days = 2
+			}
+		}
+
+	}
+
+}
+
+country_event = { #6月毕业
+	id = mexico_unam.0
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_to_variable = { MEX_UNAM_total_enrollment = MEX_UNAM_latest_enrollment }
+			country_event = {
+				id = mexico_unam.1
+				days = 62
+			}
+		}
+	}
+
+}
+
+country_event = { #9月入学
+	id = mexico_unam.1
+
+	hidden = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_variable = { MEX_UNAM_latest_enrollment = 750 }
+			add_to_variable = { MEX_UNAM_latest_enrollment = MEX_UNAM_latest_enrollment_extra_add }
+			set_variable = { MEX_UNAM_social_attitude_bonus = MEX_UNAM_social_attitude }
+			multiply_variable = { MEX_UNAM_social_attitude_bonus = 50 }
+			add_to_variable = { MEX_UNAM_latest_enrollment = MEX_UNAM_social_attitude_bonus }
+			set_variable_to_random = {
+				var = MEX_UNAM_random_enrollment_modifier
+				min = -50
+				max = 50
+				integer = yes
+			}
+			add_to_variable = { MEX_UNAM_latest_enrollment = MEX_UNAM_random_enrollment_modifier }
+			country_event = {
+				id = mexico_unam.0
+				days = 303
+			}
+		}
+	}
+
+}
+
+#以下三个事件通过完成决议 MEX_UNAM_suppress_catholic_student_union 随机触发
+
+country_event = { #左翼大学生的演讲
+	id = mexico_unam.2
+	title = mexico_unam.2.t
+	desc = mexico_unam.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.2.a
+		add_political_power = 10
+		add_popularity = {
+			ideology = social_democratic
+			popularity = 0.02
+		}
+
+	}
+
+}
+
+country_event = { #天主教学生会的反击
+	id = mexico_unam.3
+	title = mexico_unam.3.t
+	desc = mexico_unam.3.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.3.a
+		add_political_power = -10
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+
+	}
+
+}
+
+country_event = { #大学内爆发吉列的豆蒸
+	id = mexico_unam.4
+	title = mexico_unam.4.t
+	desc = mexico_unam.4.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.4.a
+		add_political_power = -25
+		add_stability = -0.1
+		add_popularity = {
+			ideology = social_democratic
+			popularity = -0.05
+		}
+		MEX_UNAM_damage_social_attitude_1 = yes
+
+	}
+
+}
+
+#以下三个事件通过完成决议 MEX_push_for_socialist_education 逐个触发（决定 MEX_socialist_education 国家精神效果）
+
+country_event = { #社会主义教育1
+	id = mexico_unam.5
+	title = mexico_unam.5.t
+	desc = mexico_unam.5.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = { add_ideas = MEX_socialist_education }
+	}
+
+	option = {
+		name = mexico_unam.5.a
+		MEX_socialist_education_0 = yes
+		country_event = {
+			id = mexico_unam.6
+			days = 1
+		}
+	}
+
+	option = {
+		name = mexico_unam.5.b
+		MEX_socialist_education_1 = yes
+		country_event = {
+			id = mexico_unam.6
+			days = 1
+		}
+	}
+
+}
+
+country_event = { #社会主义教育2
+	id = mexico_unam.6
+	title = mexico_unam.6.t
+	desc = mexico_unam.6.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.6.a
+		MEX_socialist_education_x0 = yes
+		MEX_PLM_M_loyalty_add = yes
+		country_event = {
+			id = mexico_unam.7
+			days = 1
+		}
+	}
+
+	option = {
+		name = mexico_unam.6.b
+		MEX_socialist_education_x1 = yes
+		MEX_PLM_R_loyalty_add = yes
+		MEX_PNA_loyalty_add = yes
+		MEX_PSO_loyalty_add = yes
+		country_event = {
+			id = mexico_unam.7
+			days = 1
+		}
+	}
+
+}
+
+country_event = { #社会主义教育3
+	id = mexico_unam.7
+	title = mexico_unam.7.t
+	desc = mexico_unam.7.desc
+
+	is_triggered_only = yes
+
+	option = {
+		MEX_socialist_education_xx0 = yes
+		name = mexico_unam.7.a
+		country_event = {
+			id = mexico_unam.8
+			days = 1
+		}
+		
+	}
+
+	option = {
+		MEX_socialist_education_xx1 = yes
+		name = mexico_unam.7.b
+		country_event = {
+			id = mexico_unam.8
+			days = 1
+		}
+		
+	}
+
+}
+
+country_event = { #社会主义教育制定完成
+	id = mexico_unam.8
+	title = mexico_unam.8.t
+	desc = mexico_unam.8.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.8.a
+		add_political_power = 25
+		MEX_socialist_education_finalize = yes
+		
+	}
+
+}
+
+#以下几个事件为政府与大学谈判事件链
+
+country_event = { #开始谈判
+	id = mexico_unam.9
+	title = mexico_unam.9.t
+	desc = mexico_unam.9.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.9.a
+		country_event = {
+			id = mexico_unam.10
+			days = 2
+		}
+		
+	}
+
+}
+
+country_event = { #大学内言论自由问题-政府的要求
+	id = mexico_unam.10
+	title = mexico_unam.10.t
+	desc = mexico_unam.10.desc
+
+	is_triggered_only = yes
+
+	option = { #保留敏感内容管制
+		name = mexico_unam.10.a
+		MEX_UNAM_negotiate_0 = yes
+		random_list = {
+			70 = { #抗议言论管制
+				country_event = {
+					id = mexico_unam.11
+					days = 1
+				}
+			}
+			30 = { #学生顺从
+				country_event = {
+					id = mexico_unam.12
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = { #撤销绝大多数政治管制
+		name = mexico_unam.10.b
+		MEX_UNAM_negotiate_1 = yes
+		random_list = {
+			60 = { #学生集会庆祝言论自由
+				country_event = {
+					id = mexico_unam.13
+					days = 1
+				}
+			}
+			40 = { #学生要求更激进自由化
+				country_event = {
+					id = mexico_unam.14
+					days = 1
+				}
+			}
+		}
+		
+	}
+
+}
+
+country_event = { #大学内言论自由问题-学校的反应-抗议言论管制
+	id = mexico_unam.11
+	title = mexico_unam.11.t
+	desc = mexico_unam.11.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.11.a
+		add_political_power = -25
+		add_stability = -0.02
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.02
+		}
+		country_event = {
+			id = mexico_unam.15
+			days = 2
+		}
+		
+	}
+
+}
+
+country_event = { #大学内言论自由问题-学校的反应-学生顺从
+	id = mexico_unam.12
+	title = mexico_unam.12.t
+	desc = mexico_unam.12.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.12.a
+		add_political_power = 25
+		add_stability = 0.02
+		country_event = {
+			id = mexico_unam.15
+			days = 2
+		}
+		
+	}
+
+}
+
+country_event = { #大学内言论自由问题-学校的反应-学生集会庆祝言论自由
+	id = mexico_unam.13
+	title = mexico_unam.13.t
+	desc = mexico_unam.13.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.13.a
+		add_stability = -0.01
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.01
+		}
+		country_event = {
+			id = mexico_unam.15
+			days = 2
+		}
+		
+	}
+
+}
+
+country_event = { #大学内言论自由问题-学校的反应-学生要求更激进自由化
+	id = mexico_unam.14
+	title = mexico_unam.14.t
+	desc = mexico_unam.14.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.14.a
+		add_political_power = -25
+		add_stability = -0.02
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.05
+		}
+		country_event = {
+			id = mexico_unam.15
+			days = 2
+		}
+		
+	}
+
+}
+
+country_event = { #大学内宗教地位-政府的要求
+	id = mexico_unam.15
+	title = mexico_unam.15.t
+	desc = mexico_unam.15.desc
+
+	is_triggered_only = yes
+
+	option = { #要求大学全面世俗化
+		name = mexico_unam.15.a
+		MEX_UNAM_negotiate_x0 = yes
+		random_list = {
+			50 = { #达成全面世俗化
+				country_event = {
+					id = mexico_unam.16
+					days = 1
+				}
+			}
+			50 = { #PAN发动反政府集会
+				country_event = {
+					id = mexico_unam.17
+					days = 1
+				}
+			}
+		}
+		
+	}
+
+	option = { #保留部分宗教地位
+		name = mexico_unam.15.b
+		MEX_UNAM_negotiate_x1 = yes
+		random_list = {
+			60 = { #天主教价值观写进校训
+				country_event = {
+					id = mexico_unam.18
+					days = 1
+				}
+			}
+			40 = { #大学宣布开设必修宗教课
+				country_event = {
+					id = mexico_unam.19
+					days = 1
+				}
+			}
+		}
+
+	}
+
+}
+
+country_event = { #大学内宗教地位-学校的反应-达成全面世俗化
+	id = mexico_unam.16
+	title = mexico_unam.16.t
+	desc = mexico_unam.16.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.16.a
+		add_political_power = 25
+		add_stability = 0.02
+		add_popularity = {
+			ideology = social_democratic
+			popularity = 0.02
+		}
+		country_event = {
+			id = mexico_unam.20
+			days = 2
+		}
+		
+	}
+
+}
+
+country_event = { #大学内宗教地位-学校的反应-PAN发动反政府集会
+	id = mexico_unam.17
+	title = mexico_unam.17.t
+	desc = mexico_unam.17.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.17.a
+		add_political_power = -10
+		add_stability = -0.02
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		country_event = {
+			id = mexico_unam.20
+			days = 2
+		}
+
+	}
+
+}
+
+country_event = { #大学内宗教地位-学校的反应-天主教价值观写进校训
+	id = mexico_unam.18
+	title = mexico_unam.18.t
+	desc = mexico_unam.18.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.18.a
+		add_political_power = -10
+		add_stability = -0.02
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.02
+		}
+		country_event = {
+			id = mexico_unam.20
+			days = 2
+		}
+
+	}
+
+}
+
+country_event = { #大学内宗教地位-学校的反应-大学宣布开设必修宗教课
+	id = mexico_unam.19
+	title = mexico_unam.19.t
+	desc = mexico_unam.19.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.19.a
+		add_political_power = -25
+		add_stability = -0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		country_event = {
+			id = mexico_unam.20
+			days = 2
+		}
+
+	}
+
+}
+
+country_event = { #大学生福利-政府的要求
+	id = mexico_unam.20
+	title = mexico_unam.20.t
+	desc = mexico_unam.20.desc
+
+	is_triggered_only = yes
+
+	option = { #要求学生与工人福利一致
+		name = mexico_unam.20.a
+		MEX_UNAM_negotiate_xx0 = yes
+		random_list = {
+			40 = { #学生接受要求
+				country_event = {
+					id = mexico_unam.21
+					days = 1
+				}
+			}
+			60 = { #学生要求维持现状
+				country_event = {
+					id = mexico_unam.22
+					days = 1
+				}
+			}
+		}
+		
+	}
+
+	option = { #允许学生享有特权
+		name = mexico_unam.20.b
+		MEX_UNAM_negotiate_xx1 = yes
+		random_list = {
+			60 = { #学生同意维持现状
+				country_event = {
+					id = mexico_unam.23
+					days = 1
+				}
+			}
+			40 = { #学生要求更多特权
+				country_event = {
+					id = mexico_unam.24
+					days = 1
+				}
+			}
+		}
+
+	}
+
+}
+
+country_event = { #大学内宗教地位-学校的反应-学生接受要求
+	id = mexico_unam.21
+	title = mexico_unam.21.t
+	desc = mexico_unam.21.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.21.a
+		add_political_power = 10
+		add_stability = 0.02
+		country_event = {
+			id = mexico_unam.25
+			days = 2
+		}
+		
+	}
+
+}
+
+country_event = { #大学内宗教地位-学校的反应-学生要求维持现状
+	id = mexico_unam.22
+	title = mexico_unam.22.t
+	desc = mexico_unam.22.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.22.a
+		add_political_power = -10
+		add_stability = -0.02
+		country_event = {
+			id = mexico_unam.25
+			days = 2
+		}
+		
+	}
+
+}
+
+country_event = { #大学内宗教地位-学校的反应-学生同意维持现状
+	id = mexico_unam.23
+	title = mexico_unam.23.t
+	desc = mexico_unam.23.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.23.a
+		add_political_power = 5
+		country_event = {
+			id = mexico_unam.25
+			days = 2
+		}
+		
+	}
+
+}
+
+country_event = { #大学内宗教地位-学校的反应-学生要求更多特权
+	id = mexico_unam.24
+	title = mexico_unam.24.t
+	desc = mexico_unam.24.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.24.a
+		add_political_power = -25
+		add_stability = -0.05
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.02
+		}
+		country_event = {
+			id = mexico_unam.25
+			days = 2
+		}
+		
+	}
+
+}
+
+country_event = { #大学自治权谈判结果
+	id = mexico_unam.25
+	title = mexico_unam.25.t
+	desc = mexico_unam.25.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.25.a
+		MEX_UNAM_negotiate_finalize = yes
+		add_political_power = 25
+
+	}
+
+}
+
+country_event = { #撤换曼努埃尔·戈麦斯·莫林校长
+	id = mexico_unam.26
+	title = mexico_unam.26.t
+	desc = mexico_unam.26.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.26.a
+		add_political_power = 25
+		add_stability = 0.1
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.1
+		}
+		set_country_flag = MEX_UNAM_headmaster_replaced_flag
+
+	}
+
+}
+
+country_event = { #贫困生的逆袭演讲
+	id = mexico_unam.100
+	title = mexico_unam.100.t
+	desc = mexico_unam.100.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = mexico_unam.100.a
+		
+	}
+
+}
+
+country_event = { #Mexico nationalizes oil (USA event)
+	id = mexico_foreign.1
+	title = mexico_foreign.1.t
+	desc = mexico_foreign.1.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_resource_rights = 480
+			remove_resource_rights = 479
+			remove_resource_rights = 930
+			remove_resource_rights = 477
+			remove_resource_rights = 476
+			add_opinion_modifier = {
+				target = MEX
+				modifier = IN_nationalized_oil
+			}
+		}
+	}
+	
+	option = {
+		name = mexico_foreign.1.a
+		effect_tooltip = {
+			remove_resource_rights = 480
+			remove_resource_rights = 479
+			remove_resource_rights = 930
+			remove_resource_rights = 477
+			remove_resource_rights = 476
+			add_opinion_modifier = {
+				target = MEX
+				modifier = IN_nationalized_oil
+			}
+		}
+	}
+
+}
+
+country_event = { #Mexico asks for an alliance (USA event)
+	id = mexico_foreign.2
+	title = mexico_foreign.2.t
+	desc = mexico_foreign.2.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = mexico_foreign.2.a
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 90
+				OR = {
+					threat > 0.7
+					AND = {
+						threat > 0.5
+						MEX = {
+							num_divisions > 40
+						}
+					}
+					MEX = {
+						num_divisions > 70
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_cosmetic_tag = USA_neoconfederates
+			}
+		}
+		effect_tooltip = {
+			give_guarantee = MEX
+			give_military_access = MEX
+			MEX = {
+				give_guarantee = USA
+				give_military_access = USA
+				country_event = mexico_foreign.3
+			}
+		}
+		hidden_effect = { MEX = { country_event = mexico_foreign.3 } }
+	}
+
+	option = { #Deny
+		name = mexico_foreign.2.b
+		ai_chance = {
+			base = 10
+		}
+		MEX = { country_event = { id = mexico_foreign.4 days = 1 } }
+	}
+
+}
+
+country_event = { #USA accepts (MEX event)
+	id = mexico_foreign.3
+	title = mexico_foreign.3.t
+	desc = mexico_foreign.3.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_foreign.3.a
+		give_guarantee = USA
+		give_military_access = USA
+		USA = {
+			give_guarantee = MEX
+			give_military_access = MEX
+		}
+	}
+
+}
+
+country_event = { #USA declines (MEX event)
+	id = mexico_foreign.4
+	title = mexico_foreign.4.t
+	desc = mexico_foreign.4.desc
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = mexico_foreign.4.a
+		add_opinion_modifier = {
+			target = USA
+			modifier = protest_action
+		}
+	}
+
+}
+
+country_event = { #MEX asks for non aggression pact (FROM event)
+	id = mexico_foreign.5
+	title = mexico_foreign.5.t
+	desc = mexico_foreign.5.desc
+
+	is_triggered_only = yes
+	
+	option = { #Accept
+		name = mexico_foreign.5.a
+		ai_chance = { base = 80 }
+		effect_tooltip = { diplomatic_relation = { country = MEX relation = non_aggression_pact } }
+		MEX = { country_event = { id = mexico_foreign.6 days = 1 } }
+	}
+
+	option = { #Decline
+		name = mexico_foreign.5.b
+		ai_chance = { base = 20 }
+		MEX = { country_event = { id = mexico_foreign.7 days = 1 } }
+
+	}
+
+}
+
+country_event = { #FROM accepts (MEX event)
+	id = mexico_foreign.6
+	title = mexico_foreign.6.t
+	desc = mexico_foreign.6.desc
+
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_foreign.6.a
+		diplomatic_relation = { country = FROM relation = non_aggression_pact }
+		add_political_power = 25
+		IF = {
+			limit = {
+				FROM = { tag = SOV }
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = industry
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				FROM = { tag = GRR }
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = armor
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				FROM = { tag = USA }
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = electronics
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				FROM = { tag = ENG }
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = naval_equipment
+			}
+		}
+	}
+
+}
+
+country_event = { #FROM declines (MEX event)
+	id = mexico_foreign.7
+	title = mexico_foreign.7.t
+	desc = mexico_foreign.7.desc
+
+	is_triggered_only = yes
+	
+	option = {
+		name = mexico_foreign.7.a
+		add_political_power = -25
+		add_opinion_modifier = {
+			target = FROM
+			modifier = protest_action
+		}
+	}
+
+}
+
+country_event = { #Calles breaks away
+	id = mexico_civilwar.1
+	title = mexico_civilwar.1.t
+	desc = mexico_civilwar.1.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			IF = {
+				limit = { is_ai = yes }
+				every_owned_state = {
+					MEX = {
+						delete_unit = { state = PREV disband = yes }
+					}
+				}
+			}
+			MEX_plutarco_elias_calles = { set_nationality = NMX }
+			MEX_manuel_avila_camacho = {
+				set_nationality = NMX
+				add_advisor_role = {
+					character = MEX_manuel_avila_camacho
+					activate = yes
+					advisor={
+						slot = political_advisor
+						idea_token = MEX_manuel_avila_camacho
+						cost = 100
+						traits = {
+							MEX_PLM_E_trait 
+							gentleman_minister
+						}
+						on_add = {
+							MEX_PLM_E_loyalty_add = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = 0.03
+							}
+						}
+						on_remove = {
+							MEX_PLM_E_loyalty_subtract = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = -0.03
+							}
+						}
+						can_be_fired = no
+					}
+				}
+			}
+			MEX_aaron_saenz = {
+				set_nationality = NMX
+				add_advisor_role = {
+					character = MEX_aaron_saenz
+					activate = yes
+					advisor={
+						slot = political_advisor
+						idea_token = MEX_aaron_saenz
+						cost = 100
+						traits = {
+							MEX_PLM_E_trait 
+							shadow_of_calles
+						}
+						on_add = {
+							MEX_PLM_E_loyalty_add = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = 0.03
+							}
+						}
+						on_remove = {
+							MEX_PLM_E_loyalty_subtract = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = -0.03
+							}
+						}
+						can_be_fired = no
+					}
+				}
+			}
+			MEX_luis_morones = {
+				set_nationality = NMX
+				add_advisor_role = {
+					character = MEX_luis_morones
+					activate = yes
+					advisor={
+						slot = political_advisor
+						idea_token = MEX_luis_morones
+						cost = 100
+						traits = {
+							MEX_PLM_E_trait 
+							senior_labor_unionist
+						}
+						on_add = {
+							MEX_PLM_E_loyalty_add = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = 0.03
+							}
+						}
+						on_remove = {
+							MEX_PLM_E_loyalty_subtract = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = -0.03
+							}
+						}
+						can_be_fired = no
+					}
+				}
+			}
+			NMX = {
+				inherit_technology = MEX
+				transfer_state = 930
+				transfer_state = 479
+				transfer_state = 480
+				transfer_state = 482
+				transfer_state = 934
+				transfer_state = 937
+				generic_add_owned_claims = yes
+				generic_add_owned_cores = yes
+				#add_country_leader_role = {
+				#	character = MEX_plutarco_elias_calles
+				#	promote_leader = yes
+				#	country_leader = {
+				#		ideology = auth_dem
+				#		expire = "1965.1.1.1"
+				#	}
+				#}
+				promote_character = { character = MEX_plutarco_elias_calles ideology = social_democratic_subtype }
+			}
+			every_state = {
+				limit = { is_owned_by = MEX }
+				add_claim_by = NMX
+			}
+			generic_remove_unowned_cores = yes
+			929 = { set_demilitarized_zone = yes }
+			934 = { set_demilitarized_zone = yes }
+			935 = { set_demilitarized_zone = yes }
+			937 = { set_demilitarized_zone = yes }
+			clr_country_flag = autdem_coalition_flag
+		}
+	}
+	
+	option = {
+		name = mexico_civilwar.1.a
+		hidden_effect = {
+			country_event = {
+				id = mexico_civilwar.2
+				days = 3
+				random_days = 1
+			}
+		}
+	}
+
+	option = {
+		name = mexico_civilwar.1.b
+		trigger = { is_ai = no }
+		hidden_effect = {
+			country_event = {
+				id = mexico_civilwar.2
+				days = 3
+				random_days = 1
+			}
+		}
+		NMX = { change_tag_from = MEX }
+	}
+
+}
+
+country_event = { #COM and MGS break away
+	id = mexico_civilwar.2
+	title = mexico_civilwar.2.t
+	desc = mexico_civilwar.2.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#MEX_antonio_soto_y_gama = { set_nationality = COM }
+			COM = {
+				transfer_state = 926
+				transfer_state = 927
+				transfer_state = 474
+				generic_add_owned_claims = yes
+				generic_add_owned_cores = yes
+				#promote_character = { character = MEX_antonio_soto_y_gama ideology = socialism_subtype }
+			}
+			MGS = {
+				transfer_state = 928
+				transfer_state = 475
+				generic_add_owned_claims = yes
+				generic_add_owned_cores = yes
+			}
+			COM = {
+				IF = {
+					limit = { has_country_flag = loyal_to_MEX_flag }
+					diplomatic_relation = { country = MEX relation = non_aggression_pact }
+					add_opinion_modifier = {
+						target = MEX
+						modifier = allies
+					}
+					reverse_add_opinion_modifier = {
+						target = MEX
+						modifier = allies
+					}
+					MEX = {
+						add_popularity = {
+							ideology = fascism
+							popularity = -0.2
+						}
+					}
+				}
+			}
+			MGS = {
+				IF = {
+					limit = { has_country_flag = loyal_to_MEX_flag }
+					diplomatic_relation = { country = MEX relation = non_aggression_pact }
+					add_opinion_modifier = {
+						target = MEX
+						modifier = allies
+					}
+					reverse_add_opinion_modifier = {
+						target = MEX
+						modifier = allies
+					}
+					MEX = {
+						add_popularity = {
+							ideology = socialism
+							popularity = -0.2
+						}
+					}
+				}
+			}
+			474 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			475 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			926 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			927 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			928 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			generic_remove_unowned_cores = yes
+		}
+	}
+	
+	option = {
+		name = mexico_civilwar.2.a
+		hidden_effect = {
+			country_event = {
+				id = mexico_civilwar.3
+				days = 4
+				random_days = 2
+			}
+		}
+	}
+
+	option = {
+		name = mexico_civilwar.2.b
+		trigger = { is_ai = no }
+		hidden_effect = {
+			country_event = {
+				id = mexico_civilwar.3
+				days = 4
+				random_days = 2
+			}
+		}
+		COM = { change_tag_from = MEX }
+	}
+
+	option = {
+		name = mexico_civilwar.2.c
+		trigger = { is_ai = no }
+		hidden_effect = {
+			country_event = {
+				id = mexico_civilwar.3
+				days = 4
+				random_days = 2
+			}
+		}
+		MGS = { change_tag_from = MEX }
+	}
+
+}
+
+country_event = { #MCA breaks away
+	id = mexico_civilwar.3
+	title = mexico_civilwar.3.t
+	desc = mexico_civilwar.3.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			#MEX_pancho_villa = { set_nationality = MCA }
+			MCA = {
+				transfer_state = 483
+				transfer_state = 484
+				transfer_state = 925
+				generic_add_owned_claims = yes
+				generic_add_owned_cores = yes
+				#promote_character = { character = MEX_pancho_villa ideology = socialism_subtype }
+			}
+			generic_remove_unowned_cores = yes
+			481 = { set_demilitarized_zone = yes }
+			482 = { set_demilitarized_zone = yes }
+		}
+	}
+	
+	option = {
+		name = mexico_civilwar.3.a
+		hidden_effect = {
+			country_event = {
+				id = mexico_civilwar.4
+				days = 2
+				random_days = 3
+			}
+		}
+	}
+
+	option = {
+		name = mexico_civilwar.3.b
+		trigger = { is_ai = no }
+		hidden_effect = {
+			country_event = {
+				id = mexico_civilwar.4
+				days = 2
+				random_days = 3
+			}
+		}
+		MCA = { change_tag_from = MEX }
+	}
+
+}
+
+country_event = { #FULL CIVIL WAR
+	id = mexico_civilwar.4
+	title = mexico_civilwar.4.t
+	desc = mexico_civilwar.4.desc
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	immediate = {
+		USA = {
+			diplomatic_relation = {
+				country = MEX
+				relation = guarantee
+				active = no
+			}
+		}
+		MEX = {
+			country_event = MEX_civilwar.1
+			IF = {
+				limit = {
+					has_completed_focus = MEX_pol3_compromise
+				}
+				IF = {
+					limit = {
+						power_balance_value = {
+							id = MEX_left_right_bop
+							value > 0.5
+						}
+					}
+					MGS = { set_country_flag = loyal_to_MEX_flag }
+				}
+				ELSE_IF = {
+					limit = {
+						power_balance_value = {
+							id = MEX_left_right_bop
+							value < 0.5
+						}
+					}
+					COM = { set_country_flag = loyal_to_MEX_flag }
+				}
+				ELSE = {
+					MGS = { set_country_flag = loyal_to_MEX_flag }
+					COM = { set_country_flag = loyal_to_MEX_flag }
+					MEX = { set_country_flag = MEX_balanced_south }
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					has_completed_focus = MEX_pol3_do_nothing
+				}
+				IF = {
+					limit = {
+						power_balance_value = {
+							id = MEX_left_right_bop
+							value > 0.5
+						}
+					}
+					MGS = { set_country_flag = loyal_to_MEX_flag }
+				}
+				ELSE = {
+					COM = { set_country_flag = loyal_to_MEX_flag }
+				}
+			}
+		}
+		NMX = {
+			country_event = NMX_civilwar.1
+		}
+		MCA = {
+			country_event = MCA_civilwar.1
+		}
+		MGS = {
+			country_event = MGS_civilwar.1
+		}
+		COM = {
+			country_event = COM_civilwar.1
+		}
+		every_country = {
+			limit = { is_mexican_tag = yes }
+			add_ideas = MEX_civil_war_player_debuff
+		}
+	}
+
+}
+
+country_event = { 
+	id = MEX_civilwar.1
+	title = MEX_civilwar.1.t
+	desc = MEX_civilwar.1.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = MEX_civilwar.1.a
+		set_country_flag = MEX_civil_war_flag
+		generic_update_focus_tree = yes
+
+		division_template = {
+			name = "División de Infanteria"
+
+			division_names_group = SPAN_INF_01
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+			}
+		}
+
+		division_template = {
+			name = "Brigada Agrarista"
+
+			division_names_group = MEX_INF_02
+
+			#is_locked = yes
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+			}
+			priority = 0
+		}
+
+		division_template = {
+			name = "Brigada de Artillería"
+
+			division_names_group = MEX_INF_02
+
+			#is_locked = yes
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				artillery_brigade = { x = 1 y = 0 }
+			}
+			priority = 0
+		}
+
+		division_template = {
+			name = "División de Caballería"
+
+			division_names_group = SPAN_CAV_01
+
+			regiments = {
+				cavalry = { x = 0 y = 0 }
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 0 y = 2 }
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+				cavalry = { x = 1 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+			}
+		}
+		IF = {
+			limit = { is_ai = yes }
+			every_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 2
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 2
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 2
+				}
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					MEX_LDN_balance < -4
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					MEX_LDN_balance < -3
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					MEX_LDN_balance < -2
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					MEX_LDN_balance < -1
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					MEX_LDN_balance < 0
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+		declare_war_on = {
+			target = NMX
+			type = annex_everything
+		}
+		give_military_access = MCA
+		hidden_effect = {
+			add_ideas = {
+				MEX_civil_war_idea
+				MEX_brothers_at_odds
+				MEX_legitimate_government
+				MEX_practice_makes_perfection
+			}
+		}
+	}
+
+}
+
+country_event = { #YUC joins MEX
+	id = MEX_civilwar.2
+	title = MEX_civilwar.2.t
+	desc = MEX_civilwar.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = MEX_civilwar.2.a
+		set_autonomy = {
+			target = FROM
+			autonomy_state = autonomy_autonomous_governorate
+		}
+		transfer_state = 928
+		transfer_state = 475
+		hidden_effect = {
+			generic_fix_core_claims = yes
+		}
+		FROM = {
+			set_cosmetic_tag = yucatan
+			transfer_state = 474
+			transfer_state = 926
+			transfer_state = 927
+			hidden_effect = {
+				generic_fix_core_claims = yes
+				IF = {
+					limit = { tag = COM }
+					set_politics = {
+						ruling_party = socialism
+					}
+					set_popularities = {
+						auth_communism = 5
+						communism = 15
+						socialism = 70
+						social_democratic = 10
+					}
+				}
+				ELSE = {
+					set_politics = {
+						ruling_party = fascism
+					}
+					set_popularities = {
+						despotism = 20
+						fascism = 80
+					}
+				}
+			}
+		}
+	}
+
+}
+
+country_event = { 
+	id = NMX_civilwar.1
+	title = NMX_civilwar.1.t
+	desc = NMX_civilwar.1.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = NMX_civilwar.1.a
+		load_focus_tree = NMX_focus
+		division_template = {
+			name = "División de Infanteria"
+
+			division_names_group = SPAN_INF_01
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+				infantry = { x = 3 y = 0 }
+				infantry = { x = 3 y = 1 }
+				infantry = { x = 3 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+			}
+		}
+		every_owned_state = {
+			create_unit = {
+				division = "division_template = \"División de Infanteria\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = PREV
+				count = 8
+			}
+		}
+		IF = {
+			limit = { is_ai = yes }
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 2
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 2
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 2
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 2
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "division_template = \"División de Infanteria\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 2
+				}
+			}
+		}
+		declare_war_on = {
+			target = MCA
+			type = annex_everything
+		}
+		hidden_effect = {
+			IF = {
+				limit = { is_ai = yes }
+				add_manpower = 350000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 15000
+					producer = NMX
+				}
+				add_equipment_to_stockpile = {
+					type = convoy
+					amount = 15
+					producer = NMX
+				}
+			}
+			add_ideas = {
+				NMX_civil_war_idea
+				NMX_betrayal_of_allies
+				NMX_the_second_revolution
+				NMX_legacy_of_madero
+			}
+		}
+	}
+
+}
+
+
+country_event = { 
+	id = NMX_civilwar.2
+	title = NMX_civilwar.2.t
+	desc = NMX_civilwar.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = NMX_civilwar.2.a
+		add_timed_idea = {
+			idea = NMX_pressure_to_surrender
+			days = 14
+		}
+	}
+
+}
+
+country_event = {
+	id = NMX_civilwar.3
+	title = NMX_civilwar.3.t
+	desc = NMX_civilwar.3.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = NMX_civilwar.3.a
+		generic_update_focus_tree = yes
+		hidden_effect = {
+			MEX_plutarco_elias_calles = { set_nationality = MEX }
+			MEX = {
+				transfer_state = 277
+				inherit_technology = NMX
+				set_cosmetic_tag = MEX_calles
+				clr_country_flag = MEX_civil_war_flag
+				set_country_flag = MEX_civil_war_calles_victory_flag
+				mark_focus_tree_layout_dirty = yes
+				remove_ideas = {
+					MEX_the_next_diaz
+					MEX_the_next_diaz_1
+					MEX_civil_war_idea
+					MEX_brothers_at_odds
+					MEX_brothers_at_odds_1
+					MEX_legitimate_government
+					MEX_practice_makes_perfection
+				}
+				remove_power_balance = {
+					id = MEX_left_right_bop
+				}
+				every_owned_state = {
+					remove_core_of = NMX
+					remove_core_of = MCA
+					remove_core_of = MGS
+					remove_core_of = COM
+					add_core_of = MEX
+				}
+				promote_character = { character = MEX_plutarco_elias_calles ideology = social_democratic_subtype }
+				promote_character = { character = MEX_plutarco_elias_calles ideology = auth_dem }
+				set_popularities = {
+					fascism = 8
+					neutrality = 32
+					social_democratic = 45
+					social_liberal = 10
+					liberal = 5
+				}
+				clr_country_flag = revsoc_coalition_flag
+				clr_country_flag = libsoc_coalition_flag
+				clr_country_flag = soclib_coalition_flag
+				clr_country_flag = condem_coalition_flag
+				clr_country_flag = natpop_coalition_flag
+				set_country_flag = autdem_coalition_flag
+				NMX = {
+					every_owned_state = {
+						transfer_state_to = MEX
+						remove_core_of = NMX
+						remove_claim_by = NMX
+					}
+					every_core_state = {
+						transfer_state_to = MEX
+						remove_core_of = NMX
+						remove_claim_by = NMX
+					}
+				}
+				change_tag_from = NMX
+				annex_country = { target = NMX }
+			}
+			MEX_manuel_avila_camacho = {
+				set_nationality = MEX
+				add_advisor_role = {
+					character = MEX_manuel_avila_camacho
+					activate = yes
+					advisor={
+						slot = political_advisor
+						idea_token = MEX_manuel_avila_camacho
+						cost = 100
+						allowed = {
+							original_tag = MEX
+						}
+						available = {
+							NOT = {
+								OR = {
+									has_war_with = NMX
+									has_completed_focus = MEX_civilwar_another_victory
+								}
+							}
+						}
+						on_add = {
+							MEX_PLM_E_loyalty_add = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = 0.03
+							}
+						}
+						on_remove = {
+							MEX_PLM_E_loyalty_subtract = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = -0.03
+							}
+						}
+						traits = {
+							MEX_PLM_E_trait 
+							gentleman_minister
+						}
+					}
+				}
+			}
+			MEX_aaron_saenz = {
+				set_nationality = MEX
+				add_advisor_role = {
+					character = MEX_aaron_saenz
+					activate = yes
+					advisor={
+						slot = political_advisor
+						idea_token = MEX_aaron_saenz
+						cost = 100
+						allowed = {
+							original_tag = MEX
+						}
+						available = {
+							NOT = {
+								OR = {
+									has_war_with = NMX
+									has_completed_focus = MEX_civilwar_another_victory
+								}
+							}
+						}
+						on_add = {
+							MEX_PLM_E_loyalty_add = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = 0.03
+							}
+						}
+						on_remove = {
+							MEX_PLM_E_loyalty_subtract = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = -0.03
+							}
+						}
+						traits = {
+							MEX_PLM_E_trait 
+							shadow_of_calles
+						}
+					}
+				}
+			}
+			MEX_luis_morones = {
+				set_nationality = MEX
+				add_advisor_role = {
+					character = MEX_luis_morones
+					activate = yes
+					advisor={
+						slot = political_advisor
+						idea_token = MEX_luis_morones
+						cost = 100
+						allowed = {
+							original_tag = MEX
+						}
+						available = {
+							NOT = {
+								OR = {
+									has_war_with = NMX
+									has_completed_focus = MEX_civilwar_another_victory
+								}
+							}
+						}
+						on_add = {
+							MEX_PLM_E_loyalty_add = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = 0.03
+							}
+						}
+						on_remove = {
+							MEX_PLM_E_loyalty_subtract = yes
+							add_popularity = {
+								ideology = neutrality
+								popularity = -0.03
+							}
+						}
+						traits = {
+							MEX_PLM_E_trait
+							senior_labor_unionist
+						}
+					}
+				}
+			}
+			MEX = {
+				every_owned_state = {
+					add_core_of = MEX
+					remove_core_of = NMX
+					remove_claim_by = NMX
+					create_unit = {
+						division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+						owner = MEX
+						count = 1
+					}
+				}
+				clr_country_flag = MEX_PLM_moderate_dominant
+				clr_country_flag = MEX_PLM_radical_dominant
+				clr_country_flag = MEX_villa_in_government
+				set_country_flag = MEX_PLM_establishment_dominant
+				set_variable = { MEX_PLM_establishment_loyalty = 100 }
+				set_variable = { MEX_PLM_moderate_loyalty = 0 }
+				set_variable = { MEX_PLM_radical_loyalty = 0 }
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
+
+}
+
+country_event = { 
+	id = MCA_civilwar.1
+	title = MCA_civilwar.1.t
+	desc = MCA_civilwar.1.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = MCA_civilwar.1.a
+		load_focus_tree = MCA_focus
+
+		division_template = {
+			name = "Brigada Agrarista"
+
+			division_names_group = MEX_INF_02
+
+			#is_locked = yes
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+			}
+			priority = 0
+		}
+
+		division_template = {
+			name = "Brigada de Artillería"
+
+			division_names_group = MEX_INF_02
+
+			is_locked = yes
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }
+				artillery_brigade = { x = 1 y = 0 }
+				artillery_brigade = { x = 1 y = 1 }
+			}
+			priority = 0
+		}
+
+		division_template = {
+			name = "División de Caballería"
+
+			division_names_group = SPAN_CAV_01
+
+			is_locked = yes
+		
+			regiments = {
+				cavalry = { x = 0 y = 0 }
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 0 y = 2 }
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+				cavalry = { x = 1 y = 2 }
+				cavalry = { x = 2 y = 0 }
+				cavalry = { x = 2 y = 1 }
+				cavalry = { x = 2 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+			}
+		}
+
+		every_owned_state = {
+			create_unit = {
+				division = "division_template = \"División de Caballería\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+				owner = PREV
+				count = 6
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					MEX_LDN_balance > 0
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Caballería\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					MEX_LDN_balance > 1
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Caballería\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					MEX_LDN_balance > 2
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Caballería\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					MEX_LDN_balance > 3
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Caballería\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+		IF = {
+			limit = {
+				check_variable = {
+					MEX_LDN_balance > 4
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "division_template = \"División de Caballería\" start_experience_factor = 0.6 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 1
+				}
+			}
+		}
+		give_military_access = MEX
+		diplomatic_relation = { country = MEX relation = non_aggression_pact }
+		hidden_effect = {
+			IF = {
+				limit = { is_ai = yes }
+				add_manpower = 50000
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 3000
+					producer = NMX
+				}
+			}
+			add_ideas = {
+				MCA_civil_war_idea
+				MCA_peasants_army
+				MCA_land_and_liberty
+			}
+		}
+	}
+
+}
+
+country_event = { 
+	id = MCA_civilwar.2
+	title = MCA_civilwar.2.t
+	desc = MCA_civilwar.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = MCA_civilwar.2.a
+		484 = {
+			create_unit = {
+				division = "division_template = \"Brigada de Artillería\" start_experience_factor = 0.65 start_equipment_factor = 1.0" 
+				owner = PREV
+				count = 5
+			}
+		}
+	}
+
+}
+
+country_event = { 
+	id = MGS_civilwar.1
+	title = MGS_civilwar.1.t
+	desc = MGS_civilwar.1.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = MGS_civilwar.1.a
+		load_focus_tree = MGS_focus
+		division_template = {
+			name = "División de Infanteria"
+
+			division_names_group = SPAN_INF_01
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+			}
+		}
+		every_owned_state = {
+			create_unit = {
+				division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+				owner = PREV
+				count = 6
+			}
+		}
+		declare_war_on = {
+			target = COM
+			type = annex_everything
+		}
+		hidden_effect = {
+			add_ideas = {
+				MGS_civil_war_idea
+				MGS_low_organization
+				MGS_national_fanaticism
+			}
+			IF = {
+				limit = { has_country_flag = loyal_to_MEX_flag }
+				diplomatic_relation = { country = MEX relation = non_aggression_pact }
+				add_opinion_modifier = {
+					target = MEX
+					modifier = allies
+				}
+				reverse_add_opinion_modifier = {
+					target = MEX
+					modifier = allies
+				}
+				MEX = {
+					add_popularity = {
+						ideology = socialism
+						popularity = -0.2
+					}
+				}
+			}
+		}
+	}
+
+}
+
+country_event = { 
+	id = COM_civilwar.1
+	title = COM_civilwar.1.t
+	desc = COM_civilwar.1.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = COM_civilwar.1.a
+		load_focus_tree = COM_focus
+		division_template = {
+			name = "División de Infanteria"
+
+			division_names_group = SPAN_INF_01
+
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+			}
+		}
+		every_owned_state = {
+			create_unit = {
+				division = "division_template = \"División de Infanteria\" start_experience_factor = 0.4 start_equipment_factor = 1.0" 
+				owner = PREV
+				count = 5
+			}
+		}
+		hidden_effect = {
+			add_manpower = 5000
+			add_ideas = {
+				COM_civil_war_idea
+				COM_peasants_workers_unite
+				COM_poor_army
+			}
+			IF = {
+				limit = { has_country_flag = loyal_to_MEX_flag }
+				diplomatic_relation = { country = MEX relation = non_aggression_pact }
+				add_opinion_modifier = {
+					target = MEX
+					modifier = allies
+				}
+				reverse_add_opinion_modifier = {
+					target = MEX
+					modifier = allies
+				}
+				MEX = {
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.2
+					}
+				}
+			}
+		}
+	}
+
+}
+
+country_event = { 
+	id = MEX_post_civilwar.1
+	title = MEX_post_civilwar.1.t
+	desc = MEX_post_civilwar.1.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEX
+		has_war = no
+		country_exists = YUC
+		YUC = {
+			is_subject_of = MEX
+		}
+		NOT = { country_exists = NMX }
+		has_completed_focus = MEX_civilwar_another_victory
+	}
+
+	option = {
+		name = MEX_civilwar.1.a
+		add_political_power = 50
+		set_country_flag = MEX_civil_war_obregon_victory_flag
+		generic_update_focus_tree = yes
+		complete_national_focus = MEX_postcivilwar_day_for_peace
+		hidden_effect = {
+			remove_ideas = {
+				MEX_civil_war_idea
+				MEX_civil_war_idea_1
+				MEX_brothers_at_odds
+				MEX_brothers_at_odds_1
+				MEX_legitimate_government
+				MEX_practice_makes_perfection
+				MEX_practice_makes_perfection_1
+			}
+			MEX_plutarco_elias_calles = { set_nationality = MEX }
+			MEX_manuel_avila_camacho = { set_nationality = MEX }
+			MEX_aaron_saenz = { set_nationality = MEX }
+			MEX_luis_morones = { set_nationality = MEX }
+		}
+	}
+
+}

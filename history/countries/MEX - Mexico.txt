@@ -1,0 +1,455 @@
+capital = 277
+set_country_flag = MEX_clicked_on_mexico_city
+#set_rule = { can_send_volunteers = no }
+
+oob = "MEX_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "MEX_1936_naval_mtg"
+	else = {
+		set_naval_oob = "MEX_1936_naval_legacy"
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_air_oob = "MEX_1936_air_bba"
+	set_technology = {
+		aa_lmg = 1
+		engines_1 = 1
+		early_bombs = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+	}
+	else = {
+		set_air_oob = "MEX_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+
+		}
+	}
+}
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	
+	fuel_silos = 1
+	fuel_refining = 1
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		coastal_defense_ships = 1
+	}
+}
+
+add_ideas = {
+	MEX_legacy_of_1910_war
+	MEX_the_next_diaz
+	MEX_catholic_opposition
+	generic_send_more_volunteers_idea
+}
+
+set_power_balance = {
+	id = MEX_left_right_bop
+}
+
+recruit_character = MEX_congress
+activate_advisor = MEX_congress
+recruit_character = MEX_alvaro_obregon_salido
+recruit_character = MEX_luis_morones
+recruit_character = MEX_isidro_fabela
+recruit_character = MEX_amalia_gonzalez_caballero_de_castillo_ledon
+recruit_character = MEX_plutarco_elias_calles
+recruit_character = MEX_plutarco_elias_calles_placeholder
+recruit_character = MEX_manuel_avila_camacho
+recruit_character = MEX_aaron_saenz
+recruit_character = MEX_lazaro_cardenas
+activate_advisor = MEX_lazaro_cardenas
+recruit_character = MEX_francisco_mugica
+recruit_character = MEX_vicente_lombardo
+recruit_character = MEX_emilio_portes_gil
+recruit_character = MEX_antonio_soto_y_gama
+recruit_character = MEX_pancho_villa
+recruit_character = MEX_manuel_gomez_morin
+recruit_character = MEX_efrain_gonzalez_luna
+recruit_character = MEX_huerta_faction_remains
+recruit_character = MEX_adolfo_de_la_huerta
+MEX_adolfo_de_la_huerta = { set_nationality = USA }
+recruit_character = MEX_liberal_movement
+recruit_character = MEX_reactionary_remains
+recruit_character = MEX_diego_rivera
+#recruit_character = MEX_ezequiel_padilla_penaloza
+recruit_character = MEX_octavio_paz
+recruit_character = MEX_m_n_roy
+recruit_character = MEX_dionisio_encina
+
+set_country_flag = monroe_doctrine
+
+set_convoys = 45
+set_stability = 0.2
+set_war_support = 0.1
+
+set_politics = {
+	ruling_party = social_democratic
+}
+set_country_flag = libsoc_coalition_flag
+#set_country_flag = soclib_coalition_flag
+set_country_flag = autdem_coalition_flag
+set_popularities = {
+	auth_communism = 1
+	communism = 6
+	socialism = 14
+	social_democratic = 30
+	social_liberal = 3
+	liberal = 2
+	democratic = 17
+	neutrality = 10
+	despotism = 2
+	fascism = 15
+}
+
+country_event = { id = mexico_stage1.1 days = 3 }
+
+#Party Loyalty
+set_country_flag = MEX_PLM_moderate_dominant
+set_variable = {
+	var = MEX_PLM_moderate_loyalty
+	value = 100
+}
+set_variable = {
+	var = MEX_PLM_radical_loyalty
+	value = 75
+}
+set_variable = {
+	var = MEX_PLM_establishment_loyalty
+	value = 65
+}
+set_variable = {
+	var = MEX_PNA_loyalty
+	value = 50
+}
+set_variable = {
+	var = MEX_PNC_loyalty
+	value = 1
+}
+set_variable = { #needs flag to activate
+	var = MEX_PAN_loyalty
+	value = 1
+}
+set_variable = {
+	var = MEX_PSO_loyalty
+	value = 1
+}
+set_variable = {
+	var = MEX_PCM_loyalty
+	value = 1
+}
+set_variable = {
+	var = MEX_LDN_loyalty
+	value = 1
+}
+set_variable = {
+	var = MEX_ARM_loyalty
+	value = 47
+}
+
+#Cristero War
+set_variable = {
+	var = MEX_cristero_army_total_strength
+	value = 0
+}
+set_variable = {
+	var = MEX_cristero_army_strength_mexico_city
+	value = 10
+}
+set_variable = {
+	var = MEX_cristero_army_strength_nuevo_leon
+	value = 15
+}
+set_variable = {
+	var = MEX_cristero_army_strength_jalisco
+	value = 50
+}
+set_variable = {
+	var = MEX_cristero_army_strength_mexico_state
+	value = 30
+}
+set_variable = {
+	var = MEX_cristero_army_strength_veracruz
+	value = 35
+}
+set_variable = {
+	var = MEX_cristero_army_strength_baja_california
+	value = 10
+}
+set_variable = {
+	var = MEX_cristero_army_strength_guanajuato
+	value = 40
+}
+set_variable = {
+	var = MEX_cristero_army_strength_san_luis_potosi
+	value = 30
+}
+set_variable = {
+	var = MEX_cristero_army_strength_durango
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_sinaloa
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_tamaulipas
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_coahuila
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_chihuahua
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_baja_california_sur
+	value = 10
+}
+set_variable = {
+	var = MEX_cristero_army_strength_sonora
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_zacatecas
+	value = 35
+}
+set_variable = {
+	var = MEX_cristero_army_strength_nayarit
+	value = 30
+}
+set_variable = {
+	var = MEX_cristero_army_strength_aguascalientes
+	value = 40
+}
+set_variable = {
+	var = MEX_cristero_army_strength_guerrero
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_morelos
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_tlaxcala
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_puebla
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_hidalgo
+	value = 30
+}
+set_variable = {
+	var = MEX_cristero_army_strength_oaxaca
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_tabasco
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_queretaro
+	value = 30
+}
+set_variable = {
+	var = MEX_cristero_army_strength_campeche
+	value = 10
+}
+set_variable = {
+	var = MEX_cristero_army_strength_quintana_roo
+	value = 10
+}
+set_variable = {
+	var = MEX_cristero_army_strength_yucatan
+	value = 10
+}
+set_variable = {
+	var = MEX_cristero_army_strength_colima
+	value = 40
+}
+set_variable = {
+	var = MEX_cristero_army_strength_chiapas
+	value = 20
+}
+set_variable = {
+	var = MEX_cristero_army_strength_michoacan
+	value = 40
+}
+set_variable = {
+	var = MEX_cristero_add
+	value = 10
+}
+set_variable = {
+	var = MEX_cristero_threshold
+	value = 30
+}
+set_variable = {
+	var = MEX_cristero_war_clear_cristero_army_cooldown
+	value = 15
+}
+set_variable = {
+	var = MEX_cristero_war_clear_cristero_army_strength
+	value = -10
+}
+
+#Six Year Plan
+set_variable = {
+	var = MEX_six_year_plan_consumers
+	value = 0
+}
+set_variable = {
+	var = MEX_six_year_plan_research
+	value = 0
+}
+set_variable = {
+	var = MEX_six_year_plan_construction
+	value = 0
+}
+
+#UNAM
+set_variable = {
+	var = MEX_UNAM_total_enrollment
+	value = 8253
+}
+set_variable = {
+	var = MEX_UNAM_latest_enrollment
+	value = 773
+}
+set_variable = {
+	var = MEX_UNAM_latest_enrollment_extra_add
+	value = 0
+}
+set_variable = {
+	var = MEX_UNAM_social_attitude
+	value = 1
+}
+set_variable = {
+	var = MEX_UNAM_social_attitude_bonus
+	value = 50
+}
+country_event = { id = mexico_unam.0 days = 180 }
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	create_equipment_variant = {
+		name = "Durango Class"
+		type = destroyer_1
+		upgrades = {
+			ship_anti_air_upgrade = 1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Nicolás Bravo Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 1
+			ship_anti_air_upgrade = 2
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Nicolás Bravo Class"			
+		type = ship_hull_light_1
+		name_group = MEX_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Durango Class"			# represents both Guanajuato and Durango classes (gunboats)
+		type = ship_hull_light_1
+		name_group = MEX_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Anahuac Class"			
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = MEX_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}

@@ -1,0 +1,93 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+USA_SUPPORT_CLN = {
+	enable = {
+		original_tag = USA
+		OR = {
+			is_liberal_ideology = yes
+			has_government = neutrality
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ENG
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = ENG
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = NFR
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = NFR
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = GRR
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = GRR
+		value = 1000
+	}
+
+}
+USA_SUPPORT_IN = {
+	enable = {
+		original_tag = USA
+		is_commie_ideology = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SOV
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SOV
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = FRA
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = FRA
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ITA
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = ITA
+		value = 1000
+	}
+
+}

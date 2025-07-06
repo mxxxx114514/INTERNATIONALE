@@ -1,0 +1,16 @@
+﻿capital = 928
+
+oob = "MGS_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+set_research_slots = 3
+set_politics = {
+	ruling_party = fascism
+}
+set_popularities = {
+	despotism = 20
+	fascism = 80
+}

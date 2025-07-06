@@ -1,0 +1,60 @@
+MEX_mountains_state_modifier = {
+	icon = GFX_idea_GER_extremism
+	state_production_speed_buildings_factor = -0.3
+}
+MEX_six_year_plan = {
+	icon = GFX_idea_MEX_six_year_plan
+	production_speed_buildings_factor = MEX_six_year_plan_construction
+	research_speed_factor = MEX_six_year_plan_research
+	consumer_goods_factor = MEX_six_year_plan_cost
+	political_power_cost = MEX_six_year_plan_cost
+}
+MEX_revsoc_influence = {
+	enable = { communism < 0.03 }
+	communism_drift = 0.5
+}
+MEX_libsoc_restrictions = {
+	enable = { socialism > 0.25 }
+	socialism_drift = -0.5
+}
+MEX_socdem_influence = {
+	enable = { social_democratic < 0.3 NOT = { has_cosmetic_tag = MEX_calles } }
+	social_democratic_drift = 0.5
+}
+MEX_socdem_influence_calles = {
+	enable = { social_democratic < 0.15 has_cosmetic_tag = MEX_calles NOT = { has_country_flag = MEX_camacho_PAN_flag } }
+	social_democratic_drift = 0.5
+}
+MEX_soclib_influence = {
+	enable = { social_liberal < 0.03 }
+	social_liberal_drift = 0.5
+}
+MEX_condem_influence = {
+	enable = { democratic < 0.12 NOT = { has_country_flag = MEX_camacho_PAN_flag } }
+	democratic_drift = 0.5
+}
+MEX_condem_restrictions = {
+	enable = { democratic > 0.2 NOT = { has_country_flag = MEX_camacho_PAN_flag } }
+	democratic_drift = -0.5
+}
+MEX_condem_influence_camacho = {
+	enable = { democratic < 0.19 has_country_flag = MEX_camacho_PAN_flag }
+	democratic_drift = 0.5
+}
+MEX_condem_restrictions_camacho = {
+	enable = { democratic > 0.22 has_country_flag = MEX_camacho_PAN_flag }
+	democratic_drift = -0.5
+}
+MEX_autdem_influence = {
+	enable = { neutrality < 0.1 NOT = { has_cosmetic_tag = MEX_calles } }
+	neutrality_drift = 0.5
+}
+MEX_autdem_influence_calles = {
+	enable = { neutrality < 0.35 has_cosmetic_tag = MEX_calles }
+	neutrality_drift = 0.5
+}
+MEX_natpop_influence = {
+	enable = { fascism < 0.075 }
+	fascism_drift = 0.5
+}
+	

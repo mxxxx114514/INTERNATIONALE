@@ -1,0 +1,22 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_ENG_george_v"
+		texturefile = "gfx/leaders/ENG/GFX_portrait_ENG_george_v.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_ENG_edward_viii"
+		texturefile = "gfx/leaders/ENG/GFX_portrait_ENG_edward_viii.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_ENG_george_vi"
+		texturefile = "gfx/leaders/ENG/GFX_portrait_ENG_george_vi.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_ENG_clement_attlee"
+		texturefile = "gfx/leaders/ENG/GFX_portrait_ENG_clement_attlee.png"
+	}
+}

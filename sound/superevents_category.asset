@@ -1,0 +1,52 @@
+######################################
+category = {
+	name = "SuperEvents"
+	soundeffects = {
+		superevents_verdun_on_ne_passe_pas
+		superevents_star_spangled_banner_sad
+		superevents_well_meet_again
+		superevents_wo_alle_strassen_enden
+		superevents_addio_mia_bella_addio
+		superevents_song_of_kamikaze_corps
+		superevents_wide_is_my_motherland
+		superevents_eight_hundred_heroes_theme
+		superevents_defend_the_yellow_river
+		superevents_espana_cani
+		superevents_erika
+		superevents_tchaikovsky_overture
+		superevents_sacred_war
+		superevents_battotai
+		superevents_red_sun_in_the_sky
+		superevents_victory_song
+		superevents_as_the_war_approaches
+		superevents_burgundian_lullaby
+		superevents_westerwaldlied
+		superevents_deutschlandlied
+		superevents_for_god_and_queen
+		superevents_hungarian_dance_5
+		superevents_soviet_storm_intro
+		superevents_chestnut_tree
+		superevents_edelweiss
+		superevents_lenin_is_young_again
+		superevents_we_are_friends_forever
+		superevents_the_moldau
+		superevents_yellow_rose_of_texas
+		superevents_song_of_the_united_front
+		superevents_battle_cry_of_freedom
+		superevents_chant_du_depart
+		superevents_quand_fera_til_jour_camarade
+		superevents_funiculi_funicula
+		superevents_marcha_de_oriamendi
+		superevents_mother_anarchy_loves_her_sons
+		superevents_united_nations_on_the_march
+	}
+	compressor =  {
+		enabled = yes
+		pregain = 5.0
+		postgain = 6.0
+		ratio = 15.0
+		threshold = -15.0
+		attacktime = 0.03
+		releasetime = 0.0
+	}
+}

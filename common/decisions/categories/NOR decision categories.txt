@@ -1,0 +1,9 @@
+#################
+#### NOT ####
+#################
+NOR_diplomacy_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = NOR }
+}

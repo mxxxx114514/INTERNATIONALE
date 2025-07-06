@@ -1,0 +1,10 @@
+capital = 219
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	elections_allowed = no
+}
+set_cosmetic_tag = SOV_MCW_pakt
+set_popularities = {
+	neutrality = 100
+}

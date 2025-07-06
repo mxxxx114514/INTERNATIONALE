@@ -1,0 +1,568 @@
+poland_german_soviet_game = {
+    
+    POL_increase_POL = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            tag = POL
+        }
+        visible = {
+            country_exists = POL
+            POL = { NOT = { has_country_flag = POL_neutrality_flag } }
+            NOT = { check_variable = { POL.POL_POL_influence > 99 } }
+            NOT = { check_variable = { POL.POL_GER_influence > 99 } }
+            NOT = { check_variable = { POL.POL_SOV_influence > 99 } }
+        }
+
+        available = {
+            country_exists = POL
+            POL = { is_subject = no }
+            hidden_trigger = {
+                NOT = { has_country_flag = POL_increase_GER_flag }
+                NOT = { has_country_flag = POL_increase_SOV_flag }
+            }
+            
+        }
+
+        days_remove = 14
+
+        ai_will_do = {
+            base = 15
+        }
+
+        cost = 25
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = POL_increase_POL_flag
+            }
+        }
+
+        remove_effect = { 
+            clr_country_flag = POL_increase_POL_flag
+            add_to_variable = {
+                var = POL_POL_influence
+                value = 5
+                tooltip = POL_increase_POL_tt
+            }
+            clamp_variable = {
+				var = POL.POL_POL_influence
+				min = 0
+				max = 100
+			}
+        }
+
+    }
+
+    POL_increase_GER = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            tag = POL
+        }
+        visible = {
+            country_exists = POL
+            POL = { NOT = { has_country_flag = POL_neutrality_flag } }
+            NOT = { check_variable = { POL.POL_POL_influence > 99 } }
+            NOT = { check_variable = { POL.POL_GER_influence > 99 } }
+            NOT = { check_variable = { POL.POL_SOV_influence > 99 } }
+        }
+
+        available = {
+            country_exists = GER
+            GER = { is_subject = no }
+            hidden_trigger = {
+                NOT = { has_country_flag = POL_increase_POL_flag }
+                NOT = { has_country_flag = POL_increase_SOV_flag }
+            }
+        }
+
+        days_remove = 14
+
+        cost = 25
+
+        ai_will_do = {
+            base = 0
+        }
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = POL_increase_GER_flag
+            }
+        }
+
+        remove_effect = {
+            clr_country_flag = POL_increase_GER_flag
+            add_to_variable = {
+                var = POL_GER_influence
+                value = 5
+                tooltip = POL_increase_GER_tt
+            }
+            clamp_variable = {
+				var = POL.POL_GER_influence
+				min = 0
+				max = 100
+			}
+            POL = {
+                add_political_power = var:POL_GER_influence
+            }
+        }
+    }
+
+    POL_increase_SOV = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            tag = POL
+        }
+        visible = {
+            country_exists = POL
+            POL = { NOT = { has_country_flag = POL_neutrality_flag } }
+            NOT = { check_variable = { POL.POL_POL_influence > 99 } }
+            NOT = { check_variable = { POL.POL_GER_influence > 99 } }
+            NOT = { check_variable = { POL.POL_SOV_influence > 99 } }
+        }
+
+        available = {
+            country_exists = SOV
+            SOV = { is_subject = no }
+            hidden_trigger = {
+                NOT = { has_country_flag = POL_increase_POL_flag }
+                NOT = { has_country_flag = POL_increase_GER_flag }
+            }
+        }
+
+        days_remove = 14
+
+        ai_will_do = {
+            factor = 0
+            modifier = {
+                factor = 100
+                is_commie_ideology = yes
+            }
+        }
+
+        cost = 25
+
+        complete_effect = {
+            hidden_effect = {
+                set_country_flag = POL_increase_SOV_flag
+            }
+        }
+
+        remove_effect = {
+            clr_country_flag = POL_increase_SOV_flag
+            add_to_variable = {
+                var = POL_SOV_influence
+                value = 5
+                tooltip = POL_increase_SOV_tt
+            }
+            clamp_variable = {
+				var = POL.POL_SOV_influence
+				min = 0
+				max = 100
+			}
+            POL = {
+                add_political_power = var:POL_SOV_influence
+            }
+        }
+    }
+        
+        
+    GER_increase_GER = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            tag = GER
+        }
+        visible = {
+            country_exists = POL
+            POL = { NOT = { has_country_flag = POL_neutrality_flag } }
+            NOT = { check_variable = { POL.POL_POL_influence > 99 } }
+            NOT = { check_variable = { POL.POL_GER_influence > 99 } }
+            NOT = { check_variable = { POL.POL_SOV_influence > 99 } }
+        }
+
+        available = {
+            country_exists = GER
+            GER = { is_subject = no }
+        }
+
+        days_remove = 14
+
+        ai_will_do = {
+            base = 80
+            #modifier = {
+            #    factor = 0
+            #    check_variable = { POL.POL_GER_influence > 99 }
+            #}
+        }
+
+        cost = 25
+
+        remove_effect = {
+            add_to_variable = {
+                var = POL.POL_GER_influence
+                value = 5
+                tooltip = GER_increase_GER_tt
+            } 
+            clamp_variable = {
+				var = POL.POL_GER_influence
+				min = 0
+				max = 100
+			}
+        }
+    }
+
+    SOV_increase_SOV = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            tag = SOV
+        }
+        visible = {
+            country_exists = POL
+            POL = { NOT = { has_country_flag = POL_neutrality_flag } }
+            NOT = { check_variable = { POL.POL_POL_influence > 99 } }
+            NOT = { check_variable = { POL.POL_GER_influence > 99 } }
+            NOT = { check_variable = { POL.POL_SOV_influence > 99 } }
+        }
+
+        available = {
+            country_exists = SOV
+            SOV = { is_subject = no }
+        }
+
+        #days_remove = 14
+
+        days_remove = 42
+
+        ai_will_do = {
+            base = 20
+            modifier = {
+                factor = 0
+                check_variable = { POL.POL_SOV_influence > 99 }
+            }
+        }
+
+        cost = 25
+
+        remove_effect = {
+            add_to_variable = {
+                var = POL.POL_SOV_influence
+                value = 5
+                tooltip = SOV_increase_SOV_tt
+            }   
+            clamp_variable = {
+				var = POL.POL_SOV_influence
+				min = 0
+				max = 100
+			}
+            POL = {
+                add_popularity = {
+                    ideology = auth_communism
+                    popularity = 0.005
+                }
+                add_popularity = {
+                    ideology = communism
+                    popularity = 0.01
+                }
+                add_popularity = {
+                    ideology = communism
+                    popularity = 0.005
+                }
+            }
+        }
+    }
+
+    GER_increase_poznan = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            tag = GER
+        }
+        visible = {
+            country_exists = POL
+	        NOT = { country_exists = GGN }
+            NOT = { check_variable = { POL.GER_poznan_influence > 99 } }
+        }
+
+        available = {
+            country_exists = GER
+            GER = { is_subject = no }
+        }
+
+        days_remove = 14
+
+        ai_will_do = {
+            base = 100
+            modifier = {
+                factor = 0
+                is_liberal_ideology = yes
+            }
+        }
+
+        cost = 25
+
+        remove_effect = {
+            add_to_variable = {
+                var = POL.GER_poznan_influence
+                value = 10
+                tooltip = GER_increase_poznan_tt
+            } 
+        }
+    }
+
+    GER_demand_poznan = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            tag = GER
+        }
+        visible = {
+            OR = {
+                has_completed_focus = GER_imperialism
+                has_completed_focus = GER_nationalism
+            }
+            NOT = { owns_state = 86 }
+        }
+        available = {
+            country_exists = POL
+            check_variable = { POL.GER_poznan_influence > 99 }
+            hidden_trigger = {
+                NOT = { has_global_flag = GER_demand_poznan_flag }
+                NOT = { has_global_flag = ww2 }
+            }
+            GER = { 
+                is_subject = no 
+                OR = {
+                    has_cosmetic_tag = GER_hugenberg
+                    has_cosmetic_tag = GER_hugenberg_greater
+                    has_cosmetic_tag = GER_kaiserreich
+                    has_cosmetic_tag = GER_kaiserreich_greater
+                }
+            }
+            POL = {
+                NOT = {
+                    is_in_faction_with = SOV
+                }
+            }
+            date > 1939.6.1
+        }
+        ai_will_do = {
+            base = 500
+        }
+        cost = 25
+        days_remove = 14
+
+        war_with_on_complete = POL
+
+        complete_effect = {
+            add_ai_strategy = {
+				type = prepare_for_war
+				id = POL
+				value = 1000
+			}
+        }
+
+        remove_effect = {
+            set_global_flag = GER_demand_poznan_flag
+	        add_state_claim = 86
+            POL = {
+                country_event = { id = poland.1 days = 3 }
+            } 
+        }
+    }
+
+    GER_invite_POL = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            tag = GER
+        }
+        visible = {
+            country_exists = POL
+            country_exists = GER
+            POL = { NOT = { has_country_flag = POL_neutrality_flag } NOT = { is_in_faction = yes } }
+            GER = { is_subject = no }
+        }
+
+        available = {
+            check_variable = { POL.POL_GER_influence > 99 }
+            NOT = {
+                POL = {
+                    is_commie_ideology = yes
+                }
+            }
+        }
+
+        fire_only_once = yes
+
+        ai_will_do = {
+            base = 500
+        }
+
+        cost = 50
+
+        complete_effect = {
+            POL = {
+                country_event = generic.5
+                effect_tooltip = {
+                    GRR = {
+                        add_dynamic_modifier = {
+                            modifier = GER_POL_in_faction
+                        }
+                    }
+                }
+                custom_effect_tooltip = needs_approval
+            }
+        }
+    }
+
+    SOV_invite_POL = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            always = no
+        }
+        visible = {
+            always = yes
+        }
+
+        available = {
+            country_exists = POL
+            POL = { NOT = { has_country_flag = POL_neutrality_flag } }
+            country_exists = SOV
+            SOV = { is_subject = no }
+            POL = { is_subject = no }
+            check_variable = { POL.POL_SOV_influence > 99 }
+            POL = {
+                is_commie_ideology = yes
+            }
+        }
+
+        fire_only_once = yes
+
+        ai_will_do = {
+            base = 50
+        }
+
+        cost = 50
+
+        complete_effect = {
+            hidden_effect = {
+                SOV = {
+                    add_to_faction = POL
+                }
+            }
+        }
+    }
+
+    SOV_turn_POL_into_commie = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            tag = SOV
+        }
+        visible = {
+            always = yes
+        }
+
+        available = {
+            country_exists = POL
+            POL = { NOT = { has_country_flag = POL_neutrality_flag } }
+            country_exists = SOV
+            SOV = { is_subject = no }
+            POL = { is_subject = no }
+            check_variable = { POL.POL_SOV_influence > 99 }
+        }
+
+        fire_only_once = yes
+
+        ai_will_do = {
+            base = 1000
+        }
+
+        cost = 50
+
+        complete_effect = {
+            hidden_effect = {
+                POL = {
+                    set_politics = { ruling_party = communism }
+                    set_cosmetic_tag = POL_commie
+                    diplomatic_relation = {
+                        country = GRR
+                        relation = military_access
+                        active = no
+                    }
+                    diplomatic_relation = {
+                        country = GRR
+                        relation = non_aggression_pact
+                        active = no
+                    }
+                    remove_opinion_modifier = {
+                        target = SOV
+                        modifier = world_war_pain_3
+                    }
+                }
+                GRR = {
+                    diplomatic_relation = {
+                        country = POL
+                        relation = military_access
+                        active = no
+                    }
+                }
+                SOV = {
+                    add_to_faction = POL
+                    transfer_state = 89
+		    #transfer_state = 91
+                    remove_opinion_modifier = {
+                        target = POL
+                        modifier = world_war_pain_3
+                    }
+                }
+                IF = {
+                    limit = {
+                        RUS = { is_subject_of = SOV }
+                    }
+                    RUS = {
+                        remove_opinion_modifier = {
+                            target = POL
+                            modifier = world_war_pain_3
+                        }
+                    }
+                    POL = {
+                        remove_opinion_modifier = {
+                            target = RUS
+                            modifier = world_war_pain_3
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    POL_declare_neutrality = {
+        icon = GFX_decision_gre_investment_decisions
+        allowed = { 
+            tag = POL
+        }
+        visible = {
+            always = yes
+        }
+
+        available = {
+            country_exists = POL
+            POL = { NOT = { has_country_flag = POL_neutrality_flag } }
+            check_variable = { POL_POL_influence > 99 }
+        }
+
+        ai_will_do = {
+            base = 50
+        }
+        
+        cost = 50
+
+        fire_only_once = yes
+
+        complete_effect = {
+            create_faction = intermarium
+            hidden_effect = {
+                set_country_flag = POL_neutrality_flag
+                set_country_flag = intermarium_member
+                give_guarantee = GER
+                GER = { give_guarantee = POL }
+            }
+        }
+    }
+}

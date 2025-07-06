@@ -1,0 +1,91 @@
+MEX_left_right_bop = {
+	initial_value = -0.7
+	left_side = MEX_left_side_bop
+	right_side = MEX_right_side_bop
+	decision_category = MEX_left_right_conflict
+
+	range = {
+		id = MEX_right_side_bop_balanced
+		min = -0.25
+		max = 0.25
+		modifier = {
+			
+		}
+	}
+
+	side = {
+		id = MEX_right_side_bop
+		#icon = 
+		range = {
+			id = MEX_right_side_bop_3
+			min = 0.75
+			max = 1
+			modifier = {
+				fascism_drift = 0.1
+				army_attack_factor = 0.15
+				resistance_growth = -0.35
+			}
+		}
+		
+		range = {
+			id = MEX_right_side_bop_2
+			min = 0.5
+			max = 0.75
+			modifier = {
+				fascism_drift = 0.05
+				army_attack_factor = 0.1
+				resistance_growth = -0.25
+			}
+		}
+
+		range = {
+			id = MEX_right_side_bop_1
+			min = 0.25
+			max = 0.5
+			modifier = {
+				army_attack_factor = 0.05
+				resistance_growth = -0.15
+			}
+		}
+	}
+
+	side = {
+		id = MEX_left_side_bop
+		#icon = 
+		range = {
+			id = MEX_left_side_bop_1
+			min = -0.5
+			max = -0.25
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_dockyard = 0.03
+			}
+		}
+		
+		range = {
+			id = MEX_left_side_bop_2
+			min = -0.75
+			max = -0.5
+			modifier = {
+				socialism_drift = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+
+		range = {
+			id = MEX_left_side_bop_3
+			min = -1
+			max = -0.75
+			modifier = {
+				socialism_drift = 0.1
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_dockyard = 0.07
+			}
+		}
+	}
+
+} 

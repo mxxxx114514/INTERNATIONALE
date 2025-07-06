@@ -1,0 +1,879 @@
+defined_text = {
+	name = GetCristeroWarTitle
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_mexico_city
+		}
+		localization_key = STATE_277
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_yucatan
+		}
+		localization_key = STATE_474
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_chiapas
+		}
+		localization_key = STATE_475
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_oaxaca
+		}
+		localization_key = STATE_476
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_veracruz
+		}
+		localization_key = STATE_477
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_jalisco
+		}
+		localization_key = STATE_478
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_tamaulipas
+		}
+		localization_key = STATE_479
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_coahuila
+		}
+		localization_key = STATE_480
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_sinaloa
+		}
+		localization_key = STATE_481
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_chihuahua
+		}
+		localization_key = STATE_482
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_sonora
+		}
+		localization_key = STATE_483
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_baja_california
+		}
+		localization_key = STATE_484
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_guerrero
+		}
+		localization_key = STATE_485
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_baja_california_sur
+		}
+		localization_key = STATE_925
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_quintana_roo
+		}
+		localization_key = STATE_926
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_campeche
+		}
+		localization_key = STATE_927
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_tabasco
+		}
+		localization_key = STATE_928
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_durango
+		}
+		localization_key = STATE_929
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_nuevo_leon
+		}
+		localization_key = STATE_930
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_michoacan
+		}
+		localization_key = STATE_931
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_colima
+		}
+		localization_key = STATE_932
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_nayarit
+		}
+		localization_key = STATE_933
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_zacatecas
+		}
+		localization_key = STATE_934
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_aguascalientes
+		}
+		localization_key = STATE_935
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_puebla
+		}
+		localization_key = STATE_936
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_san_luis_potosi
+		}
+		localization_key = STATE_937
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_guanajuato
+		}
+		localization_key = STATE_938
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_queretaro
+		}
+		localization_key = STATE_939
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_morelos
+		}
+		localization_key = STATE_940
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_hidalgo
+		}
+		localization_key = STATE_941
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_mexico_state
+		}
+		localization_key = STATE_942
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_tlaxcala
+		}
+		localization_key = STATE_943
+	}
+}
+
+defined_text = {
+	name = GetCristeroWarNumber
+	text = {
+ 		trigger = {
+        	has_country_flag = MEX_clicked_on_mexico_city
+		}
+		localization_key = MEX_mexico_city_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_yucatan
+		}
+		localization_key = MEX_yucatan_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_chiapas
+		}
+		localization_key = MEX_chiapas_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_oaxaca
+		}
+		localization_key = MEX_oaxaca_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_veracruz
+		}
+		localization_key = MEX_veracruz_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_jalisco
+		}
+		localization_key = MEX_jalisco_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_tamaulipas
+		}
+		localization_key = MEX_tamaulipas_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_coahuila
+		}
+		localization_key = MEX_coahuila_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_sinaloa
+		}
+		localization_key = MEX_sinaloa_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_chihuahua
+		}
+		localization_key = MEX_chihuahua_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_sonora
+		}
+		localization_key = MEX_sonora_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_baja_california
+		}
+		localization_key = MEX_baja_california_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_guerrero
+		}
+		localization_key = MEX_guerrero_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_baja_california_sur
+		}
+		localization_key = MEX_baja_california_sur_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_quintana_roo
+		}
+		localization_key = MEX_quintana_roo_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_campeche
+		}
+		localization_key = MEX_campeche_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_tabasco
+		}
+		localization_key = MEX_tabasco_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_durango
+		}
+		localization_key = MEX_durango_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_nuevo_leon
+		}
+		localization_key = MEX_nuevo_leon_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_michoacan
+		}
+		localization_key = MEX_michoacan_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_colima
+		}
+		localization_key = MEX_colima_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_nayarit
+		}
+		localization_key = MEX_nayarit_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_zacatecas
+		}
+		localization_key = MEX_zacatecas_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_aguascalientes
+		}
+		localization_key = MEX_aguascalientes_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_puebla
+		}
+		localization_key = MEX_puebla_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_san_luis_potosi
+		}
+		localization_key = MEX_san_luis_potosi_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_guanajuato
+		}
+		localization_key = MEX_guanajuato_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_queretaro
+		}
+		localization_key = MEX_queretaro_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_morelos
+		}
+		localization_key = MEX_morelos_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_hidalgo
+		}
+		localization_key = MEX_hidalgo_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_mexico_state
+		}
+		localization_key = MEX_mexico_state_number
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_clicked_on_tlaxcala
+		}
+		localization_key = MEX_tlaxcala_number
+	}
+
+}
+
+defined_text = {
+	name = GetPLMLoyaltylines
+	text = {
+		trigger = {
+			has_country_flag = MEX_PLM_moderate_dominant
+		}
+		localization_key = MEX_PLM_m_loyalty_lines
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_PLM_radical_dominant
+		}
+		localization_key = MEX_PLM_r_loyalty_lines
+	}
+	text = {
+		trigger = {
+			has_country_flag = MEX_PLM_establishment_dominant
+		}
+		localization_key = MEX_PLM_e_loyalty_lines
+	}
+}
+
+defined_text = {
+	name = GetPLMmoderateLoyalty
+	text = {
+		trigger = {
+			OR = { has_government = social_democratic has_government = neutrality }
+			has_cosmetic_tag = MEX_calles
+		}
+		localization_key = MEX_loyalty_enemy_faction
+	}
+	text = {
+		trigger = {
+			has_government = social_democratic
+			has_country_flag = MEX_PLM_moderate_dominant
+			check_variable = { MEX_PLM_moderate_loyalty > 75 }
+		}
+		localization_key = MEX_loyalty_governing_party
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = social_democratic
+				has_country_flag = socdem_coalition_flag
+			}
+			check_variable = { MEX_PLM_moderate_loyalty > 50 }
+		}
+		localization_key = MEX_loyalty_governing_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = social_democratic
+				has_country_flag = socdem_coalition_flag
+			}
+			check_variable = { MEX_PLM_moderate_loyalty > 25 }
+		}
+		localization_key = MEX_loyalty_loose_connection
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = social_democratic
+				has_country_flag = socdem_coalition_flag
+			}
+			check_variable = { MEX_PLM_moderate_loyalty > 0 }
+		}
+		localization_key = MEX_loyalty_disagreeing_partner
+	}
+	text = {
+		localization_key = MEX_loyalty_opposition
+	}
+}
+
+defined_text = {
+	name = GetPLMradicalLoyalty
+	text = {
+		trigger = {
+			OR = { has_government = social_democratic has_government = neutrality }
+			has_cosmetic_tag = MEX_calles
+		}
+		localization_key = MEX_loyalty_enemy_faction
+	}
+	text = {
+		trigger = {
+			has_government = social_democratic
+			has_country_flag = MEX_PLM_radical_dominant
+			check_variable = { MEX_PLM_radical_loyalty > 75 }
+		}
+		localization_key = MEX_loyalty_governing_party
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = social_democratic
+				has_country_flag = socdem_coalition_flag
+			}
+			check_variable = { MEX_PLM_radical_loyalty > 50 }
+		}
+		localization_key = MEX_loyalty_governing_coalition
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = social_democratic
+				has_country_flag = socdem_coalition_flag
+			}
+			check_variable = { MEX_PLM_radical_loyalty > 25 }
+		}
+		localization_key = MEX_loyalty_loose_connection
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_government = social_democratic
+				has_country_flag = socdem_coalition_flag
+			}
+			check_variable = { MEX_PLM_radical_loyalty > 0 }
+		}
+		localization_key = MEX_loyalty_disagreeing_partner
+	}
+	text = {
+		localization_key = MEX_loyalty_opposition
+	}
+}
+
+defined_text = {
+	name = GetPLMestablishmentLoyalty
+	text = {
+		trigger = {
+			NOT = { has_government = neutrality }
+			NOT = { has_country_flag = autdem_coalition_flag }
+			OR = {
+				has_war_with = NMX
+				has_completed_focus = MEX_civilwar_another_victory
+			}
+		}
+		localization_key = MEX_loyalty_enemy_faction
+	}
+	text = {
+		trigger = {
+			OR = { has_government = neutrality has_government = social_democratic }
+			has_country_flag = MEX_PLM_establishment_dominant
+			check_variable = { MEX_PLM_establishment_loyalty > 75 }
+		}
+		localization_key = MEX_loyalty_governing_party
+	}
+	text = {
+		trigger = {
+			has_country_flag = autdem_coalition_flag
+			check_variable = { MEX_PLM_establishment_loyalty > 50 }
+		}
+		localization_key = MEX_loyalty_governing_coalition
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = neutrality }
+			has_country_flag = autdem_coalition_flag
+			check_variable = { MEX_PLM_establishment_loyalty > 25 }
+		}
+		localization_key = MEX_loyalty_loose_connection
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = neutrality }
+			has_country_flag = autdem_coalition_flag
+			check_variable = { MEX_PLM_establishment_loyalty > 0 }
+		}
+		localization_key = MEX_loyalty_disagreeing_partner
+	}
+	text = {
+		localization_key = MEX_loyalty_opposition
+	}
+}
+
+defined_text = {
+	name = GetPNALoyalty
+	text = {
+		trigger = {
+			has_government = socialism
+			check_variable = { MEX_PNA_loyalty > 75 }
+		}
+		localization_key = MEX_loyalty_governing_party
+	}
+	text = {
+		trigger = {
+			has_country_flag = libsoc_coalition_flag
+			check_variable = { MEX_PNA_loyalty > 50 }
+		}
+		localization_key = MEX_loyalty_governing_coalition
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = socialism }
+			has_country_flag = libsoc_coalition_flag
+			check_variable = { MEX_PNA_loyalty > 25 }
+		}
+		localization_key = MEX_loyalty_loose_connection
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = socialism }
+			has_country_flag = libsoc_coalition_flag
+			check_variable = { MEX_PNA_loyalty > 0 }
+		}
+		localization_key = MEX_loyalty_disagreeing_partner
+	}
+	text = {
+		localization_key = MEX_loyalty_opposition
+	}
+}
+
+defined_text = {
+	name = GetPNCLoyalty
+	text = {
+		trigger = {
+			has_government = social_liberal
+			check_variable = { MEX_PNC_loyalty > 75 }
+		}
+		localization_key = MEX_loyalty_governing_party
+	}
+	text = {
+		trigger = {
+			has_country_flag = soclib_coalition_flag
+			check_variable = { MEX_PNC_loyalty > 50 }
+		}
+		localization_key = MEX_loyalty_governing_coalition
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = social_liberal }
+			has_country_flag = soclib_coalition_flag
+			check_variable = { MEX_PNC_loyalty > 25 }
+		}
+		localization_key = MEX_loyalty_loose_connection
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = social_liberal }
+			has_country_flag = soclib_coalition_flag
+			check_variable = { MEX_PNC_loyalty > 0 }
+		}
+		localization_key = MEX_loyalty_disagreeing_partner
+	}
+	text = {
+		localization_key = MEX_loyalty_opposition
+	}
+}
+
+defined_text = {
+	name = GetPANLoyalty
+	text = {
+		trigger = {
+			has_government = democratic
+			check_variable = { MEX_PAN_loyalty > 75 }
+		}
+		localization_key = MEX_loyalty_governing_party
+	}
+	text = {
+		trigger = {
+			has_country_flag = condem_coalition_flag
+			check_variable = { MEX_PAN_loyalty > 50 }
+		}
+		localization_key = MEX_loyalty_governing_coalition
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = democratic }
+			has_country_flag = condem_coalition_flag
+			check_variable = { MEX_PAN_loyalty > 25 }
+		}
+		localization_key = MEX_loyalty_loose_connection
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = democratic }
+			has_country_flag = condem_coalition_flag
+			check_variable = { MEX_PAN_loyalty > 0 }
+		}
+		localization_key = MEX_loyalty_disagreeing_partner
+	}
+	text = {
+		localization_key = MEX_loyalty_opposition
+	}
+}
+
+defined_text = {
+	name = GetPANLoyaltyLine
+	text = {
+		trigger = {
+			has_country_flag = MEX_PAN_established_flag
+		}
+		localization_key = MEX_PAN_loyalty_line
+	}
+	text = {
+		localization_key = EMPTY
+	}
+}
+
+defined_text = {
+	name = GetPSOLoyalty
+	text = {
+		trigger = {
+			has_government = communism
+			check_variable = { MEX_PSO_loyalty > 75 }
+		}
+		localization_key = MEX_loyalty_governing_party
+	}
+	text = {
+		trigger = {
+			has_country_flag = revsoc_coalition_flag
+			check_variable = { MEX_PSO_loyalty > 50 }
+		}
+		localization_key = MEX_loyalty_governing_coalition
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = communism }
+			has_country_flag = revsoc_coalition_flag
+			check_variable = { MEX_PSO_loyalty > 25 }
+		}
+		localization_key = MEX_loyalty_loose_connection
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = communism }
+			has_country_flag = revsoc_coalition_flag
+			check_variable = { MEX_PSO_loyalty > 0 }
+		}
+		localization_key = MEX_loyalty_disagreeing_partner
+	}
+	text = {
+		localization_key = MEX_loyalty_opposition
+	}
+}
+
+defined_text = {
+	name = GetPCMLoyalty
+	text = {
+		trigger = {
+			has_government = auth_communism
+			check_variable = { MEX_PCM_loyalty > 75 }
+		}
+		localization_key = MEX_loyalty_governing_party
+	}
+	text = {
+		trigger = {
+			has_country_flag = autsoc_coalition_flag
+			check_variable = { MEX_PCM_loyalty > 50 }
+		}
+		localization_key = MEX_loyalty_governing_coalition
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = auth_communism }
+			has_country_flag = autsoc_coalition_flag
+			check_variable = { MEX_PCM_loyalty > 25 }
+		}
+		localization_key = MEX_loyalty_loose_connection
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = auth_communism }
+			has_country_flag = autsoc_coalition_flag
+			check_variable = { MEX_PCM_loyalty > 0 }
+		}
+		localization_key = MEX_loyalty_disagreeing_partner
+	}
+	text = {
+		localization_key = MEX_loyalty_opposition
+	}
+}
+
+defined_text = {
+	name = GetLDNLoyalty
+	text = {
+		trigger = {
+			has_government = socialism
+			has_country_flag = MEX_villa_in_government
+		}
+		localization_key = MEX_loyalty_governing_party
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = socialism }
+			has_country_flag = MEX_villa_in_government
+			check_variable = { MEX_LDN_loyalty > 50 }
+		}
+		localization_key = MEX_loyalty_governing_coalition
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = socialism }
+			has_country_flag = MEX_villa_in_government
+			check_variable = { MEX_LDN_loyalty > 25 }
+		}
+		localization_key = MEX_loyalty_loose_connection
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = socialism }
+			has_country_flag = MEX_villa_in_government
+			check_variable = { MEX_LDN_loyalty > 0 }
+		}
+		localization_key = MEX_loyalty_disagreeing_partner
+	}
+	text = {
+		localization_key = MEX_loyalty_opposition
+	}
+}
+
+defined_text = {
+	name = GetARMLoyalty
+	text = {
+		trigger = {
+			has_government = fascism
+			check_variable = { MEX_ARM_loyalty > 75 }
+		}
+		localization_key = MEX_loyalty_governing_party
+	}
+	text = {
+		trigger = {
+			has_country_flag = natpop_coalition_flag
+			check_variable = { MEX_ARM_loyalty > 50 }
+		}
+		localization_key = MEX_loyalty_governing_coalition
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = fascism }
+			has_country_flag = natpop_coalition_flag
+			check_variable = { MEX_ARM_loyalty > 25 }
+		}
+		localization_key = MEX_loyalty_loose_connection
+	}
+	text = {
+		trigger = {
+			NOT = { has_government = fascism }
+			has_country_flag = natpop_coalition_flag
+			check_variable = { MEX_ARM_loyalty > 0 }
+		}
+		localization_key = MEX_loyalty_disagreeing_partner
+	}
+	text = {
+		localization_key = MEX_loyalty_opposition
+	}
+}
+
+defined_text = {
+	name = GetMEXPLMMline
+	text = {
+		trigger = {
+			has_country_flag = MEX_PRI_flag
+		}
+		localization_key = EMPTY
+	}
+	text = {
+		localization_key = MEX_PLM_moderate_loyalty_line_0
+	}
+}
+
+defined_text = {
+	name = GetMEXPLMRline
+	text = {
+		trigger = {
+			has_country_flag = MEX_PRI_flag
+		}
+		localization_key = EMPTY
+	}
+	text = {
+		localization_key = MEX_PLM_radical_loyalty_line_0
+	}
+}
+
+defined_text = {
+	name = GetMEXPLMEline
+	text = {
+		trigger = {
+			has_country_flag = MEX_PRI_flag
+		}
+		localization_key = MEX_PLM_establishment_loyalty_line_1
+	}
+	text = {
+		localization_key = MEX_PLM_establishment_loyalty_line_0
+	}
+}

@@ -1,0 +1,198 @@
+CZE_intervene_bw4_category = {
+
+	CZE_invade_bulgaria = {
+		allowed = { tag = CZE }
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 50
+		days_remove = 14
+		visible = { has_global_flag = BUL_coup is_commie_ideology = no NOT = { has_global_flag = fourth_balkan_war } NOT = { has_global_flag = ww2 } }
+		remove_effect = {
+			set_global_flag = fourth_balkan_war
+			CZE = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = BW4_outcome
+							option = BW4_OUTCOME_PRG_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+				add_named_threat = {
+					threat = 5
+					name = IN_BW4_CZE_intervenes
+				}
+				declare_war_on = {
+					target = BUL
+					type = topple_government
+				}
+				#every_owned_state = {
+				#	create_unit = {
+				#		division = "division_template = \"Pěší divize\" start_experience_factor = 0.5" 
+				#		owner = PREV
+				#		count = 1
+				#	}
+				#}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HUN
+					value = 1000
+				}
+			}
+			GRE = { 
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = BW4_outcome
+							option = BW4_OUTCOME_PRG_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+				set_major = yes 
+				add_ideas = generic_surrender_debuff_2
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HUN
+					value = 1000
+				}
+			}
+			#ROM = { set_major = yes }
+			#SER = { set_major = yes }
+			SLV = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HUN
+					value = 1000
+				}
+			}
+			CRO = {
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Pesadijska Divizija\" start_experience_factor = 0.5" 
+						owner = PREV
+						count = 1
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HUN
+					value = 1000
+				}
+			}
+			ROM = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = BW4_outcome
+							option = BW4_OUTCOME_PRG_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+				declare_war_on = {
+					target = BUL
+					type = topple_government
+				}
+				#every_owned_state = {
+				#	create_unit = {
+				#		division = "division_template = \"Divizia de Infanterie\" start_experience_factor = 0.5" 
+				#		owner = PREV
+				#		count = 1
+				#	}
+				#}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HUN
+					value = 1000
+				}
+			}
+			SER = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = BW4_outcome
+							option = BW4_OUTCOME_PRG_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+				declare_war_on = {
+					target = BUL
+					type = topple_government
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HUN
+					value = 1000
+				}
+			}
+			GRE = {
+				declare_war_on = {
+					target = BUL
+					type = topple_government
+				}
+				#every_owned_state = {
+				#	create_unit = {
+				#		division = "division_template = \"Trigonikó Pezikoú\" start_experience_factor = 0.5" 
+				#		owner = PREV
+				#		count = 1
+				#	}
+				#}
+				47 = {
+					create_unit = {
+						division = "division_template = \"Trigonikó Pezikoú\" start_experience_factor = 0.5" 
+						owner = PREV
+						count = 1
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = HUN
+					value = 1000
+				}
+			}
+			HUN = {
+				43 = {
+					create_unit = {
+						division = "division_template = \"Gyalogdandár\" start_experience_factor = 0.75" 
+						owner = PREV
+						count = 31
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = CZE
+					value = 1000
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = SER
+					value = 1000
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = CRO
+					value = 1000
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = ROM
+					value = 1000
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.15
+					days = 1
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+}

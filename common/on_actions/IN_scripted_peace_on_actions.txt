@@ -1,0 +1,1957 @@
+#Scripted peace
+#credit to the TNO team for the code
+#NekawaH 12/28/23
+on_actions = {
+	on_declare_war = {
+		effect = {
+			log="[GetDateText]: [Root.GetName] declared war on [From.GetName]"
+		}
+	}
+	on_capitulation = {
+		effect = {
+
+			FROM = {
+				save_global_event_target_as = winning_country
+			}
+			ROOT = {
+				save_global_event_target_as = losing_country
+			}
+
+			log = "[GetDateText]: winner/loser: FROM: [winning_country.GetName] ROOT: [losing_country.GetName] on_capitulation"
+
+			IF = {
+				limit = {
+					OR = {
+						ROOT = { is_in_faction = no }
+						ROOT = {
+							all_allied_country = {
+								IF = {
+									limit = {
+										has_war_with = FROM
+										is_major = yes
+									}
+									has_capitulated = yes
+								}
+							}
+						}
+					}
+				}
+				log = "War won"
+			}
+			ELSE = {
+				log = "War continues"
+			}
+
+
+			IF = { #WW2 IN surrenders
+				limit = {
+					#always = no
+					has_global_flag = ww2
+					FROM = {
+						OR = {
+							tag = GER
+							has_war_together_with = GER
+						}
+					}
+					SOV = { has_capitulated = yes }
+					ROOT = {
+						OR = {
+							tag = FRA
+							tag = ITA
+						}
+					}
+				}
+				news_event = ww2.6
+			}
+			ELSE_IF = { #Entente is defeated
+				limit = {
+					ROOT = {
+						tag = ENG
+					}
+					#FROM = { is_commie_ideology = yes }
+				}
+				news_event = britaincollapse.1
+			}
+			ELSE_IF = { #Japan is defeated by CLN
+				limit = {
+					ROOT = { tag = JAP }
+					FROM = {
+						has_idea = cln_member_idea
+					}
+				}
+				TIB = { white_peace = CHI }
+				every_country = {
+					limit = { has_war_with = JAP }
+					set_country_flag = defeated_JAP_flag
+					white_peace = JAP
+				}
+				KOR = {
+					transfer_state = 525
+					transfer_state = 527
+				}
+				IF = {
+					limit = {
+						VIN = { is_in_faction_with = JAP }
+					}
+					LAO = { transfer_state = 670 }
+				}
+				IF = {
+					limit = {
+						SIA = { is_in_faction_with = JAP }
+					}
+					IF = {
+						limit = {
+							VIN = { has_country_flag = defeated_JAP_flag}
+						}
+						VIN = { transfer_state = 741 }
+					}
+					ELSE = { 
+						CAM = { transfer_state = 741 }
+					}
+				}
+				IF = {
+					limit = {
+						MAN = { is_in_faction_with = JAP }
+					}
+					IF = {
+						limit = {
+							NOT = {
+								country_exists = CHI
+							}
+						}
+						CHI = {
+							drop_cosmetic_tag = yes
+							set_politics = { ruling_party = neutrality }
+							set_popularities = { neutrality = 100 }
+						}
+					}
+					CHI = {
+						IF = {
+							limit = { SHX = { is_subject_of = MAN } }
+							annex_country =  { target = SHX }
+						}
+						annex_country =  { target = MAN }
+						every_state = {
+							limit = {
+								is_claimed_by = CHI
+								is_owned_by = JAP
+							}
+							transfer_state_to = CHI
+						}
+					}
+				}
+				ELSE = {
+					MAN = {
+						every_state = {
+							limit = {
+								is_claimed_by = CHI
+								is_owned_by = JAP
+							}
+							transfer_state_to = MAN
+						}
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by = JAP
+						NOT = { is_core_of = JAP }
+					}
+					transfer_state_to = USA
+				}
+				every_country = {
+					limit = {
+						has_country_flag = defeated_JAP_flag
+					}
+					give_guarantee = KOR
+					give_guarantee = VIN
+					give_guarantee = LAO
+					give_guarantee = CAM
+					KOR = {
+						give_military_access = PREV
+					}
+					VIN = {
+						give_military_access = PREV
+					}
+					LAO = {
+						give_military_access = PREV
+					}
+					CAM = {
+						give_military_access = PREV
+					}
+					IF = {
+						limit = { SIA = { is_in_faction_with = JAP } }
+						give_guarantee = SIA
+						SIA = {
+							give_military_access = PREV
+						}
+					}
+				}
+				JAP = { dismantle_faction = yes }
+				IF = {
+					limit = { USA = { has_country_flag = defeated_JAP_flag } }
+					USA = {
+						set_autonomy = {
+							target = JAP
+							autonomy_state = autonomy_puppet
+						}
+					}
+				}
+				ELSE = {
+					ENG = {
+						set_autonomy = {
+							target = JAP
+							autonomy_state = autonomy_puppet
+						}
+					}
+				}
+				JAP = {
+					set_cosmetic_tag = JAP_defeated
+					set_politics = { ruling_party = democratic }
+					set_popularities = {
+						democratic = 70
+						liberal = 10
+						despotism = 5
+						fascism = 15
+					}
+				}
+				generic_remove_unowned_claims = yes
+				generic_remove_unowned_cores = yes
+			}
+			ELSE_IF = { #Fourth Balkan War HUN Victory
+				limit = {
+					has_global_flag = fourth_balkan_war
+					NOT = { has_global_flag = ww2 }
+					NOT = { has_global_flag = fourth_balkan_war_HUN_victory }
+					NOT = { has_global_flag = fourth_balkan_war_CZE_victory }
+					FROM = {
+						OR = {
+							original_tag = HUN
+							original_tag = SOV
+							is_in_faction_with = HUN
+							is_in_faction_with = SOV
+						}
+					}
+					ROOT = {
+						OR = {
+							original_tag = CZE
+							original_tag = ROM
+							original_tag = SER
+							original_tag = CRO
+							original_tag = SLV
+							original_tag = GRE
+							original_tag = ALB
+						}
+					}
+					HUN = { is_commie_ideology = yes }
+					BUL = { is_commie_ideology = yes }
+				}
+				IF = {
+					limit = {
+						ROOT = {
+							original_tag = SER
+						}
+					}
+					SER = {
+						set_autonomy = { target = CRO autonomy_state = autonomy_free }					
+						set_autonomy = { target = SLV autonomy_state = autonomy_free }
+						faction_leader = {
+							add_to_faction = CRO
+							add_to_faction = SLV
+						}
+					}
+				}
+				IF = {
+					limit = {
+						ROOT = {
+							original_tag = CZE
+						}
+					}
+					CZE = {
+						set_faction_name = balkan_entente
+					}
+				}
+				ROOT = { leave_faction = yes }
+				FROM = { white_peace = ROOT }
+				every_country = {
+                    limit = {
+                        has_war_with = ROOT
+                    }
+                    white_peace = ROOT
+                }
+				every_state = {
+					limit = {
+						is_claimed_by = HUN
+						is_owned_by = ROOT
+					}
+					transfer_state_to = HUN
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = BUL
+						is_owned_by = ROOT
+					}
+					transfer_state_to = BUL
+				}
+				IF = {
+					limit = {
+						ROOT = {
+							OR = {
+								original_tag = ROM
+								original_tag = GRE
+							}
+						}
+					}
+					ROOT = {
+						set_politics = {
+							ruling_party = communism
+						}
+						set_popularities = {
+							auth_communism = 10
+							communism = 80
+							socialism = 10
+						}
+						IF = {
+							limit = { original_tag = ROM }
+							set_cosmetic_tag = ROM_commie
+						}
+						IF = {
+							limit = { original_tag = GRE }
+							set_cosmetic_tag = GRE_commie
+						}
+					}
+					SOV = {
+						add_to_faction = ROOT
+					}
+				}
+				IF = {
+					limit = {
+						ROOT = {
+							original_tag = ROM
+						}
+					}
+					SOV = {
+						transfer_state = 78
+						transfer_state = 80
+						transfer_state = 766
+						transfer_state = 912
+						transfer_state = 918
+					}
+				}
+				IF = {
+					limit = {
+						ROOT = {
+							original_tag = GRE
+						}
+					}
+					ITA = {
+						transfer_state = 805
+					}
+				}
+				IF = {
+					limit = {
+						ROOT = {
+							original_tag = ALB
+						}
+					}
+					ITA = {
+						annex_country = {
+							target = ROOT
+						}
+					}
+				}
+				IF = {
+					limit = {
+						ROOT = {
+							OR = {
+								tag = SER
+								tag = CRO
+								tag = SLV
+							}
+						}
+					}
+					YUG = {
+						annex_country = { target = ROOT }
+						set_politics = {
+							ruling_party = communism
+						}
+						set_popularities = {
+							auth_communism = 30
+							communism = 60
+							socialism = 10
+						}
+						generic_add_owned_cores = yes
+					}
+					FROM = {
+						faction_leader = { add_to_faction = YUG }
+					}
+				}
+				IF = {
+					limit = {
+						ROOT = {
+							original_tag = CRO
+						}
+					}
+					ITA = { transfer_state = 163 transfer_state = 948 }
+				}
+				IF = {
+					limit = {
+						ROOT = {
+							original_tag = CZE
+						}
+					}
+					CZE = { set_cosmetic_tag = CZE_ONLY }
+					GER = {
+						country_event = {
+							id = germany.9
+							days = 3
+						}
+					}
+				}
+			}
+			ELSE_IF = { #Fourth Balkan War PRG Victory
+				limit = {
+					has_global_flag = fourth_balkan_war
+					NOT = { has_global_flag = fourth_balkan_war_IN_intervenes }
+					NOT = { has_global_flag = ww2 }
+					NOT = { has_global_flag = fourth_balkan_war_HUN_victory }
+					NOT = { has_global_flag = fourth_balkan_war_CZE_victory }
+					#FROM = {
+					#	OR = {
+					#		original_tag = CZE
+					#		original_tag = ROM
+					#		original_tag = SER
+					#		original_tag = CRO
+					#		original_tag = SLV
+					#		original_tag = GRE
+					#		original_tag = ALB
+					#	}
+					#}
+					ROOT = {
+						OR = {
+							original_tag = HUN
+							original_tag = BUL
+							original_tag = YUG
+						}
+					}
+				}
+				ROOT = { leave_faction = yes }
+				every_country = {
+					limit = { has_war_with = ROOT }
+					white_peace = ROOT
+					ROOT = {
+						give_military_access = PREV
+					}
+				}
+				IF = {
+					limit = {
+						ROOT = { tag = YUG }
+					}
+					SER = {
+						every_core_state = {
+							limit = { is_owned_by = YUG }
+							transfer_state_to = PREV
+						}
+					}
+					CRO = {
+						every_core_state = {
+							limit = { is_owned_by = YUG }
+							transfer_state_to = PREV
+						}
+					}
+					SLV = {
+						every_core_state = {
+							limit = { is_owned_by = YUG }
+							transfer_state_to = PREV
+						}
+					}
+					FROM = {
+						add_to_faction = SER
+						add_to_faction = CRO
+						add_to_faction = SLV
+					}
+				}
+			}
+			ELSE_IF = { #WW2 Tallinn Pakt surrenders to IN
+				limit = {
+					has_global_flag = ww2
+					FROM = {
+						OR = {
+							tag = SOV
+							is_in_faction_with = SOV
+						}
+					}
+					ROOT = {
+						is_major = yes
+						OR = {
+							tag = GER
+							tag = TUR
+						}
+					}
+				}
+				IF = {
+					limit = {
+						ROOT = { tag = GRR }
+						ROOT = { is_faction_leader = yes }
+						NOT = { has_global_flag = anti_in_pact_created_flag }
+					}
+					GRR = { set_faction_name = european_defense_pact }
+				}
+				IF = {
+					limit = {
+						SPR = {
+							is_in_faction_with = GRR
+							has_capitulated = yes
+						}
+					}
+					SPC = { annex_country = { target = SPR } }
+					SOV = { add_to_faction = SPC }
+				}
+				ROOT = { leave_faction = yes }
+				FROM = {
+					white_peace = ROOT
+					every_country = {
+						limit = {
+							has_war_with = ROOT
+						}
+						white_peace = ROOT
+					}
+					#Aug 4
+					#every_country = {
+					#	limit = {
+					#		has_war_together_with = ROOT
+					#	}
+					#	leave_faction = yes
+					#	white_peace = FROM
+					#}
+				}
+				IF = { #GER surrenders
+					limit = {
+						ROOT = {
+							original_tag = GER
+						}
+					}
+					set_global_flag = tallinn_pakt_surrender
+					GER = { 
+						IF = {
+							limit = { country_exists = AUS }
+							set_autonomy = { target = AUS autonomy_state = autonomy_free }
+						}
+						IF = {
+							limit = { country_exists = BOH }
+							set_autonomy = { target = BOH autonomy_state = autonomy_free }
+						}
+					}
+					every_state = {
+						limit = {
+							is_owned_by = FLA
+							NOT = { is_core_of = FLA }
+						}
+						COG = {
+							set_cosmetic_tag = COG_entente_trust
+							transfer_state = PREV
+						}
+					}
+					ENG = {
+						set_autonomy = {
+							target = COG
+							autonomy_state = autonomy_puppet
+						}
+					}
+					COG = {
+						set_politics = { ruling_party = neutrality }
+						set_popularities = { neutrality = 100 }
+					}
+					every_state = {
+						limit = {
+							is_owned_by = WAL
+						}
+						FRA = {
+							add_state_core = PREV
+						}
+					}
+					FRA = {
+						annex_country = { target = FLA }
+						annex_country = { target = WAL }
+						annex_country = { target = LUX }
+						#transfer Rhineland states
+						transfer_state = 8
+						transfer_state = 909
+						transfer_state = 42
+						transfer_state = 917
+						transfer_state = 911
+						add_state_claim = 845
+					}
+					IF = {
+						limit = {
+							HOL = { has_country_flag = pakt_member }
+						}
+						FRA = { set_autonomy = { target = HOL autonomy_state = autonomy_puppet } transfer_state = 35 }
+						HOL = {
+							set_cosmetic_tag = HOL_commie
+						}
+					}
+					IF = {
+						limit = {
+							DEN = { has_country_flag = pakt_member }
+						}
+						FRA = { set_autonomy = { target = DEN autonomy_state = autonomy_puppet } }
+						DEN = {
+							set_cosmetic_tag = DEN_commie
+							transfer_state = 914
+						}
+					}
+					SOV = {
+						annex_country = { target = EST }
+						annex_country = { target = LAT }
+						annex_country = { target = LIT }
+						IF = {
+							limit = {
+								POL = { is_commie_ideology = no }
+							}
+							set_autonomy = { target = POL autonomy_state = autonomy_puppet }
+							transfer_state = 89
+							#transfer_state = 91
+						}
+						transfer_state = 188
+					}
+					every_state = {
+						limit = {
+							is_core_of = AUS
+							is_owned_by = GER
+						}
+						transfer_state_to = AUS
+					}
+					AUS = { set_cosmetic_tag = AUS_commie }
+					ITA = {
+						add_state_claim = 846
+						transfer_state = 39
+						set_autonomy = { target = AUS autonomy_state = autonomy_puppet }
+					}
+					IF = {
+						limit = {
+							HUN = { is_in_faction_with = SOV }
+						}
+						HUN = { transfer_state = 916 }
+					}
+					IF = {
+						limit = {
+							country_exists = BOH
+						}
+						CZE = {
+							set_cosmetic_tag = CZE_commie
+							transfer_state = 69
+							#transfer_state = 72
+							transfer_state = 74
+							transfer_state = 919
+						}
+						SOV = {
+							set_autonomy = { target = CZE autonomy_state = autonomy_puppet }
+						}
+					}
+					POL = {
+						#transfer states from Germany
+						set_cosmetic_tag = POL_commie
+						transfer_state = 5
+						transfer_state = 67
+						transfer_state = 85
+						transfer_state = 86
+						transfer_state = 762
+						transfer_state = 763
+						transfer_state = 807
+						transfer_state = 814
+					}
+					create_dynamic_country = {
+						original_tag = GER
+						set_country_flag = GER_GRU
+						set_cosmetic_tag = GER_GRU
+						transfer_state = 55
+						set_capital = { state = 55 } #Frankfurt
+						every_state = {
+							limit = { is_owned_by = GRR }
+							set_state_controller_to = GRU
+						}
+						generic_remove_uncontrolled_cores = yes
+						generic_remove_unowned_claims = yes
+						SOV = {
+							set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+						}
+						IF = {
+							limit = {
+								#always = no #Temp disabled
+								has_global_flag = anti_in_pact_created_flag
+							}
+							ENG = { add_to_faction = GRR }
+						}
+						ELSE = {
+							annex_country = { target = GRR }
+						}
+					}
+					IF = {
+						limit = { has_global_flag = ww2_ENG_invade_GRR }
+						every_country = {
+							limit = {
+								has_war_with = ENG
+								has_country_flag = pakt_member
+							}
+							ENG = { white_peace = PREV }
+						}
+					}
+					POL = {
+						every_owned_state = {
+							set_state_controller_to = PREV
+						}
+					}
+					HOL = {
+						every_owned_state = {
+							set_state_controller_to = PREV
+						}
+					}
+					DEN = {
+						every_owned_state = {
+							set_state_controller_to = PREV
+						}
+					}
+					IF = {
+						limit = { ENG = { has_war_with = SOV } }
+						every_country = {
+							limit = { is_ai = no }
+								news_event = {
+								id =  war_news.44
+								days = 1
+							}
+						}
+					}
+				}
+				IF = { #TUR surrenders
+					limit = {
+						ROOT = {
+							original_tag = TUR
+						}
+					}
+					set_global_flag = TUR_surrender
+					KUR = {
+						set_cosmetic_tag = KUR_commie
+						transfer_state = 354
+						transfer_state = 920
+						transfer_state = 350
+						transfer_state = 352
+						transfer_state = 353
+						transfer_state = 800
+						every_owned_state = {
+							add_core_of = PREV
+						}
+					}
+					SYR = {
+						set_cosmetic_tag = SYR_commie
+						transfer_state = 677
+						transfer_state = 799
+						every_owned_state = {
+							add_core_of = PREV
+						}
+					}
+					CYP = {
+						transfer_state = 183
+					}
+					create_dynamic_country = {
+						original_tag = TUR
+						set_country_flag = TUR_TRS
+						set_cosmetic_tag = TUR_commie
+						annex_country = {
+							target = TRR
+						}
+						generic_remove_unowned_cores = yes
+						SOV = {
+							set_autonomy = { target = PREV autonomy_state = autonomy_puppet }
+						}
+						set_capital = { state = 49 }
+					}
+					SOV = {
+						set_autonomy = { target = SYR autonomy_state = autonomy_puppet }
+						set_autonomy = { target = KUR autonomy_state = autonomy_puppet }
+						set_autonomy = { target = CYP autonomy_state = autonomy_puppet }
+						transfer_state = 797
+					}
+					every_country = {
+						limit = { is_ai = no }
+						news_event = {
+							id =  war_news.46
+							days = 1
+						}
+					}
+				}
+			}
+			ELSE_IF = { #Nord Europa surrender
+				limit = {
+					has_global_flag = ww2
+					#has_global_flag = tallinn_pakt_surrender
+					FROM = {
+						OR = {
+							tag = SOV
+							has_war_together_with = SOV
+						}
+					}
+					ROOT = {
+						OR = {
+							tag = SWE
+							tag = NOR
+						}
+						all_other_country = {
+							IF = {
+								limit = {
+									OR = {
+										tag = SWE
+										tag = NOR
+									}
+								}
+								has_capitulated = yes
+							}
+						}
+					}
+				}
+				set_global_flag = nord_europa_surrender
+				#IF = {
+				#	limit = { country_exists = RFI }
+				#	RFI = {
+				#		annex_country = {
+				#			target = WFI
+				#			transfer_troops = yes
+				#		}
+				#	}
+				#}
+				#ELSE = {
+				#	SOV = {
+				#		annex_country = {
+				#			target = WFI
+				#			transfer_troops = yes
+				#		}
+				#	}
+				#}
+				#every_state = {
+				#	limit = { is_core_of = FIN NOT = { is_owned_by = SOV is_owned_by = RFI } }
+				#	SOV = { transfer_state = PREV }
+				#}
+				FRA = { 
+					set_autonomy = { target = NOR autonomy_state = autonomy_puppet } 
+					set_autonomy = { target = SWE autonomy_state = autonomy_puppet } 
+					set_autonomy = { target = DEN autonomy_state = autonomy_puppet } 
+				}
+				DEN = {
+					#transfer_state = 58
+					transfer_state = 914
+					set_cosmetic_tag = DEN_commie
+					every_owned_state = {
+						set_state_controller_to = PREV
+					}
+				}
+				SWE = {
+					set_cosmetic_tag = SWE_commie
+					every_owned_state = {
+						set_state_controller_to = PREV
+					}
+				}
+				NOR = {
+					set_cosmetic_tag = NOR_commie
+					every_owned_state = {
+						set_state_controller_to = PREV
+					}
+				}
+				every_country = {
+					limit = { is_ai = no }
+					news_event = {
+						id =  war_news.47
+						days = 1
+					}
+				}
+			}
+			ELSE_IF = { #TUR invasion of KUR, SYR, CYP
+				limit = {
+					#always = no
+					has_global_flag = mid_east_TUR_invasion
+					FROM = {
+						original_tag = TUR
+					}
+					ROOT = {
+						OR = {
+							original_tag = KUR
+							original_tag = SYR
+							original_tag = CYP
+						}
+					}
+				}
+				FROM = { white_peace = ROOT }
+				every_country = {
+                    limit = {
+                        has_war_with = ROOT
+                    }
+                    white_peace = ROOT
+                }
+				ROOT = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								is_core_of = FROM
+								is_claimed_by FROM
+							}
+						}
+						transfer_state_to = FROM
+					}
+				}
+				IF = {
+					limit = {
+						ROOT = {
+							NOT = { original_tag = CYP }
+						}
+					}
+					create_dynamic_country = {
+						original_tag = ROOT
+						annex_country = {
+							target = ROOT
+						}
+						generic_remove_unowned_cores = yes
+						IF = {
+							limit = {
+								ROOT = {
+									original_tag = SYR
+								}
+							}
+							set_cosmetic_tag = SYR_TUR
+							set_capital = { state = 554 }
+						}
+						IF = {
+							limit = {
+								ROOT = {
+									original_tag = KUR
+								}
+							}
+							set_cosmetic_tag = KUR_TUR
+							set_capital = { state = 676 }
+						}
+						TUR = {
+							set_autonomy = {
+								target = PREV
+								autonomy_state = autonomy_puppet
+							}
+						}
+					}
+				}
+			}
+			ELSE_IF = { #Spanish Civil War
+				limit = {
+					has_global_flag = spanish_civil_war
+					NOT = {
+						OR = {
+							has_global_flag = scw_over_SPA_victory
+							has_global_flag = scw_over_SPB_victory
+							has_global_flag = scw_over_SPC_victory
+							has_global_flag = scw_over_SPD_victory
+						}
+					}
+					FROM = {
+						OR = {
+							original_tag = SPR
+							any_allied_country = {
+								original_tag = SPR
+							}
+							AND = {
+								NOT = { country_exists = SPC }
+								#is_commie_ideology = yes
+								OR = {
+									is_in_faction_with = SOV
+									tag = SOV
+								}
+							}
+						}
+					}
+					ROOT = {
+						original_tag = SPR
+					}
+				}
+				every_country = {
+					limit = {
+						has_war_with = ROOT
+					}
+					every_state = {
+						limit = {
+							is_owned_by = ROOT
+							is_controlled_by = PREV
+						}
+						transfer_state_to = PREV
+					}
+				}
+				FROM = { white_peace = ROOT }
+				every_country = {
+                    limit = {
+                        has_war_with = ROOT
+                    }
+                    white_peace = ROOT
+                }
+				IF = {
+					limit = {
+						FROM = {
+							original_tag = SPR
+						}
+					}
+					FROM = {
+						annex_country = {
+							target = ROOT
+						}
+					}
+				}
+				ELSE = {
+					SPC = {
+						annex_country = {
+							target = ROOT
+						}
+					}
+					IF = {
+						limit = { SPC = { NOT = { is_in_faction_with = SOV } } }
+						SOV = { add_to_faction = SPC }
+					}
+				}
+			}
+			ELSE_IF = { #IN invasion of SWI success
+				limit = {
+					#has_global_flag = international_SWI_invasion
+					FROM = {
+						is_in_faction_with = SOV
+					}
+					ROOT = {
+						original_tag = SWI
+					}
+				}
+				FROM = { white_peace = ROOT }
+				every_country = {
+                    limit = {
+                        has_war_with = ROOT
+                    }
+                    white_peace = ROOT
+                }
+				FRA = {
+					set_autonomy = {
+						target = SWI
+						autonomy_state = autonomy_puppet
+					}
+					transfer_state = 845
+				}
+				ITA = {
+					transfer_state = 846
+				}
+				#news_event = ww2.4
+			}
+			ELSE_IF = { #GER invasion of POL
+				limit = {
+					has_global_flag = GER_invade_POL_flag
+					FROM = {
+						OR = {
+							original_tag = GER
+							is_in_faction_with = GER
+						}
+					}
+					ROOT = {
+						original_tag = POL
+					}
+				}
+				FROM = {
+					white_peace = ROOT
+					every_country = {
+						limit = {
+							has_war_with = ROOT
+						}
+						white_peace = ROOT
+					}
+				}
+				GER = {
+					transfer_state = 86 
+					every_core_state = {
+						limit = { is_owned_by = POL }
+						transfer_state_to = GER
+					}
+				}
+				SOV = {
+					transfer_state = 89
+					#transfer_state = 91
+				}
+				create_dynamic_country = {
+					original_tag = POL
+					set_cosmetic_tag = POL_protectorate
+					set_capital = { state = 10 }
+					annex_country = {
+						target = POL
+					}
+					GER = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_puppet
+						}
+					}
+					set_politics = {
+						ruling_party = despotism
+					}
+					set_popularities = {
+						auth_communism = 3
+						communism = 9
+						socialism = 6
+						social_democratic = 1
+						social_liberal = 1
+						liberal = 2
+						democratic = 3
+						neutrality = 20
+						despotism = 50
+						fascism = 5
+					}
+					generic_remove_unowned_cores = yes
+				}
+			}
+			ELSE_IF = { #WFI beats RFI
+				limit = {
+					FROM = {
+						tag = WFI
+					}
+					ROOT = {
+						tag = RFI
+					}
+				}
+				IF = {
+					limit = {
+						RFI = { is_in_faction = no }
+					}
+					GER = { add_to_faction = WFI }
+				}
+				WFI = {
+					annex_country = {
+						target = RFI
+					}
+				}
+				every_country = {
+					limit = { is_ai = no }
+					news_event = {
+						id = war_news.31
+						days = 1
+					}
+				}
+			}
+			ELSE_IF = { #RFI beats WFI
+				limit = {
+					FROM = {
+						tag = RFI
+					}
+					ROOT = {
+						tag = WFI
+					}
+				}
+				IF = {
+					limit = {
+						WFI = { is_in_faction = no }
+					}
+					SOV = { add_to_faction = RFI }
+				}
+				RFI = {
+					annex_country = {
+						target = WFI
+					}
+				}
+				every_country = {
+					limit = { is_ai = no }
+					news_event = {
+						id = war_news.30
+						days = 1
+					}
+				}
+			}
+			ELSE_IF = { #PRU defeats ECU
+				limit = {
+					FROM = {
+						tag = PRU
+					}
+					ROOT = {
+						tag = ECU
+					}
+				}
+				PRU = {
+					white_peace = ECU
+					transfer_state = 490
+					remove_ideas = generic_surrender_debuff_5
+					remove_ideas = win_this_war_idea
+				}	
+				ECU = {
+					remove_ideas = generic_surrender_debuff_5
+					remove_ideas = win_this_war_idea
+				}
+			}
+			ELSE_IF = { #ECU defeats PRU
+				limit = {
+					FROM = {
+						tag = ECU
+					}
+					ROOT = {
+						tag = PRU
+					}
+				}
+				ECU = {
+					white_peace = PRU
+					remove_ideas = generic_surrender_debuff_5
+					remove_ideas = win_this_war_idea
+				}
+				PRU = {
+					remove_ideas = generic_surrender_debuff_5
+					remove_ideas = win_this_war_idea
+				}
+				491 = { set_demilitarized_zone = yes }
+			}
+			ELSE_IF = { #IRE defeats IRN
+				limit = {
+					FROM = {
+						tag = IRE
+					}
+					ROOT = {
+						tag = IRN
+					}
+				}
+				IRE = {
+					set_cosmetic_tag = IRE_republic
+					annex_country = {
+						target = IRN
+					}
+				}
+				SOV = { add_to_faction = IRE }
+			}
+			ELSE_IF = { #IRN defeats IRE
+				limit = {
+					FROM = {
+						tag = IRN
+					}
+					ROOT = {
+						tag = IRE
+					}
+				}
+				IRN = {
+					annex_country = {
+						target = IRE
+					}
+				}
+				ENG = {
+					country_event = britain.4
+				}
+			}
+			ELSE_IF = { #SSF defeats NMB
+				limit = {
+					FROM = {
+						tag = SSF
+					}
+					ROOT = {
+						tag = NMB
+					}
+				}
+				SSF = {
+					annex_country = {
+						target = NMB
+					}
+				}
+				SOV = {
+					add_to_faction = SSF
+				}
+			}
+			ELSE_IF = { #NMB defeats SSF
+				limit = {
+					FROM = {
+						tag = NMB
+					}
+					ROOT = {
+						tag = SSF
+					}
+				}
+				USF = {
+					annex_country = {
+						target = NMB
+					}
+					annex_country = {
+						target = SSF
+					}
+					country_event = southafrica.4
+				}
+			}
+			ELSE_IF = { #NMX is defeated
+				limit = {
+					FROM = {
+						OR = {
+							tag = MEX
+							tag = MCA
+						}
+					}
+					ROOT = {
+						tag = NMX
+					}
+				}
+				MEX = {
+					transfer_state = 483
+					annex_country = { target = NMX }
+					set_autonomy = {
+						target = MCA
+						autonomy_state = autonomy_autonomous_governorate
+					}
+					generic_add_owned_cores = yes
+				}
+				MCA = {
+					set_cosmetic_tag = MCA_baja_california
+					generic_remove_unowned_claims = yes
+					generic_remove_unowned_cores = yes
+					set_politics = {
+						ruling_party = socialism
+					}
+					set_country_flag = revsoc_coalition_flag
+					set_popularities = {
+						auth_communism = 10
+						communism = 25
+						socialism = 45
+						social_democratic = 20
+					}
+				}
+			}
+			ELSE_IF = { #NMX beats MEX
+				limit = {
+					FROM = {
+						tag = NMX
+					}
+					ROOT = {
+						tag = MEX
+					}
+				}
+				NMX = {
+					annex_country = {
+						target = MEX
+					}
+				}
+			}
+			ELSE_IF = { #NMX beats MCA
+				limit = {
+					FROM = {
+						tag = NMX
+					}
+					ROOT = {
+						tag = MCA
+					}
+				}
+				NMX = {
+					annex_country = {
+						target = MCA
+					}
+				}
+			}
+			ELSE_IF = { #MGS beats COM
+				limit = {
+					FROM = {
+						tag = MGS
+					}
+					ROOT = {
+						tag = COM
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			}
+			ELSE_IF = { #COM beats MGS
+				limit = {
+					FROM = {
+						tag = COM
+					}
+					ROOT = {
+						tag = MGS
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			}
+			ELSE_IF = { #MEX beats the south
+				limit = {
+					FROM = {
+						tag = MEX
+					}
+					ROOT = {
+						OR = {
+							tag = MGS
+							tag = COM
+						}
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			}
+			ELSE_IF = { #NMX beats the south
+				limit = {
+					FROM = {
+						tag = NMX
+					}
+					ROOT = {
+						OR = {
+							tag = MGS
+							tag = COM
+						}
+					}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+					}
+				}
+			}
+			ELSE_IF = { #BAL beats LAT or EST
+				limit = {
+					has_global_flag = baltic_crisis_war
+					FROM = {
+						OR = {
+							tag = BAL
+							tag = LIT
+						}
+					}
+					ROOT = {
+						OR = {
+							tag = LAT
+							tag = EST
+						}
+					}
+				}
+				BAL = {
+					annex_country = { target = ROOT }
+				}
+			}
+			ELSE_IF = { #SAU is defeated
+				limit = {
+					FROM = {
+						OR = {
+							tag = HEJ
+							tag = IRQ
+							tag = JOR
+						}
+					}
+					ROOT = {
+						tag = SAU
+					}
+				}
+				HEJ = {
+					annex_country = { target = SAU }
+					set_cosmetic_tag = HEJ_hejaz_and_nejd
+					#dismantle_faction = yes
+					give_military_access = ENG
+					diplomatic_relation = { country = ENG relation = non_aggression_pact }
+				}
+				IRQ = { give_military_access = ENG diplomatic_relation = { country = ENG relation = non_aggression_pact } }
+				JOR = { give_military_access = ENG diplomatic_relation = { country = ENG relation = non_aggression_pact } }
+				ENG = {
+					give_guarantee = HEJ
+					give_guarantee = IRQ
+					give_guarantee = JOR
+					diplomatic_relation = {
+						country = HEJ
+						relation = docking_rights
+						active = yes
+					}
+					diplomatic_relation = {
+						country = IRQ
+						relation = docking_rights
+						active = yes
+					}
+					diplomatic_relation = {
+						country = JOR
+						relation = docking_rights
+						active = yes
+					}
+				}
+			}
+			ELSE_IF = { #SAU defeats Hashemites
+				limit = {
+					FROM = {
+						tag = SAU
+					}
+					ROOT = {
+						tag = HEJ
+					}
+				}
+				SAU = {
+					white_peace = HEJ
+					HEJ = { dismantle_faction = yes }
+					set_cosmetic_tag = SAU_nejd_and_hejaz
+					annex_country = { target = HEJ }
+					annex_country = { target = JOR }
+					transfer_state = 656
+					dismantle_faction = yes
+				}
+				PAL = { transfer_state = 454 add_state_claim = 454 add_state_core = 454 }
+				GER = {
+					IF = {
+						limit = { has_country_flag = supported_SAU_flag }
+						country_event = {
+							id = saudi_foreign.2
+							days = 1
+						}
+					}
+				}
+				JAP = {
+					IF = {
+						limit = { has_country_flag = supported_SAU_flag }
+						country_event = {
+							id = saudi_foreign.2
+							days = 1
+						}
+					}
+				}
+				SAU = {
+					dismantle_faction = yes
+				}
+			}
+			ELSE_IF = { #NFR beats ALG
+				limit = {
+					has_global_flag = algerian_uprising
+					FROM = {
+						tag = NFR
+					}
+					ROOT = {
+						tag = ALG
+					}
+				}
+				FROM = {
+					white_peace = ROOT
+					every_country = {
+						limit = {
+							has_war_with = ROOT
+						}
+						white_peace = ROOT
+					}
+				}
+				NFR = {
+					annex_country = { target = ALG }
+					#remove_state_claim = 460
+					#remove_state_claim = 514
+					transfer_state = 514
+					remove_ideas = win_this_war_idea
+				}
+				ENG = {
+					add_to_faction = NFR
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					news_event = {
+						id = war_news.23
+						days = 1
+					}
+				}
+			}
+			ELSE_IF = { #ALG beats NFR
+				limit = {
+					has_global_flag = algerian_uprising
+					FROM = {
+						tag = ALG
+					}
+					ROOT = {
+						tag = NFR
+					}
+				}
+				ALG = {
+					white_peace = ROOT
+					remove_ideas = win_this_war_idea
+					create_faction = african_unity_organization
+					every_country = {
+						limit = {
+							has_war_with = ROOT
+						}
+						white_peace = ROOT
+					}
+					set_politics = { ruling_party = communism }
+					add_popularity = {
+						ideology = neutrality
+						popularity = -25
+					}
+					white_peace = TUN
+					white_peace = MOR
+					white_peace = SEN
+					white_peace = RCG
+					white_peace = VIN
+					white_peace = MAD
+				}
+				NFR = {
+					every_subject_country = {
+						PREV = {
+							set_autonomy = {
+								target = PREV
+								autonomy_state = autonomy_free
+							}
+						}
+					}
+				}
+				MOR = { drop_cosmetic_tag = yes }
+				TUN = { drop_cosmetic_tag = yes }
+				SEN = { drop_cosmetic_tag = yes }
+				RCG = { drop_cosmetic_tag = yes }
+				VIN = { drop_cosmetic_tag = yes }
+				MAD = { drop_cosmetic_tag = yes }
+				every_possible_country = {
+					limit = {
+						NOT = { original_tag = SPR }
+						any_core_state = {
+							OR = {
+								is_owned_by = SEN
+								is_owned_by = RCG
+								is_owned_by = NFR
+							}
+						}
+					}
+					every_core_state = {
+						limit = {
+							OR = {
+								is_owned_by = SEN
+								is_owned_by = RCG
+								is_owned_by = NFR
+							}
+						}
+						transfer_state_to = PREV
+						add_claim_by = NFR
+					}
+					ALG = { add_to_faction = PREV }
+				}
+				514 = { add_claim_by = NFR }
+				775 = { add_claim_by = NFR }
+				NFR = {
+					add_state_claim = 514
+					add_state_claim = 775
+				}
+				SEN = { generic_remove_unowned_claims = yes }
+				RCG = { generic_remove_unowned_claims = yes }
+				ENG = {
+					annex_country = { target = NFR }
+					transfer_state = 178
+				}
+				ALG = {
+					white_peace = ROOT
+					every_country = { 
+						limit = {
+							has_war_with = ROOT
+						}
+						white_peace = ROOT
+					}
+					add_to_faction = MOR
+					add_to_faction = RCG
+					add_to_faction = SEN
+					add_to_faction = TUN
+				}
+				COR = { leave_faction = yes }
+				CAY = { leave_faction = yes }
+				TAH = { leave_faction = yes }
+				CHA = { transfer_state = 775 }
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					news_event = {
+						id = war_news.24
+						days = 1
+					}
+				}
+			}
+			ELSE_IF = { #IN beats HOL
+				limit = {
+					has_global_flag = ww2
+					#has_global_flag = international_HOL_invasion
+					FROM = {
+						OR = {
+							original_tag = SOV
+							is_in_faction_with = SOV
+						}
+					}
+					ROOT = {
+						tag = HOL
+					}
+				}
+				FROM = {
+					white_peace = ROOT
+					every_country = {
+						limit = {
+							has_war_with = ROOT
+						}
+						white_peace = ROOT
+					}
+				}
+				FRA = { set_autonomy = { target = HOL autonomy_state = autonomy_puppet } transfer_state = 35 }
+				HOL = { set_cosmetic_tag = HOL_commie }
+			}
+			ELSE_IF = { #IN beats COR
+				limit = {
+					FROM = {
+						OR = {
+							tag = FRA
+							is_in_faction_with = FRA
+							has_war_together_with = FRA
+						}
+					}
+					ROOT = {
+						tag = COR
+					}
+				}
+				FRA = {
+					white_peace = ROOT
+					annex_country = { target = ROOT }
+				}
+			}
+			ELSE_IF = { #CHI beats GXC/YUN/SZC
+				limit = {
+					has_global_flag = south_western_war
+					FROM = {
+						tag = CHI
+					}
+					ROOT = {
+						OR = {
+							tag = GXC
+							tag = YUN
+							tag = SZC
+						}
+					}
+				}
+				CHI = {
+					white_peace = ROOT
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_associated_governorate
+					}
+				}
+				ROOT = {
+					IF = {
+						limit = { tag = GXC }
+						set_cosmetic_tag = GXC_lkmt
+					}
+					ELSE_IF = {
+						limit = { tag = YUN }
+						set_cosmetic_tag = YUN_lkmt
+					}
+					ELSE_IF = {
+						limit = { tag = SZC }
+						set_cosmetic_tag = SZC_lkmt
+					}
+				}
+			}
+			ELSE_IF = { #CHI beats TIB
+				limit = {
+					FROM = {
+						tag = CHI
+					}
+					ROOT = {
+						tag = TIB
+					}
+				}
+				FROM = {
+					annex_country = { target = ROOT }
+				}
+			}
+			ELSE_IF = { #MAN/JAP/GMJ beats CHI
+				limit = {
+					FROM = {
+						OR = {
+							original_tag = MAN
+							is_in_faction_with = MAN
+							has_war_together_with = MAN
+						}
+					}
+					ROOT = {
+						tag = CHI
+					}
+				}
+				every_country = {
+					limit = {
+						OR = {
+							original_tag = CHI
+							AND = {
+								is_commie_ideology = yes
+								OR = {
+									tag = YUN
+									tag = GXC
+									tag = SZC
+								}
+							}
+						}
+					}
+					set_country_flag = CHI_commies
+				}
+				CHI = { white_peace = TIB }
+				GMJ = {
+					every_controlled_state = {
+						limit = { owner = { has_country_flag = CHI_commies } }
+						transfer_state_to = PREV
+					}
+				}
+				MAN = {
+					set_cosmetic_tag = MAN_china
+					every_controlled_state = {
+						limit = { owner = { has_country_flag = CHI_commies } }
+						transfer_state_to = PREV
+					}
+					every_subject_country = {
+						MAN = { annex_country = { target = PREV } }
+					}
+				}
+				JAP = {
+					every_controlled_state = {
+						limit = { owner = { has_country_flag = CHI_commies } }
+						transfer_state_to = MAN
+					}
+				}
+				FROM = {
+					white_peace = ROOT
+					every_country = {
+						limit = {
+							has_war_with = ROOT
+						}
+						white_peace = ROOT
+					}
+				}
+				every_country = {
+					limit = {
+						has_country_flag = CHI_commies
+					}
+					MAN = {
+						annex_country = {
+							target = PREV
+						}
+					}
+				}
+				MAN = {
+					generic_add_owned_claims = yes
+					generic_add_owned_cores = yes
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					ROOT = { original_tag = SAF }
+					FROM = { original_tag = SAF }
+					has_global_flag = saf_civil_war
+				}
+				FROM = { annex_country = { target = ROOT } }
+			}
+			ELSE_IF = {
+				limit = {
+					ROOT = { tag = GRU }
+				}
+				GRR = { annex_country = { target = ROOT } }
+				ENG = {
+					faction_leader = {
+						add_to_faction = GRR
+					}
+				}
+			}
+			ELSE_IF = {
+				limit = { ROOT = { tag = FRA } has_global_flag = ww2 country_exists = NFR }
+				FRA = {
+					every_owned_state = {
+						set_state_controller_to = NFR
+					}
+				}
+				ENG = { add_to_faction = NFR }
+			}
+			ELSE_IF = {
+				limit = { ROOT = { tag = ITA } has_global_flag = ww2 country_exists = SPM }
+				ITA = {
+					every_owned_state = {
+						set_state_controller_to = SPM
+					}
+				}
+				ENG = { add_to_faction = SPM }
+			}
+			ELSE_IF = {
+				limit = { ROOT = { original_tag = AUS } FROM = { original_tag = AUS } }
+				FROM = {
+					white_peace = ROOT
+					annex_country = { target = ROOT }
+				}
+			}
+			
+			#ELSE = {
+			#	FROM = { white_peace = ROOT }
+			#}
+
+			every_country = {
+				generic_add_owned_claims = yes
+			}
+
+			every_country = {
+				limit = { is_ai = no }
+				news_event = { id = country_capitulated.0 }
+			}
+
+			every_possible_country = {
+				every_possible_country = {
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = IN_same_ideology
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = IN_similar_ideology
+					}
+					remove_opinion_modifier = {
+						target = PREV
+						modifier = IN_different_ideology
+					}
+					PREV = {
+						remove_opinion_modifier = {
+							target = PREV
+							modifier = IN_same_ideology
+						}
+						remove_opinion_modifier = {
+							target = PREV
+							modifier = IN_similar_ideology
+						}
+						remove_opinion_modifier = {
+							target = PREV
+							modifier = IN_different_ideology
+						}
+					}
+					IF = {
+						limit = { has_government = PREV }
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_same_ideology
+						}
+						PREV = {
+							add_opinion_modifier = {
+								target = PREV
+								modifier = IN_same_ideology
+							}
+						}
+					}
+					ELSE_IF = {
+						limit = { is_similar_ideology = yes }
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_similar_ideology
+						}
+						PREV = {
+							add_opinion_modifier = {
+								target = PREV
+								modifier = IN_similar_ideology
+							}
+						}
+					}
+					ELSE = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = IN_different_ideology
+						}
+						PREV = {
+							add_opinion_modifier = {
+								target = PREV
+								modifier = IN_different_ideology
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+state={
+	id=928
+	name="STATE_928"
+	provinces={
+		2021 12867 13262 13263 13340
+	}
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 1
+			#industrial_complex = 2
+			#arms_factory = 1
+			2021 = {
+				naval_base = 2
+
+			}
+		}
+		add_core_of = MEX
+		victory_points = {
+			2021 3
+		}
+
+	}
+	manpower=240000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+
+}

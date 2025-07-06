@@ -1,0 +1,783 @@
+###########################
+# ENG Events
+###########################
+
+add_namespace = britain
+add_namespace = britaincollapse
+
+country_event = { #1939大选
+	id = britain.1
+	title = britain.1.t
+	desc = britain.1.desc
+	fire_only_once = yes
+	
+	trigger = { tag = ENG date > 1939.7.11 }
+
+	immediate = {
+		hidden_effect = { remove_ideas = ENG_economic_stagnation remove_ideas = ENG_imperial_sunset }
+	}
+	
+	option = {
+		name = britain.1.a
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = ENG_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = ENG_path
+					option = ENG_PATH_CONSERVATIVES
+				}
+			}
+		}
+		deactivate_advisor = ENG_stanley_baldwin
+		activate_advisor = ENG_winston_churchill
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.1
+		}
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = ENG_news.3 days = 1 }
+		}
+	}
+
+	option = {
+		name = britain.1.b
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = ENG_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = ENG_path
+					option = ENG_PATH_LIBDEM
+				}
+			}
+		}
+		deactivate_advisor = ENG_stanley_baldwin
+		remove_ideas = ENG_long_tory_reign
+		set_politics = {
+			ruling_party = social_liberal
+		}
+		set_country_flag = socdem_coalition_flag
+		clr_country_flag = autdem_coalition_flag
+		add_popularity = {
+			ideology = social_democratic
+			popularity = 0.09
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.15
+		}
+		add_popularity = {
+			ideology = socialism
+			popularity = 0.02
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.02
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.02
+		}
+		every_country = {
+			limit = { is_ai = no }
+			news_event = { id = ENG_news.4 days = 1 }
+		}
+
+	}
+
+}
+
+country_event = { #乔治五世去世
+	id = britain.2
+	title = britain.2.t
+	desc = britain.2.desc
+	fire_only_once = yes
+	
+	trigger = { tag = ENG date > 1936.1.20 }
+
+	option = {
+		name = britain.2.a
+		kill_country_leader = yes
+		promote_character = { character = ENG_edward_viii ideology = social_democratic }
+		promote_character = { character = ENG_edward_viii ideology = social_liberal }
+		promote_character = { character = ENG_edward_viii ideology = liberal }
+		promote_character = { character = ENG_edward_viii ideology = democratic }
+		promote_character = { character = ENG_edward_viii ideology = neutrality }
+		promote_character = { character = ENG_edward_viii ideology = despotism }
+		promote_character = { character = ENG_edward_viii ideology = fascism }
+
+	}
+
+}
+
+country_event = { #爱德华八世退位
+	id = britain.3
+	title = britain.3.t
+	desc = britain.3.desc
+	fire_only_once = yes
+	
+	trigger = { tag = ENG date > 1936.12.11 }
+
+	option = {
+		name = britain.3.a
+		effect_tooltip = { retire_country_leader = yes }
+		hidden_effect = {
+			
+			retire_ideology_leader = social_democratic
+			retire_ideology_leader = social_liberal
+			retire_ideology_leader = liberal
+			retire_ideology_leader = democratic
+			retire_ideology_leader = neutrality
+			retire_ideology_leader = despotism
+			retire_ideology_leader = fascism
+		}
+		promote_character = { character = ENG_george_vi ideology = social_democratic }
+		promote_character = { character = ENG_george_vi ideology = social_liberal }
+		promote_character = { character = ENG_george_vi ideology = liberal }
+		promote_character = { character = ENG_george_vi ideology = democratic }
+		promote_character = { character = ENG_george_vi ideology = neutrality }
+		promote_character = { character = ENG_george_vi ideology = despotism }
+		promote_character = { character = ENG_george_vi ideology = fascism }
+
+	}
+
+}
+
+country_event = { #爱尔兰战争胜利
+	id = britain.4
+	title = britain.4.t
+	desc = britain.4.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #爱尔兰直辖领
+		name = britain.4.a
+		ai_chance = {
+			base = 15
+			modifier = {
+				base = 5
+				has_government = democratic
+			}
+		}
+		set_autonomy = {
+			target = IRE
+			autonomy_state = autonomy_integrated_puppet
+		}
+		IRE = {
+			set_cosmetic_tag = IRE_ENG
+			set_politics = { ruling_party = neutrality }
+			set_popularities = {
+				neutrality = 75
+				democratic = 25
+			}
+		}
+
+	}
+
+	option = { #爱尔兰自由邦
+		name = britain.4.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				base = 15
+				has_government = social_liberal
+			}
+		}
+		set_autonomy = {
+			target = IRE
+			autonomy_state = autonomy_dominion
+		}
+		IRE = {
+			set_cosmetic_tag = IRE_free_state
+			set_politics = { ruling_party = democratic }
+			set_popularities = {
+				democratic = 75
+				neutrality = 25
+			}
+		}
+
+	}
+
+}
+
+country_event = {
+	id = britaincollapse.1
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			log = "Entente is defeated"
+			set_global_flag = fall_of_CLN
+			IF = {
+				limit = { country_exists = ALG }
+				every_country = {
+					limit = { is_in_faction_with = ALG }
+					set_country_flag = ALG_faction_flag
+				}
+			}
+			every_state = {
+				limit = {
+					is_controlled_by_SOV_or_ally = yes
+				}
+				set_state_flag = IN_occupied
+			}
+			every_country = {
+				limit = { has_war_with = ENG }
+				set_country_flag = defeated_ENG_flag
+				white_peace = ENG
+			}
+			every_country = {
+				limit = { is_in_faction_with = ENG }
+				set_country_flag = entente_member
+			}
+			every_country = {
+				limit = { NOT = { is_in_faction_with = ENG } }
+				clr_country_flag = entente_member
+			}
+			FRA = { transfer_state = 1 }
+			ITA = { transfer_state = 114 }
+			MOR = { drop_cosmetic_tag = yes }
+			TUN = { drop_cosmetic_tag = yes }
+			SEN = { drop_cosmetic_tag = yes }
+			RCG = { drop_cosmetic_tag = yes }
+			VIN = { drop_cosmetic_tag = yes }
+			MAD = { drop_cosmetic_tag = yes }
+			NFR = {
+				set_autonomy = { target = MOR autonomy_state = autonomy_free }
+				set_autonomy = { target = TUN autonomy_state = autonomy_free }
+			}
+			JAP = {
+				transfer_state = 326
+				transfer_state = 729
+			}
+			RAJ = {
+				transfer_state = 321
+			}
+			COG = {
+				IF = {
+					limit = {
+						has_cosmetic_tag = COG_entente_trust
+					}
+					drop_cosmetic_tag = yes
+				}
+			}
+			ANG = {
+				IF = {
+					limit = {
+						has_cosmetic_tag = ANG_entente_trust
+					}
+					drop_cosmetic_tag = yes
+				}
+			}
+			every_possible_country = {
+				limit = {
+					NOT = { original_tag = SPR }
+					any_core_state = {
+						OR = {
+							is_owned_by = SEN
+							is_owned_by = RCG
+							is_owned_by = NFR
+						}
+					}
+				}
+				every_core_state = {
+					limit = {
+						OR = {
+							is_owned_by = SEN
+							is_owned_by = RCG
+							is_owned_by = NFR
+						}
+					}
+					transfer_state_to = PREV
+					add_claim_by = NFR
+				}
+				SOV = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_puppet
+					}
+				}
+			}
+			ENG = {
+				dismantle_faction = yes
+			}
+			CAN = { drop_cosmetic_tag = yes }
+			IF = {
+				limit = {
+					CHI = { has_country_flag = defeated_ENG_flag }
+				}
+				every_state = {
+					limit = { is_claimed_by = CHI }
+					transfer_state_to = CHI
+				}
+			}
+			every_country = {
+				limit = {
+					has_country_flag = entente_member
+					any_owned_state = {
+						has_state_flag = IN_occupied
+					}
+					NOT = { tag = JAP }
+					NOT = { original_tag = ENG }
+				}
+				drop_cosmetic_tag = yes
+				white_peace = SOV
+				SOV = {
+					set_autonomy = {
+						target = PREV
+						autonomy_state = autonomy_puppet
+					}
+				}
+				IF = {
+					limit = { original_tag = SAF }
+					set_cosmetic_tag = SAF_SSF
+				}
+				IF = {
+					limit = { original_tag = MAN }
+					IF = {
+						limit = {
+							country_exists = CHI
+							CHI = { is_commie_ideology = yes }
+						}
+						CHI = { annex_country = { target = MAN } }
+					}
+				}
+			}
+			IF = {
+				limit = {
+					MOR = { has_country_flag = entente_member }
+				}
+				SOV = {
+					set_autonomy = {
+						target = MOR
+						autonomy_state = autonomy_puppet
+					}
+				}
+			}
+			IF = {
+				limit = {
+					TUN = { has_country_flag = entente_member }
+				}
+				SOV = {
+					set_autonomy = {
+						target = TUN
+						autonomy_state = autonomy_puppet
+					}
+				}
+			}
+			every_country = {
+				limit = { is_subject_of = ENG }
+				drop_cosmetic_tag = yes
+				ENG = {
+					set_autonomy = { target = PREV autonomy_state = autonomy_free }
+				}
+			}
+			ENG = {
+				IF = {
+					limit = {
+						USA = {
+							has_country_flag = defeated_ENG_flag
+						}
+					}
+					white_peace = USA
+					USA = {
+						annex_country = { target = CAN }
+					}
+					every_owned_state = {
+						limit = {
+							OR = { is_on_continent = north_america is_on_continent = south_america }
+						}
+						transfer_state_to = USA
+					}
+				}
+				IF = {
+					limit = {
+						JAP = {
+							has_country_flag = defeated_ENG_flag
+						}
+					}
+					white_peace = JAP
+					every_country = {
+						limit = { has_country_flag = entente_member }
+						white_peace = JAP
+					}
+					HOL = {
+						set_autonomy = {
+							target = DEI
+							autonomy_state = autonomy_free
+						}
+					}
+					ENG = {
+						set_autonomy = {
+							target = MAL
+							autonomy_state = autonomy_free
+						}
+						set_autonomy = {
+							target = AST
+							autonomy_state = autonomy_free
+						}
+					}
+					MAL = {
+						drop_cosmetic_tag = yes
+					}
+					INS = {
+						annex_country = { target = DEI }
+					}
+					NFR = {
+						set_autonomy = {
+							target = VIN
+							autonomy_state = autonomy_free
+						}
+					}
+					VIN = { drop_cosmetic_tag = yes }
+					BRM = {
+						every_core_state = { transfer_state_to = BRM }
+					}
+					IF = {
+						limit = { PHI = { is_in_faction_with = ENG } }
+						JAP = {
+							set_autonomy = {
+								target = PHI
+								autonomy_state = autonomy_wtt_imperial_subject
+							}
+						}
+					}
+					JAP = {
+						add_to_faction = SIA
+						set_autonomy = {
+							target = INS
+							autonomy_state = autonomy_wtt_imperial_subject
+						}
+						set_autonomy = {
+							target = MAL
+							autonomy_state = autonomy_wtt_imperial_subject
+						}
+						set_autonomy = {
+							target = AST
+							autonomy_state = autonomy_wtt_imperial_subject
+						}
+						set_autonomy = {
+							target = NZL
+							autonomy_state = autonomy_wtt_imperial_subject
+						}
+						set_autonomy = {
+							target = VIN
+							autonomy_state = autonomy_wtt_imperial_subject
+						}
+						set_autonomy = {
+							target = BRM
+							autonomy_state = autonomy_wtt_imperial_subject
+						}
+					}
+					INS = {
+						transfer_state = 721
+					}
+				}
+			}
+			IF = {
+				limit = {
+					country_exists = RFI
+				}
+				RFI = { annex_country = { target = WFI } }
+			}
+			ELSE = { SOV = { annex_country = { target = WFI } } }
+			NFR = {
+				every_subject_country = {
+					PREV = {
+						set_autonomy = {
+							target = PREV
+							autonomy_state = autonomy_free
+						}
+					}
+				}
+			}
+			MOR = { drop_cosmetic_tag = yes }
+			TUN = { drop_cosmetic_tag = yes }
+			SEN = { drop_cosmetic_tag = yes }
+			RCG = { drop_cosmetic_tag = yes }
+			VIN = { drop_cosmetic_tag = yes }
+			MAD = { drop_cosmetic_tag = yes }
+			514 = { add_claim_by = NFR }
+			775 = { add_claim_by = NFR }
+			NFR = {
+				add_state_claim = 514
+				add_state_claim = 775
+			}
+			SEN = { generic_remove_unowned_claims = yes }
+			RCG = { generic_remove_unowned_claims = yes }
+			ENG = {
+				annex_country = { target = NFR }
+				transfer_state = 178
+			}
+			COR = { leave_faction = yes }
+			CAY = { leave_faction = yes }
+			TAH = { leave_faction = yes }
+			CHA = { transfer_state = 775 }
+			RAJ = { drop_cosmetic_tag = yes }
+			ENG = {
+				dismantle_faction = yes
+			}
+			SAF = { annex_country = { target = NMB } }
+			create_dynamic_country = {
+				original_tag = ENG
+				set_country_flag = ENG_UOB
+				set_cosmetic_tag = ENG_UOB
+				annex_country = { target = GBR }
+				set_politics = {
+					ruling_party = socialism
+				}
+				clr_country_flag = autdem_coalition_flag
+				set_country_flag = autsoc_coalition_flag
+				set_country_flag = revsoc_coalition_flag
+				set_popularities = {
+					auth_communism = 15
+					communism = 12
+					socialism = 35
+					social_democratic = 8
+					social_liberal = 3
+					liberal = 7
+					democratic = 13
+					neutrality = 3
+					despotism = 2
+					fascism = 2
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = GBR
+					}
+					transfer_state_to = UOB
+					add_core_of = UOB
+				}
+			}
+			every_country = {
+				limit = { has_war_with = SOV }
+				white_peace = SOV
+			}
+			UOB = {
+				set_politics = {
+					ruling_party = socialism
+				}
+				set_country_flag = autsoc_coalition_flag
+				set_country_flag = revsoc_coalition_flag
+				set_popularities = {
+					auth_communism = 15
+					communism = 12
+					socialism = 35
+					social_democratic = 8
+					social_liberal = 3
+					liberal = 7
+					democratic = 13
+					neutrality = 3
+					despotism = 2
+					fascism = 2
+				}
+			}
+			UOB = {
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = PREV
+						}
+					}
+					every_possible_country = {
+						limit = {
+							NOT = { original_tag = ENG }
+							PREV = { is_core_of = PREV }
+						}
+						every_core_state = {
+							limit = { is_owned_by = UOB }
+							transfer_state_to = PREV
+						}
+					}
+				}
+			}
+			KEN = {
+				IF = {
+					limit = {
+						is_in_faction_with = SOV
+					}
+					every_owned_state = {
+						limit = {
+							NOT = {
+								is_core_of = PREV
+							}
+						}
+						every_possible_country = {
+							limit = {
+								exists = no
+								PREV = { is_core_of = PREV }
+							}
+							every_core_state = {
+								transfer_state_to = PREV
+							}
+							SOV = {
+								set_autonomy = {
+									target = PREV
+									autonomy_state = autonomy_puppet
+								}
+							}
+						}
+					}
+				}
+			}
+			SIE = {
+				IF = {
+					limit = {
+						is_in_faction_with = SOV
+					}
+					every_owned_state = {
+						limit = {
+							NOT = {
+								is_core_of = PREV
+							}
+						}
+						every_possible_country = {
+							limit = {
+								exists = no
+								PREV = { is_core_of = PREV }
+							}
+							every_core_state = {
+								transfer_state_to = PREV
+							}
+							SOV = {
+								set_autonomy = {
+									target = PREV
+									autonomy_state = autonomy_puppet
+								}
+							}
+						}
+					}
+				}
+			}
+			IF = {
+				limit = { country_exists = NGR }
+				NGR = { transfer_state = 515 }
+			}
+			IF = {
+				limit = { country_exists = MRT }
+				MRT = { transfer_state = 786 }
+			}
+			every_country = {
+				limit = {
+					original_tag = SPR
+					NOT = { tag = SPC }
+				}
+				SPC = { annex_country = { target = PREV } }
+			}
+			SPC = {
+				set_cosmetic_tag = SPC_iberia
+			}
+			SOV = { add_to_faction = SPC }
+			SOM = { transfer_state = 269 }
+			YEM = { transfer_state = 659 }
+			IF = {
+				limit = {
+					USA = {
+						is_in_faction_with = SOV
+					}
+				}
+				every_state = {
+					limit = {
+						is_owned_by_SOV_or_ally = yes
+						OR = {
+							is_on_continent = north_america
+							is_on_continent = south_america
+						}
+					}
+					transfer_state_to = USA
+				}
+			}
+			CZE = {
+				IF = {
+					limit = { is_in_faction_with = SOV }
+					set_cosmetic_tag = CZE_commie
+				}
+			}
+			GRR = {
+				set_politics = { ruling_party = neutrality }
+				set_popularities = { neutrality = 100 }
+				set_cosmetic_tag = GRR_resistance
+			}
+			GRU = {
+				annex_country = { target = GRR }
+			}
+			CZE = {
+				transfer_state = 69
+				transfer_state = 74
+				transfer_state = 919
+			}
+			IF = {
+				limit = {
+					USA = {
+						is_liberal_ideology = yes
+						is_faction_leader = yes
+					}
+				}
+				every_country = {
+					limit = { is_in_faction_with = USA }
+					leave_faction = yes
+					USA = { give_guarantee = PREV }
+				}
+				USA = { dismantle_faction = yes }
+			}
+			EGY = { transfer_state = 924 }
+			CHA = { transfer_state = 775 }
+			INS = { transfer_state = 721 }
+			every_country = {
+				limit = { has_country_flag = ALG_faction_flag }
+				ALG = { add_to_faction = PREV }
+			}
+			GBR = {
+				drop_cosmetic_tag = yes
+				set_politics = { ruling_party = democratic }
+				set_popularities = { democratic = 100 }
+			}
+			UOB = {
+				annex_country = { target = GBR }
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = PREV
+						}
+					}
+					every_possible_country = {
+						limit = {
+							NOT = { original_tag = ENG }
+							PREV = { is_core_of = PREV }
+						}
+						every_core_state = {
+							limit = { is_owned_by = UOB }
+							transfer_state_to = PREV
+						}
+					}
+				}
+				remove_state_claim = 118
+			}
+			SPC = {
+				transfer_state = 118
+				add_core_of = 118
+			}
+			IRE = {
+				set_cosmetic_tag = IRE_republic
+				set_popularities = {
+					fascism = 25
+					socialism = 10
+					auth_communism = 25
+					communism = 40
+				}
+			}
+			SOV = {
+				add_to_faction = UOB
+				add_to_faction = IRR
+			}
+		}
+	}
+
+}

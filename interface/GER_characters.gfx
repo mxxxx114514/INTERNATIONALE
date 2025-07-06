@@ -1,0 +1,133 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_GER_erich_ludendorff"
+		texturefile = "gfx/leaders/GER/GFX_portrait_GER_erich_ludendorff.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GER_erich_ludendorff_small"
+		texturefile = "gfx/interface/ideas/idea_GER_erich_ludendorff.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GER_reichstag_council"
+		texturefile = "gfx/leaders/GER/GFX_portrait_GER_reichstag_council.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GER_ludwig_quidde"
+		texturefile = "gfx/leaders/GER/GFX_portrait_GER_ludwig_quidde.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GER_alfred_hugenberg"
+		texturefile = "gfx/leaders/GER/GFX_portrait_GER_alfred_hugenberg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GER_otto_von_dandl"
+		texturefile = "gfx/leaders/GER/GFX_portrait_GER_otto_von_dandl.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GER_theodor_heuss"
+		texturefile = "gfx/leaders/GER/GFX_portrait_GER_theodor_heuss.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GER_wilhelm_iii"
+		texturefile = "gfx/leaders/GER/GFX_portrait_GER_wilhelm_iii.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_franz_von_papen"
+		texturefile = "gfx/interface/idea_portraits/GER/弗朗茨·冯·帕彭.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_otto_wels"
+		texturefile = "gfx/interface/idea_portraits/GER/奥托·威尔士.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_otto_karl_gessler"
+		texturefile = "gfx/interface/idea_portraits/GER/奥托·卡尔·格斯勒.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_heinrich_bruning"
+		texturefile = "gfx/interface/idea_portraits/GER/海因里希·布吕宁.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_lutz_von_krosigk"
+		texturefile = "gfx/interface/idea_portraits/GER/鲁茨·冯·科洛希克.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_carl_friedrich_goerdeler"
+		texturefile = "gfx/interface/idea_portraits/GER/卡尔·弗里德里希·戈得勒.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_wilhelm_frick"
+		texturefile = "gfx/interface/idea_portraits/GER/威廉·弗里克.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_karl_jarres"
+		texturefile = "gfx/interface/idea_portraits/GER/卡尔·雅尔斯.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_joachim_von_ribbentrop"
+		texturefile = "gfx/interface/idea_portraits/GER/约阿希姆·冯·里宾特洛甫.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_konstantin_von_neurath"
+		texturefile = "gfx/interface/idea_portraits/GER/康斯坦丁·冯·诺伊拉特.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_arnold_brecht"
+		texturefile = "gfx/interface/idea_portraits/GER/阿诺德·布莱希特.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_ludwig_muller"
+		texturefile = "gfx/interface/idea_portraits/GER/路德维希·穆勒.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_albert_ganzenmuller"
+		texturefile = "gfx/interface/idea_portraits/GER/阿尔伯特·甘岑米勒.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_jakob_kaiser"
+		texturefile = "gfx/interface/idea_portraits/GER/雅各布·凯撒.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_max_amann"
+		texturefile = "gfx/interface/idea_portraits/GER/马克斯·阿曼.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_georg_handke"
+		texturefile = "gfx/interface/idea_portraits/GER/乔治·乌尔里希·汉德克.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_friedrich_middelhauve"
+		texturefile = "gfx/interface/idea_portraits/GER/弗里德里希·米德尔豪夫.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_hjamar_schacht"
+		texturefile = "gfx/interface/idea_portraits/GER/亚尔马·沙赫特.png"
+	}
+
+}

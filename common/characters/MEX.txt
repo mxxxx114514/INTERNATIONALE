@@ -1,0 +1,1785 @@
+characters={
+
+	MEX_congress={
+		name=MEX_congress
+		portraits={
+			army={
+				small=GFX_idea_generic_legislature
+			}
+			civilian={
+				small=GFX_idea_generic_legislature
+			}
+		}
+		advisor={
+			slot = government_leader
+			idea_token = MEX_congress
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			on_add = {
+				MEX_congress = { set_character_flag = event_only }
+			}
+			on_remove = {
+				MEX_congress = { clr_character_flag = event_only }
+			}
+			available = {
+				has_character_flag = event_only
+			}
+			traits = {
+				dominant_party_congress
+			}
+			can_be_fired = no
+		}
+	}
+
+	NMX_congress={
+		name=NMX_congress
+		portraits={
+			army={
+				small=GFX_idea_generic_legislature
+			}
+			civilian={
+				small=GFX_idea_generic_legislature
+			}
+		}
+		advisor={
+			slot = government_leader
+			idea_token = NMX_congress
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			on_add = {
+				NMX_congress = { set_character_flag = event_only }
+			}
+			on_remove = {
+				NMX_congress = { clr_character_flag = event_only }
+			}
+			available = {
+				has_character_flag = event_only
+			}
+			traits = {
+				temporary_congress
+			}
+			can_be_fired = no
+		}
+	}
+
+	#PLM-M
+
+	MEX_alvaro_obregon_salido={
+		name=MEX_alvaro_obregon_salido
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_alvaro_obregon_salido"
+			}
+		}
+		country_leader={
+			ideology=social_democratic_subtype
+			desc = MEX_alvaro_obregon_salido_leader_desc
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_alvaro_obregon_salido
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			on_add = {
+				MEX_alvaro_obregon_salido = { set_character_flag = event_only }
+				MEX_PLM_M_loyalty_add = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_alvaro_obregon_salido = { clr_character_flag = event_only }
+				MEX_PLM_M_loyalty_subtract = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = -0.03
+				}
+			}
+			visible = {
+				has_character_flag = event_only
+			}
+			available = {
+				has_character_flag = event_only
+			}
+			traits = {
+				MEX_PLM_M_trait_obregon
+				revolutionary_leader 
+			}
+			can_be_fired = no
+		}
+		
+	}
+
+	MEX_amalia_gonzalez_caballero={
+		name = MEX_amalia_gonzalez_caballero
+		gender = female
+		portraits={
+			army={
+				small=GFX_portrait_MEX_amalia_gonzalez_caballero_army_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MEX_amalia_gonzalez_caballero
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			visible = {
+				hidden_trigger = { NOT = { has_country_flag = MEX_civil_war_calles_victory_flag } }
+			}
+			available = {
+				hidden_trigger = { NOT = { has_country_flag = MEX_civil_war_calles_victory_flag } }
+			}
+			on_add = {
+				MEX_amalia_gonzalez_caballero = { set_character_flag = event_only }
+				MEX_PLM_M_loyalty_add = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_amalia_gonzalez_caballero = { clr_character_flag = event_only }
+				MEX_PLM_M_loyalty_subtract = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = -0.03
+				}
+			}
+			traits = {
+				MEX_PLM_M_trait_gonzalez
+				feminist_leader
+			}
+		}
+	}
+
+	MEX_isidro_fabela={
+		name=MEX_isidro_fabela
+		portraits = {
+			army={
+				small=GFX_portrait_MEX_isidro_fabela_army_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MEX_isidro_fabela
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			visible = {
+				hidden_trigger = { NOT = { has_country_flag = MEX_civil_war_calles_victory_flag } }
+			}
+			available = {
+				hidden_trigger = { NOT = { has_country_flag = MEX_civil_war_calles_victory_flag } }
+			}
+			on_add = {
+				MEX_isidro_fabela = { set_character_flag = event_only }
+				MEX_PLM_M_loyalty_add = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_isidro_fabela = { clr_character_flag = event_only }
+				MEX_PLM_M_loyalty_subtract = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = -0.03
+				}
+			}
+			traits = {
+				MEX_PLM_M_trait_fabela
+				leading_diplomat
+			}
+		}
+	}
+
+	#PLM-R
+
+	MEX_lazaro_cardenas={
+		name=MEX_lazaro_cardenas
+		portraits={
+			army={
+				large=GFX_portrait_MEX_lazaro_cardenas
+				small=GFX_portrait_MEX_lazaro_cardenas_small
+			}
+			civilian={
+				large=GFX_portrait_MEX_lazaro_cardenas
+			}
+		}
+		field_marshal={
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=712
+		}
+		country_leader={
+			ideology=social_democratic_subtype
+			desc = MEX_lazaro_cardenas_leader_desc
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_lazaro_cardenas
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			visible = {
+				hidden_trigger = { NOT = { has_country_flag = MEX_civil_war_calles_victory_flag } }
+			}
+			on_add = {
+				MEX_lazaro_cardenas = { set_character_flag = event_only }
+				MEX_PLM_R_loyalty_add = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_lazaro_cardenas = { clr_character_flag = event_only }
+				MEX_PLM_R_loyalty_subtract = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = -0.03
+				}
+			}
+			available = {
+				has_character_flag = event_only
+				NOT = { has_country_flag = MEX_civil_war_calles_victory_flag }
+			}
+			traits = {
+				MEX_PLM_R_trait_cardenas
+				new_hope_of_the_nation
+			}
+			can_be_fired = no
+		}
+	}
+
+	MEX_vicente_lombardo={
+		name=MEX_vicente_lombardo
+		portraits={
+			army={
+				large="GFX_portrait_MEX_vicente_lombardo"
+				small=GFX_portrait_MEX_vicente_lombardo_small
+			}
+			civilian = {
+				large="GFX_portrait_MEX_vicente_lombardo"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_vicente_lombardo
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			visible = {
+				hidden_trigger = { NOT = { has_country_flag = MEX_civil_war_calles_victory_flag } }
+			}
+			available = {
+				NOT = { has_country_flag = MEX_civil_war_calles_victory_flag }
+			}
+			on_add = {
+				MEX_PLM_R_loyalty_add = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_PLM_R_loyalty_subtract = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = -0.03
+				}
+			}
+			traits = {
+				MEX_PLM_R_trait_lombardo
+				labor_union_reformer
+			}
+		}
+	}
+
+	MEX_francisco_mugica = {
+		name=MEX_francisco_mugica
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_francisco_mugica"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_francisco_mugica
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			visible = {
+				hidden_trigger = { NOT = { has_country_flag = MEX_civil_war_calles_victory_flag } }
+			}
+			available = {
+				NOT = { has_country_flag = MEX_civil_war_calles_victory_flag }
+			}
+			on_add = {
+				MEX_PLM_R_loyalty_add = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_PLM_R_loyalty_subtract = yes
+				add_popularity = {
+					ideology = social_democratic
+					popularity = -0.03
+				}
+			}
+			traits = {
+				MEX_PLM_R_trait_mugica
+				mexican_bolshevik
+			}
+		}
+	}
+
+	#PLM-E
+
+	MEX_plutarco_elias_calles = {
+		name=MEX_plutarco_elias_calles
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_plutarco_elias_calles"
+			}
+		}
+		country_leader={
+			ideology=social_democratic_subtype
+			desc = MEX_plutarco_elias_calles_leader_desc_socdem
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=auth_dem
+			desc = MEX_plutarco_elias_calles_leader_desc_autdem
+			traits={ el_jefe_maximo }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_plutarco_elias_calles
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			on_add = {
+				MEX_plutarco_elias_calles = { set_character_flag = event_only }
+				MEX_PLM_E_loyalty_add = yes
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_plutarco_elias_calles = { clr_character_flag = event_only }
+				MEX_PLM_E_loyalty_subtract = yes
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.03
+				}
+			}
+			available = {
+				has_character_flag = event_only
+				NOT = {
+					OR = {
+						has_war_with = NMX
+						has_completed_focus = MEX_civilwar_another_victory
+					}
+				}
+			}
+			traits = {
+				MEX_PLM_E_trait_calles
+				strong_man
+			}
+			can_be_fired = no
+		}
+	}
+
+	MEX_plutarco_elias_calles_placeholder = {
+		name=MEX_plutarco_elias_calles_placeholder
+		country_leader={
+			ideology=auth_dem
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	MEX_luis_morones={
+		name=MEX_luis_morones
+		portraits={
+			civilian={
+				small=GFX_portrait_MEX_luis_morones_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_luis_morones
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				NOT = {
+					OR = {
+						has_war_with = NMX
+						has_completed_focus = MEX_civilwar_another_victory
+					}
+				}
+			}
+			on_add = {
+				MEX_PLM_E_loyalty_add = yes
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_PLM_E_loyalty_subtract = yes
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.03
+				}
+			}
+			traits = {
+				MEX_PLM_E_trait_morones
+				senior_labor_unionist
+			}
+		}
+	}
+
+	MEX_manuel_avila_camacho={
+		name=MEX_manuel_avila_camacho
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_manuel_avila_camacho_civil"
+				small=GFX_portrait_MEX_manuel_avila_camacho_small
+			}
+			army={
+				large="GFX_portrait_MEX_manuel_avila_camacho_military"
+				small=GFX_portrait_MEX_manuel_avila_camacho_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_manuel_avila
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				NOT = {
+					OR = {
+						has_war_with = NMX
+						has_completed_focus = MEX_civilwar_another_victory
+					}
+				}
+			}
+			on_add = {
+				MEX_PLM_E_loyalty_add = yes
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_PLM_E_loyalty_subtract = yes
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.03
+				}
+			}
+			traits = {
+				MEX_PLM_E_trait_camacho
+				gentleman_minister
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=705
+		}
+	}
+
+	MEX_aaron_saenz={
+		name=MEX_aaron_saenz
+		portraits={
+			civilian={
+				small=GFX_portrait_MEX_aaron_saenz_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_aaron_saenz
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				NOT = {
+					OR = {
+						has_war_with = NMX
+						has_completed_focus = MEX_civilwar_another_victory
+					}
+				}
+			}
+			on_add = {
+				MEX_PLM_E_loyalty_add = yes
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_PLM_E_loyalty_subtract = yes
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.03
+				}
+			}
+			traits = {
+				MEX_PLM_E_trait_saenz
+				shadow_of_calles 
+			}
+		}
+	}
+
+	#PNA
+
+	MEX_antonio_soto_y_gama={
+		name=MEX_antonio_soto_y_gama
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_antonio_soto_y_gama
+			}
+		}
+		country_leader={
+			ideology=socialism_subtype
+			desc = MEX_antonio_soto_y_gama_leader_desc
+			traits={ savior_of_mexican_workers }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_antonio_soto_y_gama
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			visible = {
+				NOT = { has_country_flag = MEX_civil_war_calles_victory_flag }
+			}
+			available = {
+				hidden_trigger = { NOT = { has_country_flag = MEX_civil_war_calles_victory_flag } has_country_flag = libsoc_coalition_flag }
+			}
+			on_add = {
+				MEX_PNA_loyalty_add = yes
+				add_popularity = {
+					ideology = socialism
+					popularity = 0.03
+				}
+			}
+			on_remove = {
+				MEX_PNA_loyalty_subtract = yes
+				add_popularity = {
+					ideology = socialism
+					popularity = -0.03
+				}
+			}
+			available = {
+				
+			}
+			traits = {
+				MEX_PNA_trait_soto_y_gama
+				successor_of_zapata
+			}
+		}
+	}
+
+	COM_antonio_soto_y_gama={
+		name=MEX_antonio_soto_y_gama
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_antonio_soto_y_gama
+			}
+		}
+		country_leader={
+			ideology=socialism_subtype
+			desc = MEX_antonio_soto_y_gama_leader_desc
+			traits={ savior_of_mexican_workers }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	#LDN
+
+	MEX_pancho_villa={
+		name=MEX_pancho_villa
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_pancho_villa
+			}
+		}
+		country_leader={
+			ideology=socialism_subtype
+			desc = MEX_pancho_villa_leader_desc
+			traits={ hero_of_the_past the_old_horse }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_pancho_villa
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			visible = {
+				NOT = { has_country_flag = MEX_civil_war_calles_victory_flag }
+			}
+			available = {
+				NOT = { has_country_flag = MEX_civil_war_calles_victory_flag }
+			}
+			on_add = {
+				MEX_LDN_loyalty_add = yes
+				add_popularity = {
+					ideology = socialism
+					popularity = 0.01
+				}
+			}
+			on_remove = {
+				MEX_LDN_loyalty_subtract = yes
+				add_popularity = {
+					ideology = socialism
+					popularity = -0.01
+				}
+			}
+			available = {
+				has_completed_focus = MEX_pol2_3_0
+			}
+			traits = {
+				MEX_LDN_trait_villa
+				centaur_of_the_north
+			}
+		}
+	}
+
+	MCA_pancho_villa={
+		name=MEX_pancho_villa
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_pancho_villa
+			}
+		}
+		country_leader={
+			ideology=socialism_subtype
+			desc = MEX_pancho_villa_leader_desc
+			traits={ hero_of_the_past the_old_horse }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	#PAN
+
+	MEX_manuel_gomez_morin={
+		name=MEX_manuel_gomez_morin
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_manuel_gomez_morin
+			}
+		}
+		country_leader={
+			ideology=conservatism
+			desc = MEX_manuel_gomez_morin_leader_desc
+			traits={ }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_vicente_lombardo
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			visible = {
+				has_country_flag = MEX_PAN_established_flag
+			}
+			available = {
+				has_completed_focus = MEX_pol3_university_autonomy
+				NOT = { has_country_flag = MEX_civil_war_calles_victory_flag }
+			}
+			on_add = {
+				MEX_UNAM_improve_social_attitude_2 = yes
+			}
+			on_remove = {
+				MEX_UNAM_damage_social_attitude_2 = yes
+			}
+			traits = {
+				MEX_PAN_trait_morin
+				scholar_ivory_tower
+			}
+		}
+	}
+	
+	MEX_efrain_gonzalez_luna={
+		name=MEX_efrain_gonzalez_luna
+		portraits={
+			civilian={
+				small=GFX_portrait_MEX_efrain_gonzalez_luna_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_efrain_gonzalez_luna
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			visible = {
+				has_country_flag = MEX_PAN_established_flag
+			}
+			available = {
+				has_completed_focus = MEX_pol3_university_autonomy
+				NOT = { has_country_flag = MEX_civil_war_calles_victory_flag }
+			}
+			traits = {
+				MEX_PAN_trait_luna
+				catholic_jurist
+			}
+		}
+	}
+
+	#PSO
+
+	MEX_m_n_roy={
+		name=MEX_m_n_roy
+		country_leader={
+			ideology=marxism
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	MEX_diego_rivera={
+		name=MEX_diego_rivera
+		portraits={
+			civilian={
+				large="GFX_Portrait_MEX_Dionisio_Encina" #Can become country leader later (Communism -> Stalinism)
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_diego_rivera
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			visible = {
+				NOT = { has_country_flag = MEX_civil_war_calles_victory_flag }
+			}
+			available = {
+				NOT = { has_country_flag = MEX_civil_war_calles_victory_flag }
+				has_completed_focus = MEX_pol3_end_of_war
+			}
+			on_add = {
+				MEX_PSO_loyalty_add = yes
+				add_popularity = {
+					ideology = communism
+					popularity = -0.03
+				}
+			}
+			on_remove = {
+				MEX_PSO_loyalty_subtract = yes
+				add_popularity = {
+					ideology = communism
+					popularity = -0.03
+				}
+			}
+			traits = {
+				MEX_PSO_trait_rivera
+				painter_of_revolutionary_ideals
+			}
+		}
+	}
+
+	#PCM
+
+	MEX_dionisio_encina={
+		name=MEX_dionisio_encina
+		country_leader={
+			ideology=auth_communism_subtype
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	#OTHERS
+
+	MEX_emilio_portes_gil={
+		name=MEX_emilio_portes_gil
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_emilio_portes_gil
+			}
+		}
+		country_leader={
+			ideology=social_democratic_subtype
+			desc = MEX_emilio_portes_gil_leader_desc
+			traits={  }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	MEX_salvador_abascal={
+		name=MEX_salvador_abascal
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_Salvador_Abascal"
+			}
+		}
+		country_leader={
+			ideology=falangism
+			traits={ fascist_militia_leader }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	MEX_adolfo_de_la_huerta={ 
+		name=MEX_adolfo_de_la_huerta
+		portraits={
+			civilian={
+				large="GFX_Portrait_MEX_Adolfo_de_la_Huerta"
+			}
+		}
+	}
+
+	MEX_huerta_faction_remains={ 
+		name=MEX_huerta_faction_remains
+		country_leader={
+			ideology=social_liberal_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	MEX_liberal_movement={ 
+		name=MEX_liberal_movement
+		country_leader={
+			ideology=liberal_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	MEX_reactionary_remains={ 
+		name=MEX_reactionary_remains
+		country_leader={
+			ideology=despotism_subtype
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	MEX_octavio_paz={
+		name=MEX_octavio_paz
+		portraits={
+			civilian={
+				small=GFX_portrait_MEX_octavio_paz_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_octavio_paz
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			on_add = {
+				MEX_UNAM_improve_social_attitude_1 = yes
+			}
+			on_remove = {
+				MEX_UNAM_damage_social_attitude_1 = yes
+			}
+			traits = {
+				passionate_poet
+			}
+		}
+	}
+
+	MEX_ezequiel_padilla_penaloza={
+		name=MEX_ezequiel_padilla_penaloza
+		portraits = {
+			army={
+				small=GFX_portrait_MEX_ezequiel_padilla_penaloza_army_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_ezequiel_padilla_penaloza
+			cost = 100
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {  }
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	MEX_jesus_degollado_guizar={
+		name=MEX_jesus_degollado_guizar
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_jesus_degollado_guizar" #Can become country leader later (Fascism -> Falangism)
+			}
+			army={
+				large="GFX_portrait_MEX_jesus_degollado_guizar" #Can become unit leader later (General or Field Marshal)
+				small = GFX_portrait_MEX_jesus_degollado_guizar_small
+			}
+		}
+	}
+
+	# INDIGENOUS MEXICAN COUNCIL
+	MEX_indigenous_council = { 
+		name = MEX_indigenous_council
+		portraits = {
+			civilian = {
+				large = GFX_portrait_indigenous_mexico_council
+				#small = GFX_portrait_AFA_mohamed_yayyo_small
+			}
+			
+		}
+		
+	}
+
+	MEX_hernan_laborde={
+		name=MEX_hernan_laborde
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_hernan_laborde"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			traits={ devoted_trotskyist }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	MEX_valentin_campa={
+		name=MEX_valentin_campa
+		portraits={
+			civilian={
+				large=GFX_portrait_MEX_valentin_campa #Can become country leader later (Communism -> Leninism)
+			}
+		}
+	}
+
+	MEX_luis_maria_martinez = {
+		name=MEX_luis_maria_martinez
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_Luis_Maria_Martinez" #Can become country leader (Democratic -> Socialism)
+			}
+		}
+	}
+
+	MEX_juan_andreu = {
+		name=MEX_juan_andreu
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_juan_andreu" #Can become country leader (Fascism -> Fascism)
+			}
+		}
+	}
+
+	MEX_heliodoro_charis={
+		name=MEX_heliodoro_charis
+		portraits={
+			army={
+				large="GFX_portrait_MEX_heliodoro_charis" #This is really a generic portrait
+				small="GFX_portrait_MEX_heliodoro_charis_small" #This is really a generic portrait
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=700
+		}
+	}
+
+	MEX_gildardo_magana={
+		name=MEX_gildardo_magana
+		portraits={
+			army={
+				large="GFX_portrait_MEX_gildardo_magana"
+				small=GFX_portrait_MEX_gildardo_magana_small
+			}
+		}
+		corps_commander={
+			traits={ media_personality }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=702
+		}
+	}
+
+	MEX_manuel_perez_trevino={
+		name=MEX_manuel_perez_trevino
+		portraits={
+			army={
+				large="GFX_portrait_MEX_manuel_perez_trevino"
+				small=GFX_portrait_MEX_manuel_perez_trevino_small
+			}
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = MEX_manuel_perez_trevino
+			ledger = army
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					has_completed_focus = MEX_focus_heroic_military_college
+				}
+			}
+			traits = {
+				superior_firepower_expert
+			}
+		}
+
+		corps_commander={
+			traits={ career_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=703
+		}
+	}
+
+	MEX_abelardo_rodriguez={
+		name=MEX_abelardo_rodriguez
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_abelardo_rodriguez"
+			}
+			army={
+				large="GFX_portrait_MEX_abelardo_rodriguez"
+				small="GFX_portrait_MEX_abelardo_rodriguez_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MEX_abelardo_rodriguez
+			ledger = army
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		corps_commander={
+			traits={ politically_connected }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=704
+		}
+	}
+
+	MEX_othon_blanco={
+		name=MEX_othon_blanco
+		portraits={
+			civilian={
+				large="GFX_portrait_MEX_othon_blanco"
+			}
+			army={
+				large="GFX_portrait_MEX_othon_blanco"
+				small="GFX_idea_MEX_othon_blanco"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = MEX_othon_blanco
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				navy_chief_reform_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		navy_leader={
+			traits={ old_guard_navy }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=3
+			legacy_id=706
+		}
+	}
+
+	MEX_heriberto_corona={
+		name=MEX_heriberto_corona
+		portraits={
+			army={
+				large="GFX_portrait_MEX_heriberto_corona"
+				small="GFX_portrait_MEX_heriberto_corona_small"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = MEX_heriberto_corona
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+
+		navy_leader={
+			traits={ navy_media_personality }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=707
+		}
+	}
+
+	MEX_manuel_sanchez={ #Empty FICTIOUS leader -> Can become unit leader later
+		name=MEX_manuel_sanchez
+		portraits={
+			army={
+				large="GFX_Portrait_South_America_Generic_land_2"
+				small=GFX_portrait_MEX_manuel_sanchez_small
+			}
+		}
+	}
+
+	MEX_alberto_gorostieta_vega = { #Empty FICTIOUS leader -> Can become unit leader later
+		name=MEX_alberto_gorostieta_vega
+		portraits={
+			army={
+				large=GFX_portrait_MEX_alberto_gorostieta_vega
+				small=GFX_portrait_MEX_alberto_gorostieta_vega_small
+			}
+		}
+	}
+
+	MEX_dionisio_navarro_anguiano = { #Empty FICTIOUS leader -> Can become unit leader later
+		name=MEX_dionisio_navarro_anguiano
+		portraits={
+			army={
+				large=GFX_portrait_MEX_dionisio_navarro_anguiano
+				small=GFX_portrait_MEX_dionisio_navarro_anguiano_small
+			}
+		}
+	}
+
+	### THEORISTS ###
+
+	# Treviño up there
+
+	MEX_enrique_estrada={
+		name=MEX_enrique_estrada
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_south_america_1"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = MEX_enrique_estrada
+			ledger = army
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				military_theorist
+			}
+		}
+	}
+
+	MEX_agustin_olachea={
+		name=MEX_agustin_olachea
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = MEX_agustin_olachea
+			ledger = air
+			allowed = {
+				original_tag = MEX
+			}
+			
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+
+	### ARMY CHIEFS ###
+
+	MEX_saturnino_cedillo={
+		name=MEX_saturnino_cedillo
+		portraits={
+			army={
+				small=GFX_portrait_MEX_saturnino_cedillo_small
+				large="GFX_portrait_MEX_saturnino_cedillo" #Can become unit leader
+			}
+			civilian={
+				large="GFX_portrait_MEX_saturnino_cedillo" #Can become country leader (Fascism -> Fascism) (Non-Aligned -> Despotism)
+			}
+		}
+
+		country_leader={
+			ideology=falangism
+			traits={ fascist_militia_leader }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MEX_saturnino_cedillo
+			cost = 75.000
+			allowed = {
+				original_tag = MEX
+				has_dlc = "Man the Guns"
+			}
+			available = {
+				has_completed_focus = MEX_focus_support_general_cedillo
+				NOT = {
+					has_government = communism
+				}
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MEX_matias_santos_ramos={
+		name=MEX_matias_santos_ramos
+		portraits={
+			army={
+				small=GFX_portrait_MEX_matias_santos_ramos_small
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MEX_matias_santos_ramos
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MEX_gilberto_limon={
+		name=MEX_gilberto_limon
+		portraits={
+			army={
+				small=GFX_portrait_MEX_gilberto_limon_small
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MEX_gilberto_limon
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				army_chief_drill_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MEX_leon_trotsky={
+		name=MEX_leon_trotsky
+		portraits={
+			civilian = {
+				large = GFX_portrait_MEX_leon_trotsky
+				#small="GFX_idea_SOV_lev_trotsky"
+			}
+			army={
+				small="GFX_idea_MEX_leon_trotsky"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = MEX_leon_trotsky
+			cost = 75.000
+			visible = {
+				has_global_flag = flag_mexico_invited_trotsky_to_government
+			}
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				is_trotsky_valid_for_mexico = yes 
+			}
+			traits = {
+				red_army_organizer
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+
+	### NAVY CHIEFS ###
+
+	# Corona up there
+
+	# Blanco up there
+
+
+	### AIR CHIEFS ###
+
+	MEX_antonio_cardenas_rodriguez={
+		name=MEX_antonio_cardenas_rodriguez
+		portraits={
+			army={
+				small="GFX_idea_MEX_antonio_cardenas_rodriguez"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = MEX_antonio_cardenas_rodriguez
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				air_chief_reform_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MEX_luis_farell={
+		name=MEX_luis_farell
+		portraits={
+			army={
+				small="GFX_portrait_MEX_luis_farell_small"
+				large="GFX_portrait_MEX_luis_farell"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = MEX_luis_farell
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		
+		corps_commander={
+			traits={ war_hero }
+			skill=3
+			attack_skill=4
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=701
+		}
+	}
+
+
+	### MILITARY HIGH COMMAND ###
+
+	# Rodríguez up there
+
+	MEX_jesus_garza_siller={
+		name=MEX_jesus_garza_siller
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MEX_jesus_garza_siller
+			ledger = air
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				air_strategic_bombing_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MEX_pablo_macias={
+		name=MEX_pablo_macias
+		portraits={
+			army={
+				small=GFX_portrait_MEX_pablo_macias_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MEX_pablo_macias
+			ledger = army
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MEX_jose_gonzalo_escobar={
+		name=MEX_jose_gonzalo_escobar
+		portraits={
+			army={
+				small=GFX_portrait_MEX_jose_gonzalo_escobar_small
+				large = "GFX_portrait_MEX_jose_gonzalo_escobar" #Can become unit leader
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MEX_jose_gonzalo_escobar
+			ledger = army
+			allowed = {
+				original_tag = MEX
+				has_dlc = "Man the Guns"
+			}
+			available = {
+				has_completed_focus = MEX_focus_purge_the_bureaucracy
+			}
+			traits = {
+				army_cavalry_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+		
+	MEX_hector_meixueiro={
+		name=MEX_hector_meixueiro
+		portraits={
+			army={
+				small=GFX_portrait_MEX_hector_meixueiro_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MEX_hector_meixueiro
+			ledger = navy
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				navy_naval_air_defense_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MEX_jose_vasconcelos={
+		name=MEX_jose_vasconcelos
+		portraits={
+			army={
+				small=GFX_portrait_MEX_jose_vasconcelos_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_jose_vasconcelos
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					has_completed_focus = MEX_focus_the_gold_shirts 
+				}
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+			}
+			traits = {
+				syncretic_revanchist 
+			}
+		}
+	}
+
+	MEX_bartolome_garcia_correa={
+		name=MEX_bartolome_garcia_correa
+		portraits={
+			army={
+				small=GFX_portrait_MEX_bartolome_garcia_correa_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_bartolome_garcia_correa
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					has_completed_focus = MEX_focus_exile_calles 
+				}
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					NOT = {
+						has_autonomy_state = autonomy_supervised_state
+					}
+				}
+			}
+			traits = {
+				social_reformer 
+			}
+		}
+	}
+
+	MEX_eduardo_hay={
+		name=MEX_eduardo_hay
+		portraits={
+			army={
+				small="GFX_idea_MEX_eduardo_hay"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_eduardo_hay
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				smooth_talking_charmer 
+			}
+		}
+	}
+
+	MEX_luis_montes_de_oca={
+		name=MEX_luis_montes_de_oca
+		portraits={
+			army={
+				small=GFX_portrait_MEX_luis_montes_de_oca_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_luis_montes_de_oca
+			cost = 75.000
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					has_completed_focus = MEX_focus_liberalize_the_banking_sector 
+				}
+			}
+			traits = {
+				financial_expert 
+			}
+		}
+	}
+
+	MEX_alberto_pani={
+		name=MEX_alberto_pani
+		portraits={
+			army={
+				small=GFX_portrait_MEX_alberto_pani_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_alberto_pani
+			cost = 75.000
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					has_completed_focus = MEX_focus_agricultural_credit_bank 
+				}
+			}
+			traits = {
+				captain_of_industry 
+			}
+		}
+	}
+
+	MEX_pablo_gonzalez={
+		name=MEX_pablo_gonzalez
+		portraits={
+			army={
+				small="GFX_idea_MEX_pablo_gonzalez"
+				large = "GFX_portrait_MEX_pablo_gonzalez" #Can become unit leader
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = MEX_pablo_gonzalez
+			cost = 50.000
+			allowed = {
+				original_tag = MEX
+			}
+			available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					has_completed_focus = MEX_focus_triumph_over_the_cristeros 
+				}
+			}
+			traits = {
+				prince_of_terror 
+			}
+		}
+	}
+	
+	# Illusive Gentleman auto-generated
+}

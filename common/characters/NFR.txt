@@ -1,0 +1,33 @@
+characters = {
+
+	NFR_philippe_petain = {
+		name = NFR_philippe_petain
+		portraits = {
+			civilian = {
+				large = GFX_portrait_NFR_philippe_petain
+			}
+		}
+		country_leader = {
+			ideology=despotism_subtype
+			traits = { conservative_nationalist_lar }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+	NFR_charles_de_gaulle={
+		name=NFR_charles_de_gaulle
+		portraits={
+			civilian={
+				large=GFX_portrait_NFR_charles_de_gaulle
+			}
+		}
+		country_leader = {
+			ideology=conservatism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		
+	}
+
+}

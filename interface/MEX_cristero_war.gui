@@ -1,0 +1,245 @@
+@SENATE_TEXT_X = 16
+@HOUSE_TEXT_X = 212
+@HEADERS_Y = 67
+@STATUS_Y = 52
+guiTypes = {
+
+	containerWindowType = {
+		name = "MEX_cristero_war_scripted_gui"
+		position = { x = -5 y = 0 }
+		size = { width = 100% height = 600 }
+
+
+		containerWindowType = {
+			name = "MEX_cristero_war_scripted_gui_map"
+			position = { x = -4  y = 10 }
+
+		    iconType = {
+		    	name = "MEX_states_outline"
+		    	spriteType = "GFX_MEX_states_outline"
+		    	position = { x = 0 y = 0 }
+		    }
+
+		    buttonType = {
+		    	name = "MEX_states_aguascalientes"
+		    	spriteType = "GFX_MEX_states_aguascalientes"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_baja_california_sur"
+		    	spriteType = "GFX_MEX_states_baja_california_sur"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_baja_california"
+		    	spriteType = "GFX_MEX_states_baja_california"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_campeche"
+		    	spriteType = "GFX_MEX_states_campeche"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_coahuila"
+		    	spriteType = "GFX_MEX_states_coahuila"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_chiapas"
+		    	spriteType = "GFX_MEX_states_chiapas"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_chihuahua"
+		    	spriteType = "GFX_MEX_states_chihuahua"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_colima"
+		    	spriteType = "GFX_MEX_states_colima"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_durango"
+		    	spriteType = "GFX_MEX_states_durango"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_guanajuato"
+		    	spriteType = "GFX_MEX_states_guanajuato"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_guerrero"
+		    	spriteType = "GFX_MEX_states_guerrero"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_hidalgo"
+		    	spriteType = "GFX_MEX_states_hidalgo"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_jalisco"
+		    	spriteType = "GFX_MEX_states_jalisco"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_mexico_city"
+		    	spriteType = "GFX_MEX_states_mexico_city"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_mexico_state"
+		    	spriteType = "GFX_MEX_states_mexico_state"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_michoacan"
+		    	spriteType = "GFX_MEX_states_michoacan"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_morelos"
+		    	spriteType = "GFX_MEX_states_morelos"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_nayarit"
+		    	spriteType = "GFX_MEX_states_nayarit"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_nuevo_leon"
+		    	spriteType = "GFX_MEX_states_nuevo_leon"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_oaxaca"
+		    	spriteType = "GFX_MEX_states_oaxaca"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_puebla"
+		    	spriteType = "GFX_MEX_states_puebla"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_queretaro"
+		    	spriteType = "GFX_MEX_states_queretaro"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_quintana_roo"
+		    	spriteType = "GFX_MEX_states_quintana_roo"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_san_luis_potosi"
+		    	spriteType = "GFX_MEX_states_san_luis_potosi"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_sinaloa"
+		    	spriteType = "GFX_MEX_states_sinaloa"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_sonora"
+		    	spriteType = "GFX_MEX_states_sonora"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_tabasco"
+		    	spriteType = "GFX_MEX_states_tabasco"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_tamaulipas"
+		    	spriteType = "GFX_MEX_states_tamaulipas"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_tlaxcala"
+		    	spriteType = "GFX_MEX_states_tlaxcala"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_veracruz"
+		    	spriteType = "GFX_MEX_states_veracruz"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_yucatan"
+		    	spriteType = "GFX_MEX_states_yucatan"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+			buttonType = {
+		    	name = "MEX_states_zacatecas"
+		    	spriteType = "GFX_MEX_states_zacatecas"
+		    	position = { x = 0 y = 0 }
+				clicksound = click_default
+		    }
+
+		}
+		containerWindowType = {
+			name = "MEX_cristero_war_scripted_gui_infobox"
+			position = { x = -4 y = 64 }
+			size = { width = 500 height = 210 }
+
+			instantTextboxType = {
+				name = "MEX_cristero_war_info_title"
+				position = { x = 115 y = 300 }
+				font = "hoi_30header"
+				text = "MEX_cristero_war_info_title"
+				format = center
+				maxWidth = 300
+				fixedsize = yes
+				maxHeight = 100
+			}
+
+			instantTextboxType = {
+				name = "MEX_cristero_war_info_number"
+				position = { x = 115 y = 340 }
+				font = "hoi_30header"
+				text = "MEX_cristero_war_info_number"
+				format = center
+				maxWidth = 300
+				fixedsize = yes
+				maxHeight = 100
+			}
+		}
+	}
+}

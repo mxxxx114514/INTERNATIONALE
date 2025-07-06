@@ -1,0 +1,42 @@
+
+state={
+	id=477
+	name="STATE_477"
+	manpower = 1951460
+	
+	state_category = large_town
+	
+	resources={
+		oil=10
+	}
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			13273 = {
+				naval_base = 3
+			}
+			10889 = {
+				naval_base = 2
+			}
+			13339 = { dam = 1 }
+		}
+		add_core_of = MEX
+		victory_points = {
+			13273 5
+		}
+		victory_points = {
+			10889 1
+		}
+		set_demilitarized_zone = yes
+	}
+
+	provinces={
+		8079 10732 10889 12810 13291 13273 13276 13316 13318 13334 13339 13350 13356
+	}
+	
+
+	local_supplies=0.0 
+}

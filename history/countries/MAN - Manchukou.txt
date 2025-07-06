@@ -1,0 +1,31 @@
+capital = 716 #Shenyang
+
+oob = "MAN_1936"
+
+set_cosmetic_tag = MAN_fengtian
+
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	auth_communism = 2
+	communism = 8
+	liberal = 5
+	neutrality = 5
+	despotism = 65
+	fascism = 15
+}
+
+1939.1.1 = {
+}

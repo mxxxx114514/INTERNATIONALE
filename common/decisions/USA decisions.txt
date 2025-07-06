@@ -1,0 +1,85 @@
+USA_intervene_ww2_category = {
+
+	USA_join_CLN = {
+		allowed = { tag = USA }
+		icon = ger_mefo_bills
+		available = {
+			#OR = {
+			#	GRR = {
+			#		surrender_progress > 0.01
+			#	}
+			#}
+			#country_exists = GRU
+			always = yes
+		}
+		visible = {
+			OR = {
+				date > 1941.12.1
+				ENG = { surrender_progress > 0.5 }
+			}
+			ENG = { has_war_with = SOV }
+			is_liberal_ideology = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.40
+					days = 1
+				}
+			}
+			ENG = {
+				add_to_faction = USA
+			}
+			USA = { add_ideas = cln_member_idea set_faction_leader = yes }
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	USA_join_IN = {
+		allowed = { tag = USA }
+		icon = ger_mefo_bills
+		visible = {
+			is_commie_ideology = yes
+			country_exists = GRU
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			SOV = { add_to_faction = USA }
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	USA_invade_CLN = {
+		allowed = { tag = USA }
+		icon = ger_mefo_bills
+		visible = {
+			has_global_flag = ww2
+			has_cosmetic_tag = USA_snp
+			OR = {
+				country_exists = GRU
+				date > 1941.2.1
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		days_remove = 3
+		remove_effect = {
+			declare_war_on = {
+				target = CAN
+				type = annex_everything
+			}
+		}
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+}

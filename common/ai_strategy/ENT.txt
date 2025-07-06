@@ -1,0 +1,186 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+ENT_support_IRN = {
+	allowed = {
+		OR = {
+			tag = ENG
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+		}
+
+	}
+
+	enable = {
+		country_exists = IRN
+		IRN = { has_war_with = IRR }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = IRN
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = IRN
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = IRN
+		value = 1000
+	}
+
+}
+
+IRN_likes_ENT = {
+	allowed = {
+		tag = IRN
+	}
+	enable = { always = yes }
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = ENG
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = RAJ
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = CAN
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = USF
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = AST
+		value = 1000
+	}
+
+}
+
+ENT_support_SPD = {
+
+	enable = {
+		country_exists = SPD
+		OR = {
+			tag = ENG
+			is_in_faction_with = ENG
+		}
+		NOT = { tag = POR }
+		is_commie_ideology = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPD
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SPD
+		value = 1000
+	}
+
+}
+
+ENT_support_SPB = {
+
+	enable = {
+		country_exists = SPB
+		NOT = { country_exists = SPD }
+		OR = {
+			tag = ENG
+			is_in_faction_with = ENG
+		}
+		is_commie_ideology = no
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SPB
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SPB
+		value = 1000
+	}
+
+}
+
+ENT_support_HASHEMITES = {
+	enable = {
+		OR = {
+			tag = ENG
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = NFR
+		}
+		HEJ = {
+			has_war_with = SAU
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = HEJ
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = HEJ
+		value = 1000
+	}
+
+}
+
+ENT_like_NOR = {
+	enable = {
+		OR = {
+			tag = ENG
+			tag = CAN
+			tag = USF
+			tag = RAJ
+			tag = AST
+			tag = NFR
+		}
+		NOR = {
+			is_commie_ideology = no
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = alliance
+		id = NOR
+		value = 1000
+	}
+}

@@ -1,0 +1,251 @@
+###########################
+# GER News events
+###########################
+
+add_namespace = GER_news
+
+#鲁登道夫被推翻
+
+news_event = {
+	id = GER_news.1
+	title = GER_news.1.t
+	desc = GER_news.1.desc
+	picture = GFX_event_GER_news_1
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_news.1.a
+		trigger = {
+			tag = GRR
+		}
+	}
+
+	option = {
+		name = GER_news.1.b
+		trigger = {
+			is_commie_ideology = yes
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+
+	option = {
+		name = GER_news.1.c
+		trigger = {
+			is_commie_ideology = no
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+
+}
+
+#奎德上台
+
+news_event = {
+	id = GER_news.2
+	title = GER_news.2.t
+	desc = GER_news.2.desc
+	picture = GFX_event_GER_news_2
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_news.2.a
+		trigger = {
+			tag = GRR
+		}
+	}
+
+	option = {
+		name = GER_news.2.b
+		trigger = {
+			is_commie_ideology = yes
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+
+	option = {
+		name = GER_news.2.c
+		trigger = {
+			is_commie_ideology = no
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+    
+}
+
+#丹德尔上台
+
+news_event = {
+	id = GER_news.3
+	title = GER_news.3.t
+	desc = GER_news.3.desc
+	picture = GFX_event_GER_news_3
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_news.3.a
+		trigger = {
+			tag = GRR
+		}
+	}
+
+	option = {
+		name = GER_news.3.b
+		trigger = {
+			is_commie_ideology = yes
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+
+	option = {
+		name = GER_news.3.c
+		trigger = {
+			is_commie_ideology = no
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+    
+}
+
+#威廉三世上台
+
+news_event = {
+	id = GER_news.4
+	title = GER_news.4.t
+	desc = GER_news.4.desc
+	picture = GFX_event_GER_news_4
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_news.4.a
+		trigger = {
+			tag = GRR
+		}
+	}
+
+	option = {
+		name = GER_news.4.b
+		trigger = {
+			is_commie_ideology = yes
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+
+	option = {
+		name = GER_news.4.c
+		trigger = {
+			is_commie_ideology = no
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+    
+}
+
+#胡根贝格上台
+
+news_event = {
+	id = GER_news.5
+	title = GER_news.5.t
+	desc = GER_news.5.desc
+	picture = GFX_event_GER_news_5
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_news.5.a
+		trigger = {
+			tag = GRR
+		}
+	}
+
+	option = {
+		name = GER_news.5.b
+		trigger = {
+			is_commie_ideology = yes
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+
+	option = {
+		name = GER_news.5.c
+		trigger = {
+			is_commie_ideology = no
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+    
+}
+
+#鲁登道夫之死
+
+news_event = {
+	id = GER_news.6
+	title = GER_news.6.t
+	desc = GER_news.6.desc
+	picture = GFX_event_GER_news_6
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GER_news.6.a
+		trigger = {
+			tag = GRR
+		}
+	}
+
+	option = {
+		name = GER_news.6.b
+		trigger = {
+			is_commie_ideology = yes
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+
+	option = {
+		name = GER_news.6.c
+		trigger = {
+			is_commie_ideology = no
+			NOT = {
+				tag = GRR
+			}
+		}
+	}
+    
+}

@@ -1,0 +1,26 @@
+state={
+	id=922
+	name="STATE_922"
+	provinces={
+		3560 5291 
+	}
+	history={
+		owner = FRA
+		victory_points = {
+			3560 1 
+		}
+		buildings = {
+			infrastructure = 4
+			air_base = 5
+			arms_factory = 2
+
+		}
+		add_core_of = FRA
+		add_claim_by = NFR
+
+	}
+	manpower=18559
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

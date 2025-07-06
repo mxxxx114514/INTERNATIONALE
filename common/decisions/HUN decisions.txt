@@ -1,0 +1,85 @@
+HUN_intervene_bw4_category = {
+
+	HUN_intervene_bw4 = {
+		allowed = { tag = HUN }
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 50
+		days_remove = 21
+		visible = { has_global_flag = fourth_balkan_war }
+		remove_effect = {
+			HUN = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = BW4_outcome
+							option = BW4_OUTCOME_HUN_BUL_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+				leave_faction = yes
+				create_faction = budapest_sofiagrad_pact
+				add_to_faction = BUL
+				declare_war_on = {
+					target = CZE
+				}
+				43 = {
+					create_unit = {
+						division = "division_template = \"Gyalogdandár\" start_experience_factor = 0.7" 
+						owner = PREV
+						count = 10
+					}
+				}
+				add_named_threat = {
+					threat = 5
+					name = IN_BW4_HUN_intervenes
+				}
+			}
+			BUL = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = BW4_outcome
+							option = BW4_OUTCOME_HUN_BUL_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+				48 = {
+					create_unit = {
+						division = "division_template = \"Pekhotna Divizija\" start_experience_factor = 0.75" 
+						owner = PREV
+						count = 17
+					}
+				}
+			}
+			45 = { add_claim_by = HUN }
+			70 = { add_claim_by = HUN }
+			71 = { add_claim_by = HUN }
+			73 = { add_claim_by = HUN }
+			76 = { add_claim_by = HUN }
+			82 = { add_claim_by = HUN }
+			84 = { add_claim_by = HUN }
+			764 = { add_claim_by = HUN }
+			913 = { add_claim_by = HUN }
+			78 = { add_claim_by = SOV }
+			80 = { add_claim_by = SOV }
+			766 = { add_claim_by = SOV }
+			912 = { add_claim_by = SOV }
+			918 = { add_claim_by = SOV }
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.16
+					days = 1
+				}
+			}
+			set_global_flag = fourth_balkan_war_full
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+}

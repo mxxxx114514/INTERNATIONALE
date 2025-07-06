@@ -1,0 +1,578 @@
+focus_tree = {
+	id = COM_focus
+
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2200 }
+
+	focus = {
+		id = COM_twenty_five_years
+		icon = GFX_focus_unknown
+		x = 1
+		y = 0
+		cost = 2
+		completion_reward = {
+			add_war_support = 0.1
+		}
+
+	}
+
+	focus = {
+		id = COM_revolution_in_chaos
+		icon = GFX_focus_unknown
+		relative_position_id = COM_twenty_five_years
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_twenty_five_years }
+		completion_reward = {
+			add_ideas = COM_revolution_reborn
+		}
+
+	}
+
+	focus = {
+		id = COM_guards_of_yucatan
+		icon = GFX_focus_unknown
+		relative_position_id = COM_revolution_in_chaos
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_revolution_in_chaos }
+		completion_reward = {
+			add_trait = {
+				character = COM_antonio_soto_y_gama
+				ideology = socialism_subtype
+				trait = guardian_of_yucatan
+			}
+		}
+
+	}
+
+	focus = {
+		id = COM_recruit_indian_peasants_workers
+		icon = GFX_focus_unknown
+		relative_position_id = COM_guards_of_yucatan
+		x = -2
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_guards_of_yucatan }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = COM_peasants_workers_unite
+				add_idea = COM_peasants_workers_unite_1
+			}
+		}
+
+	}
+
+	focus = {
+		id = COM_twelve_years_as_slaves
+		icon = GFX_focus_unknown
+		relative_position_id = COM_recruit_indian_peasants_workers
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_recruit_indian_peasants_workers }
+		completion_reward = {
+			926 = {
+				create_unit = {
+					division = "division_template = \"Brigada de Artillería\" start_experience_factor = 0.65 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 5
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = COM_train_soldiers
+		icon = GFX_focus_unknown
+		relative_position_id = COM_guards_of_yucatan
+		x = 2
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_guards_of_yucatan }
+		completion_reward = {
+			remove_ideas = COM_poor_army
+		}
+
+	}
+
+	focus = {
+		id = COM_improve_military_quality
+		icon = GFX_focus_unknown
+		relative_position_id = COM_train_soldiers
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_train_soldiers }
+		completion_reward = {
+			add_ideas = COM_good_army
+		}
+
+	}
+
+	focus = {
+		id = COM_invite_zapatistas_remnants
+		icon = GFX_focus_unknown
+		relative_position_id = COM_guards_of_yucatan
+		x = 0
+		y = 2
+		cost = 2
+		prerequisite = { focus = COM_guards_of_yucatan }
+		completion_reward = {
+			926 = {
+				create_unit = {
+					division = "division_template = \"Brigada Agrarista\" start_experience_factor = 0.65 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 3
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = COM_final_blow
+		icon = GFX_focus_unknown
+		relative_position_id = COM_invite_zapatistas_remnants
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_invite_zapatistas_remnants }
+		prerequisite = { focus = COM_twelve_years_as_slaves }
+		prerequisite = { focus = COM_improve_military_quality }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = COM_peasants_workers_unite_1
+				add_idea = COM_peasants_workers_unite_2
+			}
+			add_timed_idea = {
+				idea = COM_the_final_blow
+				days = 21
+			}
+			activate_mission = COM_unify_south_mexico_mission
+		}
+
+	}
+
+	focus = {
+		id = COM_peasants_and_workers_are_happy
+		icon = GFX_focus_unknown
+		relative_position_id = COM_final_blow
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_final_blow }
+		available = { always = no }
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			every_state = {
+				limit = { is_core_of = MGS }
+				add_core_of = COM
+			}
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_thirty_years_of_struggle
+		icon = GFX_focus_unknown
+		relative_position_id = COM_twenty_five_years
+		x = 8
+		y = 0
+		cost = 2
+		allow_branch = { has_cosmetic_tag = yucatan }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = COM_revolution_reborn
+				add_idea = COM_revolution_reborn_1
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = despotism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.08
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_a_piece_of_land_at_last
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_thirty_years_of_struggle
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_thirty_years_of_struggle }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_fight_against_gold_shirts
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_a_piece_of_land_at_last
+		x = -2
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_a_piece_of_land_at_last }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_our_peninsula
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_fight_against_gold_shirts
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_fight_against_gold_shirts }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_defend_our_homeland
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_our_peninsula
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_our_peninsula }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_request_aid_from_central_gov
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_defend_our_homeland
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_defend_our_homeland }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_move_to_new_place
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_a_piece_of_land_at_last
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_a_piece_of_land_at_last }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_meet_with_agrarians
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_move_to_new_place
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_move_to_new_place }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_consolidate_coalition
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_meet_with_agrarians
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_meet_with_agrarians }
+		completion_reward = {
+			set_country_flag = socdem_coalition_flag
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_launch_the_reform
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_a_piece_of_land_at_last
+		x = 2
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_a_piece_of_land_at_last }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_all_enterprises_to_workers
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_launch_the_reform
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_launch_the_reform }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_all_plantations_to_peasants
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_all_enterprises_to_workers
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_all_enterprises_to_workers }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_first_workers_peasants_congress
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_a_piece_of_land_at_last
+		x = 1
+		y = 4
+		cost = 2
+		prerequisite = { focus = COM_YUC_consolidate_coalition }
+		prerequisite = { focus = COM_YUC_all_plantations_to_peasants }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_the_union_guards_yucatan
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_a_piece_of_land_at_last
+		x = 0
+		y = 5
+		cost = 2
+		prerequisite = { focus = COM_YUC_request_aid_from_central_gov }
+		prerequisite = { focus = COM_YUC_first_workers_peasants_congress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_question_on_the_british_colony
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_the_union_guards_yucatan
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_the_union_guards_yucatan }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_drive_the_brits_out
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_question_on_the_british_colony
+		x = -2
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_question_on_the_british_colony }
+		mutually_exclusive = { focus = COM_YUC_contact_the_brits }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_ask_for_permission
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_drive_the_brits_out
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_drive_the_brits_out }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_gather_troops
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_ask_for_permission
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_ask_for_permission }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_the_great_bet
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_gather_troops
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_gather_troops }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_destroy_the_colony
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_the_great_bet
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_the_great_bet }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_contact_the_brits
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_question_on_the_british_colony
+		x = 2
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_question_on_the_british_colony }
+		mutually_exclusive = { focus = COM_YUC_drive_the_brits_out }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_draw_borders
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_contact_the_brits
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_contact_the_brits }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_peaceful_coexistence
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_draw_borders
+		x = 0
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_draw_borders }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_prepare_for_the_worst
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_peaceful_coexistence
+		x = -1
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_peaceful_coexistence }
+		mutually_exclusive = { focus = COM_YUC_limited_collaboration }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_limited_collaboration
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_peaceful_coexistence
+		x = 1
+		y = 1
+		cost = 2
+		prerequisite = { focus = COM_YUC_peaceful_coexistence }
+		mutually_exclusive = { focus = COM_YUC_prepare_for_the_worst }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_lasting_security
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_peaceful_coexistence
+		x = 0
+		y = 2
+		cost = 2
+		prerequisite = { focus = COM_YUC_prepare_for_the_worst focus = COM_YUC_limited_collaboration }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = COM_YUC_cheer_for_yucatan
+		icon = GFX_focus_unknown
+		relative_position_id = COM_YUC_question_on_the_british_colony
+		x = 0
+		y = 6
+		cost = 2
+		prerequisite = { focus = COM_YUC_destroy_the_colony focus = COM_YUC_lasting_security }
+		completion_reward = {
+			
+		}
+
+	}
+
+}

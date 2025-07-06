@@ -1,0 +1,14 @@
+defined_text = {
+	name = BEL_civil_war_escalation_category_desc_loc
+	text = {
+		trigger = { tag = GRR }
+		localization_key = BEL_civil_war_escalation_category_german_desc
+	}
+	text = {
+		trigger = { tag = SOV }
+		localization_key = BEL_civil_war_escalation_category_soviet_desc
+	}
+	text = {
+		localization_key = BEL_civil_war_escalation_category_others_desc
+	}
+}

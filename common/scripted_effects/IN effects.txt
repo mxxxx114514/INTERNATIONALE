@@ -1,0 +1,39 @@
+IN_add_winter_idea = {
+	IF = {
+		limit = {
+			has_country_flag = IN_winter_4
+		}
+		#do nothing
+	}
+	ELSE_IF = {
+		limit = {
+			has_country_flag = IN_winter_3
+		}
+		clr_country_flag = IN_winter_3
+		set_country_flag = IN_winter_4
+	}
+	ELSE_IF = {
+		limit = {
+			has_country_flag = IN_winter_2
+		}
+		clr_country_flag = IN_winter_2
+		set_country_flag = IN_winter_3
+	}
+	ELSE_IF = {
+		limit = {
+			has_country_flag = IN_winter_1
+		}
+		clr_country_flag = IN_winter_1
+		set_country_flag = IN_winter_2
+	}
+	ELSE_IF = {
+		limit = {
+			has_country_flag = IN_winter_0
+		}
+		clr_country_flag = IN_winter_0
+		set_country_flag = IN_winter_1
+	}
+	ELSE = {
+		set_country_flag = IN_winter_0
+	}
+}

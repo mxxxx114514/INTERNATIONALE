@@ -1,0 +1,407 @@
+soundeffect = {
+	name = superevents_verdun_on_ne_passe_pas
+	loop = no
+	sounds = {
+		sound = verdun_on_ne_passe_pas
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_star_spangled_banner_sad
+	loop = no
+	sounds = {
+		sound = star_spangled_banner_sad
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_well_meet_again
+	loop = no
+	sounds = {
+		sound = well_meet_again
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_wo_alle_strassen_enden
+	loop = no
+	sounds = {
+		sound = wo_alle_strassen_enden
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_addio_mia_bella_addio
+	loop = no
+	sounds = {
+		sound = addio_mia_bella_addio
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_song_of_kamikaze_corps
+	loop = no
+	sounds = {
+		sound = song_of_kamikaze_corps
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_wide_is_my_motherland
+	loop = no
+	sounds = {
+		sound = wide_is_my_motherland
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_eight_hundred_heroes_theme
+	loop = no
+	sounds = {
+		sound = eight_hundred_heroes_theme
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = { #SOUNDEFFECTSSOUNDEFFECTSSOUNDEFFECTS
+	name = superevents_defend_the_yellow_river
+	loop = no
+	sounds = {
+		sound = defend_the_yellow_river
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_espana_cani
+	loop = no
+	sounds = {
+		sound = espana_cani
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_erika
+	loop = no
+	sounds = {
+		sound = erika
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_tchaikovsky_overture
+	loop = no
+	sounds = {
+		sound = tchaikovsky_overture
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_sacred_war
+	loop = no
+	sounds = {
+		sound = sacred_war
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_battotai
+	loop = no
+	sounds = {
+		sound = battotai
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_red_sun_in_the_sky
+	loop = no
+	sounds = {
+		sound = red_sun_in_the_sky
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_victory_song
+	loop = no
+	sounds = {
+		sound = victory_song
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_as_the_war_approaches
+	loop = no
+	sounds = {
+		sound = as_the_war_approaches
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_burgundian_lullaby
+	loop = no
+	sounds = {
+		sound = burgundian_lullaby
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_westerwaldlied
+	loop = no
+	sounds = {
+		sound = westerwaldlied
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_deutschlandlied
+	loop = no
+	sounds = {
+		sound = deutschlandlied
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_for_god_and_queen
+	loop = no
+	sounds = {
+		sound = for_god_and_queen
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_hungarian_dance_5
+	loop = no
+	sounds = {
+		sound = hungarian_dance_5
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_soviet_storm_intro
+	loop = no
+	sounds = {
+		sound = soviet_storm_intro
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_chestnut_tree
+	loop = no
+	sounds = {
+		sound = chestnut_tree
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_edelweiss
+	loop = no
+	sounds = {
+		sound = edelweiss
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_lenin_is_young_again
+	loop = no
+	sounds = {
+		sound = lenin_is_young_again
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_we_are_friends_forever
+	loop = no
+	sounds = {
+		sound = we_are_friends_forever
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_the_moldau
+	loop = no
+	sounds = {
+		sound = the_moldau
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_yellow_rose_of_texas
+	loop = no
+	sounds = {
+		sound = yellow_rose_of_texas
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_song_of_the_united_front
+	loop = no
+	sounds = {
+		sound = song_of_the_united_front
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_battle_cry_of_freedom
+	loop = no
+	sounds = {
+		sound = battle_cry_of_freedom
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_chant_du_depart
+	loop = no
+	sounds = {
+		sound = chant_du_depart
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_quand_fera_til_jour_camarade
+	loop = no
+	sounds = {
+		sound = quand_fera_til_jour_camarade
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_funiculi_funicula
+	loop = no
+	sounds = {
+		sound = funiculi_funicula
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_marcha_de_oriamendi
+	loop = no
+	sounds = {
+		sound = marcha_de_oriamendi
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_mother_anarchy_loves_her_sons
+	loop = no
+	sounds = {
+		sound = mother_anarchy_loves_her_sons
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}
+soundeffect = {
+	name = superevents_united_nations_on_the_march
+	loop = no
+	sounds = {
+		sound = united_nations_on_the_march
+	}
+	is3d = no
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 2.0
+}

@@ -1,0 +1,31 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_FRA_leon_blum"
+		texturefile = "gfx/leaders/FRA/GFX_portrait_FRA_leon_blum.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_FRA_maurice_thorez"
+		texturefile = "gfx/leaders/FRA/GFX_portrait_FRA_maurice_thorez.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_FRA_paul_faure"
+		texturefile = "gfx/leaders/FRA/GFX_portrait_FRA_paul_faure.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_FRA_oscar_frossard"
+		texturefile = "gfx/leaders/FRA/GFX_portrait_FRA_oscar_frossard.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_FRA_marceau_pivert"
+		texturefile = "gfx/leaders/FRA/GFX_portrait_FRA_marceau_pivert.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_FRA_daniel_guerin"
+		texturefile = "gfx/leaders/FRA/GFX_portrait_FRA_daniel_guerin.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_FRA_jacques_doriot"
+		texturefile = "gfx/leaders/FRA/GFX_portrait_FRA_jacques_doriot.png"
+	}
+}

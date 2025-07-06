@@ -1,0 +1,17 @@
+air_wings = {
+	
+	# Z.d'Op. Aériennes Africain -- Tunis
+	458 = {
+		# Groupement de Chasse du Nord-Africain
+		fighter_equipment_0 = {
+			owner = "FRA" 
+			amount = 48
+		}
+		# Groupement de Bombardment du Nord-Africain
+		tac_bomber_equipment_1 =  {
+			owner = "FRA" 
+			amount = 30
+		}
+	}
+
+}

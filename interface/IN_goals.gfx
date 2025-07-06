@@ -1,0 +1,1294 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_focus_GER_election"
+		texturefile = "gfx/interface/goals/GER/1936选举.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_dandl"
+		texturefile = "gfx/interface/goals/GER/丹德尔.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_golden_twenties"
+		texturefile = "gfx/interface/goals/GER/二十年代.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_peoples_republic"
+		texturefile = "gfx/interface/goals/GER/人民的共和国.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_constitution"
+		texturefile = "gfx/interface/goals/GER/修宪护宪.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_after_hindenburg"
+		texturefile = "gfx/interface/goals/GER/兴登堡.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_agriculture_reforms"
+		texturefile = "gfx/interface/goals/GER/农业制度改革.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_anti_extremist_parties"
+		texturefile = "gfx/interface/goals/GER/反对极端政党.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_unified_struggle"
+		texturefile = "gfx/interface/goals/GER/团结奋斗.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_international_liberal_leader"
+		texturefile = "gfx/interface/goals/GER/国际自由老大哥.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_basic_welfare_policies"
+		texturefile = "gfx/interface/goals/GER/基础福利政策.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_quidde"
+		texturefile = "gfx/interface/goals/GER/奎德.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_national_tax"
+		texturefile = "gfx/interface/goals/GER/工农商国家税法.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_equal_laws"
+		texturefile = "gfx/interface/goals/GER/平等法律.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_new_army"
+		texturefile = "gfx/interface/goals/GER/德国新式陆军.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_liberty_war"
+		texturefile = "gfx/interface/goals/GER/打响自由主义战争.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_expand_civ_rights"
+		texturefile = "gfx/interface/goals/GER/扩大公民权利.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_expand_reichstag_politics"
+		texturefile = "gfx/interface/goals/GER/扩大国会政治范围.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_revive_marx"
+		texturefile = "gfx/interface/goals/GER/新政的继续复兴.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_europe_trade_union"
+		texturefile = "gfx/interface/goals/GER/欧洲自由关税同盟.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_europe_liberty_union"
+		texturefile = "gfx/interface/goals/GER/欧洲自由国家联盟.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_stablize_workers_emotions"
+		texturefile = "gfx/interface/goals/GER/稳定工农情绪.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_econ_free_act"
+		texturefile = "gfx/interface/goals/GER/经济自由法案.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_political_peace"
+		texturefile = "gfx/interface/goals/GER/维护政治和平.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_urban_and_rural"
+		texturefile = "gfx/interface/goals/GER/缓和城乡政策.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_hugenberg"
+		texturefile = "gfx/interface/goals/GER/胡根贝格.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_voluntary_military_tax"
+		texturefile = "gfx/interface/goals/GER/自愿国军税.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_liberal_not_disorganized"
+		texturefile = "gfx/interface/goals/GER/自由不是无组织.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_free_market_policies"
+		texturefile = "gfx/interface/goals/GER/自由商贸政策.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_soldiers_for_liberty"
+		texturefile = "gfx/interface/goals/GER/自由民主战士.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_torch_of_liberty"
+		texturefile = "gfx/interface/goals/GER/自由灯塔.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_military_admin"
+		texturefile = "gfx/interface/goals/GER/解决军队管理问题.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_rebuild_military_system"
+		texturefile = "gfx/interface/goals/GER/重建德国军事体系.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_alsace_lorraine_line"
+		texturefile = "gfx/interface/goals/GER/阿尔萨斯洛林防线.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_overthrow_ludendorff"
+		texturefile = "gfx/interface/goals/GER/鲁登道夫.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_encourage_soldiers"
+		texturefile = "gfx/interface/goals/GER/鼓励战士.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_europe_situation"
+		texturefile = "gfx/interface/goals/GER/欧洲局势.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_great_red_menace"
+		texturefile = "gfx/interface/goals/GER/巨大的红色威胁.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_ENG_GER_alliance"
+		texturefile = "gfx/interface/goals/GER/英德同盟.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_call_USA"
+		texturefile = "gfx/interface/goals/GER/联系美国.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_call_JAP"
+		texturefile = "gfx/interface/goals/GER/联系日本.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_east_europe"
+		texturefile = "gfx/interface/goals/GER/聚焦东欧.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_north_europe"
+		texturefile = "gfx/interface/goals/GER/聚焦北欧.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_west_europe"
+		texturefile = "gfx/interface/goals/GER/聚焦西欧.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_expand_pakt"
+		texturefile = "gfx/interface/goals/GER/扩大塔林条约.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_traditional_culture"
+		texturefile = "gfx/interface/goals/GER/传统文化自信.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_ensure_workers_safety"
+		texturefile = "gfx/interface/goals/GER/保证劳工安全.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_glorious_national_warriors"
+		texturefile = "gfx/interface/goals/GER/光辉的民族战士.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_rural_industrial_construction"
+		texturefile = "gfx/interface/goals/GER/农村工业建设.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_thousand_week_reich"
+		texturefile = "gfx/interface/goals/GER/千周之国.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_anti_socialist_countries"
+		texturefile = "gfx/interface/goals/GER/反对社会主义国家.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_national_military_congress"
+		texturefile = "gfx/interface/goals/GER/召开全国军备大会.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_national_econ_committee"
+		texturefile = "gfx/interface/goals/GER/国家经济委员会.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_national_and_private"
+		texturefile = "gfx/interface/goals/GER/国有私有共同发展.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_increase_influence"
+		texturefile = "gfx/interface/goals/GER/壮大势力.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_develop_southern_economy"
+		texturefile = "gfx/interface/goals/GER/壮大南部地区经济.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_demonize_french_commune"
+		texturefile = "gfx/interface/goals/GER/妖魔化法国共产主义.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_realize_independent_rejuvenation"
+		texturefile = "gfx/interface/goals/GER/实现自主复兴.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_german_national_democracy"
+		texturefile = "gfx/interface/goals/GER/德意志民族的民主国家.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_german_federal_national_identity"
+		texturefile = "gfx/interface/goals/GER/德意志联邦的民族认同.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_restore_all_industries"
+		texturefile = "gfx/interface/goals/GER/恢复各行各业.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_restore_german_military_science_institute"
+		texturefile = "gfx/interface/goals/GER/恢复德国军事科学院.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_strategic_economic_defense"
+		texturefile = "gfx/interface/goals/GER/战略经济回防.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_find_allies"
+		texturefile = "gfx/interface/goals/GER/找到盟友.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_aid_anti_IN"
+		texturefile = "gfx/interface/goals/GER/援助国际反革命势力.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_germanic_national_state"
+		texturefile = "gfx/interface/goals/GER/日耳曼民族国家.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_ban_leftist_parties"
+		texturefile = "gfx/interface/goals/GER/禁止左翼政党参政.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_embargo_socialist_countries"
+		texturefile = "gfx/interface/goals/GER/禁止社会主义国家经济联系.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_stable_prosperity"
+		texturefile = "gfx/interface/goals/GER/稳向兴盛.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_independent_learning"
+		texturefile = "gfx/interface/goals/GER/自发学习.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_ENG_GER_economic_bond"
+		texturefile = "gfx/interface/goals/GER/英德经济同盟.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_west_prussia"
+		texturefile = "gfx/interface/goals/GER/西普鲁士特殊政策.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_expand_army_cautiously"
+		texturefile = "gfx/interface/goals/GER/谨慎扩张军队.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_revitalize_bismark"
+		texturefile = "gfx/interface/goals/GER/重拾俾斯麦精神.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_industrial_upgrade"
+		texturefile = "gfx/interface/goals/GER/产业技术升级.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_heavy_industry_preference"
+		texturefile = "gfx/interface/goals/GER/倾向重工业.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_rural_capitalism"
+		texturefile = "gfx/interface/goals/GER/农村资本主义.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_infrastructure_development"
+		texturefile = "gfx/interface/goals/GER/发展基础设施.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_national_industry_development"
+		texturefile = "gfx/interface/goals/GER/发展民族工业.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_state_owned_enterprise_bankruptcy"
+		texturefile = "gfx/interface/goals/GER/国有化破产企业.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_massive_public_works"
+		texturefile = "gfx/interface/goals/GER/大量公共工程.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_military_race"
+		texturefile = "gfx/interface/goals/GER/奔向军备竞赛.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_economic_decoupling_from_us"
+		texturefile = "gfx/interface/goals/GER/对美经济脱钩.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_german_research_innovation"
+		texturefile = "gfx/interface/goals/GER/德国科研创新.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_german_resurgence"
+		texturefile = "gfx/interface/goals/GER/德意志的复苏.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_promotion_of_technocratic_elite"
+		texturefile = "gfx/interface/goals/GER/提拔技术官僚.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_support_for_nationwide_labor_unions"
+		texturefile = "gfx/interface/goals/GER/支持全德工会.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_all_roads_lead_to_berlin"
+		texturefile = "gfx/interface/goals/GER/条条大路通柏林.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_research_breakthroughs"
+		texturefile = "gfx/interface/goals/GER/科研新成果.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_bank_credibility_stabilization"
+		texturefile = "gfx/interface/goals/GER/稳定银行信誉.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_secondary_sector_subsidies"
+		texturefile = "gfx/interface/goals/GER/第二产业补贴.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_continuation_of_national_construction"
+		texturefile = "gfx/interface/goals/GER/继续全国建设.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_defense_of_petite_bourgeoisie"
+		texturefile = "gfx/interface/goals/GER/维护小资产阶级.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_exit_from_great_depression"
+		texturefile = "gfx/interface/goals/GER/走出大萧条.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_militarized_economy"
+		texturefile = "gfx/interface/goals/GER/军事化经济.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_wealth_redistribution_through_taxation"
+		texturefile = "gfx/interface/goals/GER/适当劫富济贫.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_revival_of_marxist_new_deal"
+		texturefile = "gfx/interface/goals/GER/重启马克思新政.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_walk_out_great_depression"
+		texturefile = "gfx/interface/goals/GER/走出大萧条.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_sad_years"
+		texturefile = "gfx/interface/goals/GER/忧伤年代.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_new_econ_policy"
+		texturefile = "gfx/interface/goals/GER/新经济政策.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_great_imperial_days"
+		texturefile = "gfx/interface/goals/GER/帝国的伟大时代.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_break_1919_chain"
+		texturefile = "gfx/interface/goals/GER/冲破1919束缚.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_president_dictates_economy"
+		texturefile = "gfx/interface/goals/GER/总统独裁经济.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_destroy_hypocritical_democracy"
+		texturefile = "gfx/interface/goals/GER/击碎虚伪的民主.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_evil_republican"
+		texturefile = "gfx/interface/goals/GER/邪恶共和.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_germany_situation"
+		texturefile = "gfx/interface/goals/GER/德国的现状.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_future_political_reforms"
+		texturefile = "gfx/interface/goals/GER/未来政治改革.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_kaiser_integrity_propaganda"
+		texturefile = "gfx/interface/goals/GER/宣传德皇廉政.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_anti_separation"
+		texturefile = "gfx/interface/goals/GER/打击分离主义.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_german_legitmacy"
+		texturefile = "gfx/interface/goals/GER/德意志唯一正统.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_imperial_army_reforms"
+		texturefile = "gfx/interface/goals/GER/帝国军队改革.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_western_enemy"
+		texturefile = "gfx/interface/goals/GER/重视西边的敌人.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_solve_army_corrupt"
+		texturefile = "gfx/interface/goals/GER/解决军队腐败.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_revitalize_junkers_traditions"
+		texturefile = "gfx/interface/goals/GER/恢复贵族传统.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_new_constitution"
+		texturefile = "gfx/interface/goals/GER/颁布新宪法.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_loyal_to_kaiser"
+		texturefile = "gfx/interface/goals/GER/向德皇效忠.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_the_kaiser_returns"
+		texturefile = "gfx/interface/goals/GER/德皇归来.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_attack_is_defense"
+		texturefile = "gfx/interface/goals/GER/进攻即防御.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_small_encirclment_tactics"
+		texturefile = "gfx/interface/goals/GER/小规模包围战术.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_no_enemy_planes"
+		texturefile = "gfx/interface/goals/GER/不容敌机盘旋.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_develop_naval_bombers"
+		texturefile = "gfx/interface/goals/GER/发展海军轰炸机.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_develop_radar"
+		texturefile = "gfx/interface/goals/GER/发展雷达科技.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_guderians_panzers"
+		texturefile = "gfx/interface/goals/GER/古德里安的装甲部队.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_reichstag_army_funds"
+		texturefile = "gfx/interface/goals/GER/国会军队集资.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_german_sky"
+		texturefile = "gfx/interface/goals/GER/德意志的天空.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_bombing_1"
+		texturefile = "gfx/interface/goals/GER/战场轰炸.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_bombing_2"
+		texturefile = "gfx/interface/goals/GER/战场轰炸2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_promote_new_doctrines"
+		texturefile = "gfx/interface/goals/GER/推广新理论.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_support_military_industrial_complex"
+		texturefile = "gfx/interface/goals/GER/支持军工复合体.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_lean_towards_military"
+		texturefile = "gfx/interface/goals/GER/政府向军队倾斜.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_develop_navy"
+		texturefile = "gfx/interface/goals/GER/海军新技术.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_develop_submarines"
+		texturefile = "gfx/interface/goals/GER/潜艇建设.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_build_dockyards_1"
+		texturefile = "gfx/interface/goals/GER/船坞建设.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_build_dockyards_2"
+		texturefile = "gfx/interface/goals/GER/船坞建设2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_trade_interdiction"
+		texturefile = "gfx/interface/goals/GER/贸易阻断学说.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_invite_new_officers"
+		texturefile = "gfx/interface/goals/GER/邀请新人加入.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_renew_naval_armament"
+		texturefile = "gfx/interface/goals/GER/重启海军军备.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_army_new_development"
+		texturefile = "gfx/interface/goals/GER/陆军再发展.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_power_to_fuhrer"
+		texturefile = "gfx/interface/goals/GER/一切权力归德国元首.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_power_to_reichstag"
+		texturefile = "gfx/interface/goals/GER/一切权力归德国议会.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_focus_eastern_front"
+		texturefile = "gfx/interface/goals/GER/专注东线.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_focus_western_front"
+		texturefile = "gfx/interface/goals/GER/专注西线.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_eastern_conquests"
+		texturefile = "gfx/interface/goals/GER/东方占领区问题.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_limited_control"
+		texturefile = "gfx/interface/goals/GER/有限自由管制.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_full_control"
+		texturefile = "gfx/interface/goals/GER/全面政治管制.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_support_balkans"
+		texturefile = "gfx/interface/goals/GER/支持布拉格协约.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_destroy_HUN"
+		texturefile = "gfx/interface/goals/GER/消灭匈牙利红色政权.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_geopolitical_encirclement"
+		texturefile = "gfx/interface/goals/GER/地缘政治被包围.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_second_seven_years_war"
+		texturefile = "gfx/interface/goals/GER/第二次七年战争.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_memory_of_faustschlag"
+		texturefile = "gfx/interface/goals/GER/梦回拳击行动.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_destroy_FRA"
+		texturefile = "gfx/interface/goals/GER/宣扬法德世仇.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_unite_schwartz_rot_gold"
+		texturefile = "gfx/interface/goals/GER/团结黑红金国旗团.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_GER_unite_the_conservatives"
+		texturefile = "gfx/interface/goals/GER/团结保守派.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_complete_secularization"
+		texturefile = "gfx/interface/goals/MEX/全面世俗化.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_dismantle_other_unions"
+		texturefile = "gfx/interface/goals/MEX/解散其他工会.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_expand_red_guard"
+		texturefile = "gfx/interface/goals/MEX/扩张赤卫大队.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_militia_cooption"
+		texturefile = "gfx/interface/goals/MEX/招安民兵.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_nationalize_church_land"
+		texturefile = "gfx/interface/goals/MEX/国有化教会土地.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_preserve_union_diversity"
+		texturefile = "gfx/interface/goals/MEX/保留工会多样化.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_purge_cristero_general"
+		texturefile = "gfx/interface/goals/MEX/清洗基督将军.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_resolve_gold_shirt_problem"
+		texturefile = "gfx/interface/goals/MEX/解决金衫军.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_ruthless_oppression"
+		texturefile = "gfx/interface/goals/MEX/无情打压.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_stability_lasts"
+		texturefile = "gfx/interface/goals/MEX/稳定长存？.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_stabilize_situation"
+		texturefile = "gfx/interface/goals/MEX/稳住局势.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_theocracy_stands"
+		texturefile = "gfx/interface/goals/MEX/神权仍立.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_throne_ruins"
+		texturefile = "gfx/interface/goals/MEX/废墟王座.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_rurals_finally_in_our_hands"
+		texturefile = "gfx/interface/goals/MEX/农村终落吾手.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_peasants_no_arms"
+		texturefile = "gfx/interface/goals/MEX/农民无武装.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_assassinate_local_leaders"
+		texturefile = "gfx/interface/goals/MEX/刺杀当地领导人.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_create_cnc"
+		texturefile = "gfx/interface/goals/MEX/建立全国农民联盟.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_military_police"
+		texturefile = "gfx/interface/goals/MEX/建立宪兵队.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_godless_comedy"
+		texturefile = "gfx/interface/goals/MEX/无神的喜剧.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_send_gold_shirts"
+		texturefile = "gfx/interface/goals/MEX/派出金衫军.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_smoke_rises"
+		texturefile = "gfx/interface/goals/MEX/浓烟再起.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_alienate_peasants"
+		texturefile = "gfx/interface/goals/MEX/离间农民.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_resolve_urban_rebels"
+		texturefile = "gfx/interface/goals/MEX/解决城市叛军.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_invite_pancho_villa"
+		texturefile = "gfx/interface/goals/MEX/邀请比利亚.png"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_MEX_self_reliance"
+		texturefile = "gfx/interface/goals/MEX/靠自己.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_all_silent"
+		texturefile = "gfx/interface/goals/MEX/万籁俱寂.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_greater_colombian_identity"
+		texturefile = "gfx/interface/goals/MEX/促进大哥伦比亚民族认同.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_lean_to_one_side"
+		texturefile = "gfx/interface/goals/MEX/偏袒一方.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_bright_future"
+		texturefile = "gfx/interface/goals/MEX/光明未来.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_build_schools"
+		texturefile = "gfx/interface/goals/MEX/兴办学校.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_officers_aid"
+		texturefile = "gfx/interface/goals/MEX/军官援助.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_army_no_politics"
+		texturefile = "gfx/interface/goals/MEX/军队去党化.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_rural_night_school"
+		texturefile = "gfx/interface/goals/MEX/农村夜校.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_new_industrial_complex"
+		texturefile = "gfx/interface/goals/MEX/创立新工业园区.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_increase_peasant_welfare"
+		texturefile = "gfx/interface/goals/MEX/加大农民福利.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_align_americas"
+		texturefile = "gfx/interface/goals/MEX/联合美洲.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_north_american_cooperation"
+		texturefile = "gfx/interface/goals/MEX/北美合作.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_north_american_alliance"
+		texturefile = "gfx/interface/goals/MEX/北美同盟.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_launch_five_year_plan"
+		texturefile = "gfx/interface/goals/MEX/启动五年计划.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_attract_foreign_investment"
+		texturefile = "gfx/interface/goals/MEX/吸引国外投资.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_nationalize_oil"
+		texturefile = "gfx/interface/goals/MEX/国有化石油.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_national_education"
+		texturefile = "gfx/interface/goals/MEX/国民教育.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_diplo_GER"
+		texturefile = "gfx/interface/goals/MEX/塔林之旅.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_political_peace"
+		texturefile = "gfx/interface/goals/MEX/天下太平.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_obregon_survives"
+		texturefile = "gfx/interface/goals/MEX/奥布雷贡存活.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_military_factory_deterence"
+		texturefile = "gfx/interface/goals/MEX/威慑性军工发展.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_academic_freedom"
+		texturefile = "gfx/interface/goals/MEX/学术自由.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_socialist_education"
+		texturefile = "gfx/interface/goals/MEX/社会主义教育.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_MEX_replace_UNAM_leadership"
+		texturefile = "gfx/interface/goals/MEX/撤换大学领导层.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_compromise"
+		texturefile = "gfx/interface/goals/MEX/寻求和解.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_maybe_still_useful"
+		texturefile = "gfx/interface/goals/MEX/或许还有用.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_post_war_reconstruction"
+		texturefile = "gfx/interface/goals/MEX/战后重建.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_end_of_war"
+		texturefile = "gfx/interface/goals/MEX/战终平息.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_university_autonomy"
+		texturefile = "gfx/interface/goals/MEX/授予大学自治权.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_enter_government_army"
+		texturefile = "gfx/interface/goals/MEX/政府军进驻.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_army_politics"
+		texturefile = "gfx/interface/goals/MEX/政治化军队.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_political_game"
+		texturefile = "gfx/interface/goals/MEX/政治游戏.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_integrate_national_peasants_workers_union"
+		texturefile = "gfx/interface/goals/MEX/整合全国工农联盟.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_chess_piece"
+		texturefile = "gfx/interface/goals/MEX/棋子.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_chess_player"
+		texturefile = "gfx/interface/goals/MEX/棋手.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_chess_game"
+		texturefile = "gfx/interface/goals/MEX/棋局.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_do_nothing"
+		texturefile = "gfx/interface/goals/MEX/毫无作为.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_livelihood_first"
+		texturefile = "gfx/interface/goals/MEX/民生至上.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_lessons_of_civil_armed_groups"
+		texturefile = "gfx/interface/goals/MEX/民间武装之训.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_encourage_CAN_independence"
+		texturefile = "gfx/interface/goals/MEX/煽动加拿大独立运动.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_diplo_USA"
+		texturefile = "gfx/interface/goals/MEX/白宫之行.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_inner_party"
+		texturefile = "gfx/interface/goals/MEX/视于党内.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_growing_stability"
+		texturefile = "gfx/interface/goals/MEX/稳中向好.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_stabilize_rural_areas"
+		texturefile = "gfx/interface/goals/MEX/稳定农村.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_first_national_literacy_exam"
+		texturefile = "gfx/interface/goals/MEX/第一次全国识字考试.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_demand_canal_area"
+		texturefile = "gfx/interface/goals/MEX/索取运河区.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_legacy_of_sonora_triumvirate"
+		texturefile = "gfx/interface/goals/MEX/索诺拉三巨头的遗产.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_diplo_SOV"
+		texturefile = "gfx/interface/goals/MEX/红色巨人.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_workers_literacy_program"
+		texturefile = "gfx/interface/goals/MEX/组织工人识字班.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_organize_militia"
+		texturefile = "gfx/interface/goals/MEX/组织民兵.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_huertas_lessons"
+		texturefile = "gfx/interface/goals/MEX/韦尔塔的教训.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_diplo_ENG"
+		texturefile = "gfx/interface/goals/MEX/英伦风情.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_mountains"
+		texturefile = "gfx/interface/goals/MEX/茫茫青山.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_spanish_culture"
+		texturefile = "gfx/interface/goals/MEX/西班牙文化认同.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_align_SPR_POR"
+		texturefile = "gfx/interface/goals/MEX/西葡同盟.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_outer_society"
+		texturefile = "gfx/interface/goals/MEX/观其视外.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_reparations"
+		texturefile = "gfx/interface/goals/MEX/赔偿.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_towards_the_world"
+		texturefile = "gfx/interface/goals/MEX/迈向世界.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_avoid_waves"
+		texturefile = "gfx/interface/goals/MEX/避免浪潮.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_tightrope_walk"
+		texturefile = "gfx/interface/goals/MEX/钢丝漫漫.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_railway_transport"
+		texturefile = "gfx/interface/goals/MEX/铁路运输.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_political_dancer"
+		texturefile = "gfx/interface/goals/MEX/长袖善舞.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_faction_collaborate_research"
+		texturefile = "gfx/interface/goals/MEX/阵营合作科研.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_fate_of_banana_republic"
+		texturefile = "gfx/interface/goals/MEX/香蕉共和国的命运.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_industrialization"
+		texturefile = "gfx/interface/goals/MEX/墨西哥工业化.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MEX_support_domestic_industrialists"
+		texturefile = "gfx/interface/goals/MEX/鼓励国内实业派.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_MEX_trip_to_the_city"
+		texturefile = "gfx/interface/goals/MEX/市井之行.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_the_past_blood"
+		texturefile = "gfx/interface/goals/NMX/昔日见血.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_fall_into_fire"
+		texturefile = "gfx/interface/goals/NMX/重现于火.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_focus_on_the_leader"
+		texturefile = "gfx/interface/goals/NMX/擒贼先擒王.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_focus_on_peasant_rebels"
+		texturefile = "gfx/interface/goals/NMX/解决农民叛军.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_stabilize_public_opinion"
+		texturefile = "gfx/interface/goals/NMX/安抚民心.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_condemn_obregon"
+		texturefile = "gfx/interface/goals/NMX/谴责奥夫雷贡.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_recruit_militias"
+		texturefile = "gfx/interface/goals/NMX/征召民兵.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_dark_clouds"
+		texturefile = "gfx/interface/goals/NMX/乌云漫漫.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_inner_fighting"
+		texturefile = "gfx/interface/goals/NMX/相煎太急.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_the_capital_stops_weeping"
+		texturefile = "gfx/interface/goals/NMX/首都不再哭泣.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_NMX_mexico_stops_bleeding"
+		texturefile = "gfx/interface/goals/NMX/墨西哥不再流血.png"
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+}

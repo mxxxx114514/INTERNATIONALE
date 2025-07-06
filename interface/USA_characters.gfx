@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_USA_robert_taft"
+		texturefile = "gfx/leaders/USA/GFX_portrait_USA_robert_taft.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_USA_herbert_clark_hoover"
+		texturefile = "gfx/leaders/USA/GFX_portrait_USA_herbert_clark_hoover.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_USA_henry_agard_wallace"
+		texturefile = "gfx/leaders/USA/GFX_portrait_USA_henry_agard_wallace.png"
+	}
+}

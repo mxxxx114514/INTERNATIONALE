@@ -1,0 +1,105 @@
+GER_federal_bop = {
+	initial_value = 0
+	left_side = GER_decentralization_bop
+	right_side = GER_centralization_bop
+	decision_category = GER_centralization_power_balance_decisions
+
+	range = {
+		id = GER_centralization_bop_balanced
+		min = -0.25
+		max = 0.25
+		modifier = {
+			
+		}
+	}
+
+	side = {
+		id = GER_centralization_bop
+		#icon = 
+		range = {
+			id = GER_centralization_bop_3
+			min = 0.75
+			max = 1
+			modifier = {
+				war_support_factor = 0.1
+				research_speed_factor = -0.1
+				political_power_factor = -0.1
+				max_command_power_mult = 0.1
+				consumer_goods_factor = 0.20
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		range = {
+			id = GER_centralization_bop_2
+			min = 0.5
+			max = 0.75
+			modifier = {
+				war_support_factor = 0.05
+				research_speed_factor = -0.05
+				political_power_factor = -0.1
+				max_command_power_mult = 0.05
+				consumer_goods_factor = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
+
+		range = {
+			id = GER_centralization_bop_1
+			min = 0.25
+			max = 0.5
+			modifier = {
+				war_support_factor = 0.02
+				research_speed_factor = -0.05
+				political_power_factor = -0.05
+				max_command_power_mult = 0.05
+				consumer_goods_factor = 0
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+
+	side = {
+		id = GER_decentralization_bop
+		#icon = 
+		range = {
+			id = GER_decentralization_bop_1
+			min = -0.5
+			max = -0.25
+			modifier = {
+				war_support_factor = 0
+				research_speed_factor = 0
+				political_power_factor = 0.02
+				max_command_power_mult = 0
+				consumer_goods_factor = 0
+			}
+		}
+		
+		range = {
+			id = GER_decentralization_bop_2
+			min = -0.75
+			max = -0.5
+			modifier = {
+				war_support_factor = 0
+				research_speed_factor = 0.02
+				political_power_factor = 0.05
+				max_command_power_mult = 0
+				consumer_goods_factor = -0.10
+			}
+		}
+
+		range = {
+			id = GER_decentralization_bop_3
+			min = -1
+			max = -0.75
+			modifier = {
+				war_support_factor = -0.02
+				research_speed_factor = 0.05
+				political_power_factor = 0.05
+				max_command_power_mult = 0
+				consumer_goods_factor = -0.10
+			}
+		}
+	}
+
+} 

@@ -1,0 +1,591 @@
+###########################
+# South Africa Events
+###########################
+
+add_namespace = southafrica
+
+news_event = { #SAF civil war
+	id = southafrica.1
+	#title = southafrica.1.t
+	title = ""
+	#desc = southafrica.1.desc
+	desc = ""
+	fire_only_once = yes
+
+	trigger = {
+		date > 1938.5.14
+		NOT = { has_global_flag = saf_civil_war }
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = saf_civil_war
+			every_state = {
+				limit = { is_core_of = NMB }
+				transfer_state_to = NMB
+			}
+			ENG = {
+				set_autonomy = {
+					target = SAF
+					autonomy_state = autonomy_free
+				}
+			}
+			NMB = {
+				set_cosmetic_tag = NMB_ENG
+				division_template = {
+					name = "Infantry Brigade"
+					division_names_group = NMB_INF_01
+					# Note: Divisions were nowhere near full strength until mobilized
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"Infantry Brigade\" start_experience_factor = 1.0" 
+						owner = NMB
+						count = 3
+					}
+				}
+				ENG = {
+					set_autonomy = {
+						target = NMB
+						autonomy_state = autonomy_puppet
+					}
+				}
+			}
+			SAF = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = SACW_outcome
+							option = SACW_OUTCOME_USF_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+				add_named_threat = {
+					threat = 5
+					name = IN_SAF_civil_war_threat
+				}
+				leave_faction = yes
+				add_state_claim = 542
+				set_country_flag = SAF_USF
+				every_owned_state = {
+					SAF = {
+						delete_unit = { state = PREV disband = yes }
+					}
+				}
+				add_popularity = {
+					ideology = auth_communism
+					popularity = -0.15
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.15
+				}
+				add_popularity = {
+					ideology = socialism
+					popularity = -0.15
+				}
+				add_popularity = {
+					ideology = despotism
+					popularity = -0.15
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.15
+				}
+			}
+			create_dynamic_country = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = SACW_outcome
+							option = SACW_OUTCOME_BOR_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+				original_tag = SAF
+				transfer_state = 542
+				add_state_core = 542
+				set_cosmetic_tag = SAF_BOR
+				set_country_flag = SAF_BOR
+				set_politics = {
+					ruling_party = fascism
+				}
+				set_popularities = {
+					neutrality = 10
+					despotism = 20
+					fascism = 70
+				}
+				set_country_flag = pataut_coalition_flag
+				division_template = {
+					name = "District Force"				# For 2-brigade Military Districts
+
+					division_names_group = SAF_GAR_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				542 = {
+					create_unit = {
+						division = "division_template = \"District Force\" start_experience_factor = 1.0" 
+						owner = PREV
+						count = 30
+					}
+				}
+				declare_war_on = {
+					target = SAF
+					type = topple_government
+				}
+			}
+			create_dynamic_country = {
+				IF = {
+					limit = {
+						has_game_rule = {
+							rule = SACW_outcome
+							option = SACW_OUTCOME_SSF_VICTORY
+						}
+					}
+					add_ideas = win_this_war_idea
+				}
+				original_tag = SAF
+				transfer_state = 681
+				add_state_core = 542
+				set_cosmetic_tag = SAF_SSF
+				set_country_flag = SAF_SSF
+				set_politics = {
+					ruling_party = communism
+				}
+				set_popularities = {
+					auth_communism = 10
+					communism = 60
+					socialism = 10
+					social_democratic = 10
+					neutrality = 10
+				}
+				set_country_flag = autsoc_coalition_flag
+				set_country_flag = libsoc_coalition_flag
+				division_template = {
+					name = "District Force"				# For 2-brigade Military Districts
+
+					division_names_group = SAF_GAR_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				681 = {
+					create_unit = {
+						division = "division_template = \"District Force\" start_experience_factor = 1.0" 
+						owner = PREV
+						count = 12
+					}
+				}
+				declare_war_on = {
+					target = SAF
+					type = topple_government
+				}
+				declare_war_on = {
+					target = BOR
+					type = topple_government
+				}
+			}
+			SAF = {
+				division_template = {
+					name = "District Force"				# For 2-brigade Military Districts
+
+					division_names_group = SAF_GAR_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				every_owned_state = {
+					create_unit = {
+						division = "division_template = \"District Force\" start_experience_factor = 1.0" 
+						owner = PREV
+						count = 8
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						is_in_faction_with = ENG
+					}
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = USF
+					value = 150
+				}
+			}
+			GER = {
+				IF = {
+					limit = {
+						OR = {
+							has_cosmetic_tag = GER_liberal_torch
+							has_cosmetic_tag = GER_kaiserreich
+						}
+					}
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = SAF
+						value = 150
+					}
+				}
+				IF = {
+					limit = {
+						has_cosmetic_tag = GER_hugenberg
+					}
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = BOR
+						value = 150
+					}
+				}
+			}
+			SOV = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = SSF
+					value = 150
+				}
+			}
+			FRA = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = SSF
+					value = 150
+				}
+			}
+			ITA = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = SSF
+					value = 150
+				}
+			}
+			SOV = {
+				add_ai_strategy = {
+					type = send_lend_lease_desire
+					id = SSF
+					value = 150
+				}
+			}
+			FRA = {
+				add_ai_strategy = {
+					type = send_lend_lease_desire
+					id = SSF
+					value = 150
+				}
+			}
+			ITA = {
+				add_ai_strategy = {
+					type = send_lend_lease_desire
+					id = SSF
+					value = 150
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.25
+				}
+			}
+		}
+
+	}
+
+	option = {
+		name = southafrica.1.a
+	}
+}
+
+news_event = { #Boer victory
+	id = southafrica.2
+	#title = southafrica.2.t
+	title = ""
+	#desc = southafrica.2.desc
+	desc = ""
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = saf_civil_war
+		country_exists = BOR
+		BOR = {
+			NOT = { has_war_with = USF }
+			NOT = { has_war_with = SSF }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = saf_civil_war_over_BOR_victory
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = SAF
+					}
+				}
+				BOR = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			IF = {
+				limit = {
+					GER = {
+						OR = {
+							has_cosmetic_tag = GER_hugenberg
+							has_cosmetic_tag = GER_hugenberg_greater
+						}
+					}
+				}
+				GER = {
+					add_to_faction = BOR
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = NMB
+				}
+				BOR = {
+					add_state_claim = PREV
+				}
+			}
+			ENG = {
+				set_autonomy = {
+					target = NMB
+					autonomy_state = autonomy_free
+				}
+			}
+			NMB = {
+				leave_faction = yes
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						is_in_faction_with = ENG
+					}
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = NMB
+					value = 150
+				}
+			}
+			BOR = {
+				remove_ideas = win_this_war_idea
+				set_capital = {
+					state = 275
+				}
+				declare_war_on = {
+					target = NMB
+					type = annex_everything
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.28
+				}
+			}
+		}
+
+	}
+
+	option = {
+		name = southafrica.2.a
+	}
+}
+
+news_event = { #Cape Commune victory
+	id = southafrica.3
+	#title = southafrica.3.t
+	title = ""
+	#desc = southafrica.3.desc
+	desc = ""
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = saf_civil_war
+		country_exists = SSF
+		SSF = {
+			NOT = { has_war_with = USF }
+			NOT = { has_war_with = BOR }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = saf_civil_war_over_SSF_victory
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = SAF
+					}
+				}
+				SSF = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					is_owned_by = NMB
+				}
+				SSF = {
+					add_state_claim = PREV
+				}
+			}
+			ENG = {
+				set_autonomy = {
+					target = NMB
+					autonomy_state = autonomy_free
+				}
+			}
+			NMB = {
+				leave_faction = yes
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						is_in_faction_with = ENG
+					}
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = NMB
+					value = 150
+				}
+			}
+			SSF = {
+				remove_ideas = win_this_war_idea
+				set_capital = {
+					state = 275
+				}
+				declare_war_on = {
+					target = NMB
+					type = annex_everything
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.27
+				}
+			}
+		}
+
+	}
+
+	option = {
+		name = southafrica.3.a
+	}
+}
+
+news_event = { #Union of South Africa Victory
+	id = southafrica.4
+	#title = southafrica.4.t
+	title = ""
+	#desc = southafrica.4.desc
+	desc = ""
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = saf_civil_war
+		country_exists = USF
+		USF = {
+			NOT = { has_war_with = SSF }
+			NOT = { has_war_with = BOR }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = saf_civil_war_over_USF_victory
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = SAF
+					}
+				}
+				USF = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+			ENG = {
+				set_autonomy = {
+					target = USF
+					autonomy_state = autonomy_dominion
+				}
+			}
+			USF = {
+				remove_ideas = win_this_war_idea
+				set_capital = {
+					state = 275
+				}
+				annex_country = {
+					target = NMB
+				}
+				set_politics = { ruling_party = democratic }
+				set_popularities = {
+					social_democratic = 5
+					social_liberal = 10
+					liberal = 35
+					democratic = 40
+					neutrality = 10
+				}
+			}
+			NMB = {
+				drop_cosmetic_tag = yes
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.26
+				}
+			}
+		}
+
+	}
+
+	option = {
+		name = southafrica.4.a
+	}
+}

@@ -1,0 +1,29 @@
+scripted_gui = {
+    superevents_gui = {
+        window_name = "superevents"
+        context_type = player_context
+
+        visible = {
+            has_global_flag = SE_superevents_activate
+        }
+
+        effects = {
+            superevents_button_click = {
+                clr_global_flag = SE_superevents_activate
+                #superevents
+                clr_global_flag = SE_world_war_ii
+                clr_global_flag = SE_fall_of_germany
+            }
+        }
+
+        triggers = {
+            supereventsbg_test_visible = {
+                has_global_flag = SE_test
+            }
+            #superevents
+            superevents_spanish_civilwar_visible = {
+                has_global_flag = SE_spanish_civilwar
+            }
+        }
+    }
+}

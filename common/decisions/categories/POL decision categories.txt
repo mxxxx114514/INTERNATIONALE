@@ -1,0 +1,19 @@
+#################
+#### POL ####
+#################
+POL_intervene_ww2_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = POL }
+	visible = { has_global_flag = ww2 }
+}
+POL_war_with_GER_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = POL }
+	visible = {
+		has_global_flag = GER_invade_POL_flag
+	}
+}

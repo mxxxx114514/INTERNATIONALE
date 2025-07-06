@@ -1,0 +1,22 @@
+state={
+	id=932
+	name="STATE_932"
+	provinces={
+		13271 13274
+	}
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = MEX
+		set_demilitarized_zone = yes
+
+	}
+	manpower=70000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=pastoral
+
+}

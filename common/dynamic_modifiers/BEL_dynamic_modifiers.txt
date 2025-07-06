@@ -1,0 +1,12 @@
+BEL_wallonian_socialism = {
+	enable = {
+		OR = {
+			auth_communism < 0.02
+			communism < 0.02
+			socialism < 0.02
+		}
+	}
+	auth_communism_drift = 0.05
+	communism_drift = 0.05
+	socialism_drift = 0.05
+}

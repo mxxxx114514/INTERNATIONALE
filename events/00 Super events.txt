@@ -1,0 +1,41 @@
+﻿#Super events
+
+add_namespace = superevents
+
+country_event = { #test event
+	id = superevents.0
+	title = superevents.0.t
+	desc = superevents.0.d
+	
+	immediate = {
+		set_global_flag = SE_superevents_activate
+		set_global_flag = SE_test
+	}
+
+	hidden = yes
+	
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+}
+
+country_event = { #test event
+	id = superevents.1
+	title = superevents.1.t
+	desc = superevents.1.d
+	
+	immediate = {
+		set_global_flag = SE_superevents_activate
+		set_global_flag = SE_world_war_ii
+		sound_effect = superevents_sacred_war
+	}
+
+	hidden = yes
+	
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+}
+

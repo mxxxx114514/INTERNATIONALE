@@ -1,0 +1,6 @@
+popularity_pp_buff = {
+	political_power_gain = popularity_pp_var
+}
+coalition_pp_buff = {
+	political_power_gain = coalition_pp_var
+}

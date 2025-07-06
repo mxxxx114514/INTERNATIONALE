@@ -1,0 +1,28 @@
+scripted_gui = {
+	GER_reichstag_gui = {
+		context_type = decision_category
+		window_name = "GER_reichstag_gui"
+		
+		dynamic_lists = {
+			reichstag_diagram = {
+				array = reichstag_seat_x
+				change_scope = no
+				entry_container = reichstag_seat
+				index = seat_idx
+			}
+		}
+		properties = {
+			reichstag_dot_icon = {
+				x = reichstag_seat_x^seat_idx
+				y = reichstag_seat_y^seat_idx
+				frame = reichstag_seat_frame^seat_idx
+			}
+			reichstag_highlight_icon = {
+				x = reichstag_seat_x^seat_idx
+				y = reichstag_seat_y^seat_idx
+				frame = reichstag_highlight_frame^seat_idx
+			}
+		}
+	
+	}
+}

@@ -1,0 +1,9 @@
+#################
+#### CHI ####
+#################
+CHI_war_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = CHI }
+}

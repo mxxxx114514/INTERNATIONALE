@@ -1,0 +1,19 @@
+ideas = {
+    country = {
+        PRU_war_for_pastaza = {
+			allowed = {
+				original_tag = PRU
+			}
+
+            available = { has_war_with = ECU }
+
+			name = PRU_war_for_pastaza
+			picture = PRU_war
+
+			targeted_modifier = { 
+                tag = ECU 
+                attack_bonus_against = 1.5
+            }
+		}
+    }
+}

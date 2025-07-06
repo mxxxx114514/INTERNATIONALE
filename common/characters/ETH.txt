@@ -1,0 +1,54 @@
+characters = {
+	#### COUNTRY LEADERS 
+	ETH_haile_selassie = {
+		name = ETH_haile_selassie
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ETH_haile_selassie
+				small = GFX_portrait_ETH_haile_selassie_imprisoned_small
+			}
+			army = {
+				large = GFX_portrait_ETH_haile_selassie_field_marshal
+				small = GFX_portrait_ETH_haile_selassie_field_marshal_small
+			}
+		}
+		country_leader = {
+			ideology = auth_dem
+			expire = "1965.1.1.1"
+			traits = { king_of_kings }
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = ETH_haile_selassie
+			allowed  = {
+
+			}
+			available = {
+				NOT = { has_character_flag = ETH_imprisoned_flag}
+			}
+			traits = {
+				imprisoned_emperor
+			}
+			visible = {
+				has_character_flag = ETH_imprisoned_flag
+			}				
+		}
+		field_marshal = {
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			visible = { 
+				has_country_leader =  {
+					ruling_only = yes 
+					character = ETH_haile_selassie
+				}
+				has_completed_focus = ETH_rally_around_the_emperor
+				NOT = { has_country_leader_with_trait = imperator_absentis }
+			}
+		}
+	}
+}

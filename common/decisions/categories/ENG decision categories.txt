@@ -1,0 +1,13 @@
+#################
+#### ENG ####
+#################
+ENG_intervene_ww2_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = ENG }
+	visible = { has_global_flag = ww2 }
+}
+ENG_decolonization_category = {
+	allowed = { tag = ENG }
+}

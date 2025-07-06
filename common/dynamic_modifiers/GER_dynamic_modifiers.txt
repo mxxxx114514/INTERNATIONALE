@@ -1,0 +1,143 @@
+GER_ai_buff_idea = {
+	enable = { is_ai = yes }
+	political_power_gain = 2.3
+	#stability_weekly = 0.005
+	#war_support_weekly = 0.005
+	conscription = 0.005
+	ai_desired_divisions_factor = 3.2
+	production_factory_start_efficiency_factor = 0.05
+	production_factory_max_efficiency_factor = 0.05
+	training_time_army_factor = -0.2
+}
+
+GER_maintain_st = {
+	enable = { is_ai = yes has_stability < 0.5 NOT = { has_global_flag = ww2 } }
+	stability_factor = 0.4
+}
+
+GER_maintain_ws = {
+	enable = { is_ai = yes has_war_support < 0.5 NOT = { has_global_flag = ww2 } }
+	war_support_factor = 0.4
+}
+
+GER_far_left_influence = {
+	enable = { auth_communism < 0.02 communism < 0.02 socialism < 0.03 }
+	auth_communism_drift = 0.05
+	communism_drift = 0.05
+	socialism_drift = 0.05
+}
+
+GER_sapd_influence = {
+	enable = { socialism < 0.1 has_government = social_democratic }
+	socialism_drift = 0.05
+}
+
+GER_spd_influence = {
+	enable = { social_democratic < 0.12 }
+	social_democratic_drift = 0.05
+}
+
+GER_ddp_influence = {
+	enable = { social_liberal < 0.05 }
+	social_liberal_drift = 0.05
+}
+
+GER_no_marlib_infleunce = {
+	enable = { liberal > 0.1 NOT = { has_country_flag = marlib_coalition_flag } }
+	liberal_drift = -0.03
+	#social_democratic_drift = 0.01
+	#social_liberal_drift = 0.01
+	#democratic_drift = 0.01
+}
+
+GER_marlib_infleunce = {
+	enable = { liberal < 0.05 has_country_flag = marlib_coalition_flag }
+	liberal_drift = 0.02
+	#icon = GFX_idea_GER_commie_opposition
+}
+
+GER_catholic_influence = {
+	enable = { democratic < 0.1 }
+	democratic_drift = 0.05
+}
+
+GER_monarchist_influence = {
+	enable = { neutrality < 0.05 NOT = { has_cosmetic_tag = GER_hugenberg } NOT = { has_cosmetic_tag = GER_hugenberg_greater } }
+	neutrality_drift = 0.05
+}
+
+GER_far_right_influence = {
+	enable = { 
+		fascism < 0.05
+	}
+	fascism_drift = 0.05
+}
+
+GER_POL_in_faction = {
+	enable = {
+		POL = {
+			is_in_faction_with = GER
+			is_subject = no
+		}
+		OR = {
+			NOT = { has_global_flag = ww2 }
+			AND = {
+				has_global_flag = ww2
+				POL = { has_country_flag = pakt_member }
+			}
+		}
+	}
+	production_factory_max_efficiency_factor = 0.05
+	production_speed_buildings_factor = 0.1
+	political_power_gain = 0.2
+	stability_factor = 0.05
+	war_support_factor = 0.1
+	icon = GFX_idea_GER_POL_in_faction
+}
+
+GER_commie_opposition = {
+	enable = {
+		always = yes
+	}
+	stability_factor = GER_commie_influence
+	war_support_factor = GER_commie_influence
+	icon = GFX_idea_GER_commie_opposition
+}
+
+GER_never_surrender = {
+	enable = {
+		surrender_progress > 0.9
+	}
+	surrender_limit = 1.0
+	army_defence_factor = 5.0
+	army_org_regain = 5.0
+	supply_consumption_factor = -0.99
+	max_dig_in_factor = 3.0
+}
+
+GER_military_spending_modifier = {
+	icon = GFX_idea_generic_army
+	despotism_drift = GER_military_spending_drift
+	war_support_factor = GER_military_spending_war_support
+	army_org_factor = GER_military_spending_org
+	research_speed_factor = GER_military_spending_research
+}
+
+GER_industry_spending_modifier = {
+	icon = GFX_idea_generic_medium_industry
+	production_speed_buildings_factor = GER_industry_spending_construction
+	industrial_capacity_factory = GER_industry_spending_production
+	industrial_capacity_dockyard = GER_industry_spending_production
+}
+
+GER_welfare_spending_modifier = {
+	icon = GFX_idea_government
+	stability_factor = GER_welfare_spending_stability
+	socialism_drift = GER_welfare_spending_libsoc
+	social_democratic_drift = GER_welfare_spending_socdem
+	social_liberal_drift = GER_welfare_spending_soclib
+	liberal_drift = GER_welfare_spending_marlib
+	democratic_drift = GER_welfare_spending_condem
+	neutrality_drift = GER_welfare_spending_autdem
+	fascism_drift = GER_welfare_spending_natpop
+}

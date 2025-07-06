@@ -1,0 +1,29 @@
+
+state={
+	id=944
+	name="STATE_944"
+	manpower = 2021072
+	
+	state_category = large_city
+	resources={
+		steel=16 # was: 28
+	}
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 2
+			air_base = 10
+		}
+		add_core_of = SOV
+		add_core_of = RUS
+	}
+
+	provinces={
+		301 350 366 401 3259 3290 3327 3358 3391 6283 6290 6348 6414 9235 9282 9302 9348 9378 9395 11217 11236 11268 11282 11330 
+	}
+
+	local_supplies=6.0 
+}

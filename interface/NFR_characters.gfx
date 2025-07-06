@@ -1,0 +1,12 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_NFR_philippe_petain"
+		texturefile = "gfx/leaders/NFR/GFX_portrait_NFR_philippe_petain.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_NFR_charles_de_gaulle"
+		texturefile = "gfx/leaders/NFR/GFX_portrait_NFR_charles_de_gaulle.png"
+	}
+}

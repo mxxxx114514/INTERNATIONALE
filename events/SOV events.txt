@@ -1,0 +1,324 @@
+###########################
+# Soviet Events
+###########################
+
+add_namespace = soviet
+
+country_event = {
+	id = soviet.1
+	title = soviet.1.t
+	desc = soviet.1.desc
+	#picture = GFX_report_event_wallonian_uprising
+
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = ww2
+		SOV = {
+			surrender_progress > 0.82
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	hidden = yes
+
+	immediate = {
+		set_global_flag = SOV_surrender
+		GRR = {
+			annex_country = { target = GRU }
+		}
+		create_dynamic_country = {
+			original_tag = SOV
+			set_capital = { state = 219 }
+			set_cosmetic_tag = SOV_MCW_pakt
+			set_country_flag = SOV_MCW
+			every_state = {
+				limit = {
+					is_owned_by = SOV
+					is_on_continent = europe
+					#NOT = { is_controlled_by = SOV }
+				}
+				transfer_state_to = PREV
+			}
+			transfer_state = 351
+			transfer_state = 880
+			transfer_state = 236
+			transfer_state = 252
+			transfer_state = 255
+			transfer_state = 239
+			transfer_state = 829
+			generic_remove_unowned_cores = yes
+		}
+		UKR = {
+			set_cosmetic_tag = UKR_pakt
+			transfer_state = 137
+			transfer_state = 946
+			transfer_state = 218
+			every_state = {
+				limit = {
+					is_core_of = UKR
+					NOT = {
+						is_core_of = POL
+					}
+					NOT = {
+						is_core_of = ROM
+					}
+				}
+				transfer_state_to = UKR
+			}
+		}
+		BLR = {
+			set_cosmetic_tag = BLR_pakt
+			every_state = {
+				limit = {
+					is_core_of = BLR
+					NOT = {
+						is_core_of = UKR
+					}
+				}
+				transfer_state_to = BLR
+			}
+		}
+		CAU = {
+			set_cosmetic_tag = CAU_pakt
+			every_state = {
+				limit = {
+					is_core_of = CAU
+				}
+				transfer_state_to = CAU
+			}
+		}
+		WFI = {
+			annex_country = {
+				target = RFI
+			}
+			transfer_state = 213
+			transfer_state = 215
+			transfer_state = 216
+			transfer_state = 722
+		}
+		IF = {
+			limit = {
+				HUN = { is_commie_ideology = yes }
+			}
+			every_country = {
+				limit = { has_war_with = HUN }
+				white_peace = HUN
+			}
+		}
+		IF = {
+			limit = {
+				FRA = { has_capitulated = yes }
+				ITA = { has_capitulated = yes }
+			}
+			every_country = {
+				limit = { has_war_with = FRA }
+				white_peace = SOV
+				white_peace = HUN
+				white_peace = FRA
+				white_peace = ITA
+				white_peace = SPC
+			}
+			news_event = { id = ww2.6 hours = 2 }
+		}
+		SOV = {
+			FRA = { set_faction_leader = yes }
+			leave_faction = yes
+			white_peace = GER
+			white_peace = ENG
+			white_peace = PRG
+			white_peace = USA
+			set_cosmetic_tag = SOV_anarchy
+			set_autonomy = {
+				target = ROM
+				autonomy_state = autonomy_free
+			}
+			set_autonomy = {
+				target = GRE
+				autonomy_state = autonomy_free
+			}
+			set_autonomy = {
+				target = YUG
+				autonomy_state = autonomy_free
+			}
+			remove_ideas = internationale_buff
+		}
+		POL = {
+			transfer_state = 89
+			transfer_state = 91
+		}
+		GER = {
+			faction_leader = { add_to_faction = WFI }
+			set_autonomy = {
+				target = MOS
+				autonomy_state = autonomy_puppet
+			}
+			set_autonomy = {
+				target = UKR
+				autonomy_state = autonomy_puppet
+			}
+			set_autonomy = {
+				target = BLR
+				autonomy_state = autonomy_puppet
+			}
+			set_autonomy = {
+				target = CAU
+				autonomy_state = autonomy_puppet
+			}
+		}
+		UKR = {
+			set_politics = { ruling_party = despotism }
+			set_popularities = {
+				auth_communism = 6
+				communism = 10
+				socialism = 4
+				despotism = 60
+				neutrality = 20
+			}
+		}
+		BLR = {
+			set_politics = { ruling_party = despotism }
+			set_popularities = {
+				auth_communism = 6
+				communism = 10
+				socialism = 4
+				despotism = 60
+				neutrality = 20
+			}
+		}
+		CAU = {
+			set_politics = { ruling_party = despotism }
+			set_popularities = {
+				auth_communism = 6
+				communism = 10
+				socialism = 4
+				despotism = 60
+				neutrality = 20
+			}
+		}
+		every_country = {
+			limit = { has_war_with = SOV }
+			white_peace = SOV
+			white_peace = MON
+			white_peace = SIK
+		}
+		SOV = {
+			kill_country_leader = yes
+			set_autonomy = { target = MON autonomy_state = autonomy_free }
+			set_autonomy = { target = SIK autonomy_state = autonomy_free }
+		}
+		EGY = { transfer_state = 924 }
+		774 = { owner = { transfer_state = 775 } }
+		ZZZ = { annex_country = { target = SOV } }
+		MOS = {
+			every_core_state = {
+				remove_core_of = MOS
+			}
+		}
+		MCW = {
+			set_cosmetic_tag = SOV_MCW_pakt
+			annex_country = { target = MOS }
+			generic_add_owned_cores = yes
+		}
+		every_state = {
+			limit = {
+				is_owned_by = ZZZ
+				is_on_continent = europe
+				#NOT = { is_controlled_by = SOV }
+			}
+			transfer_state_to = MCW
+		}
+		GER = {
+			set_autonomy = {
+				target = MCW
+				autonomy_state = autonomy_puppet
+			}
+		}
+		MCW = {
+			set_politics = { ruling_party = despotism }
+			set_popularities = {
+				auth_communism = 6
+				communism = 10
+				socialism = 4
+				despotism = 60
+				neutrality = 20
+			}
+		}
+		IF = {
+			limit = { POL = { has_cosmetic_tag = POL_commie } }
+			POL = { drop_cosmetic_tag = yes }
+		}
+		IF = {
+			limit = { has_global_flag = JAP_invade_SOV_flag }
+			FER = {
+				transfer_state = 408
+				transfer_state = 409
+			}
+			JAP = {
+				transfer_state = 655
+				set_autonomy = {
+					target = FER
+					autonomy_state = autonomy_puppet
+				}
+			}
+		}
+		IF = {
+			limit = {
+				NOT = { 812 = { is_owned_by = EST } }
+			}
+			EST = {
+				every_core_state = { transfer_state_to = EST }
+			}
+		}
+		IF = {
+			limit = {
+				NOT = { 808 = { is_owned_by = LAT } }
+			}
+			LAT = {
+				every_core_state = { transfer_state_to = LAT }
+			}
+		}
+		IF = {
+			limit = {
+				NOT = { 784 = { is_owned_by = LIT } }
+			}
+			LIT = {
+				every_core_state = { limit = { NOT = { is_owned_by = GRR } } transfer_state_to = LIT }
+			}
+		}
+		IF = {
+			limit = {
+				ROM = { is_commie_ideology = yes }
+			}
+			GER = {
+				transfer_state = 766
+				transfer_state = 78
+				#transfer_state = 834
+				#transfer_state = 192
+				transfer_state = 80
+				transfer_state = 912
+				transfer_state = 918
+			}
+		}
+		ELSE = {
+			ROM = {
+				transfer_state = 766
+				transfer_state = 78
+				#transfer_state = 834
+				#transfer_state = 192
+				transfer_state = 80
+				transfer_state = 912
+				transfer_state = 918
+			}
+		}
+	}
+
+	option = {
+		name = soviet.1.a
+	
+	}
+
+}

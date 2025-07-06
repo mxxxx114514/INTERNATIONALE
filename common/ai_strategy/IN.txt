@@ -1,0 +1,234 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+IN_SUPPORTS_IRR = {
+	allowed = {
+		OR = {
+			#tag = SOV
+			tag = FRA
+			#tag = ITA
+		}
+
+	}
+
+	enable = {
+		country_exists = IRR
+		IRR = { has_war_with = IRN }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = IRR
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = IRR
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = IRR
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = IRR
+		value = 1000
+	}
+
+}
+
+IRR_LIKES_FRA = {
+	allowed = {
+		tag = IRR
+	}
+	enable = { always = yes }
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = befriend
+		id = FRA
+		value = 1000
+	}
+	ai_strategy = {
+		type = alliance
+		id = FRA
+		value = 1000
+	}
+
+}
+
+IN_SUPPORT_BUL_HUN = {
+	allowed = {
+		OR = {
+			tag = SOV
+			tag = FRA
+			tag = ITA
+		}
+
+	}
+
+	enable = {
+		has_global_flag = fourth_balkan_war
+	}
+
+	abort = {
+		OR = {
+			has_global_flag = fourth_balkan_war_HUN_victory
+			has_global_flag = fourth_balkan_war_CZE_victory
+		}
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = HUN
+		value = 1000
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = BUL
+		value = 1000
+	}
+
+}
+IN_ANTI_CLN = {
+	allowed = {
+		always = yes
+
+	}
+
+	enable = {
+		is_in_faction_with = SOV
+	}
+
+	abort = {
+		NOT = { is_in_faction_with = SOV }
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = GRR
+		value = 1000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = BAL
+		value = 1000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = LIT
+		value = 1000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = WFI
+		value = 1000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = ENG
+		value = 1000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = NFR
+		value = 1000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = TRR
+		value = 1000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = FLA
+		value = 1000
+	}
+}
+IN_SUPPORT_ALG = {
+	enable = {
+		has_global_flag = algerian_uprising
+		NFR = { has_war_with = ALG }
+		is_commie_ideology = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = ALG
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = ALG
+		value = 1000
+	}
+
+}
+IGNORE_ARABIA = {
+	enable = {
+		OR = {
+			tag = SOV
+			tag = FRA
+			tag = ITA
+			tag = HUN
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = HEJ
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = HEJ
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = IRQ
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = IRQ
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = JOR
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = JOR
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SAU
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SAU
+		value = -1000
+	}
+
+}
+

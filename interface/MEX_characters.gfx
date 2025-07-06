@@ -1,0 +1,22 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_MEX_alvaro_obregon_salido"
+		texturefile = "gfx/leaders/MEX/GFX_portrait_MEX_alvaro_obregon_salido.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_MEX_plutarco_elias_calles"
+		texturefile = "gfx/leaders/MEX/GFX_portrait_MEX_plutarco_elias_calles.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_MEX_pancho_villa"
+		texturefile = "gfx/leaders/MEX/GFX_portrait_MEX_pancho_villa.png"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_MEX_antonio_soto_y_gama"
+		texturefile = "gfx/leaders/MEX/GFX_portrait_MEX_antonio_soto_y_gama.png"
+	}
+}

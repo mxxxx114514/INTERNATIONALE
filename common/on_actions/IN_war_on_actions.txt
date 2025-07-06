@@ -1,0 +1,65 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			IF = {
+				limit = {
+					has_global_flag = ww2_ENG_invade_GRR
+					ROOT = { tag = ENG }
+					FROM = { tag = GRR }
+				}
+				IF = {
+					limit = {
+						56 = { is_fully_controlled_by = GRR }
+					}
+					set_state_controller = 56
+					56 = {
+						create_unit = {
+							division = "division_template = \"Infantry Division\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+							owner = ENG
+							count = 12
+						}
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						59 = { is_fully_controlled_by = GRR }
+					}
+					set_state_controller = 59
+					59 = {
+						create_unit = {
+							division = "division_template = \"Infantry Division\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+							owner = ENG
+							count = 12
+						}
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						58 = { is_fully_controlled_by = GRR }
+					}
+					set_state_controller = 58
+					58 = {
+						create_unit = {
+							division = "division_template = \"Infantry Division\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+							owner = ENG
+							count = 12
+						}
+					}
+				}
+				ELSE_IF = {
+					limit = {
+						914 = { is_fully_controlled_by = GRR }
+					}
+					set_state_controller = 914
+					914 = {
+						create_unit = {
+							division = "division_template = \"Infantry Division\" start_experience_factor = 1.0 start_equipment_factor = 1.0" 
+							owner = ENG
+							count = 12
+						}
+					}
+				}
+			}
+		}
+	}
+}

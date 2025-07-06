@@ -1,0 +1,16 @@
+defined_text = {
+	name = GetSupereventsTitle
+	text = {
+		trigger = {
+			has_global_flag = SE_world_war_ii
+		}
+		localization_key = SE_world_war_ii_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = SE_fall_of_germany
+		}
+		localization_key = SE_fall_of_germany_title
+	}
+	
+}

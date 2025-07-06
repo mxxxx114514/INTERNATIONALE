@@ -1,0 +1,25 @@
+state={
+	id=936
+	name="STATE_936"
+	provinces={
+		8089 13264 13265 13285 13349
+	}
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = MEX
+		victory_points = {
+			8089 5
+		}
+
+	}
+	manpower=1200000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=town
+
+}

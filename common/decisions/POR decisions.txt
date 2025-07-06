@@ -1,0 +1,32 @@
+POR_intervene_scw_category = {
+
+	POR_occupy_galicia = {
+		allowed = { tag = POR }
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 100
+		days_remove = 7
+		visible = { has_global_flag = scw_over_SPC_victory }
+		remove_effect = {
+			POR = {
+				transfer_state = 171
+				add_state_claim = 171
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					news_event = {
+						id = war_news.13
+						days = 1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+
+}

@@ -1,0 +1,707 @@
+GER_get_reichstag_seats = {
+	set_temp_variable = { t1 = GER_reichstag_KPD }
+	set_temp_variable = { t2 = GER_reichstag_SAPD }
+	set_temp_variable = { t3 = GER_reichstag_SPD }
+	set_temp_variable = { t4 = GER_reichstag_DDP }
+	set_temp_variable = { t5 = GER_reichstag_Z }
+	set_temp_variable = { t6 = GER_reichstag_BVP }
+	set_temp_variable = { t7 = GER_reichstag_DBP }
+	set_temp_variable = { t8 = GER_reichstag_PP }
+	set_temp_variable = { t9 = GER_reichstag_DVP }
+	set_temp_variable = { t10 = GER_reichstag_WP }
+	set_temp_variable = { t11 = GER_reichstag_DNVP }
+	set_temp_variable = { t12 = GER_reichstag_NSDAP }
+	set_temp_variable = { t13 = 647 }
+	
+	add_to_temp_variable = { t2 = t1 }
+	add_to_temp_variable = { t3 = t2 }
+	add_to_temp_variable = { t4 = t3 }
+	add_to_temp_variable = { t5 = t4 }
+	add_to_temp_variable = { t6 = t5 }
+	add_to_temp_variable = { t7 = t6 }
+	add_to_temp_variable = { t8 = t7 }
+	add_to_temp_variable = { t9 = t8 }
+	add_to_temp_variable = { t10 = t9 }
+	add_to_temp_variable = { t11 = t10 }
+	add_to_temp_variable = { t12 = t11 }
+	add_to_temp_variable = { t13 = t12 }
+
+	clear_array = reichstag_seat_frame
+	clear_array = reichstag_highlight_frame
+
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 1
+		size = t1
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 2
+		size = t2
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 3
+		size = t3
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 4
+		size = t4
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 5
+		size = t5
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 6
+		size = t6
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 7
+		size = t7
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 8
+		size = t8
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 9
+		size = t9
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 10
+		size = t10
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 11
+		size = t11
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 12
+		size = t12
+	}
+	resize_array = {
+		array = reichstag_seat_frame
+		value = 13
+		size = t13
+	}
+
+	IF = {
+		limit = { GER_reichstag_KPD_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t1
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t1
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_SAPD_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t2
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t2
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_SPD_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t3
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t3
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_DDP_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t4
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t4
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_Z_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t5
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t5
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_BVP_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t6
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t6
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_DBP_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t7
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t7
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_PP_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t8
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t8
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_DVP_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t9
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t9
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_WP_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t10
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t10
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_DNVP_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t11
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t11
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_NSDAP_in_government = yes has_country_flag = GER_reichstag_toggle_coalition_highlight_flag }
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 1
+			size = t12
+		}
+	}
+	ELSE = {
+		resize_array = {
+			array = reichstag_highlight_frame
+			value = 2
+			size = t12
+		}
+	}
+	resize_array = {
+		array = reichstag_highlight_frame
+		value = 3
+		size = t13
+	}
+
+	set_variable = { GER_reichstag_coalition_seats = 0 }
+	IF = {
+		limit = { GER_reichstag_KPD_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_KPD }
+	}
+	IF = {
+		limit = { GER_reichstag_SAPD_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_SAPD }
+	}
+	IF = {
+		limit = { GER_reichstag_SPD_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_SPD }
+	}
+	IF = {
+		limit = { GER_reichstag_DDP_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_DDP }
+	}
+	IF = {
+		limit = { GER_reichstag_Z_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_Z }
+	}
+	IF = {
+		limit = { GER_reichstag_BVP_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_BVP }
+	}
+	IF = {
+		limit = { GER_reichstag_DBP_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_DBP }
+	}
+	IF = {
+		limit = { GER_reichstag_PP_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_PP }
+	}
+	IF = {
+		limit = { GER_reichstag_DVP_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_DVP }
+	}
+	IF = {
+		limit = { GER_reichstag_WP_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_WP }
+	}
+	IF = {
+		limit = { GER_reichstag_DNVP_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_DNVP }
+	}
+	IF = {
+		limit = { GER_reichstag_NSDAP_in_government = yes }
+		add_to_variable = { GER_reichstag_coalition_seats = GER_reichstag_NSDAP }
+	}
+}
+
+GER_calculate_reichstag_seats_from_popularity = {
+	set_temp_variable = { total = 0 }
+
+	set_variable = { GER_reichstag_KPD = party_popularity@auth_communism }
+	add_to_variable = { GER_reichstag_KPD = party_popularity@communism }
+	multiply_variable = { GER_reichstag_KPD = 647 }
+	clamp_variable = { var = GER_reichstag_KPD max = 100 }
+	round_variable = GER_reichstag_KPD
+	add_to_temp_variable = { total = GER_reichstag_KPD }
+
+	set_variable = { GER_reichstag_SAPD = party_popularity@socialism }
+	multiply_variable = { GER_reichstag_SAPD = 647 }
+	clamp_variable = { var = GER_reichstag_SAPD max = 60 }
+	round_variable = GER_reichstag_SAPD
+	add_to_temp_variable = { total = GER_reichstag_SAPD }
+
+	set_variable = { GER_reichstag_SPD = party_popularity@social_democratic }
+	multiply_variable = { GER_reichstag_SPD = 647 }
+	round_variable = GER_reichstag_SPD
+	add_to_temp_variable = { total = GER_reichstag_SPD }
+
+	set_variable = { GER_reichstag_DDP = party_popularity@social_liberal }
+	multiply_variable = { GER_reichstag_DDP = 647 }
+	round_variable = GER_reichstag_DDP
+	add_to_temp_variable = { total = GER_reichstag_DDP }
+
+	set_variable = { GER_reichstag_Z = party_popularity@democratic }
+	set_variable = { GER_reichstag_BVP = party_popularity@democratic }
+	set_variable = { GER_reichstag_PP = party_popularity@democratic }
+	multiply_variable = { GER_reichstag_Z = 647 }
+	multiply_variable = { GER_reichstag_Z = 0.76 }
+	multiply_variable = { GER_reichstag_BVP = 647 }
+	multiply_variable = { GER_reichstag_BVP = 0.16 }
+	multiply_variable = { GER_reichstag_PP = 647 }
+	multiply_variable = { GER_reichstag_PP = 0.03 }
+	round_variable = GER_reichstag_Z
+	round_variable = GER_reichstag_BVP
+	round_variable = GER_reichstag_PP
+	clamp_variable = { var = GER_reichstag_PP min = 2 }
+	add_to_temp_variable = { total = GER_reichstag_Z }
+	add_to_temp_variable = { total = GER_reichstag_BVP }
+	add_to_temp_variable = { total = GER_reichstag_PP }
+
+	set_variable = { GER_reichstag_DVP = party_popularity@liberal }
+	set_variable = { GER_reichstag_WP = party_popularity@liberal }
+	multiply_variable = { GER_reichstag_DVP = 647 }
+	multiply_variable = { GER_reichstag_DVP = 0.7 }
+	multiply_variable = { GER_reichstag_WP = 647 }
+	multiply_variable = { GER_reichstag_WP = 0.3 }
+	round_variable = GER_reichstag_DVP
+	round_variable = GER_reichstag_WP
+	add_to_temp_variable = { total = GER_reichstag_DVP }
+	add_to_temp_variable = { total = GER_reichstag_WP }
+
+	set_variable = { GER_reichstag_DNVP = party_popularity@neutrality }
+	set_variable = { GER_reichstag_DBP = party_popularity@neutrality }
+	multiply_variable = { GER_reichstag_DNVP = 647 }
+	multiply_variable = { GER_reichstag_DNVP = 0.95 }
+	multiply_variable = { GER_reichstag_DBP = 647 }
+	multiply_variable = { GER_reichstag_DBP = 0.05 }
+	round_variable = GER_reichstag_DNVP
+	round_variable = GER_reichstag_DBP
+	clamp_variable = { var = GER_reichstag_DBP min = 2 }
+	add_to_temp_variable = { total = GER_reichstag_DNVP }
+	add_to_temp_variable = { total = GER_reichstag_DBP }
+
+	set_variable = { GER_reichstag_NSDAP = party_popularity@fascism }
+	multiply_variable = { GER_reichstag_NSDAP = 647 }
+	round_variable = GER_reichstag_NSDAP
+	add_to_temp_variable = { total = GER_reichstag_NSDAP }
+
+	IF = {
+		limit = {
+			check_variable = { total < 647 }
+			#always = no
+		}
+		set_temp_variable = { diff = 647 }
+		subtract_from_temp_variable = { diff = total }
+		IF = {
+			limit = { is_liberal_ideology = yes }
+			set_temp_variable = { x = diff }
+			multiply_temp_variable = { x = 0.25 }
+			round_temp_variable = x
+			add_to_variable = { GER_reichstag_SPD = x }
+			subtract_from_temp_variable = { diff = x }
+			add_to_variable = { GER_reichstag_DDP = x }
+			subtract_from_temp_variable = { diff = x }
+			add_to_variable = { GER_reichstag_Z = x }
+			subtract_from_temp_variable = { diff = x }
+			add_to_variable = { GER_reichstag_PP = diff }
+		}
+		ELSE_IF = {
+			limit = { has_government = neutrality }
+			set_temp_variable = { x = diff }
+			multiply_temp_variable = { x = 0.25 }
+			round_temp_variable = x
+			add_to_variable = { GER_reichstag_DNVP = x }
+			subtract_from_temp_variable = { diff = x }
+			add_to_variable = { GER_reichstag_DBP = x }
+			subtract_from_temp_variable = { diff = x }
+			add_to_variable = { GER_reichstag_DVP = x }
+			subtract_from_temp_variable = { diff = x }
+			add_to_variable = { GER_reichstag_WP = diff }
+		}
+		ELSE_IF = {
+			limit = { has_government = fascism }
+			add_to_variable = { GER_reichstag_NSDAP = diff }
+		}
+		ELSE = {
+			set_temp_variable = { x = diff }
+			multiply_temp_variable = { x = 0.25 }
+			round_temp_variable = x
+			add_to_variable = { GER_reichstag_PP = x }
+			subtract_from_temp_variable = { diff = x }
+			add_to_variable = { GER_reichstag_DBP = x }
+			subtract_from_temp_variable = { diff = x }
+			add_to_variable = { GER_reichstag_DVP = x }
+			subtract_from_temp_variable = { diff = x }
+			add_to_variable = { GER_reichstag_WP = diff }
+		}
+	}
+	ELSE_IF = {
+		limit = {
+			check_variable = { total > 647 }
+			#always = no 
+		}
+		set_temp_variable = { diff = total }
+		subtract_from_temp_variable = { diff = 647 }
+		IF = {
+			limit = { is_liberal_ideology = yes }
+			set_temp_variable = { x = diff }
+			multiply_temp_variable = { x = 0.25 }
+			round_temp_variable = x
+			subtract_from_variable = { GER_reichstag_SPD = x }
+			subtract_from_temp_variable = { diff = x }
+			subtract_from_variable = { GER_reichstag_DDP = x }
+			subtract_from_temp_variable = { diff = x }
+			subtract_from_variable = { GER_reichstag_Z = x }
+			subtract_from_temp_variable = { diff = x }
+			subtract_from_variable = { GER_reichstag_PP = diff }
+		}
+		ELSE_IF = {
+			limit = { has_government = neutrality }
+			set_temp_variable = { x = diff }
+			multiply_temp_variable = { x = 0.25 }
+			round_temp_variable = x
+			subtract_from_variable = { GER_reichstag_DNVP = x }
+			subtract_from_temp_variable = { diff = x }
+			subtract_from_variable = { GER_reichstag_DBP = x }
+			subtract_from_temp_variable = { diff = x }
+			subtract_from_variable = { GER_reichstag_DVP = x }
+			subtract_from_temp_variable = { diff = x }
+			subtract_from_variable = { GER_reichstag_WP = diff }
+		}
+		ELSE_IF = {
+			limit = { has_government = fascism }
+			subtract_from_variable = { GER_reichstag_NSDAP = diff }
+		}
+		ELSE = {
+			set_temp_variable = { x = diff }
+			multiply_temp_variable = { x = 0.25 }
+			round_temp_variable = x
+			subtract_from_variable = { GER_reichstag_PP = x }
+			subtract_from_temp_variable = { diff = x }
+			subtract_from_variable = { GER_reichstag_DBP = x }
+			subtract_from_temp_variable = { diff = x }
+			subtract_from_variable = { GER_reichstag_DVP = x }
+			subtract_from_temp_variable = { diff = x }
+			subtract_from_variable = { GER_reichstag_WP = diff }
+		}
+	}
+}
+
+GER_count_popular_front_coalition_seats = {
+	set_variable = { GER_reichstag_popular_front_coalition_seats = 0 }
+	add_to_variable = { GER_reichstag_popular_front_coalition_seats = GER_reichstag_SAPD }
+	add_to_variable = { GER_reichstag_popular_front_coalition_seats = GER_reichstag_SPD }
+	add_to_variable = { GER_reichstag_popular_front_coalition_seats = GER_reichstag_DDP }
+}
+
+GER_count_schwartz_rot_gold_coalition_seats = {
+	set_variable = { GER_reichstag_schwartz_rot_gold_coalition_seats = 0 }
+	add_to_variable = { GER_reichstag_schwartz_rot_gold_coalition_seats = GER_reichstag_SPD }
+	add_to_variable = { GER_reichstag_schwartz_rot_gold_coalition_seats = GER_reichstag_DDP }
+	add_to_variable = { GER_reichstag_schwartz_rot_gold_coalition_seats = GER_reichstag_Z }
+	add_to_variable = { GER_reichstag_schwartz_rot_gold_coalition_seats = GER_reichstag_BVP }
+}
+
+GER_count_grand_coalition_seats = {
+	set_variable = { GER_reichstag_grand_coalition_seats = 0 }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_SPD }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_DDP }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_Z }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_BVP }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_DBP }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_PP }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_DVP }
+}
+
+GER_count_bourgeoisie_coalition_seats = {
+	set_variable = { GER_reichstag_bourgeoisie_coalition_seats = 0 }
+	add_to_variable = { GER_reichstag_bourgeoisie_coalition_seats = GER_reichstag_DDP }
+	add_to_variable = { GER_reichstag_bourgeoisie_coalition_seats = GER_reichstag_Z }
+	add_to_variable = { GER_reichstag_bourgeoisie_coalition_seats = GER_reichstag_BVP }
+	add_to_variable = { GER_reichstag_bourgeoisie_coalition_seats = GER_reichstag_DVP }
+}
+
+GER_count_right_wing_coalition_seats = {
+	set_variable = { GER_reichstag_right_wing_coalition_seats = 0 }
+	add_to_variable = { GER_reichstag_right_wing_coalition_seats = GER_reichstag_Z }
+	add_to_variable = { GER_reichstag_right_wing_coalition_seats = GER_reichstag_BVP }
+	add_to_variable = { GER_reichstag_right_wing_coalition_seats = GER_reichstag_DVP }
+	add_to_variable = { GER_reichstag_right_wing_coalition_seats = GER_reichstag_DNVP }
+}
+
+GER_count_center_right_coalition_seats = {
+	set_variable = { GER_reichstag_center_right_coalition_seats = 0 }
+	add_to_variable = { GER_reichstag_center_right_coalition_seats = GER_reichstag_DDP }
+	add_to_variable = { GER_reichstag_center_right_coalition_seats = GER_reichstag_Z }
+	add_to_variable = { GER_reichstag_center_right_coalition_seats = GER_reichstag_BVP }
+	add_to_variable = { GER_reichstag_center_right_coalition_seats = GER_reichstag_DVP }
+	add_to_variable = { GER_reichstag_center_right_coalition_seats = GER_reichstag_DNVP }
+}
+
+GER_count_national_unity_coalition_seats = {
+	set_variable = { GER_reichstag_national_unity_coalition_seats = 0 }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_SPD }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_DDP }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_Z }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_BVP }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_DBP }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_PP }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_DVP }
+	add_to_variable = { GER_reichstag_national_unity_coalition_seats = GER_reichstag_DNVP }
+}
+
+GER_count_far_right_coalition_seats = {
+	set_variable = { GER_reichstag_far_right_coalition_seats = 0 }
+	add_to_variable = { GER_reichstag_far_right_coalition_seats = GER_reichstag_DNVP }
+	add_to_variable = { GER_reichstag_far_right_coalition_seats = GER_reichstag_NSDAP }
+}
+
+GER_count_potential_coalition_seats = {
+	GER_count_popular_front_coalition_seats = yes                      # SAPD-SPD-DDP
+	GER_count_schwartz_rot_gold_coalition_seats = yes                  # SPD-DDP-Z-BVP
+	GER_count_grand_coalition_seats = yes                              # SPD-DDP-Z-BVP-DBP-PP-DVP
+	GER_count_bourgeoisie_coalition_seats = yes                        # DDP-Z-BVP-DVP
+	GER_count_right_wing_coalition_seats = yes                         # Z-BVP-DVP-DNVP
+	GER_count_center_right_coalition_seats = yes                       # DDP-Z-BVP-DVP-DNVP
+	GER_count_national_unity_coalition_seats = yes                     # SPD-DDP-Z-BVP-DBP-PP-DVP-DNVP
+	GER_count_far_right_coalition_seats = yes                          # DNVP-NSDAP
+}
+
+GER_calculate_spending_from_factories = {
+	set_variable = { GER_income_spending_new = GER.num_of_factories }
+	divide_variable = { GER_income_spending_new = 50 }
+	add_to_variable = { GER_income_spending_new = 6 }
+	add_to_variable = { GER_income_spending = GER_income_spending_new }
+	add_to_variable = { GER_spending_net = GER_income_spending_new }
+}
+
+GER_calculate_spending_modifiers = {
+	# Military spending
+	set_variable = { GER_military_spending_drift = GER_military_spending }
+	subtract_from_variable = { GER_military_spending_drift = 3 }
+	divide_variable = { GER_military_spending_drift = 100 }
+	set_variable = { GER_military_spending_war_support = GER_military_spending_drift }
+	multiply_variable = { GER_military_spending_war_support = 5 }
+	set_variable = { GER_military_spending_org = GER_military_spending_war_support }
+	set_variable = { GER_military_spending_research = GER_military_spending_war_support }
+
+	# Industry spending
+	set_variable = { GER_industry_spending_construction = GER_industry_spending }
+	subtract_from_variable = { GER_industry_spending_construction = 3 }
+	divide_variable = { GER_industry_spending_construction = 40 }
+	multiply_variable = { GER_industry_spending_construction = 3 }
+	set_variable = { GER_industry_spending_production = GER_industry_spending_construction }
+	divide_variable = { GER_industry_spending_production = 3 }
+	multiply_variable = { GER_industry_spending_production = 2 }
+
+	# Welfare spending
+	set_variable = { GER_welfare_spending_factor = GER_welfare_spending }
+	subtract_from_variable = { GER_welfare_spending_factor = 3 }
+	set_variable = { GER_welfare_spending_stability = GER_welfare_spending_factor }
+	divide_variable = { GER_welfare_spending_stability = 20 }
+	set_variable = { GER_welfare_spending_libsoc = 0 }
+	set_variable = { GER_welfare_spending_socdem = 0 }
+	set_variable = { GER_welfare_spending_soclib = 0 }
+	set_variable = { GER_welfare_spending_marlib = 0 }
+	set_variable = { GER_welfare_spending_condem = 0 }
+	set_variable = { GER_welfare_spending_autdem = 0 }
+	set_variable = { GER_welfare_spending_natpop = 0 }
+	IF = {
+		limit = { GER_reichstag_SAPD_in_government = yes }
+		set_variable = { GER_welfare_spending_libsoc = GER_welfare_spending_factor }
+		divide_variable = { GER_welfare_spending_libsoc = 100 }
+		IF = {
+			limit = { has_government = socialism }
+			multiply_variable = { GER_welfare_spending_libsoc = 2 }
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_SPD_in_government = yes }
+		set_variable = { GER_welfare_spending_socdem = GER_welfare_spending_factor }
+		divide_variable = { GER_welfare_spending_socdem = 100 }
+		IF = {
+			limit = { has_government = social_democratic }
+			multiply_variable = { GER_welfare_spending_socdem = 2 }
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_DDP_in_government = yes }
+		set_variable = { GER_welfare_spending_soclib = GER_welfare_spending_factor }
+		divide_variable = { GER_welfare_spending_soclib = 100 }
+		IF = {
+			limit = { has_government = social_liberal }
+			multiply_variable = { GER_welfare_spending_soclib = 2 }
+		}
+	}
+	IF = {
+		limit = { OR = { GER_reichstag_DVP_in_government = yes GER_reichstag_WP_in_government = yes } }
+		set_variable = { GER_welfare_spending_marlib = GER_welfare_spending_factor }
+		divide_variable = { GER_welfare_spending_marlib = 100 }
+		IF = {
+			limit = { OR = { has_government = liberal AND = { GER_reichstag_DVP_in_government = yes GER_reichstag_WP_in_government = yes } } }
+			multiply_variable = { GER_welfare_spending_marlib = 2 }
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_Z_in_government = yes }
+		set_variable = { GER_welfare_spending_condem = GER_welfare_spending_factor }
+		divide_variable = { GER_welfare_spending_condem = 100 }
+		IF = {
+			limit = { has_government = democratic }
+			multiply_variable = { GER_welfare_spending_condem = 2 }
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_DNVP_in_government = yes }
+		set_variable = { GER_welfare_spending_autdem = GER_welfare_spending_factor }
+		divide_variable = { GER_welfare_spending_autdem = 100 }
+		IF = {
+			limit = { has_government = neutrality }
+			multiply_variable = { GER_welfare_spending_autdem = 2 }
+		}
+	}
+	IF = {
+		limit = { GER_reichstag_NSDAP_in_government = yes }
+		set_variable = { GER_welfare_spending_natpop = GER_welfare_spending_factor }
+		divide_variable = { GER_welfare_spending_natpop = 100 }
+		IF = {
+			limit = { has_government = fascism }
+			multiply_variable = { GER_welfare_spending_natpop = 2 }
+		}
+	}
+}
+
+GER_improve_luftwaffe_CAS = {
+	IF = {
+		limit = { has_idea = GER_luftwaffe_CAS_1 }
+		air_experience = 25
+	}
+	ELSE_IF = {
+		limit = { has_idea = GER_luftwaffe_CAS }
+		swap_ideas = {
+			remove_idea = GER_luftwaffe_CAS
+			add_idea = GER_luftwaffe_CAS_1
+		}
+	}
+	ELSE = {
+		add_ideas = GER_luftwaffe_CAS
+	}
+}

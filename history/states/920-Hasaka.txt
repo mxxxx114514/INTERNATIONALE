@@ -1,0 +1,23 @@
+state={
+	id=920
+	name="STATE_920"
+	provinces={
+		1549 1578 1606 1634 6883 10882 
+	}
+	history = {
+		owner = BCR
+		victory_points = {
+			1549 1 
+		}
+		victory_points = {
+			6883 1 
+		}
+		add_core_of = SYR
+		add_core_of = KUR
+	}
+
+	manpower=120000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

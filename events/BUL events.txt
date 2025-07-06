@@ -1,0 +1,114 @@
+###########################
+# Bulgaria
+###########################
+
+add_namespace = bulgaria
+
+# Commie Coup
+news_event = {
+	id = bulgaria.1
+	#title = bulgaria.1.t
+	title = "BUL COUP"
+	#desc = bulgaria.1.desc
+	desc = "bulgaria_desc"
+	#picture = GFX_news_event_BEL_civil_war
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1937.3.5
+	}
+	
+	hidden = yes
+
+	immediate = {
+		#hidden_effect = {
+			set_global_flag = BUL_coup
+			BUL = {
+				add_named_threat = {
+					threat = 5
+					name = IN_BW4_BUL_coup
+				}
+				set_major = yes
+				create_faction = test
+				dismantle_faction = yes
+				set_cosmetic_tag = BUL_commie
+				set_politics = {
+					ruling_party = communism
+				}
+				set_popularities = {
+					auth_communism = 20
+					communism = 70
+					socialism = 10
+				}
+				division_template = {
+					name = "Pekhotna Divizija"			# Infantry Division
+
+					division_names_group = BUL_INF_01
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }   
+					}
+				}
+				48 = {
+					create_unit = {
+						division = "division_template = \"Pekhotna Divizija\" start_experience_factor = 0.73" 
+						owner = PREV
+						count = 16
+					}
+				}
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.14
+					days = 1
+				}
+			}
+			CZE = {
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+			}
+			ROM = {
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+			}
+			SER = {
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+			}
+			GRE = {
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+			}
+		#}
+	}
+
+	option = {
+		#name = bulgaria.1.a
+		name = "The Balkans had always been troublesome."
+	}
+}

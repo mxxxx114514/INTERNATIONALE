@@ -1,0 +1,25 @@
+state={
+	id=935
+	name="STATE_935"
+	provinces={
+		10172
+	}
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			10172 5
+		}
+		add_core_of = MEX
+		set_demilitarized_zone = yes
+
+	}
+	manpower=140000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+
+}

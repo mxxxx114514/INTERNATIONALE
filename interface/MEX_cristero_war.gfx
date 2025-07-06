@@ -1,0 +1,168 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_MEX_states_outline"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_outline.png"
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_aguascalientes"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_aguascalientes.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_baja_california_sur"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_baja_california_sur.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_baja_california"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_baja_california.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_campeche"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_campeche.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_coahuila"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_coahuila.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_chiapas"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_chiapas.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_chihuahua"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_chihuahua.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_colima"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_colima.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_durango"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_durango.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_guanajuato"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_guanajuato.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_guerrero"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_guerrero.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_hidalgo"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_hidalgo.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_jalisco"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_jalisco.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_mexico_city"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_mexico_city.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_mexico_state"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_mexico_state.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_michoacan"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_michoacan.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_morelos"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_morelos.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_nayarit"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_nayarit.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_nuevo_leon"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_nuevo_leon.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_oaxaca"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_oaxaca.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_puebla"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_puebla.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_queretaro"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_queretaro.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_quintana_roo"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_quintana_roo.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_san_luis_potosi"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_san_luis_potosi.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_sinaloa"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_sinaloa.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_sonora"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_sonora.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_tabasco"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_tabasco.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_tamaulipas"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_tamaulipas.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_tlaxcala"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_tlaxcala.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_veracruz"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_veracruz.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_yucatan"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_yucatan.png"
+		transparencecheck = yes
+	}
+	SpriteType = {
+		name = "GFX_MEX_states_zacatecas"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_zacatecas.png"
+		transparencecheck = yes
+	}
+	
+}

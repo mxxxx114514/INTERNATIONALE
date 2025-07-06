@@ -1,0 +1,57 @@
+﻿l_simp_chinese:
+#政党
+ POL_auth_communism_party: "共产党"
+ POL_auth_communism_party_long: "共产党"
+ POL_communism_party: "共产党"
+ POL_communism_party_long: "共产党"
+ POL_socialism_party: "波兰社会党-左翼"
+ POL_socialism_party_long: "波兰社会党-左翼"
+ POL_social_democratic_party: "波兰社会党"
+ POL_social_democratic_party_long: "波兰社会党"
+ POL_social_liberal_party: "人民党"
+ POL_social_liberal_party_long: "人民党"
+ POL_liberal_party: "波兰自由民主党"
+ POL_liberal_party_long: "波兰自由民主党"
+ POL_democratic_party: "国民民主党"
+ POL_democratic_party_long: "国民民主党"
+ POL_neutrality_party: "无党派团结政府"
+ POL_neutrality_party_long: "无党派团结政府"
+ POL_despotism_party: "民族激进阵营-ABC"
+ POL_despotism_party_long: "民族激进阵营-ABC"
+ POL_fascism_party: "民族激进阵营-长枪党"
+ POL_fascism_party_long: "民族激进阵营-长枪党"
+
+#事件
+ poland.1.t: "德国索取波兹南"
+
+#决议
+##波兰-德国-苏联外交小游戏
+ poland_german_soviet_game: "夹缝中的波兰"
+ poland_german_soviet_game_desc: "[poland_german_soviet_game_desc]"
+ POL_GER_SOV_german_desc: "自从三次被瓜分以来，波兰就消失在了东欧的地图中。即使拿破仑战争时期波兰曾以“华沙大公国”的名义短暂重建，但自从那个不可一世的法国皇帝被击溃后，独立的波兰又再次被抹去。世界大期间，英勇的德军把沙俄打得节节败退，我军几个月就解放了俄属波兰全境，我们也很快扶植了新的波兰王国作为我们“东墙”的第一块砖。然而德意志建立东欧新秩序的梦想随着1918圣诞大兵变而灰飞烟灭，曾经攻下诺夫哥罗德、罗斯托夫的东线德军魂飞魄散地向本土撤退，紧随其后的是如饿狼般急追德军收复失土的苏俄部队。波兰、立陶宛、波罗的、白罗斯、乌克兰，它们不是被红军吞没，就是宣布独立，甚至波兰还从祖国手中夺去了波森（波兹南）省。\n\n1920年夏季，穷追不舍的苏军已经逼近新近独立的波兰共和国首都华沙，甚至已经有小股部队渡过维斯瓦河，极度威胁祖国的安全。为了防止波兰被红军碾碎，驻扎在东普鲁士和西里西亚的10万精锐国防军迅速部署在维斯瓦河沿岸和华沙城郊，从而将进击的红军阻挡在了华沙城下。随后德波联军又收复了卢布林、利沃夫等地，最终迫使苏俄和波兰在波罗的联盟的首都里加签署和约。虽然波兰并未加入塔林条约，但德国还是与其签订了相互的防御协定，德国东墙再次稳固。\n\n20年代的德波关系不断升温。随着德国承认波兹南属于波兰并开放但泽、哥丁根等港口予波兰使用，两国都经历了一段经济发展的黄金时期，在波的德裔居民也得到了一定的自治权。然而30年代开始的经济萧条期以及鲁登道夫的上台却导致了德国在波投资不断减小，波兰极左翼收到苏联的支持也逐渐壮大。眼看下一次世界大战即将来临，我们应当尽量让波兰倒向我们。\n\n德国、波兰自身和苏联的影响力都由一个0-100的数字表示。如果我们的影响力到达100，就可以邀请波兰§G加入塔林条约§!，否则波兰可能会§Y独立创建阵营§!甚至§R倒向苏联§!！\n\n同时，波兹南这块领土也从未被我们彻底抛弃，只要我们在当地的影响力到达100，且波兰在战争中战败，我们就可以得到这块我们§R理应重获的故土§!。\n\n当前波兰影响力：§Y[?POL.POL_POL_influence|0]§!\n当前德国影响力：§Y[?POL.POL_GER_influence|0]§!\n当前苏联影响力：§Y[?POL.POL_SOV_influence|0]§!\n\n当前德国在波兹南影响力：§Y[?POL.GER_poznan_influence|0]§!"
+
+ GER_icon_value: "[?POL.POL_GER_influence|0H]"
+ GER_full_influence_breakdown: "[ROOT.GetNameWithFlag]拥有[?POL.POL_GER_influence|0]§Y影响力§!\n"
+ SOV_icon_value: "[?POL.POL_SOV_influence|0H]"
+ SOV_full_influence_breakdown: "[ROOT.GetNameWithFlag]拥有[?POL.POL_SOV_influence|0]§Y影响力§!\n"
+ POL_icon_value: "[?POL.POL_POL_influence|0H]"
+ POL_full_influence_breakdown: "[ROOT.GetNameWithFlag]拥有[?POL.POL_POL_influence|0]§Y影响力§!\n"
+
+ POL_increase_POL_tt: "将[POL.GetFlag]波兰§Y影响力§!增加5点"
+ POL_increase_GER_tt: "将[GER.GetFlag]德国§Y影响力§!增加5点"
+ POL_increase_SOV_tt: "将[SOV.GetFlag]苏联§Y影响力§!增加5点"
+ GER_increase_GER_tt: "将[GER.GetFlag]德国§Y影响力§!增加5点"
+ SOV_increase_SOV_tt: "将[SOV.GetFlag]苏联§Y影响力§!增加5点"
+
+ GER_increase_poznan_tt: "将[GER.GetFlag]德国在波兹南的§Y影响力§!增加10点"
+
+ POL_increase_POL: "强化波兰本国民族认同"
+ POL_increase_GER: "利用德国影响力"
+ POL_increase_SOV: "利用苏联影响力"
+ GER_increase_GER: "加强德国影响力"
+ SOV_increase_SOV: "加强苏联影响力"
+ GER_increase_poznan: "加强德国在波兹南影响力"
+ GER_demand_poznan: "索取波兹南"
+ GER_invite_POL: "邀请波兰加入塔林条约"
+ SOV_invite_POL: "邀请波兰加入第三国际"
+ POL_declare_neutrality: "宣誓波兰中立"

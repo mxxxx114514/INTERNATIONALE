@@ -1,0 +1,10 @@
+#################
+#### PER ####
+#################
+PER_intervene_ww2_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = PER }
+	visible = { has_global_flag = ww2 }
+}

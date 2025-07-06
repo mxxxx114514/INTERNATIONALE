@@ -1,0 +1,1170 @@
+MEX_improve_catholic_opposition = {
+	IF = {
+		limit = { has_idea = MEX_catholic_opposition_4 }
+		remove_ideas = MEX_catholic_opposition_4
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_catholic_opposition_3 }
+		swap_ideas = {
+			remove_idea = MEX_catholic_opposition_3
+			add_idea = MEX_catholic_opposition_4
+		}
+	}
+		ELSE_IF = {
+		limit = { has_idea = MEX_catholic_opposition_2 }
+		swap_ideas = {
+			remove_idea = MEX_catholic_opposition_2
+			add_idea = MEX_catholic_opposition_3
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_catholic_opposition_1 }
+		swap_ideas = {
+			remove_idea = MEX_catholic_opposition_1
+			add_idea = MEX_catholic_opposition_2
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_catholic_opposition }
+		swap_ideas = {
+			remove_idea = MEX_catholic_opposition
+			add_idea = MEX_catholic_opposition_1
+		}
+	}
+	ELSE = {
+		add_ideas = MEX_catholic_opposition
+	}
+}
+
+MEX_clear_all_cristero_war_state_flags = {
+	clr_country_flag = MEX_clicked_on_mexico_city
+	clr_country_flag = MEX_clicked_on_nuevo_leon
+	clr_country_flag = MEX_clicked_on_jalisco
+	clr_country_flag = MEX_clicked_on_mexico_state
+	clr_country_flag = MEX_clicked_on_veracruz
+	clr_country_flag = MEX_clicked_on_baja_california
+	clr_country_flag = MEX_clicked_on_guanajuato
+	clr_country_flag = MEX_clicked_on_san_luis_potosi
+	clr_country_flag = MEX_clicked_on_durango
+	clr_country_flag = MEX_clicked_on_sinaloa
+	clr_country_flag = MEX_clicked_on_tamaulipas
+	clr_country_flag = MEX_clicked_on_coahuila
+	clr_country_flag = MEX_clicked_on_chihuahua
+	clr_country_flag = MEX_clicked_on_baja_california_sur
+	clr_country_flag = MEX_clicked_on_sonora
+	clr_country_flag = MEX_clicked_on_zacatecas
+	clr_country_flag = MEX_clicked_on_nayarit
+	clr_country_flag = MEX_clicked_on_aguascalientes
+	clr_country_flag = MEX_clicked_on_guerrero
+	clr_country_flag = MEX_clicked_on_morelos
+	clr_country_flag = MEX_clicked_on_tlaxcala
+	clr_country_flag = MEX_clicked_on_puebla
+	clr_country_flag = MEX_clicked_on_hidalgo
+	clr_country_flag = MEX_clicked_on_oaxaca
+	clr_country_flag = MEX_clicked_on_tabasco
+	clr_country_flag = MEX_clicked_on_queretaro
+	clr_country_flag = MEX_clicked_on_campeche
+	clr_country_flag = MEX_clicked_on_quintana_roo
+	clr_country_flag = MEX_clicked_on_yucatan
+	clr_country_flag = MEX_clicked_on_colima
+	clr_country_flag = MEX_clicked_on_chiapas
+	clr_country_flag = MEX_clicked_on_michoacan
+}
+
+MEX_cristero_army_strength_clamp = {
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_mexico_city
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_nuevo_leon
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_jalisco
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_mexico_state
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_veracruz
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_baja_california
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_guanajuato
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_san_luis_potosi
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_durango
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_tamaulipas
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_sinaloa
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_coahuila
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_chihuahua
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_baja_california_sur
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_sonora
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_zacatecas
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_nayarit
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_aguascalientes
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_guerrero
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_morelos
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_tlaxcala
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_puebla
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_hidalgo
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_oaxaca
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_tabasco
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_queretaro
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_campeche
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_quintana_roo
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_yucatan
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_colima
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_chiapas
+		min = 0
+		max = 50
+	}
+	clamp_variable = {
+		var = MEX.MEX_cristero_army_strength_michoacan
+		min = 0
+		max = 50
+	}
+}
+
+MEX_state_cristero_army_strength_add = { #manually set MEX_cristero_add before using this
+	IF = {
+		limit = { state = 277 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_mexico_city = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 930 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_nuevo_leon = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 478 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_jalisco = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 942 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_mexico_state = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 477 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_veracruz = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 484 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_baja_california = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 938 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_guanajuato = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 937 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_san_luis_potosi = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 929 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_durango = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 481 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_sinaloa = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 479 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_tamaulipas = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 480 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_coahuila = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 482 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_chihuahua = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 925 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_baja_california_sur = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 483 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_sonora = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 934 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_zacatecas = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 933 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_nayarit = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 935 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_aguascalientes = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 485 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_guerrero = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 940 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_morelos = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 943 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_tlaxcala = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 936 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_puebla = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 941 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_hidalgo = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 476 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_oaxaca = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 928 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_tabasco = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 939 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_queretaro = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 927 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_campeche = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 926 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_quintana_roo = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 474 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_yucatan = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 932 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_colima = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 475 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_chiapas = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { state = 931 }
+		add_to_variable = { MEX.MEX_cristero_army_strength_michoacan = MEX.MEX_cristero_add }
+	}
+	MEX_cristero_army_strength_clamp = yes
+}
+
+MEX_selected_cristero_army_strength_add = {
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_mexico_city }
+		add_to_variable = { MEX.MEX_cristero_army_strength_mexico_city = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_nuevo_leon }
+		add_to_variable = { MEX.MEX_cristero_army_strength_nuevo_leon = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_jalisco }
+		add_to_variable = { MEX.MEX_cristero_army_strength_jalisco = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_mexico_state }
+		add_to_variable = { MEX.MEX_cristero_army_strength_mexico_state = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_veracruz }
+		add_to_variable = { MEX.MEX_cristero_army_strength_veracruz = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_baja_california }
+		add_to_variable = { MEX.MEX_cristero_army_strength_baja_california = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_guanajuato }
+		add_to_variable = { MEX.MEX_cristero_army_strength_guanajuato = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_san_luis_potosi }
+		add_to_variable = { MEX.MEX_cristero_army_strength_san_luis_potosi = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_durango }
+		add_to_variable = { MEX.MEX_cristero_army_strength_durango = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_sinaloa }
+		add_to_variable = { MEX.MEX_cristero_army_strength_sinaloa = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tamaulipas }
+		add_to_variable = { MEX.MEX_cristero_army_strength_tamaulipas = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_coahuila }
+		add_to_variable = { MEX.MEX_cristero_army_strength_coahuila = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_chihuahua }
+		add_to_variable = { MEX.MEX_cristero_army_strength_chihuahua = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_baja_california_sur }
+		add_to_variable = { MEX.MEX_cristero_army_strength_baja_california_sur = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_sonora }
+		add_to_variable = { MEX.MEX_cristero_army_strength_sonora = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_zacatecas }
+		add_to_variable = { MEX.MEX_cristero_army_strength_zacatecas = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_nayarit }
+		add_to_variable = { MEX.MEX_cristero_army_strength_nayarit = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_aguascalientes }
+		add_to_variable = { MEX.MEX_cristero_army_strength_aguascalientes = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_guerrero }
+		add_to_variable = { MEX.MEX_cristero_army_strength_guerrero = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_morelos }
+		add_to_variable = { MEX.MEX_cristero_army_strength_morelos = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tlaxcala }
+		add_to_variable = { MEX.MEX_cristero_army_strength_tlaxcala = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_puebla }
+		add_to_variable = { MEX.MEX_cristero_army_strength_puebla = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_hidalgo }
+		add_to_variable = { MEX.MEX_cristero_army_strength_hidalgo = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_oaxaca }
+		add_to_variable = { MEX.MEX_cristero_army_strength_oaxaca = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tabasco }
+		add_to_variable = { MEX.MEX_cristero_army_strength_tabasco = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_queretaro }
+		add_to_variable = { MEX.MEX_cristero_army_strength_queretaro = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_campeche }
+		add_to_variable = { MEX.MEX_cristero_army_strength_campeche = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_quintana_roo }
+		add_to_variable = { MEX.MEX_cristero_army_strength_quintana_roo = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_yucatan }
+		add_to_variable = { MEX.MEX_cristero_army_strength_yucatan = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_colima }
+		add_to_variable = { MEX.MEX_cristero_army_strength_colima = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_chiapas }
+		add_to_variable = { MEX.MEX_cristero_army_strength_chiapas = MEX.MEX_cristero_add }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_michoacan }
+		add_to_variable = { MEX.MEX_cristero_army_strength_michoacan = MEX.MEX_cristero_add }
+	}
+	MEX_cristero_army_strength_clamp = yes
+}
+
+MEX_selected_cristero_army_strength_clear_demilitarized = {
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_mexico_city }
+		277 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_nuevo_leon }
+		930 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_jalisco }
+		478 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_mexico_state }
+		942 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_veracruz }
+		477 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_baja_california }
+		484 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_guanajuato }
+		938 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_san_luis_potosi }
+		937 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_durango }
+		929 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_sinaloa }
+		481 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tamaulipas }
+		479 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_coahuila }
+		480 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_chihuahua }
+		482 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_baja_california_sur }
+		925 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_sonora }
+		483 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_zacatecas }
+		934 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_nayarit }
+		933 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_aguascalientes }
+		935 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_guerrero }
+		485 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_morelos }
+		940 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tlaxcala }
+		943 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_puebla }
+		936 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_hidalgo }
+		941 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_oaxaca }
+		476 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tabasco }
+		928 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_queretaro }
+		939 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_campeche }
+		927 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_quintana_roo }
+		926 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_yucatan }
+		474 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_colima }
+		932 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_chiapas }
+		475 = { set_demilitarized_zone = no }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_michoacan }
+		931 = { set_demilitarized_zone = no }
+	}
+}
+
+MEX_calculate_total_cristero_strength = {
+	set_variable = { MEX_cristero_army_total_strength = 0 }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_mexico_city }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_nuevo_leon }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_jalisco }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_mexico_state }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_veracruz }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_baja_california }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_guanajuato }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_san_luis_potosi }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_durango }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_sinaloa }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_tamaulipas }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_coahuila }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_chihuahua }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_baja_california_sur }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_sonora }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_zacatecas }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_nayarit }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_aguascalientes }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_guerrero }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_morelos }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_tlaxcala }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_puebla }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_hidalgo }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_oaxaca }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_tabasco }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_queretaro }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_campeche }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_quintana_roo }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_yucatan }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_colima }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_chiapas }
+	add_to_variable = { MEX.MEX_cristero_army_total_strength = MEX.MEX_cristero_army_strength_michoacan }
+}
+
+MEX_calculate_PAN_strength_effect = {
+	set_variable = { MEX.MEX_PAN_strength_effect_positive = MEX.MEX_PAN_strength }
+	set_variable = { MEX.MEX_PAN_strength_effect_negative = MEX.MEX_PAN_strength }
+	multiply_variable = { MEX.MEX_PAN_strength_effect_positive = 0.01 }
+	multiply_variable = { MEX.MEX_PAN_strength_effect_negative = -0.01 }
+}
+
+MEX_damage_PAN_strength = {
+	custom_effect_tooltip = MEX_damage_PAN_strength_tt
+	add_to_variable = { MEX_PAN_strength = -1 }
+	clamp_variable = { var = MEX_PAN_strength min = 0 max = 19 }
+	MEX_calculate_PAN_strength_effect = yes
+}
+
+MEX_improve_academic_freedom = {
+	IF = {
+		limit = { has_idea = MEX_academic_freedom_2 }
+		add_political_power = 25
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_academic_freedom_1 }
+		swap_ideas = {
+			remove_idea = MEX_academic_freedom_1
+			add_idea = MEX_academic_freedom_2
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_academic_freedom }
+		swap_ideas = {
+			remove_idea = MEX_academic_freedom
+			add_idea = MEX_academic_freedom_1
+		}
+	}
+	ELSE = {
+		add_ideas = MEX_academic_freedom
+	}
+}
+
+MEX_UNAM_add_enrollment_100 = {
+	add_to_variable = { MEX_UNAM_latest_enrollment_extra_add = 100 }
+	custom_effect_tooltip = MEX_UNAM_add_enrollment_100_tt
+}
+
+MEX_UNAM_subtract_enrollment_100 = {
+	add_to_variable = { MEX_UNAM_latest_enrollment_extra_add = -100 }
+	custom_effect_tooltip = MEX_UNAM_subtract_enrollment_100_tt
+}
+
+MEX_UNAM_improve_social_attitude_1 = {
+	add_to_variable = { MEX_UNAM_social_attitude = 1 }
+	custom_effect_tooltip = MEX_UNAM_improve_social_attitude_1_tt
+}
+
+MEX_UNAM_damage_social_attitude_1 = {
+	add_to_variable = { MEX_UNAM_social_attitude = -1 }
+	custom_effect_tooltip = MEX_UNAM_damage_social_attitude_1_tt
+}
+
+MEX_UNAM_improve_social_attitude_2 = {
+	add_to_variable = { MEX_UNAM_social_attitude = 2 }
+	custom_effect_tooltip = MEX_UNAM_improve_social_attitude_2_tt
+}
+
+MEX_UNAM_damage_social_attitude_2 = {
+	add_to_variable = { MEX_UNAM_social_attitude = -2 }
+	custom_effect_tooltip = MEX_UNAM_damage_social_attitude_2_tt
+}
+
+MEX_UNAM_negotiate_0 = {
+	swap_ideas = {
+		remove_idea = MEX_national_autonomous_university
+		add_idea = MEX_national_autonomous_university_0
+	}
+}
+
+MEX_UNAM_negotiate_1 = {
+	swap_ideas = {
+		remove_idea = MEX_national_autonomous_university
+		add_idea = MEX_national_autonomous_university_1
+	}
+}
+
+MEX_UNAM_negotiate_x0 = {
+	IF = {
+		limit = { has_idea = MEX_national_autonomous_university_0 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_0
+			add_idea = MEX_national_autonomous_university_00
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_national_autonomous_university_1 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_1
+			add_idea = MEX_national_autonomous_university_10
+		}
+	}
+}
+
+MEX_UNAM_negotiate_x1 = {
+	IF = {
+		limit = { has_idea = MEX_national_autonomous_university_0 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_0
+			add_idea = MEX_national_autonomous_university_01
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_national_autonomous_university_1 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_1
+			add_idea = MEX_national_autonomous_university_11
+		}
+	}
+}
+
+MEX_UNAM_negotiate_xx0 = {
+	IF = {
+		limit = { has_idea = MEX_national_autonomous_university_00 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_00
+			add_idea = MEX_national_autonomous_university_000
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_national_autonomous_university_01 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_01
+			add_idea = MEX_national_autonomous_university_010
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_national_autonomous_university_10 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_10
+			add_idea = MEX_national_autonomous_university_100
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_national_autonomous_university_11 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_11
+			add_idea = MEX_national_autonomous_university_110
+		}
+	}
+}
+
+MEX_UNAM_negotiate_xx1 = {
+	IF = {
+		limit = { has_idea = MEX_national_autonomous_university_00 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_00
+			add_idea = MEX_national_autonomous_university_001
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_national_autonomous_university_01 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_01
+			add_idea = MEX_national_autonomous_university_011
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_national_autonomous_university_10 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_10
+			add_idea = MEX_national_autonomous_university_101
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_national_autonomous_university_11 }
+		swap_ideas = {
+			remove_idea = MEX_national_autonomous_university_11
+			add_idea = MEX_national_autonomous_university_111
+		}
+	}
+}
+
+MEX_UNAM_negotiate_finalize = {
+	set_country_flag = MEX_UNAM_negotiate_finalize_flag
+	effect_tooltip = {
+		IF = {
+			limit = { has_idea = MEX_national_autonomous_university_000 }
+			add_ideas = MEX_national_autonomous_university_000
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_national_autonomous_university_001 }
+			add_ideas = MEX_national_autonomous_university_001
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_national_autonomous_university_010 }
+			add_ideas = MEX_national_autonomous_university_010
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_national_autonomous_university_011 }
+			add_ideas = MEX_national_autonomous_university_011
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_national_autonomous_university_100 }
+			add_ideas = MEX_national_autonomous_university_100
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_national_autonomous_university_101 }
+			add_ideas = MEX_national_autonomous_university_101
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_national_autonomous_university_110 }
+			add_ideas = MEX_national_autonomous_university_110
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_national_autonomous_university_111 }
+			add_ideas = MEX_national_autonomous_university_111
+		}
+	}
+}
+
+MEX_socialist_education_0 = {
+	swap_ideas = {
+		remove_idea = MEX_socialist_education
+		add_idea = MEX_socialist_education_0
+	}
+}
+
+MEX_socialist_education_1 = {
+	swap_ideas = {
+		remove_idea = MEX_socialist_education
+		add_idea = MEX_socialist_education_1
+	}
+}
+
+MEX_socialist_education_x0 = {
+	IF = {
+		limit = { has_idea = MEX_socialist_education_0 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_0
+			add_idea = MEX_socialist_education_00
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_socialist_education_1 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_1
+			add_idea = MEX_socialist_education_10
+		}
+	}
+}
+
+MEX_socialist_education_x1 = {
+	IF = {
+		limit = { has_idea = MEX_socialist_education_0 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_0
+			add_idea = MEX_socialist_education_01
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_socialist_education_1 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_1
+			add_idea = MEX_socialist_education_11
+		}
+	}
+}
+
+MEX_socialist_education_xx0 = {
+	IF = {
+		limit = { has_idea = MEX_socialist_education_00 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_00
+			add_idea = MEX_socialist_education_000
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_socialist_education_01 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_01
+			add_idea = MEX_socialist_education_010
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_socialist_education_10 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_10
+			add_idea = MEX_socialist_education_100
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_socialist_education_11 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_11
+			add_idea = MEX_socialist_education_110
+		}
+	}
+}
+
+MEX_socialist_education_xx1 = {
+	IF = {
+		limit = { has_idea = MEX_socialist_education_00 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_00
+			add_idea = MEX_socialist_education_001
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_socialist_education_01 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_01
+			add_idea = MEX_socialist_education_011
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_socialist_education_10 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_10
+			add_idea = MEX_socialist_education_101
+		}
+	}
+	ELSE_IF = {
+		limit = { has_idea = MEX_socialist_education_11 }
+		swap_ideas = {
+			remove_idea = MEX_socialist_education_11
+			add_idea = MEX_socialist_education_111
+		}
+	}
+}
+
+MEX_socialist_education_finalize = {
+	set_country_flag = MEX_socialist_education_finalize_flag
+	effect_tooltip = {
+		IF = {
+			limit = { has_idea = MEX_socialist_education_000 }
+			add_ideas = MEX_socialist_education_000
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_socialist_education_001 }
+			add_ideas = MEX_socialist_education_001
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_socialist_education_010 }
+			add_ideas = MEX_socialist_education_010
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_socialist_education_011 }
+			add_ideas = MEX_socialist_education_011
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_socialist_education_100 }
+			add_ideas = MEX_socialist_education_100
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_socialist_education_101 }
+			add_ideas = MEX_socialist_education_101
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_socialist_education_110 }
+			add_ideas = MEX_socialist_education_110
+		}
+		ELSE_IF = {
+			limit = { has_idea = MEX_socialist_education_111 }
+			add_ideas = MEX_socialist_education_111
+		}
+	}
+}
+
+MEX_PLM_M_loyalty_add = {
+	add_to_variable = { MEX_PLM_moderate_loyalty = 5 }
+	custom_effect_tooltip = MEX_PLM_M_loyalty_add_tt
+	clamp_variable = {
+		var = MEX_PLM_moderate_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_PLM_M_loyalty_subtract = {
+	add_to_variable = { MEX_PLM_moderate_loyalty = -5 }
+	custom_effect_tooltip = MEX_PLM_M_loyalty_subtract_tt
+	clamp_variable = {
+		var = MEX_PLM_moderate_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_PLM_R_loyalty_add = {
+	add_to_variable = { MEX_PLM_radical_loyalty = 5 }
+	custom_effect_tooltip = MEX_PLM_R_loyalty_add_tt
+	clamp_variable = {
+		var = MEX_PLM_radical_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_PLM_R_loyalty_subtract = {
+	add_to_variable = { MEX_PLM_radical_loyalty = -5 }
+	custom_effect_tooltip = MEX_PLM_R_loyalty_subtract_tt
+	clamp_variable = {
+		var = MEX_PLM_radical_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_PLM_E_loyalty_add = {
+	add_to_variable = { MEX_PLM_establishment_loyalty = 5 }
+	custom_effect_tooltip = MEX_PLM_E_loyalty_add_tt
+	clamp_variable = {
+		var = MEX_PLM_establishment_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_PLM_E_loyalty_subtract = {
+	add_to_variable = { MEX_PLM_establishment_loyalty = -5 }
+	custom_effect_tooltip = MEX_PLM_E_loyalty_subtract_tt
+	clamp_variable = {
+		var = MEX_PLM_establishment_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_PNA_loyalty_add = {
+	add_to_variable = { MEX_PNA_loyalty = 5 }
+	custom_effect_tooltip = MEX_PNA_loyalty_add_tt
+	clamp_variable = {
+		var = MEX_PNA_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_PNA_loyalty_subtract = {
+	add_to_variable = { MEX_PNA_loyalty = -5 }
+	custom_effect_tooltip = MEX_PNA_loyalty_subtract_tt
+	clamp_variable = {
+		var = MEX_PNA_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_LDN_loyalty_add = {
+	add_to_variable = { MEX_LDN_loyalty = 5 }
+	custom_effect_tooltip = MEX_LDN_loyalty_add_tt
+	clamp_variable = {
+		var = MEX_LDN_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_LDN_loyalty_subtract = {
+	add_to_variable = { MEX_LDN_loyalty = -5 }
+	custom_effect_tooltip = MEX_LDN_loyalty_subtract_tt
+	clamp_variable = {
+		var = MEX_LDN_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_PSO_loyalty_add = {
+	add_to_variable = { MEX_PSO_loyalty = 5 }
+	custom_effect_tooltip = MEX_PSO_loyalty_add_tt
+	clamp_variable = {
+		var = MEX_PSO_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_PSO_loyalty_subtract = {
+	add_to_variable = { MEX_PSO_loyalty = -5 }
+	custom_effect_tooltip = MEX_PSO_loyalty_subtract_tt
+	clamp_variable = {
+		var = MEX_PSO_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_ARM_loyalty_add = {
+	add_to_variable = { MEX_ARM_loyalty = 5 }
+	custom_effect_tooltip = MEX_ARM_loyalty_add_tt
+	clamp_variable = {
+		var = MEX_ARM_loyalty
+		min = 0
+		max = 100
+	}
+}
+
+MEX_ARM_loyalty_subtract = {
+	add_to_variable = { MEX_ARM_loyalty = -5 }
+	custom_effect_tooltip = MEX_ARM_loyalty_subtract_tt
+	clamp_variable = {
+		var = MEX_ARM_loyalty
+		min = 0
+		max = 100
+	}
+}

@@ -1,0 +1,100 @@
+ideas = {
+
+	country = {
+
+		ENG_britannia_rules_the_waves = {
+			allowed = {
+				original_tag = ENG
+			}
+
+			available = { is_subject = no }
+
+			name = ENG_britannia_rules_the_waves
+			picture = ENG_britannia_rules_the_waves
+			
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+
+			modifier = {
+				ai_focus_naval_factor = 0.15
+				navy_org_factor = 0.1
+				experience_gain_navy_factor = 0.1
+				production_speed_dockyard_factor = 0.15
+				naval_invasion_penalty = -0.35
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+
+		ENG_maintainer_of_world_order = {
+			allowed = {
+				original_tag = ENG
+			}
+
+			available = { is_subject = no }
+
+			name = ENG_maintainer_of_world_order
+			picture = ENG_maintainer_of_world_order
+
+			modifier = {
+				send_volunteer_size = 2
+				war_support_factor = -0.05
+				surrender_limit = 0.1
+				conscription = 0.015
+			}
+		}
+
+		ENG_economic_stagnation = {
+			allowed = {
+				original_tag = ENG
+			}
+
+			available = { is_subject = no }
+
+			name = ENG_economic_stagnation
+			picture = ENG_economic_stagnation
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+
+		ENG_long_tory_reign = {
+			allowed = {
+				original_tag = ENG
+			}
+
+			available = { is_subject = no has_government = democratic } #conservative
+
+			name = ENG_long_tory_reign
+			picture = ENG_long_tory_reign
+
+			modifier = {
+				democratic_drift = 0.05
+				production_factory_efficiency_gain_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
+
+		ENG_imperial_sunset = {
+			allowed = {
+				original_tag = ENG
+			}
+
+			available = { is_subject = no }
+
+			name = ENG_imperial_sunset
+			picture = ENG_imperial_sunset
+
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+
+	}
+}

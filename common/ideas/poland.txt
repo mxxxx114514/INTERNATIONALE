@@ -1,0 +1,21 @@
+ideas = {
+	country = {
+		POL_war_against_GRR = {
+
+			allowed = {
+				original_tag = POL
+			}
+
+			available = { has_war_with = GRR }
+
+			picture = POL_war_army
+
+			modifier = {
+				army_core_attack_factor = 0.5
+				army_core_defence_factor = 0.5
+				dig_in_speed_factor = 0.25
+				max_dig_in_factor = 0.25
+			}
+		}
+	}
+}

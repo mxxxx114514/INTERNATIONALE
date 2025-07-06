@@ -1,0 +1,1543 @@
+###########################
+# German Events
+###########################
+
+add_namespace = germany
+
+country_event = {
+	id = germany.1
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_event_germany_1
+
+	title = germany.1.t
+	desc = germany.1.desc
+
+	trigger = { }
+
+	option = { #Liberalism
+		name = germany.1.a
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = GER_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = GER_path
+					option = GER_PATH_LIBERAL
+				}
+			}
+		}
+		complete_national_focus = GER_liberalism
+	}
+	
+	option = { #Imperialism
+		name = germany.1.b
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = GER_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = GER_path
+					option = GER_PATH_KAISERREICH
+				}
+			}
+		}
+		complete_national_focus = GER_imperialism
+	}
+
+	option = { #Nationalism
+		name = germany.1.c
+		trigger = {
+			OR = {
+				has_game_rule = {
+					rule = GER_path
+					option = DEFAULT
+				}
+				has_game_rule = {
+					rule = GER_path
+					option = GER_PATH_HUGENBERG
+				}
+			}
+		}
+		complete_national_focus = GER_nationalism
+	}
+
+}
+country_event = { #Demand Poznan-Poland accept
+	id = germany.2
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_event_germany_2
+
+	title = germany.2.t
+	desc = germany.2.desc
+
+
+	option = {
+		name = germany.2.a
+		transfer_state = 86
+	}
+}
+country_event = { #Demand Poznan-Poland refuse
+	id = germany.3
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_event_germany_3
+	
+	title = germany.3.t
+	desc = germany.3.desc
+
+
+	option = {
+		name = germany.3.a
+		set_global_flag = GER_invade_POL_flag
+		ENG = {
+			diplomatic_relation = {
+				country = GRR
+				relation = guarantee
+				active = no
+			}
+		}
+		IF = {
+			limit = {
+				POL = {
+					is_in_faction_with = GER
+				}
+			}
+			POL = {
+				leave_faction = yes
+			}
+		}
+		GER = {
+			diplomatic_relation = {
+				country = POL
+				relation = non_aggression_pact
+				active = no
+			}
+			declare_war_on = {
+				target = POL
+				type = annex_everything
+			}
+		}
+		hidden_effect = { POL = { white_peace = WFI } }
+		POL = {
+			remove_opinion_modifier = {
+				target = GER
+				modifier = GER_1920_eastern_intervention
+			}
+			add_timed_idea = {
+				idea = POL_war_against_GRR
+				days = 120
+			}
+			division_template = {
+				name = "Polish Defense Forces"
+				is_locked = yes
+				division_names_group = POL_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					infantry = { x = 2 y = 3 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+        			artillery = { x = 0 y = 1 }
+				}
+			}
+			every_owned_state = {
+				create_unit = {
+					division = "division_template = \"Polish Defense Forces\" start_experience_factor = 0.65 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 2
+				}
+			}
+		}
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = war_news.41
+					days = 1
+				}
+			}
+			add_named_threat = {
+				threat = 10
+				name = IN_GER_invade_POL_threat
+			}
+		}
+	}
+}
+country_event = { 
+	id = germany.4
+	title = germany.4.t
+	desc = germany.4.desc
+	is_triggered_only = yes
+	picture = GFX_event_germany_4
+
+	
+}
+
+country_event = { #Soviet event: the great red manace
+	id = germany.5
+	title = germany.5.t
+	desc = germany.5.desc
+	picture = GFX_report_event_german_politician_speech
+
+	is_triggered_only = yes
+
+	# Hold massive military exercises to intimidate the Germans into shutting up
+	option = {
+		name = germany.5.a
+		ai_chance = {
+			factor = 90
+		}
+		add_named_threat = { threat = 10 name = GER_soviet_military_exercises }
+		army_experience = 50
+		add_political_power = 100
+		hidden_effect = { news_event = { id = germany.7 hours = 6 } }
+	}
+}
+
+country_event = { #CLN country event
+	id = germany.6
+	title = germany.6.t
+	desc = germany.6.desc
+	picture = GFX_report_event_german_politician_speech
+
+	is_triggered_only = yes
+
+	# Oh dear
+	option = {
+		name = germany.6.a
+		effect_tooltip = { add_ideas = GER_the_great_red_menace }
+	}
+}
+
+news_event = { 
+	id = germany.7
+	title = germany.7.t
+	desc = germany.7.desc
+	picture = GFX_news_event_german_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.7.a
+		trigger = {
+			original_tag = GER
+		}
+	}
+	option = {
+		name = germany.7.b
+		trigger = {
+			OR = {
+				original_tag = SOV
+				original_tag = FRA
+				original_tag = ITA
+			}
+		}
+	}
+	option = {
+		name = germany.7.c
+		trigger = {
+			NOT = {
+				original_tag = GER
+				original_tag = SOV
+				original_tag = FRA
+				original_tag = ITA
+			}
+		}
+	}
+}
+
+country_event = { #Choose a Reichskanzler
+	id = germany.8
+	title = germany.8.t
+	desc = germany.8.desc
+	#picture = GFX_news_event_german_speech
+	
+	#major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.8.a
+		trigger = {
+			has_completed_focus = GER_liberalism
+		}
+		activate_advisor = GER_otto_wels
+		add_popularity = {
+			ideology = social_democratic
+			popularity = 0.08
+		}
+		hidden_effect = {
+			IF = {
+				limit = { has_completed_focus = GER_liberalism }
+				set_politics = { ruling_party = social_democratic }
+				clr_country_flag = socdem_coalition_flag
+				set_country_flag = soclib_coalition_flag
+			}
+		}
+	}
+	option = {
+		name = germany.8.b
+		trigger = {
+			has_completed_focus = GER_liberalism
+		}
+		activate_advisor = GER_otto_karl_gessler
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.08
+		}
+		hidden_effect = {
+			IF = {
+				limit = { has_completed_focus = GER_liberalism }
+				set_politics = { ruling_party = social_liberal }
+				clr_country_flag = soclib_coalition_flag
+			}
+		}
+	}
+	option = {
+		name = germany.8.c
+		trigger = {
+			OR = {
+				has_completed_focus = GER_liberalism
+				has_completed_focus = GER_imperialism
+				has_completed_focus = GER_nationalism
+			}
+		}
+		activate_advisor = GER_heinrich_bruning
+		set_country_flag = condem_coalition_flag
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.08
+		}
+		hidden_effect = {
+			IF = {
+				limit = { has_completed_focus = GER_liberalism }
+				set_politics = { ruling_party = democratic }
+				clr_country_flag = condem_coalition_flag
+				set_country_flag = soclib_coalition_flag
+			}
+		}
+	}
+	option = {
+		name = germany.8.d
+		trigger = {
+			OR = {
+				has_completed_focus = GER_imperialism
+				has_completed_focus = GER_nationalism
+			}
+		}
+		activate_advisor = GER_franz_von_papen
+		set_country_flag = condem_coalition_flag
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.035
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.035
+		}
+	}
+	option = {
+		name = germany.8.e
+		trigger = {
+			OR = {
+				has_completed_focus = GER_imperialism
+				has_completed_focus = GER_nationalism
+			}
+		}
+		activate_advisor = GER_lutz_von_krosigk
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+	}
+	option = {
+		name = germany.8.f
+		trigger = {
+			OR = {
+				has_completed_focus = GER_imperialism
+				has_completed_focus = GER_nationalism
+			}
+		}
+		activate_advisor = GER_carl_friedrich_goerdeler
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.01
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = { #Czechia wants protection
+	id = germany.9
+	title = germany.9.t
+	desc = germany.9.desc
+	is_triggered_only = yes
+	picture = GFX_event_germany_9
+
+	option = {
+		name = germany.9.a
+
+		ai_chance = {
+			base = 10
+		}
+
+		transfer_state = 74
+		transfer_state = 69
+		add_state_core = 74
+		add_state_core = 69
+		remove_state_claim = 9
+		remove_state_claim = 75
+		IF = {
+			limit = {
+				country_exists = AUS
+			}
+			AUS = {
+				transfer_state = 919
+				add_state_core = 919
+			}
+		}
+		ELSE = {
+			transfer_state = 919
+			add_state_core = 919
+		}
+		hidden_effect = {
+			create_dynamic_country = {
+				original_tag = CZE
+				set_cosmetic_tag = CZE_protectorate
+				set_capital = { state = 9 }
+				annex_country = {
+					target = CZE
+				}
+				GER = {
+					set_autonomy = { 
+						target = PREV
+						autonomy_state = autonomy_puppet 
+					}
+				}
+				generic_remove_unowned_cores = yes
+			}
+			BOH = {
+				set_politics = { ruling_party = neutrality }
+				set_popularities = {
+					auth_communism = 2
+					communism = 2
+					social_democratic = 1
+					liberal = 5
+					democratic = 10
+					neutrality = 70
+					despotism = 10
+				}
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				news_event = {
+					id = war_news.19
+					days = 1
+				}
+			}
+		}
+		add_political_power = -25
+	}
+
+	option = {
+		name = germany.9.b
+		ENG = {
+			add_to_faction = CZE
+		}
+	}
+}
+
+country_event = { #Ludendorff's Speech
+	id = germany.10
+	title = germany.10.t
+	desc = germany.10.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_event_germany_10
+
+	option = {
+		name = germany.10.a
+		add_political_power = -75
+		add_stability = -0.15
+		hidden_effect = {
+			country_event = {
+				id = germany.11
+				days = 15
+			}
+		}
+	
+	}
+
+}
+
+country_event = { #Reichsflagge Schwartz-Rot-Gold
+	id = germany.11
+	title = germany.11.t
+	desc = germany.11.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_event_germany_11
+
+	option = {
+		name = germany.11.a
+		clr_country_flag = condem_coalition_flag
+		add_popularity = {
+			ideology = social_democratic
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+		add_stability = -0.05
+		add_political_power = -25
+		8 = { set_demilitarized_zone = yes }
+		911 = { set_demilitarized_zone = yes }
+		909 = { set_demilitarized_zone = yes }
+		51 = { set_demilitarized_zone = yes }
+		42 = { set_demilitarized_zone = yes }
+		55 = { set_demilitarized_zone = yes }
+		57 = { set_demilitarized_zone = yes }
+		56 = { set_demilitarized_zone = yes }
+		915 = { set_demilitarized_zone = yes }
+		58 = { set_demilitarized_zone = yes }
+		61 = { set_demilitarized_zone = yes }
+		65 = { set_demilitarized_zone = yes }
+		custom_effect_tooltip = GER_ludendorff_weaken_tt
+		hidden_effect = {
+			country_event = {
+				id = germany.12
+				days = 10
+			}
+		}
+	
+	}
+
+}
+
+country_event = { #Monarchist Union
+	id = germany.12
+	title = germany.12.t
+	desc = germany.12.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_event_germany_12
+
+	option = {
+		name = germany.12.a
+		clr_country_flag = autdem_coalition_flag
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.03
+		}
+		add_stability = -0.05
+		add_political_power = -25
+		50 = { set_demilitarized_zone = yes }
+		52 = { set_demilitarized_zone = yes }
+		53 = { set_demilitarized_zone = yes }
+		54 = { set_demilitarized_zone = yes }
+		custom_effect_tooltip = GER_ludendorff_weaken_tt
+		hidden_effect = {
+			country_event = {
+				id = germany.13
+				days = 10
+			}
+		}
+	
+	}
+
+}
+
+country_event = { #DNVP
+	id = germany.13
+	title = germany.13.t
+	desc = germany.13.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_event_germany_13
+
+	option = {
+		name = germany.13.a
+		clr_country_flag = natpop_coalition_flag
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.03
+		}
+		add_stability = -0.05
+		add_political_power = -25
+		763 = { set_demilitarized_zone = yes }
+		5 = { set_demilitarized_zone = yes }
+		763 = { set_demilitarized_zone = yes }
+		62 = { set_demilitarized_zone = yes }
+		63 = { set_demilitarized_zone = yes }
+		66 = { set_demilitarized_zone = yes }
+		#67 = { set_demilitarized_zone = yes }
+		68 = { set_demilitarized_zone = yes }
+		custom_effect_tooltip = GER_ludendorff_weaken_tt
+		hidden_effect = {
+			set_country_flag = can_overthrow_ludendorff_flag
+		}
+	
+	}
+
+}
+
+country_event = { #Fall of Ludendorff
+	id = germany.14
+	title = germany.14.t
+	desc = germany.14.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_event_germany_14
+
+	option = {
+		name = germany.14.a
+		retire_country_leader = yes
+		add_political_power = 25
+		add_stability = 0.3
+		hidden_effect = {
+			set_politics = {
+				ruling_party = democratic
+			}
+		}
+		promote_character = GER_reichstag_council
+		complete_national_focus = GER_election
+		hidden_effect = {
+			every_owned_state = {
+				set_demilitarized_zone = no
+			}
+			drop_cosmetic_tag = yes
+			set_party_name = {
+				ideology = democratic
+				long_name = GER_democratic_party_reichstag_council_long
+				name = GER_democratic_party_reichstag_council
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = GER_neutrality_party_kaiserreich_long
+				name = GER_neutrality_party_kaiserreich
+			}
+			set_party_name = {
+				ideology = despotism
+				long_name = GER_despotism_party_long
+				name = GER_despotism_party
+			}
+			set_party_name = {
+				ideology = auth_communism
+				long_name = GER_auth_communism_party_long
+				name = GER_auth_communism_party
+			}
+			set_party_name = {
+				ideology = communism
+				long_name = GER_communism_party_long
+				name = GER_communism_party
+			}
+			#set_popularities = {
+			#	auth_communism = 1
+			#	communism = 3
+			#	socialism = 5
+			#	social_democratic = 19
+			#	social_liberal = 15
+			#	liberal = 4
+			#	democratic = 16
+			#	neutrality = 15
+			#	despotism = 5
+			#	fascism = 17
+			#}
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = liberal
+				popularity = -0.03
+			}
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = GER_news.1
+					days = 1
+				}
+			}
+		}
+	
+	}
+
+}
+
+country_event = { #Death of Ludendorff
+	id = germany.15
+	title = germany.15.t
+	desc = germany.15.desc
+	fire_only_once = yes
+	picture = GFX_event_germany_15
+
+	trigger = {
+		date > 1937.12.19
+		tag = GRR
+	}
+
+	option = {
+		name = germany.15.a
+		add_political_power = 10
+		add_stability = 0.01
+		hidden_effect = {
+			every_country = {
+				limit = { is_ai = no }
+				news_event = {
+					id = GER_news.6
+					days = 1
+				}
+			}
+		}
+	
+	}
+
+}
+
+country_event = { #Death of Dandl
+	id = germany.16
+	title = germany.16.t
+	desc = germany.16.desc
+	fire_only_once = yes
+	picture = GFX_event_germany_16
+
+	trigger = {
+		date > 1942.5.19
+		tag = GRR
+	}
+
+	option = {
+		name = germany.16.a
+		trigger = { has_government = neutrality }
+	
+	}
+
+	option = {
+		name = germany.16.b
+		trigger = { NOT = { has_government = neutrality } }
+	
+	}
+
+}
+
+country_event = { #Death of Quidde
+	id = germany.17
+	title = germany.17.t
+	desc = germany.17.desc
+	fire_only_once = yes
+	picture = GFX_event_germany_17
+
+	trigger = {
+		date > 1941.3.3
+		tag = GRR
+	}
+
+	option = {
+		name = germany.17.a
+		trigger = { is_liberal_ideology = yes }
+		kill_country_leader = yes
+		hidden_effect = {
+			IF = {
+				limit = { has_government = social_democratic }
+				add_country_leader_role = {
+					character = GER_reichstag_council
+					promote_leader = yes
+					country_leader = {
+						ideology = social_democratic_subtype
+						expire = "1965.1.1.1"
+					}
+				}
+			}
+			IF = {
+				limit = { has_government = social_liberal }
+				add_country_leader_role = {
+					character = GER_reichstag_council
+					promote_leader = yes
+					country_leader = {
+						ideology = social_liberal_subtype
+						expire = "1965.1.1.1"
+					}
+				}
+			}
+			IF = {
+				limit = { has_government = democratic }
+				add_country_leader_role = {
+					character = GER_reichstag_council
+					promote_leader = yes
+					country_leader = {
+						ideology = conservatism
+						expire = "1965.1.1.1"
+					}
+				}
+			}
+		}
+		hidden_effect = { country_event = { id = germany.18 days = 7 } }
+		#country_event = { id = germany.18 days = 7 }
+		
+	
+	}
+
+	option = {
+		name = germany.17.b
+		trigger = { is_liberal_ideology = no }
+		kill_ideology_leader = social_liberal
+	
+	}
+
+}
+
+country_event = { #Theodor Heuss is elected president
+	id = germany.18
+	title = germany.18.t
+	desc = germany.18.desc
+	fire_only_once = yes
+	picture = GFX_event_germany_18
+
+	is_triggered_only = yes
+
+	#trigger = {
+	#	date > 1941.3.3
+	#}
+
+	option = {
+		name = germany.18.a
+		hidden_effect = { 
+			retire_country_leader = yes
+			set_party_name = {
+				ideology = democratic
+				long_name = GER_democratic_party_long
+				name = GER_democratic_party
+			}
+		}
+		#promote_character = GER_theodor_heuss
+		IF = {
+			limit = { has_government = social_democratic }
+			add_popularity = {
+				ideology = social_democratic
+				popularity = 0.05
+			}
+			add_country_leader_role = {
+				character = GER_theodor_heuss
+				promote_leader = yes
+				country_leader = {
+					ideology = social_democratic_subtype
+					expire = "1965.1.1.1"
+					traits = { virtual_head_of_state }
+				}
+			}
+		}
+		ELSE_IF = {
+			limit = { has_government = social_liberal }
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+			add_country_leader_role = {
+				character = GER_theodor_heuss
+				promote_leader = yes
+				country_leader = {
+					ideology = social_liberal_subtype
+					expire = "1965.1.1.1"
+					traits = { virtual_head_of_state }
+				}
+			}
+		}
+		ELSE_IF = {
+			limit = { has_government = democratic }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_country_leader_role = {
+				character = GER_theodor_heuss
+				promote_leader = yes
+				country_leader = {
+					ideology = conservatism
+					expire = "1965.1.1.1"
+					traits = { virtual_head_of_state }
+				}
+			}
+		}
+		hidden_effect = {
+			add_country_leader_role = {
+				character = GER_theodor_heuss
+				promote_leader = yes
+				country_leader = {
+					ideology = social_democratic_subtype
+					expire = "1965.1.1.1"
+					traits = { virtual_head_of_state }
+				}
+			}
+			add_country_leader_role = {
+				character = GER_theodor_heuss
+				promote_leader = yes
+				country_leader = {
+					ideology = social_liberal_subtype
+					expire = "1965.1.1.1"
+					traits = { virtual_head_of_state }
+				}
+			}
+			add_country_leader_role = {
+				character = GER_theodor_heuss
+				promote_leader = yes
+				country_leader = {
+					ideology = conservatism
+					expire = "1965.1.1.1"
+					traits = { virtual_head_of_state }
+				}
+			}
+		}
+		
+	}
+
+}
+
+country_event = { #Former: Protests in Austria
+	id = germany.19
+	title = germany.19.t
+	desc = germany.19.desc
+	fire_only_once = yes
+	picture = GFX_event_germany_19
+
+	#trigger = { date > 1936.1.7 }
+
+	is_triggered_only = yes
+
+	
+
+}
+
+country_event = { #NFR demands Alsace
+	id = germany.20
+	title = germany.20.t
+	desc = germany.20.desc
+	fire_only_once = yes
+	picture = GFX_event_germany_20
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.20.a
+		ai_chance = {
+			base = 30
+		}
+		#trigger = { always = no }
+		remove_state_core = 917
+		remove_state_claim = 917
+		NFR = { transfer_state = 917 }
+		
+	}
+
+	option = {
+		name = germany.20.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 100
+				is_reactionary_ideology = yes
+			}
+		}
+		add_political_power = -50
+		add_war_support = -0.2
+		NFR = {
+			add_opinion_modifier = {
+				modifier = refuse_return_territory
+				target = GRR
+			}
+		}
+		GER = {
+			add_state_claim = 28
+		}
+		set_border_war = yes
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+				modifier = 0.85
+				num_provinces = 4
+				state = 28
+			}	
+			defender = {
+				modifier = -0.85
+				num_provinces = 4
+				state = 917
+			}
+		}
+		set_border_war = yes
+		
+	}
+
+}
+
+country_event = { #Communard FRA attacks Luxembourg
+	id = germany.21
+	title = germany.21.t
+	desc = germany.21.desc
+	fire_only_once = yes
+	picture = GFX_event_germany_21
+
+	fire_only_once = yes
+
+	#trigger = {
+	#	date > 1940.3.25
+	#	tag = GRR
+	#}
+
+	is_triggered_only = yes
+
+	option = {
+		name = germany.21.a
+		8 = { add_manpower = -12 }
+		add_political_power = -100
+		add_stability = -0.25
+		add_war_support = 0.1
+		
+	}
+
+}
+
+country_event = { #Defeat in Poland
+	id = germany.22
+	title = germany.22.t
+	desc = germany.22.desc
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	picture = GFX_event_germany_3
+
+	option = {
+		name = germany.22.a
+		set_global_flag = POL_defeat_GRR_flag
+		white_peace = POL
+		remove_state_claim = 86
+		LIT = {
+			transfer_state = 188
+			leave_faction = yes
+		}
+		POL = {
+			transfer_state = 762
+			transfer_state = 807
+			add_to_faction = LIT
+		}
+		add_stability = -0.75
+		add_war_support = -0.75
+		add_political_power = -300
+		add_to_variable = {
+			var = POL.POL_GER_influence
+			value = -75
+		} 
+		add_to_variable = {
+			var = POL.GER_poznan_influence
+			value = -100
+		} 
+		clamp_variable = {
+			var = POL.POL_GER_influence
+			min = 0
+			max = 100
+		}
+		clamp_variable = {
+			var = POL.GER_poznan_influence
+			min = 0
+			max = 100
+		}
+		
+	}
+
+}
+
+country_event = { #National Liberals
+	id = germany.23
+	title = germany.23.t
+	desc = germany.23.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	#picture = GFX_event_germany_23
+
+	option = {
+		name = germany.23.a
+		add_political_power = 5
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.02
+		}
+		hidden_effect = {
+			#remove_dynamic_modifier = {
+			#	modifier = GER_no_marlib_infleunce
+			#}
+			set_country_flag = marlib_coalition_flag
+			GER_get_reichstag_seats = yes
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = -20
+				has_government = social_democratic
+			}
+		}
+	
+	}
+
+	option = {
+		name = germany.23.b
+		add_stability = 0.02
+		ai_chance = {
+			base = 10
+		}
+		
+	}
+
+}
+
+country_event = { #DkP
+	id = germany.24
+	title = germany.24.t
+	desc = germany.24.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	#picture = GFX_event_germany_24
+
+	option = {
+		name = germany.24.a
+		add_political_power = 5
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.02
+		}
+		hidden_effect = {
+			#remove_dynamic_modifier = {
+			#	modifier = GER_no_marlib_infleunce
+			#}
+			set_country_flag = pataut_coalition_flag
+			GER_get_reichstag_seats = yes
+		}
+	
+	}
+
+	option = {
+		name = germany.24.b
+		trigger = { is_ai = no }
+		add_stability = 0.02
+	
+	}
+
+}
+
+country_event = { #Post war election (quidde)
+	id = germany.25
+	title = germany.25.t
+	desc = germany.25.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	#picture = GFX_event_germany_25
+
+	option = { #SPD government
+		name = germany.25.a
+		trigger = {
+			social_democratic > 0.4
+		}
+		generic_clear_all_coalition_flags = yes
+		hidden_effect = {
+			set_politics = { ruling_party = social_democratic }
+			country_event = {
+				id = germany.26
+				days = 12
+				random_days = 4
+			}
+		}
+	}
+
+	option = { #SPD government, DDP coalition
+		name = germany.25.b
+		trigger = {
+			social_democratic > party_popularity@social_liberal
+			OR = {
+				AND = {
+					social_democratic > 0.3
+					social_liberal > 0.1
+				}
+				AND = {
+					social_democratic > 0.25
+					social_liberal > 0.15
+				}
+				AND = {
+					social_democratic > 0.2
+					social_liberal > 0.2
+				}
+			}
+		}
+		hidden_effect = { set_politics = { ruling_party = social_democratic } }
+		generic_clear_all_coalition_flags = yes
+		set_country_flag = soclib_coalition_flag
+	}
+
+	option = { #DDP government
+		name = germany.25.c
+		trigger = {
+			social_liberal > 0.4
+		}
+		hidden_effect = { set_politics = { ruling_party = social_liberal } }
+		generic_clear_all_coalition_flags = yes
+	}
+
+	option = { #DDP government, SPD coalition
+		name = germany.25.d
+		trigger = {
+			social_liberal > party_popularity@social_democratic
+			OR = {
+				AND = {
+					social_liberal > 0.3
+					social_democratic > 0.1
+				}
+				AND = {
+					social_liberal > 0.25
+					social_democratic > 0.15
+				}
+				AND = {
+					social_liberal > 0.2
+					social_democratic > 0.2
+				}
+			}
+		}
+		hidden_effect = { set_politics = { ruling_party = social_liberal } }
+		generic_clear_all_coalition_flags = yes
+		set_country_flag = socdem_coalition_flag
+	}
+
+	option = { #DDP government, NLP coalition
+		name = germany.25.e
+		trigger = {
+			social_liberal > party_popularity@liberal
+			OR = {
+				AND = {
+					social_liberal > 0.3
+					liberal > 0.1
+				}
+				AND = {
+					social_liberal > 0.25
+					liberal > 0.15
+				}
+				AND = {
+					social_liberal > 0.2
+					liberal > 0.2
+				}
+			}
+		}
+		hidden_effect = { set_politics = { ruling_party = social_liberal } }
+		generic_clear_all_coalition_flags = yes
+		set_country_flag = marlib_coalition_flag
+	}
+
+	option = { #Z government
+		name = germany.25.f
+		trigger = {
+			democratic > 0.4
+		}
+		hidden_effect = { set_politics = { ruling_party = democratic } }
+		generic_clear_all_coalition_flags = yes
+	}
+
+	option = { #Z government, NLP coalition
+		name = germany.25.g
+		trigger = {
+			democratic > party_popularity@liberal
+			OR = {
+				AND = {
+					democratic > 0.3
+					liberal > 0.1
+				}
+				AND = {
+					democratic > 0.25
+					liberal > 0.15
+				}
+				AND = {
+					democratic > 0.2
+					liberal > 0.2
+				}
+			}
+		}
+		hidden_effect = { set_politics = { ruling_party = democratic } }
+		generic_clear_all_coalition_flags = yes
+		set_country_flag = marlib_coalition_flag
+	}
+
+}
+
+country_event = { #SAPD joins coalition
+	id = germany.26
+	title = germany.26.t
+	desc = germany.26.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	#picture = GFX_event_germany_26
+
+	option = {
+		name = germany.26.a
+		add_popularity = {
+			ideology = socialism
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = auth_communism
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+		set_country_flag = libsoc_coalition_flag
+		ai_chance = {
+			base = 10
+			modifier = {
+				social_democratic < 0.6
+				add = 30
+			}
+		}
+	}
+
+	option = {
+		name = germany.26.b
+		add_stability = 0.05
+		ai_chance = {
+			base = 10
+		}
+	}
+
+}
+
+country_event = { #GER wants to build navy (ENG event)
+	id = germany.27
+	title = germany.27.t
+	desc = germany.27.desc
+	is_triggered_only = yes
+
+	option = { #accept
+		name = germany.27.a
+		GER = {
+			country_event = {
+				id = germany.28
+				days = 3
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 10
+				threat > 25
+			}
+			modifier = {
+				add = 10
+				threat > 50
+			}
+			modifier = {
+				add = 10
+				threat > 75
+			}
+		}
+	}
+
+	option = { #reject
+		name = germany.27.b
+		GER = {
+			country_event = {
+				id = germany.29
+				days = 3
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+}
+
+country_event = {
+	id = germany.28
+	title = germany.28.t
+	desc = germany.28.desc
+	is_triggered_only = yes
+
+	option = {
+		name = germany.28.a
+		remove_ideas = GER_naval_restrictions
+		complete_national_focus = GER_navy
+	}
+
+}
+
+country_event = {
+	id = germany.29
+	title = germany.29.t
+	desc = germany.29.desc
+	is_triggered_only = yes
+
+	option = {
+		name = germany.29.a
+		add_political_power = -25
+		set_country_flag = GER_ENG_reject_naval_expansion
+		add_opinion_modifier = {
+			modifier = GER_ENG_reject_naval_expansion_modifier
+			target = ENG
+		}
+	}
+
+}
+
+country_event = {
+	id = germany.30
+	title = germany.30.t
+	desc = germany.30.desc
+	is_triggered_only = yes
+
+	option = {
+		name = germany.30.a
+		add_political_power = -100
+		add_stability = -0.15
+		add_war_support = -0.15
+		add_timed_idea = {
+			idea = GER_austerity_bad
+			days = 365
+		}
+		set_variable = { GER_military_spending = 1 }
+		set_variable = { GER_industry_spending = 1 }
+		set_variable = { GER_welfare_spending = 1 }
+	}
+
+}
+
+country_event = {
+	id = germany.31
+	title = germany.31.t
+	desc = germany.31.desc
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = GER_spending_fixed
+			activate_mission = GER_allocate_spending_mission
+			IF = {
+				limit = { check_variable = { GER_spending_net < -4 } }
+				hidden_effect = { country_event = germany.30 }
+			}
+			GER_calculate_spending_from_factories = yes
+			set_variable = { GER_military_spending = 0 }
+			set_variable = { GER_industry_spending = 0 }
+			set_variable = { GER_welfare_spending = 0 }
+			GER_calculate_spending_modifiers = yes
+		}
+	}
+
+	option = {
+		name = germany.31.a
+		effect_tooltip = {
+			clr_country_flag = GER_spending_fixed
+			activate_mission = GER_allocate_spending_mission
+			IF = {
+				limit = { check_variable = { GER_spending_net < -4 } }
+				hidden_effect = { country_event = germany.30 }
+			}
+			GER_calculate_spending_from_factories = yes
+			set_variable = { GER_military_spending = 0 }
+			set_variable = { GER_industry_spending = 0 }
+			set_variable = { GER_welfare_spending = 0 }
+			GER_calculate_spending_modifiers = yes
+		}
+	}
+
+}
+
+country_event = { #American capital withdraws
+	id = germany.32
+	title = germany.32.t
+	desc = germany.32.desc
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_stability = -0.08
+			random_owned_controlled_state = {
+				limit = { arms_factory > 0 }
+				remove_building = { type = arms_factory level = 1 }
+			}
+			random_owned_controlled_state = {
+				limit = { arms_factory > 0 }
+				remove_building = { type = arms_factory level = 1 }
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = { type = industrial_complex level = 1 }
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = { type = industrial_complex level = 1 }
+			}
+			add_to_variable = { GER_income_spending = -1 }
+			add_to_variable = { GER_spending_net = -1 }
+		}
+	}
+
+	option = {
+		name = germany.32.a
+		effect_tooltip = {
+			add_stability = -0.08
+			random_owned_controlled_state = {
+				limit = { arms_factory > 0 }
+				remove_building = { type = arms_factory level = 1 }
+			}
+			random_owned_controlled_state = {
+				limit = { arms_factory > 0 }
+				remove_building = { type = arms_factory level = 1 }
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = { type = industrial_complex level = 1 }
+			}
+			random_owned_controlled_state = {
+				limit = { industrial_complex > 0 }
+				remove_building = { type = industrial_complex level = 1 }
+			}
+			custom_effect_tooltip = GER_remove_income_tt
+		}
+	}
+
+}

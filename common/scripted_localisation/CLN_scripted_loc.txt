@@ -1,0 +1,15 @@
+defined_text = {
+	name = GetCLNFactionName
+	text = {
+		trigger = {
+			is_commie_ideology = no
+		}
+		localization_key = CLN_faction_name_good
+	}
+	text = {
+		trigger = {
+			is_commie_ideology = yes
+		}
+		localization_key = CLN_faction_name_bad
+	}
+}

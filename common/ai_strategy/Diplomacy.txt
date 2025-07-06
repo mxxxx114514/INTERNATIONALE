@@ -1,0 +1,171 @@
+#################
+### Diplomacy ###
+#################
+SOV_hates_pakt = {
+	reversed = yes
+
+	enable_reverse = {
+		SOV = { is_subject = no }
+	}
+	enable = {
+		is_in_faction_with = GRR
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GRR.faction_members
+
+	ai_strategy = {
+		type = antagonize
+		id = SOV
+		value = 1000
+	}
+}
+FRA_hates_pakt = {
+	reversed = yes
+
+	enable_reverse = {
+		FRA = { is_subject = no }
+	}
+	enable = {
+		is_in_faction_with = GRR
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GRR.faction_members
+
+	ai_strategy = {
+		type = antagonize
+		id = FRA
+		value = 1000
+	}
+}
+ITA_hates_pakt = {
+	reversed = yes
+
+	enable_reverse = {
+		ITA = { is_subject = no }
+	}
+	enable = {
+		is_in_faction_with = GRR
+	}
+	abort_when_not_enabled = yes
+
+	target_array = GRR.faction_members
+
+	ai_strategy = {
+		type = antagonize
+		id = ITA
+		value = 1000
+	}
+}
+SOV_hates_entente = {
+	reversed = yes
+
+	enable_reverse = {
+		SOV = { is_subject = no }
+	}
+	enable = {
+		is_in_faction_with = ENG
+	}
+	abort_when_not_enabled = yes
+
+	target_array = ENG.faction_members
+
+	ai_strategy = {
+		type = antagonize
+		id = SOV
+		value = 1000
+	}
+}
+FRA_hates_entente = {
+	reversed = yes
+
+	enable_reverse = {
+		FRA = { is_subject = no }
+	}
+	enable = {
+		is_in_faction_with = ENG
+	}
+	abort_when_not_enabled = yes
+
+	target_array = ENG.faction_members
+
+	ai_strategy = {
+		type = antagonize
+		id = FRA
+		value = 1000
+	}
+}
+ITA_hates_entente = {
+	reversed = yes
+
+	enable_reverse = {
+		ITA = { is_subject = no }
+	}
+	enable = {
+		is_in_faction_with = ENG
+	}
+	abort_when_not_enabled = yes
+
+	target_array = ENG.faction_members
+
+	ai_strategy = {
+		type = antagonize
+		id = ITA
+		value = 1000
+	}
+}
+IGNORE_ARABIA = {
+	enable = {
+		OR = {
+			tag = SOV
+			tag = FRA
+			tag = ITA
+			tag = HUN
+			tag = USA
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = HEJ
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = HEJ
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = IRQ
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = IRQ
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = JOR
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = JOR
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SAU
+		value = -1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SAU
+		value = -1000
+	}
+
+}

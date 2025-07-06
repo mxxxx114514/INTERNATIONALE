@@ -1,0 +1,29 @@
+state={
+	id=930
+	name="STATE_930"
+	provinces={
+		10769 12721 13300 13302 13304 13306
+	}
+	resources={
+		oil=7
+	}
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 2
+
+		}
+		add_core_of = MEX
+		victory_points = {
+			10769 10
+		}
+
+	}
+	manpower=500000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=large_town
+
+}

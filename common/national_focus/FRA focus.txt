@@ -1,0 +1,3210 @@
+focus_tree = {
+	id = france_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 3000 }
+
+	focus = {
+		id = FRA_peoples_revolutionary_front_question
+		icon = GFX_goal_unknown
+		cost = 1
+		x = 5
+		y = 0
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_left_united_front
+		icon = GFX_goal_unknown
+		cost = 2
+		relative_position_id = FRA_peoples_revolutionary_front_question
+		x = -5
+		y = 1
+		prerequisite = { focus = FRA_peoples_revolutionary_front_question }
+		mutually_exclusive = { focus = FRA_far_left_revolutionaries }
+		available = {
+			hidden_trigger = {
+				OR = {
+					has_game_rule = {
+						rule = FRA_path
+						option = DEFAULT
+					}
+					has_game_rule = {
+						rule = FRA_path
+						option = FRA_PATH_FROSSARD
+					}
+					has_game_rule = {
+						rule = FRA_path
+						option = FRA_PATH_THOREZ
+					}
+					has_game_rule = {
+						rule = FRA_path
+						option = FRA_PATH_FAURE
+					}
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_leon_blum_last_speech
+		icon = GFX_goal_unknown
+		cost = 2
+		relative_position_id = FRA_left_united_front
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_left_united_front }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_election
+		icon = GFX_goal_unknown
+		cost = 1
+		relative_position_id = FRA_leon_blum_last_speech
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_leon_blum_last_speech }
+		completion_reward = {
+			country_event = france.1
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_victory
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_election
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_election }
+		mutually_exclusive = { focus = FRA_frossard_victory }
+		mutually_exclusive = { focus = FRA_thorez_victory }
+		available = { always = no }
+		completion_reward = {
+			retire_country_leader = yes
+			promote_character = FRA_paul_faure
+			set_politics = { ruling_party = social_democratic }
+			clr_country_flag = autsoc_coalition_flag
+			clr_country_flag = libsoc_coalition_flag
+			clr_country_flag = socdem_coalition_flag
+			set_country_flag = revsoc_coalition_flag
+			add_popularity = {
+				ideology = social_democratic
+				popularity = 0.25
+			}
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_national_economy_construction
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_victory
+		x = -5
+		y = 1
+		prerequisite = { focus = FRA_faure_victory }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_democratic_political_construction_programs
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_national_economy_construction
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_faure_national_economy_construction }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_rural_reforms
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_democratic_political_construction_programs
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_democratic_political_construction_programs }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_ban_rural_communes
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_rural_reforms
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_rural_reforms }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_ban_urban_communes
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_national_economy_construction
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_faure_national_economy_construction }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_moderate_social_reforms
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_ban_urban_communes
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_ban_urban_communes }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_a_free_france
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_moderate_social_reforms
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_moderate_social_reforms }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_paris_spring
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_national_economy_construction
+		x = 0
+		y = 4
+		prerequisite = { focus = FRA_faure_ban_rural_communes }
+		prerequisite = { focus = FRA_faure_a_free_france }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_anti_extremism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_victory
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_victory }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_political_peace
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_anti_extremism
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_faure_anti_extremism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_ally_merchants_and_workers
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_political_peace
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_political_peace }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_open_economy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_ally_merchants_and_workers
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_ally_merchants_and_workers }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_reach_USA_JAP
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_anti_extremism
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_anti_extremism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_west_europe_union
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_reach_USA_JAP
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_reach_USA_JAP }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_end_revolutionary_government
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_west_europe_union
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_west_europe_union }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_distance_with_IN
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_anti_extremism
+		x = 2
+		y = 1
+		prerequisite = { focus = FRA_faure_anti_extremism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_IN_problem
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_distance_with_IN
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_distance_with_IN }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_attack_SOV_domination_in_IN
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_IN_problem
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_IN_problem }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_workers_peasants_merchants_union
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_end_revolutionary_government
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_open_economy }
+		prerequisite = { focus = FRA_faure_end_revolutionary_government }
+		prerequisite = { focus = FRA_faure_attack_SOV_domination_in_IN }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_socialism_with_french_characteristics
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_victory
+		x = 5
+		y = 1
+		prerequisite = { focus = FRA_faure_victory }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_national_peoples_construction_congress
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_socialism_with_french_characteristics
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_socialism_with_french_characteristics }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_lyon_trade_agreement
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_national_peoples_construction_congress
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_faure_national_peoples_construction_congress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_spirit_of_locarno
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_lyon_trade_agreement
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_lyon_trade_agreement }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_anti_despotism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_national_peoples_construction_congress
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_faure_national_peoples_construction_congress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_diplomatic_peace
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_anti_despotism
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_faure_anti_despotism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_reach_GER
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_national_peoples_construction_congress
+		x = 0
+		y = 3
+		prerequisite = { focus = FRA_faure_spirit_of_locarno }
+		prerequisite = { focus = FRA_faure_diplomatic_peace }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_faure_the_republic_marches_on
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_faure_victory
+		x = 0
+		y = 6
+		prerequisite = { focus = FRA_faure_paris_spring }
+		prerequisite = { focus = FRA_faure_workers_peasants_merchants_union }
+		prerequisite = { focus = FRA_faure_reach_GER }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_victory
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_election
+		x = -19
+		y = 1
+		prerequisite = { focus = FRA_election }
+		mutually_exclusive = { focus = FRA_faure_victory }
+		mutually_exclusive = { focus = FRA_thorez_victory }
+		available = { always = no }
+		completion_reward = {
+			set_cosmetic_tag = FRA_frossard
+			retire_country_leader = yes
+			promote_character = FRA_oscar_frossard
+			clr_country_flag = socdem_coalition_flag
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_regional_communal_economy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_victory
+		x = -8
+		y = 1
+		prerequisite = { focus = FRA_frossard_victory }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_open_ports
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_regional_communal_economy
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_frossard_regional_communal_economy }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_stabilize_officials
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_open_ports
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_frossard_open_ports }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_allow_private_economy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_open_ports
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_frossard_open_ports }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_liberate_social_thinking
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_open_ports
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_frossard_stabilize_officials }
+		prerequisite = { focus = FRA_frossard_allow_private_economy }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_people_create_history
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_liberate_social_thinking
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_frossard_liberate_social_thinking }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_create_discussion_conference
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_liberate_social_thinking
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_frossard_liberate_social_thinking }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_collective_industry_building
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_regional_communal_economy
+		x = 2
+		y = 1
+		prerequisite = { focus = FRA_frossard_regional_communal_economy }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_learn_and_surpass
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_collective_industry_building
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_frossard_collective_industry_building }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_group_over_individual
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_collective_industry_building
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_frossard_collective_industry_building }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_dissolve_local_communes
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_collective_industry_building
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_frossard_learn_and_surpass }
+		prerequisite = { focus = FRA_frossard_group_over_individual }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_agriculture_mechanization
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_dissolve_local_communes
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_frossard_dissolve_local_communes }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_industry_collectivization
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_dissolve_local_communes
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_frossard_dissolve_local_communes }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_regional_economy_reforms
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_regional_communal_economy
+		x = 0
+		y = 5
+		prerequisite = { focus = FRA_frossard_people_create_history}
+		prerequisite = { focus = FRA_frossard_create_discussion_conference }
+		prerequisite = { focus = FRA_frossard_agriculture_mechanization }
+		prerequisite = { focus = FRA_frossard_industry_collectivization }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_SOV_path_threat
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_victory
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_frossard_victory }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_urge_unity
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_SOV_path_threat
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_frossard_SOV_path_threat }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_national_peoples_consultative_conference
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_urge_unity
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_frossard_urge_unity }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_class_struggle_narrative
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_national_peoples_consultative_conference
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_frossard_national_peoples_consultative_conference }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_socialism_save_france
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_class_struggle_narrative
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_frossard_class_struggle_narrative }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_unity_save_france
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_class_struggle_narrative
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_frossard_class_struggle_narrative }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_west_europe_proletariats_unite
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_SOV_path_threat
+		x = 2
+		y = 1
+		prerequisite = { focus = FRA_frossard_SOV_path_threat }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_workers_peasants_front
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_west_europe_proletariats_unite
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_frossard_west_europe_proletariats_unite }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_national_road_building
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_workers_peasants_front
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_frossard_workers_peasants_front }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_protect_workers_legislation
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_national_road_building
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_frossard_national_road_building }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_open_up_trade
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_workers_peasants_front
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_frossard_workers_peasants_front }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_protect_peasants_legislation
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_open_up_trade
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_frossard_open_up_trade }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_socialist_structure_reform
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_SOV_path_threat
+		x = 0
+		y = 5
+		prerequisite = { focus = FRA_frossard_socialism_save_france }
+		prerequisite = { focus = FRA_frossard_unity_save_france }
+		prerequisite = { focus = FRA_frossard_protect_workers_legislation }
+		prerequisite = { focus = FRA_frossard_protect_peasants_legislation }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_national_united_revolutionary_front
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_victory
+		x = 8
+		y = 1
+		prerequisite = { focus = FRA_frossard_victory }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_international_support
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_national_united_revolutionary_front
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_frossard_national_united_revolutionary_front }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_abolish_trotskyism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_international_support
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_frossard_international_support }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_protect_proletariats
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_international_support
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_frossard_international_support }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_domestic_people_unity
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_international_support
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_frossard_abolish_trotskyism }
+		prerequisite = { focus = FRA_frossard_protect_proletariats }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_anti_domestic_restorationists
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_domestic_people_unity
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_frossard_domestic_people_unity }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_anti_foreign_enemies
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_domestic_people_unity
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_frossard_domestic_people_unity }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_support_foreign_socialists
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_national_united_revolutionary_front
+		x = 2
+		y = 1
+		prerequisite = { focus = FRA_frossard_national_united_revolutionary_front }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_lead_western_europe_revolution
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_support_foreign_socialists
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_frossard_support_foreign_socialists }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_alsace_lorraine_wall
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_support_foreign_socialists
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_frossard_support_foreign_socialists }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_anti_reactionary_forces
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_support_foreign_socialists
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_frossard_lead_western_europe_revolution }
+		prerequisite = { focus = FRA_frossard_alsace_lorraine_wall }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_intelligence_agency
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_anti_reactionary_forces
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_frossard_anti_reactionary_forces }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_people_is_power
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_anti_reactionary_forces
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_frossard_anti_reactionary_forces }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_frossard_proletariats_peoples_united_fron
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_frossard_national_united_revolutionary_front
+		x = 0
+		y = 5
+		prerequisite = { focus = FRA_frossard_anti_domestic_restorationists }
+		prerequisite = { focus = FRA_frossard_anti_foreign_enemies }
+		prerequisite = { focus = FRA_frossard_intelligence_agency }
+		prerequisite = { focus = FRA_frossard_people_is_power }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_victory
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_election
+		x = 15
+		y = 1
+		prerequisite = { focus = FRA_election }
+		mutually_exclusive = { focus = FRA_frossard_victory }
+		mutually_exclusive = { focus = FRA_faure_victory }
+		available = { always = no }
+		completion_reward = {
+			set_cosmetic_tag = FRA_thorez
+			retire_country_leader = yes
+			promote_character = FRA_maurice_thorez
+			set_politics = { ruling_party = auth_communism }
+			clr_country_flag = autsoc_coalition_flag
+			clr_country_flag = libsoc_coalition_flag
+			clr_country_flag = socdem_coalition_flag
+			set_country_flag = revsoc_coalition_flag
+			add_popularity = {
+				ideology = auth_communism
+				popularity = 0.3
+			}
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_firm_socialist_path
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_victory
+		x = -6
+		y = 1
+		prerequisite = { focus = FRA_thorez_victory }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_urban_communes
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_firm_socialist_path
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_thorez_firm_socialist_path }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_local_communes
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_urban_communes
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_urban_communes }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_french_leninism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_local_communes
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_local_communes }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_communal_and_state_economy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_firm_socialist_path
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_thorez_firm_socialist_path }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_workers_cooperative
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_communal_and_state_economy
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_communal_and_state_economy }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_french_people_greatest
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_workers_cooperative
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_workers_cooperative }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_all_french_workers_union
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_firm_socialist_path
+		x = 0
+		y = 4
+		prerequisite = { focus = FRA_thorez_french_leninism }
+		prerequisite = { focus = FRA_thorez_french_people_greatest }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_great_purge
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_victory
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_victory }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_anti_rightist
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_great_purge
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_thorez_great_purge }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_reform_socialism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_anti_rightist
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_thorez_anti_rightist }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_support_foreign_communists
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_reform_socialism
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_reform_socialism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_demand_people_identify_rightist
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_anti_rightist
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_thorez_anti_rightist }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_for_state_and_people
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_demand_people_identify_rightist
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_demand_people_identify_rightist }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_for_communist_future
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_anti_rightist
+		x = 0
+		y = 3
+		prerequisite = { focus = FRA_thorez_support_foreign_communists }
+		prerequisite = { focus = FRA_thorez_for_state_and_people }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_class_struggle
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_great_purge
+		x = 2
+		y = 1
+		prerequisite = { focus = FRA_thorez_great_purge }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_strait_sides
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_class_struggle
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_thorez_class_struggle }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_follow_thorez
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_strait_sides
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_strait_sides }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_abolish_negative_defensive_strategy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_class_struggle
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_thorez_class_struggle }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_victory_flag_to_corsica
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_abolish_negative_defensive_strategy
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_abolish_negative_defensive_strategy }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_beacon_of_revolution
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_class_struggle
+		x = 0
+		y = 3
+		prerequisite = { focus = FRA_thorez_follow_thorez }
+		prerequisite = { focus = FRA_thorez_victory_flag_to_corsica }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_role_of_IN
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_victory
+		x = 8
+		y = 1
+		prerequisite = { focus = FRA_thorez_victory }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_german_border
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_role_of_IN
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_thorez_role_of_IN }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_reform_foreign_policies
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_german_border
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_german_border }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_leader_of_western_europe
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_reform_foreign_policies
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_thorez_reform_foreign_policies }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_develop_foreign_trade
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_reform_foreign_policies
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_thorez_reform_foreign_policies }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_defend_nancy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_role_of_IN
+		x = 2
+		y = 1
+		prerequisite = { focus = FRA_thorez_role_of_IN }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_reform_IN
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_defend_nancy
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_thorez_defend_nancy }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_help_all_proletariat_parties
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_reform_IN
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_thorez_reform_IN }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_defend_proletariat_countries
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_reform_IN
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_thorez_reform_IN }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_swords_towards_berlin
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_role_of_IN
+		x = 0
+		y = 4
+		prerequisite = { focus = FRA_thorez_leader_of_western_europe }
+		prerequisite = { focus = FRA_thorez_develop_foreign_trade }
+		prerequisite = { focus = FRA_thorez_help_all_proletariat_parties }
+		prerequisite = { focus = FRA_thorez_defend_proletariat_countries }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_thorez_new_era_of_the_commune
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_thorez_victory
+		x = 0
+		y = 6
+		prerequisite = { focus = FRA_thorez_all_french_workers_union }
+		prerequisite = { focus = FRA_thorez_for_communist_future }
+		prerequisite = { focus = FRA_thorez_beacon_of_revolution }
+		prerequisite = { focus = FRA_thorez_swords_towards_berlin }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_far_left_revolutionaries
+		icon = GFX_goal_unknown
+		cost = 2
+		relative_position_id = FRA_peoples_revolutionary_front_question
+		x = 30
+		y = 1
+		prerequisite = { focus = FRA_peoples_revolutionary_front_question }
+		mutually_exclusive = { focus = FRA_left_united_front }
+		available = { always = no }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_united_government
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_far_left_revolutionaries
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_far_left_revolutionaries }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_paris_revolutionary_conflicts
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_united_government
+		x = -6
+		y = 1
+		prerequisite = { focus = FRA_pivert_united_government }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_jacobins_return
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_paris_revolutionary_conflicts
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_pivert_paris_revolutionary_conflicts }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_guerings_commmunal_theory
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_jacobins_return
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_pivert_jacobins_return }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_workers_anarchist_congress
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_paris_revolutionary_conflicts
+		x = 2
+		y = 1
+		prerequisite = { focus = FRA_pivert_paris_revolutionary_conflicts }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_anarchist_labor_union
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_workers_anarchist_congress
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_pivert_workers_anarchist_congress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_autonomous_unions
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_workers_anarchist_congress
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_pivert_workers_anarchist_congress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_workers_reliberation
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_united_government
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_pivert_united_government }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_paris_socialist_congress
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_workers_reliberation
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_pivert_workers_reliberation }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_people_free_socialist_theory
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_paris_socialist_congress
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_pivert_paris_socialist_congress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_autonomous_system_conflicts
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_workers_reliberation
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_pivert_workers_reliberation }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_gender_equality
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_autonomous_system_conflicts
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_pivert_autonomous_system_conflicts }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_great_leader
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_united_government
+		x = 6
+		y = 1
+		prerequisite = { focus = FRA_pivert_united_government }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_neosocialism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_great_leader
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_pivert_great_leader }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_national_socialism_theory
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_neosocialism
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_pivert_neosocialism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_peasants_concentration_policy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_neosocialism
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_pivert_neosocialism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_radical_revolution
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_great_leader
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_pivert_great_leader }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_national_internationalism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_radical_revolution
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_pivert_radical_revolution }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_pivert_chaos_freedom_liberation
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_pivert_united_government
+		x = 0
+		y = 8
+		prerequisite = { focus = FRA_pivert_guerings_commmunal_theory }
+		prerequisite = { focus = FRA_pivert_anarchist_labor_union }
+		prerequisite = { focus = FRA_pivert_autonomous_unions }
+		prerequisite = { focus = FRA_pivert_people_free_socialist_theory }
+		prerequisite = { focus = FRA_pivert_gender_equality }
+		prerequisite = { focus = FRA_pivert_national_socialism_theory }
+		prerequisite = { focus = FRA_pivert_peasants_concentration_policy }
+		prerequisite = { focus = FRA_pivert_national_internationalism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_united_front
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_peoples_revolutionary_front_question
+		x = 18
+		y = 12
+		available = { always = no }
+		prerequisite = { focus = FRA_pivert_chaos_freedom_liberation }
+		mutually_exclusive = { focus = FRA_doriot_coup }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_paris_commune
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_united_front
+		x = -6
+		y = 1
+		prerequisite = { focus = FRA_guerin_united_front }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_publish_anarchist_books
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_paris_commune
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_guerin_paris_commune }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_liberate_work_force
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_publish_anarchist_books
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_guerin_publish_anarchist_books }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_virtue_above_all
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_publish_anarchist_books
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_guerin_publish_anarchist_books }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_self_organize_unions
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_publish_anarchist_books
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_guerin_liberate_work_force }
+		prerequisite = { focus = FRA_guerin_virtue_above_all }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_arts
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_self_organize_unions
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_guerin_self_organize_unions }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_elders
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_self_organize_unions
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_guerin_self_organize_unions }
+		completion_reward = {
+			
+		}
+
+	}
+
+
+	focus = {
+		id = FRA_guerin_neighbor_anarchism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_paris_commune
+		x = 2
+		y = 1
+		prerequisite = { focus = FRA_guerin_paris_commune }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_embrace_mutualism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_neighbor_anarchism
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_guerin_neighbor_anarchism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_for_the_mass
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_neighbor_anarchism
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_guerin_neighbor_anarchism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_revolutionary_ideals
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_neighbor_anarchism
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_guerin_embrace_mutualism }
+		prerequisite = { focus = FRA_guerin_for_the_mass }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_anarchist_propaganda
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_revolutionary_ideals
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_guerin_revolutionary_ideals }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_anarchist_leadership
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_revolutionary_ideals
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_guerin_revolutionary_ideals }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_empower_the_people
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_paris_commune
+		x = 0
+		y = 5
+		prerequisite = { focus = FRA_guerin_arts }
+		prerequisite = { focus = FRA_guerin_elders }
+		prerequisite = { focus = FRA_guerin_anarchist_propaganda }
+		prerequisite = { focus = FRA_guerin_anarchist_leadership }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_anti_state_army
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_united_front
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_united_front }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_defeat_opponents
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_anti_state_army
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_guerin_anti_state_army }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_anarchist_guarantee
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_defeat_opponents
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_defeat_opponents }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_protect_anarchism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_anarchist_guarantee
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_anarchist_guarantee }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_full_equality
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_protect_anarchism
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_protect_anarchism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_land_of_free
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_anti_state_army
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_guerin_anti_state_army }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_commune_equality
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_land_of_free
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_land_of_free }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_abolish_social_classes
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_commune_equality
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_commune_equality }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_sexual_liberation
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_abolish_social_classes
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_abolish_social_classes }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_commune_is_liberty
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_anti_state_army
+		x = 0
+		y = 5
+		prerequisite = { focus = FRA_guerin_full_equality }
+		prerequisite = { focus = FRA_guerin_sexual_liberation }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_abolish_laws
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_united_front
+		x = 6
+		y = 1
+		prerequisite = { focus = FRA_guerin_united_front }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_abolish_regional_governments
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_abolish_laws
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_guerin_abolish_laws }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_revive_the_people
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_abolish_regional_governments
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_guerin_abolish_regional_governments }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_morals_over_law
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_abolish_regional_governments
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_guerin_abolish_regional_governments }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_fire_officials
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_abolish_regional_governments
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_guerin_revive_the_people }
+		prerequisite = { focus = FRA_guerin_morals_over_law }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_dissolve_private_companies
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_fire_officials
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_fire_officials }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_abolish_traditional_economic_policies
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_abolish_laws
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_guerin_abolish_laws }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_ban_economic_hard_requirements
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_abolish_traditional_economic_policies
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_abolish_traditional_economic_policies }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_economy_of_the_free_land
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_ban_economic_hard_requirements
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_ban_economic_hard_requirements }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_society_without_experts
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_economy_of_the_free_land
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_guerin_economy_of_the_free_land }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_long_live_anarchism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_abolish_laws
+		x = 0
+		y = 5
+		prerequisite = { focus = FRA_guerin_dissolve_private_companies }
+		prerequisite = { focus = FRA_guerin_society_without_experts }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_guerin_international_anarchism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_guerin_united_front
+		x = 0
+		y = 7
+		prerequisite = { focus = FRA_guerin_empower_the_people }
+		prerequisite = { focus = FRA_guerin_commune_is_liberty }
+		prerequisite = { focus = FRA_guerin_long_live_anarchism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_coup
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_peoples_revolutionary_front_question
+		x = 45
+		y = 12
+		available = { always = no }
+		prerequisite = { focus = FRA_pivert_chaos_freedom_liberation }
+		mutually_exclusive = { focus = FRA_guerin_united_front }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_acceleration_avant_garde_progress
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_coup
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_doriot_coup }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_socialism_not_communism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_acceleration_avant_garde_progress
+		x = -12
+		y = 1
+		prerequisite = { focus = FRA_doriot_acceleration_avant_garde_progress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_create_national_defense_corps
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_socialism_not_communism
+		x = -3
+		y = 1
+		prerequisite = { focus = FRA_doriot_socialism_not_communism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_vanguard_army
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_create_national_defense_corps
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_create_national_defense_corps }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_united_vanguard
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_vanguard_army
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_vanguard_army }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_party_equals_gun
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_vanguard_army
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_vanguard_army }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_no_prisons_only_army
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_create_national_defense_corps
+		x = 2
+		y = 1
+		prerequisite = { focus = FRA_doriot_create_national_defense_corps }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_amend_the_law
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_no_prisons_only_army
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_doriot_no_prisons_only_army }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_guards_of_doriot
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_create_national_defense_corps
+		x = 0
+		y = 3
+		prerequisite = { focus = FRA_doriot_united_vanguard }
+		prerequisite = { focus = FRA_doriot_party_equals_gun }
+		prerequisite = { focus = FRA_doriot_amend_the_law }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_people_vanguards_protect_doriot
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_guards_of_doriot
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_guards_of_doriot }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_the_army_must_march
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_guards_of_doriot
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_guards_of_doriot }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_control_all_national_power
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_socialism_not_communism
+		x = 3
+		y = 1
+		prerequisite = { focus = FRA_doriot_socialism_not_communism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_dissolve_all_communes
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_control_all_national_power
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_doriot_control_all_national_power }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_collective_production
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_dissolve_all_communes
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_doriot_dissolve_all_communes }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_national_peoples_control_administration
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_control_all_national_power
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_control_all_national_power }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_expand_ministry_of_internal_affairs
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_national_peoples_control_administration
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_national_peoples_control_administration }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_european_nationalism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_national_peoples_control_administration
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_national_peoples_control_administration }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_the_more_the_better
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_control_all_national_power
+		x = 0
+		y = 3
+		prerequisite = { focus = FRA_doriot_collective_production }
+		prerequisite = { focus = FRA_doriot_expand_ministry_of_internal_affairs }
+		prerequisite = { focus = FRA_doriot_european_nationalism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_build_infrastructure
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_the_more_the_better
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_the_more_the_better }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_build_railway
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_the_more_the_better
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_the_more_the_better }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_reckless_policies_are_vanguardism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_socialism_not_communism
+		x = 0
+		y = 6
+		prerequisite = { focus = FRA_doriot_people_vanguards_protect_doriot }
+		prerequisite = { focus = FRA_doriot_the_army_must_march }
+		prerequisite = { focus = FRA_doriot_build_infrastructure }
+		prerequisite = { focus = FRA_doriot_build_railway }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_forced_progress
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_acceleration_avant_garde_progress
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_doriot_acceleration_avant_garde_progress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_twelve_hours_work
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_forced_progress
+		x = -4
+		y = 1
+		prerequisite = { focus = FRA_doriot_forced_progress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_goods_belong_to_state
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_twelve_hours_work
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_twelve_hours_work }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_abolish_communal_currency
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_twelve_hours_work
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_twelve_hours_work }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_state_doriot_people
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_twelve_hours_work
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_doriot_goods_belong_to_state }
+		prerequisite = { focus = FRA_doriot_abolish_communal_currency }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_progress_fix_errors
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_state_doriot_people
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_state_doriot_people }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_distribution_according_to_need
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_state_doriot_people
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_state_doriot_people }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_three_times_economic_goal
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_forced_progress
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_doriot_forced_progress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_ban_entertainment
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_three_times_economic_goal
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_three_times_economic_goal }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_centralization_development
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_three_times_economic_goal
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_three_times_economic_goal }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_no_tax_all_state_owned
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_three_times_economic_goal
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_doriot_ban_entertainment }
+		prerequisite = { focus = FRA_doriot_centralization_development}
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_people_know_all
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_no_tax_all_state_owned
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_no_tax_all_state_owned }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_no_autonomy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_no_tax_all_state_owned
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_no_tax_all_state_owned }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_oppress_opposition_like_jacobins
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_forced_progress
+		x = 4
+		y = 1
+		prerequisite = { focus = FRA_doriot_forced_progress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_destroy_liberalism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_oppress_opposition_like_jacobins
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_oppress_opposition_like_jacobins }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_purge_opposition
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_oppress_opposition_like_jacobins
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_oppress_opposition_like_jacobins }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_reinforce_police_forces
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_oppress_opposition_like_jacobins
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_doriot_destroy_liberalism }
+		prerequisite = { focus = FRA_doriot_purge_opposition }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_counter_spy
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_reinforce_police_forces
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_reinforce_police_forces }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_watch_out_resistance
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_reinforce_police_forces
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_reinforce_police_forces }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_direct_control_over_production_means
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_forced_progress
+		x = 0
+		y = 5
+		prerequisite = { focus = FRA_doriot_progress_fix_errors }
+		prerequisite = { focus = FRA_doriot_distribution_according_to_need }
+		prerequisite = { focus = FRA_doriot_people_know_all }
+		prerequisite = { focus = FRA_doriot_no_autonomy }
+		prerequisite = { focus = FRA_doriot_counter_spy }
+		prerequisite = { focus = FRA_doriot_watch_out_resistance }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_progressing_life_is_accelerationism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_direct_control_over_production_means
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_doriot_direct_control_over_production_means }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_rational_worshiping
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_acceleration_avant_garde_progress
+		x = 10
+		y = 1
+		prerequisite = { focus = FRA_doriot_acceleration_avant_garde_progress }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_forget_the_past
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_rational_worshiping
+		x = -2
+		y = 1
+		prerequisite = { focus = FRA_doriot_rational_worshiping }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_the_marshal_leads
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_forget_the_past
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_forget_the_past }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_the_future_is_better
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_forget_the_past
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_forget_the_past }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_ban_traditionalism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_rational_worshiping
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_rational_worshiping }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_science_is_truth
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_ban_traditionalism
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_doriot_ban_traditionalism }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_prophet_is_state_science_is_dogma
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_rational_worshiping
+		x = 0
+		y = 3
+		prerequisite = { focus = FRA_doriot_the_marshal_leads }
+		prerequisite = { focus = FRA_doriot_the_future_is_better }
+		prerequisite = { focus = FRA_doriot_science_is_truth }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_only_believers_are_people
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_prophet_is_state_science_is_dogma
+		x = 0
+		y = 1
+		prerequisite = { focus = FRA_doriot_prophet_is_state_science_is_dogma }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_the_marshals_people
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_only_believers_are_people
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_doriot_only_believers_are_people }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_proletariat_glory
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_only_believers_are_people
+		x = 1
+		y = 1
+		prerequisite = { focus = FRA_doriot_only_believers_are_people }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_absolute_obeying_is_progressivism
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_only_believers_are_people
+		x = 0
+		y = 2
+		prerequisite = { focus = FRA_doriot_the_marshals_people }
+		prerequisite = { focus = FRA_doriot_proletariat_glory }
+		completion_reward = {
+			
+		}
+
+	}
+
+	focus = {
+		id = FRA_doriot_all_hail_the_marshal
+		icon = GFX_goal_unknown
+		cost = 4
+		relative_position_id = FRA_doriot_coup
+		x = 0
+		y = 9
+		prerequisite = { focus = FRA_doriot_reckless_policies_are_vanguardism }
+		prerequisite = { focus = FRA_doriot_progressing_life_is_accelerationism }
+		prerequisite = { focus = FRA_doriot_absolute_obeying_is_progressivism }
+		completion_reward = {
+			
+		}
+
+	}
+
+}

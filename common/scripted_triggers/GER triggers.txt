@@ -1,0 +1,71 @@
+GER_is_quidde_path = {
+	original_tag = GER
+	OR = {
+		has_cosmetic_tag = GER_liberal_torch
+		has_cosmetic_tag = GER_liberal_torch_greater
+	}
+}
+
+GER_is_dandl_path = {
+	original_tag = GER
+	OR = {
+		has_cosmetic_tag = GER_kaiserreich
+		has_cosmetic_tag = GER_kaiserreich_greater
+	}
+}
+
+GER_is_hugenberg_path = {
+	original_tag = GER
+	OR = {
+		has_cosmetic_tag = GER_hugenberg
+		has_cosmetic_tag = GER_hugenberg_greater
+	}
+}
+
+GER_reichstag_KPD_in_government = {
+	OR = { has_government = auth_communism has_government = communism has_country_flag = autsoc_coalition_flag has_country_flag = revsoc_coalition_flag }
+}
+
+GER_reichstag_SAPD_in_government = {
+	OR = { has_government = socialism has_country_flag = libsoc_coalition_flag }
+}
+
+GER_reichstag_SPD_in_government = {
+	OR = { has_government = social_democratic has_country_flag = socdem_coalition_flag }
+}
+
+GER_reichstag_DDP_in_government = {
+	OR = { has_government = social_liberal has_country_flag = soclib_coalition_flag }
+}
+
+GER_reichstag_Z_in_government = {
+	OR = { has_government = democratic has_country_flag = condem_coalition_flag }
+}
+
+GER_reichstag_BVP_in_government = {
+	GER_reichstag_Z_in_government = yes
+}
+
+GER_reichstag_DBP_in_government = {
+	has_country_flag = GER_DBP_coalition_flag
+}
+
+GER_reichstag_PP_in_government = {
+	has_country_flag = GER_PP_coalition_flag
+}
+
+GER_reichstag_DVP_in_government = {
+	OR = { has_government = liberal AND = { has_country_flag = marlib_coalition_flag has_country_flag = GER_DVP_coalition_flag } }
+}
+
+GER_reichstag_WP_in_government = {
+	has_country_flag = GER_WP_coalition_flag
+}
+
+GER_reichstag_DNVP_in_government = {
+	OR = { has_government = neutrality has_country_flag = autdem_coalition_flag }
+}
+
+GER_reichstag_NSDAP_in_government = {
+	OR = { has_government = fascism has_country_flag = natpop_coalition_flag }
+}

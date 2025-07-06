@@ -1,0 +1,113 @@
+###########################
+# Austria News
+###########################
+
+add_namespace = austria_news
+
+news_event = {
+	id = austria_news.1
+	title = austria_news.1.t
+	desc = austria_news.1.desc
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria_news.1.a
+		trigger = { tag = AUS }
+		
+	}
+
+	option = {
+		name = austria_news.1.b
+		trigger = { tag = GRR }
+		
+	}
+
+	option = {
+		name = austria_news.1.c
+		trigger = { NOT = { tag = GRR } NOT = { tag = AUS } is_commie_ideology = yes }
+		
+	}
+
+	option = {
+		name = austria_news.1.d
+		trigger = { NOT = { tag = GRR } NOT = { tag = AUS } is_commie_ideology = no }
+		
+	}
+}
+
+news_event = {
+	id = austria_news.2
+	title = austria_news.2.t
+	desc = austria_news.2.desc
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria_news.2.a
+		trigger = { tag = AUS }
+		
+	}
+
+	option = {
+		name = austria_news.2.b
+		trigger = { tag = GRR }
+		effect_tooltip = {
+			remove_targeted_decision = { target = GRR decision = GER_collaborate_with_SDAPO }
+			remove_targeted_decision = { target = GRR decision = GER_fund_moderate_CSP }
+			remove_targeted_decision = { target = GRR decision = GER_support_GDVP }
+			remove_targeted_decision = { target = GRR decision = GER_arm_AUS_opposition }
+		}
+		
+	}
+
+	option = {
+		name = austria_news.2.c
+		trigger = { NOT = { tag = GRR } NOT = { tag = AUS } is_commie_ideology = yes }
+		
+	}
+
+	option = {
+		name = austria_news.2.d
+		trigger = { NOT = { tag = GRR } NOT = { tag = AUS } is_commie_ideology = no }
+		
+	}
+}
+
+news_event = {
+	id = austria_news.3
+	title = austria_news.3.t
+	desc = austria_news.3.desc
+
+	#fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = austria_news.3.a
+		trigger = { tag = AUS }
+		
+	}
+
+	option = {
+		name = austria_news.3.b
+		trigger = { tag = GRR }
+		
+	}
+
+	option = {
+		name = austria_news.3.c
+		trigger = { NOT = { tag = GRR } NOT = { tag = AUS } is_commie_ideology = yes }
+		
+	}
+
+	option = {
+		name = austria_news.3.d
+		trigger = { NOT = { tag = GRR } NOT = { tag = AUS } is_commie_ideology = no }
+		
+	}
+}

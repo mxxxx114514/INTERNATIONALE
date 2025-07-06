@@ -1,0 +1,10 @@
+#################
+#### JAP ####
+#################
+JAP_intervene_ww2_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = JAP }
+	visible = { has_global_flag = ww2 }
+}

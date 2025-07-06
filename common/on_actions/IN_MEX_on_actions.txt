@@ -1,0 +1,17 @@
+on_actions = {
+	on_weekly = {
+		effect = {
+			MEX = {
+				MEX_calculate_total_cristero_strength = yes
+				IF = {
+					limit = {
+						NOT = { has_country_flag = MEX_PAN_start_flag }
+						check_variable = { MEX_cristero_army_total_strength < 400 }
+					}
+					set_country_flag = MEX_PAN_start_flag
+					country_event = mexico_stage2.1
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+﻿l_simp_chinese:
+#政党
+ AUS_auth_communism_party: "奥地利共产党"
+ AUS_auth_communism_party_long: "奥地利共产党（Kommunistische Partei Österreichs）"
+ AUS_communism_party: "奥地利共产党"
+ AUS_communism_party_long: "奥地利共产党（Kommunistische Partei Österreichs）"
+ AUS_socialism_party: "奥地利社民工党-左翼"
+ AUS_socialism_party_long: "奥地利社民工党-左翼（Sozialdemokratische Arbeiterpartei Österreichs - Links）"
+ AUS_social_democratic_party: "奥地利社民工党"
+ AUS_social_democratic_party_long: "奥地利社民工党（Sozialdemokratische Arbeiterpartei Österreichs）"
+ AUS_social_liberal_party: "自由派"
+ AUS_social_liberal_party_long: "自由派"
+ AUS_liberal_party: "自由派"
+ AUS_liberal_party_long: "自由派"
+ AUS_democratic_party: "基督教社会党"
+ AUS_democratic_party_long: "基督教社会党（Christlichsoziale Partei）"
+ AUS_neutrality_party: "乡村同盟"
+ AUS_neutrality_party_long: "乡村同盟（Landbund）"
+ AUS_neutrality_party_national_unity_government: "民族团结政府"
+ AUS_neutrality_party_national_unity_government_long: "民族团结政府"
+ AUS_despotism_party: "大德意志人民党"
+ AUS_despotism_party_long: "大德意志人民党（Großdeutsche Volkspartei）"
+ AUS_fascism_party: "祖国阵线"
+ AUS_fascism_party_long: "祖国阵线（Vaterländische Front）"
+
+#人物
+ AUS_engelbert_dollfuss: "恩格尔伯特·陶尔斐斯"
+
+#事件
+ austria.1.t: "陶尔斐斯遇刺"
+ austria.2.t: "后陶尔斐斯时代的奥地利"
+ austria.2.desc: ""
+ austria.2.a: "尽一切可能阻止他们！"
+ austria.3.t: "奥地利陷入内战"
+ austria.3.desc: ""
+ austria.3.a: "准备好干涉部队！"
+ austria.4.t: "奥地利亲德派得胜"
+ austria.4.desc: ""
+ austria.4.a: "欢迎回归大德意志祖国！"
+
+ austria_news.1.t: "恩格尔伯特·陶尔斐斯遇刺身亡"
+ austria_news.1.desc: ""
+ austria_news.1.a: "快去调查凶手！"
+ austria_news.1.b: "对维也纳密切观察"
+ austria_news.1.c: "反动派活该的下场"
+ austria_news.1.d: "奥地利政坛一片混乱"
+
+ austria_news.2.t: "奥地利祖国阵线夺权"
+ austria_news.2.desc: ""
+ austria_news.2.a: "奥地利民族主权的胜利！"
+ austria_news.2.b: "不能让这个疯子统治奥地利！"
+ austria_news.2.c: "人民必须推翻这种反动暴君！"
+ austria_news.2.d: "奥地利民主的终结"
+
+ austria_news.3.t: "奥地利内战"
+ austria_news.3.desc: ""
+ austria_news.3.a: "让叛匪去死！"
+ austria_news.3.b: "必须终结奥地利反德政权！"
+ austria_news.3.c: "维也纳工人，团结起来！"
+ austria_news.3.d: "中欧陷入混乱"
+
+#决议
+ AUS_civil_war_category: "奥地利内战"

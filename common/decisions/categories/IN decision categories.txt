@@ -1,0 +1,15 @@
+#################
+#### Internationale ####
+#################
+IN_invade = {
+	icon = ""
+	picture = ""
+	priority = 100
+	allowed = {
+		OR = {
+			tag = SOV
+			tag = FRA
+			tag = ITA
+		}
+	}
+}

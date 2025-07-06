@@ -1,0 +1,23 @@
+﻿capital = 484
+
+oob = "MCA_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+set_research_slots = 3
+
+recruit_character = MCA_pancho_villa
+set_politics = {
+	ruling_party = socialism
+}
+set_country_flag = revsoc_coalition_flag
+set_popularities = {
+	auth_communism = 7
+	communism = 22
+	socialism = 44
+	social_democratic = 10
+	democratic = 13
+	despotism = 4
+}

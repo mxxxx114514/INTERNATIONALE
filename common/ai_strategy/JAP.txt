@@ -1,0 +1,71 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+JAP_SUPPORT_SAU = {
+	enable = {
+		original_tag = JAP
+		SAU = {
+			has_war_with = HEJ
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = SAU
+		value = 200
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = SAU
+		value = 200
+	}
+
+}
+
+JAP_LIKES_MAN = {
+	enable = {
+		original_tag = JAP
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = MAN
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MAN
+		value = 1000
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = MAN
+		value = 1000
+	}
+
+}
+
+MAN_LIKES_JAP = {
+	enable = {
+		original_tag = MAN
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = alliance
+		id = JAP
+		value = 1000
+	}
+
+}

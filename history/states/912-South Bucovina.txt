@@ -1,0 +1,16 @@
+state={
+	id=912
+	name="STATE_912"
+	provinces={
+		6761 11689
+	}
+	history={
+		owner = ROM
+		add_core_of = ROM
+
+	}
+	manpower=20000
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+	state_category=rural
+}

@@ -1,0 +1,10 @@
+#################
+#### POR ####
+#################
+POR_intervene_scw_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = POR }
+	visible = { has_global_flag = spanish_civil_war }
+}

@@ -1,0 +1,212 @@
+CHI_war_category = {
+
+	CHI_start_south_western_war = {
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			effect_tooltip = {
+				declare_war_on = {
+					target = GXC
+					type = topple_government
+				}
+				declare_war_on = {
+					target = YUN
+					type = topple_government
+				}
+				declare_war_on = {
+					target = SZC
+					type = topple_government
+				}
+			}
+			hidden_effect = {
+				set_global_flag = south_western_war
+				add_named_threat = {
+					threat = 5
+					name = IN_south_western_war_threat
+				}
+				#add_ideas = internationale_buff_2
+				declare_war_on = {
+					target = GXC
+					type = topple_government
+				}
+				declare_war_on = {
+					target = YUN
+					type = topple_government
+				}
+				declare_war_on = {
+					target = SZC
+					type = topple_government
+				}
+				SOV = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = CHI
+						value = 1000
+					}
+				}
+				FRA = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = CHI
+						value = 1000
+					}
+				}
+				ITA = {
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = CHI
+						value = 1000
+					}
+				}
+				SOV = {
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = CHI
+						value = 1000
+					}
+				}
+				FRA = {
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = CHI
+						value = 1000
+					}
+				}
+				ITA = {
+					add_ai_strategy = {
+						type = send_lend_lease_desire
+						id = CHI
+						value = 1000
+					}
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					news_event = {
+						id = war_news.1
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	CHI_remove_debuff = {
+		available = {
+			date > 1940.6.31
+			OR = { has_war_with = JAP has_war_with = MAN }
+		}
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			remove_ideas = china_poor_army
+			add_ideas = CHI_war_of_resistance
+			every_controlled_state = {
+				create_unit = {
+					division = "division_template = \"Juntuán\" start_experience_factor = 0.35 start_equipment_factor = 0.5" 
+					owner = PREV
+					count = 3
+				}
+			}
+		}
+	}
+
+	CHI_spawn_divisions = {
+		visible = {
+			has_war_with = JAP
+		}
+		available = {
+			surrender_progress > 0.25
+		}
+		days_remove = 30
+		icon = ger_mefo_bills
+		cost = 10
+		ai_will_do = { factor = 1000 }
+		remove_effect = {
+			random_state = {
+				limit = {
+					is_owned_by = CHI
+					OR = {
+						is_fully_controlled_by = JAP
+						is_fully_controlled_by = MAN
+					}
+				}
+				create_unit = {
+					division = "division_template = \"Juntuán\" start_experience_factor = 0.3 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 6
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+			random_state = {
+				limit = {
+					is_owned_by = CHI
+					OR = {
+						is_fully_controlled_by = JAP
+						is_fully_controlled_by = MAN
+					}
+				}
+				create_unit = {
+					division = "division_template = \"Juntuán\" start_experience_factor = 0.3 start_equipment_factor = 1.0" 
+					owner = PREV
+					count = 6
+					allow_spawning_on_enemy_provs = yes
+				}
+			}
+		}
+	}
+
+	CHI_invade_TIB = {
+		available = {
+			has_war = no
+			NOT = { country_exists = GMJ }
+			NOT = { country_exists = MAN }
+		}
+		visible = {
+			is_commie_ideology = yes
+		}
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			declare_war_on = {
+				target = TIB
+				type = annex_everything
+			}
+		}
+	}
+
+	CHI_join_IN = {
+		available = {
+			has_war = no
+			NOT = { country_exists = GMJ }
+			NOT = { country_exists = MAN }
+			NOT = { country_exists = TIB }
+			is_commie_ideology = yes
+		}
+		icon = ger_mefo_bills
+		fire_only_once = yes
+		cost = 50
+		ai_will_do = { factor = 1000 }
+		complete_effect = {
+			dismantle_faction = yes
+			set_cosmetic_tag = CHI_lkmt_republic
+			annex_country = { target = MON }
+			annex_country = { target = SIK }
+			every_country = {
+				limit = { is_subject_of = CHI }
+				CHI = { annex_country = { target = PREV } }
+			}
+			generic_add_owned_cores = yes
+			generic_add_owned_claims = yes
+			add_state_claim = 910
+			add_state_claim = 434
+			SOV = { add_to_faction = CHI }
+		}
+	}
+}
