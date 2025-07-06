@@ -9,6 +9,13 @@ MEX_six_year_plan = {
 	consumer_goods_factor = MEX_six_year_plan_cost
 	political_power_cost = MEX_six_year_plan_cost
 }
+MEX_catholic_opposition_d = {
+	icon = GFX_idea_MEX_catholic_opposition
+	conscription_factor = MEX_catholic_opposition_conscription_factor
+	industrial_capacity_factory = MEX_catholic_opposition_industrial_capacity_factory
+	stability_factor = MEX_catholic_opposition_stability_factor
+	war_support_factor = MEX_catholic_opposition_war_support_factor
+}
 MEX_revsoc_influence = {
 	enable = { communism < 0.03 }
 	communism_drift = 0.5

@@ -214,6 +214,9 @@
  MEX_civil_armed_groups: "遍地的民间武装"
  MEX_socialist_education: "社会主义教育"
  MEX_six_year_plan: "六年计划"
+ MEX_catholic_opposition_d: "天主教的反对"
+ MEX_catholic_opposition_d_desc: "在§S奥夫雷贡§!的第一个任期，政府对§c天主教会§!还尚且算为温和，但这一切在§g卡列斯§!的任期下彻底改变了。他对§c天主教会§!残酷打压，并甚至与梵蒂冈圣座断交。到了§S奥夫雷贡§!的第二个任期之时，尽管国家领导人已经更替，但在§c天主教会§!眼里，这两位§S工党§!籍的总统都不会是什么好人。"
+ 
 
  MEX_losing_civil_war: "战事失利"
  MEX_civil_war_player_debuff: "举步维艰"

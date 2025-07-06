@@ -25,27 +25,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = mexico_stage1.5
 			add_stability = 0.05
-			activate_targeted_decision = {
-				target = MEX
-				decision = MEX_cristero_war_test_1
-			}
-			activate_targeted_decision = {
-				target = MEX
-				decision = MEX_cristero_war_test_2
-			}
-			activate_targeted_decision = {
-				target = MEX
-				decision = MEX_cristero_war_clear_cristero_army
-			}
-			activate_mission = MEX_cristero_war_spread_mission
-			hidden_effect = {
-				MEX_clear_all_cristero_war_state_flags = yes
-				set_country_flag = MEX_clicked_on_mexico_city
-				IF = {
-					limit = { is_ai = yes }
-					activate_mission = MEX_cristero_war_clear_ai_mission
-				}
-			}
+			
 		}
 
 	}
@@ -57,10 +37,14 @@ focus_tree = {
 		relative_position_id = MEX_pol_0
 		x = 0
 		y = 1
-		cost = 5
+		cost = 6
 		completion_reward = {
 			add_stability = 0.05
-			add_political_power	= 50
+			add_popularity = {
+				ideology = social_democratic
+				popularity = 0.1
+			}
+			
 			#event: 对基督军策略
 		}
 
@@ -252,9 +236,14 @@ focus_tree = {
 		relative_position_id = MEX_pol_1
 		x = 0
 		y = 3
-		cost = 8
+		cost = 1
 		completion_reward = {
-	
+			add_to_variable = {
+				MEX_catholic_opposition_stability_factor = 0.02
+			}
+			add_to_variable = {
+				MEX_catholic_opposition_war_support_factor = 0.05
+			}
 		}
 
 	}
@@ -304,7 +293,7 @@ focus_tree = {
 		y = 1
 		cost = 8
 		completion_reward = {
-			MEX_improve_catholic_opposition = yes
+			
 		}
 
 	}
@@ -345,7 +334,29 @@ focus_tree = {
 		cost = 7
 		allow_branch = { has_completed_focus = MEX_pol_6 }
 		completion_reward = {
-
+		activate_targeted_decision = {
+		target = MEX
+		decision = MEX_cristero_war_test_1
+		}
+	 	activate_targeted_decision = {
+		target = MEX
+		decision = MEX_cristero_war_test_2
+		}
+		activate_targeted_decision = {
+		target = MEX
+		decision = MEX_cristero_war_clear_cristero_army
+		}
+		add_ideas = limited_conscription
+		add_ideas = partial_economic_mobilisation
+		activate_mission = MEX_cristero_war_spread_mission
+		hidden_effect = {
+		MEX_clear_all_cristero_war_state_flags = yes
+		set_country_flag = MEX_clicked_on_mexico_city
+		IF = {
+		limit = { is_ai = yes }
+		activate_mission = MEX_cristero_war_clear_ai_mission
+		}
+		}
 		}
 
 	}
@@ -359,7 +370,105 @@ focus_tree = {
 		y = 1
 		cost = 7
 		completion_reward = {
-
+			add_to_variable = {
+				MEX_cristero_army_strength_mexico_city = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_nuevo_leon = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_jalisco = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_mexico_state = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_veracruz = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_baja_california = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_guanajuato = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_san_luis_potosi = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_durango = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_sinaloa = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_tamaulipas = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_coahuila = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_chihuahua = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_baja_california_sur = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_sonora = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_zacatecas = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_nayarit = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_aguascalientes = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_guerrero = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_morelos = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_tlaxcala = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_puebla = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_hidalgo = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_oaxaca = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_oaxaca = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_tabasco = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_queretaro = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_campeche = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_quintana_roo = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_yucatan = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_colima = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_chiapas = -10
+			}
+			add_to_variable = {
+				MEX_cristero_army_strength_michoacan = -10
+			}
 		}
 
 	}
@@ -500,7 +609,7 @@ focus_tree = {
 		y = 5
 		cost = 7
 		completion_reward = {
-			MEX_improve_catholic_opposition = yes
+			
 		}
 
 	}

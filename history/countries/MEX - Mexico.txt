@@ -81,7 +81,6 @@ if = {
 add_ideas = {
 	MEX_legacy_of_1910_war
 	MEX_the_next_diaz
-	MEX_catholic_opposition
 	generic_send_more_volunteers_idea
 }
 
@@ -351,6 +350,20 @@ set_variable = {
 set_variable = {
 	var = MEX_six_year_plan_construction
 	value = 0
+}
+
+#天主教反对
+add_dynamic_modifier = {
+	modifier = MEX_catholic_opposition_d
+}
+set_variable = {
+	var = MEX_catholic_opposition_conscription_factor
+	value = -0.5
+}
+
+set_variable = {
+	var = MEX_catholic_opposition_industrial_capacity_factory
+	value = -0.5
 }
 
 #UNAM
