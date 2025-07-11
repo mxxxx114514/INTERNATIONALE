@@ -7,7 +7,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_twenty_five_years
-		icon = GFX_focus_unknown
+		icon = COM_twenty_five_years
 		x = 1
 		y = 0
 		cost = 2
@@ -19,7 +19,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_revolution_in_chaos
-		icon = GFX_focus_unknown
+		icon = COM_revolution_in_chaos
 		relative_position_id = COM_twenty_five_years
 		x = 0
 		y = 1
@@ -33,7 +33,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_guards_of_yucatan
-		icon = GFX_focus_unknown
+		icon = COM_guards_of_yucatan
 		relative_position_id = COM_revolution_in_chaos
 		x = 0
 		y = 1
@@ -51,7 +51,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_recruit_indian_peasants_workers
-		icon = GFX_focus_unknown
+		icon = COM_recruit_indian_peasants_workers
 		relative_position_id = COM_guards_of_yucatan
 		x = -2
 		y = 1
@@ -68,7 +68,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_twelve_years_as_slaves
-		icon = GFX_focus_unknown
+		icon = COM_twelve_years_as_slaves
 		relative_position_id = COM_recruit_indian_peasants_workers
 		x = 0
 		y = 1
@@ -88,7 +88,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_train_soldiers
-		icon = GFX_focus_unknown
+		icon = COM_train_soldiers
 		relative_position_id = COM_guards_of_yucatan
 		x = 2
 		y = 1
@@ -102,7 +102,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_improve_military_quality
-		icon = GFX_focus_unknown
+		icon = COM_improve_military_quality
 		relative_position_id = COM_train_soldiers
 		x = 0
 		y = 1
@@ -116,7 +116,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_invite_zapatistas_remnants
-		icon = GFX_focus_unknown
+		icon = COM_invite_zapatistas_remnants
 		relative_position_id = COM_guards_of_yucatan
 		x = 0
 		y = 2

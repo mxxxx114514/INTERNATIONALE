@@ -14,6 +14,8 @@ guiTypes = {
 			name = "MEX_cristero_war_scripted_gui_map"
 			position = { x = -4  y = 10 }
 
+			
+
 		    iconType = {
 		    	name = "MEX_states_outline"
 		    	spriteType = "GFX_MEX_states_outline"

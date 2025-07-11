@@ -1,0 +1,211 @@
+spriteTypes = {
+	spriteType = {
+		name = "MGS_the_immortal_eagle"
+		texturefile = "gfx/interface/goals/MGS/MGS_the_immortal_eagle.png"
+	}
+	spriteType = {
+		name = "MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "MGS_promote_nationalism"
+		texturefile = "gfx/interface/goals/MGS/MGS_promote_nationalism.png"
+	}
+	spriteType = {
+		name = "MGS_monitor_factories"
+		texturefile = "gfx/interface/goals/MGS/MGS_monitor_factories.png"
+	}
+	spriteType = {
+		name = "MGS_organize_anti_communist_youth_league"
+		texturefile = "gfx/interface/goals/MGS/MGS_organize_anti_communist_youth_league.png"
+	}
+
+	spriteType = {
+		name = "MGS_forced_conscription"
+		texturefile = "gfx/interface/goals/MGS/MGS_forced_conscription.png"
+	}
+
+	spriteType = {
+		name = "MGS_quality_over_quantity"
+		texturefile = "gfx/interface/goals/MGS/MGS_quality_over_quantity.png"
+	}
+	spriteType = {
+		name = "MGS_stabilize_front_line"
+		texturefile = "gfx/interface/goals/MGS/MGS_stabilize_front_line.png"
+	}
+	spriteType = {
+		name = "MGS_invite_abascal"
+		texturefile = "gfx/interface/goals/MGS/MGS_invite_abascal.png"
+	}
+	spriteType = {
+		name = "MGS_dreams_of_the_nation"
+		texturefile = "gfx/interface/goals/MGS/MGS_dreams_of_the_nation.png"
+	}
+	spriteType = {
+		name = "COM_twenty_five_years"
+		texturefile = "gfx/interface/goals/MGS/COM_twenty_five_years.png"
+	}
+	spriteType = {
+		name = "COM_revolution_in_chaos"
+		texturefile = "gfx/interface/goals/MGS/COM_revolution_in_chaos.png"
+	}
+	spriteType = {
+		name = "COM_guards_of_yucatan"
+		texturefile = "gfx/interface/goals/MGS/COM_guards_of_yucatan.png"
+	}
+	spriteType = {
+		name = "COM_recruit_indian_peasants_workers"
+		texturefile = "gfx/interface/goals/MGS/COM_recruit_indian_peasants_workers.png"
+	}
+	spriteType = {
+		name = "COM_twelve_years_as_slaves"
+		texturefile = "gfx/interface/goals/MGS/COM_twelve_years_as_slaves.png"
+	}
+	spriteType = {
+		name = "COM_train_soldiers"
+		texturefile = "gfx/interface/goals/MGS/COM_train_soldiers.png"
+	}
+	spriteType = {
+		name = "COM_improve_military_quality"
+		texturefile = "gfx/interface/goals/MGS/COM_improve_military_quality.png"
+	}
+	spriteType = {
+		name = "COM_invite_zapatistas_remnants"
+		texturefile = "gfx/interface/goals/MGS/COM_invite_zapatistas_remnants.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+
+	spriteType = {
+		name = "GFX_MGS_united_under_the_general"
+		texturefile = "gfx/interface/goals/MGS/MGS_united_under_the_general.png"
+	}
+	
+
+}

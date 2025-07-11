@@ -293,7 +293,12 @@ focus_tree = {
 		y = 1
 		cost = 8
 		completion_reward = {
-			
+			add_to_variable = {
+				MEX_catholic_opposition_conscription_factor = 0.1
+			}
+			add_to_variable = {
+				MEX_catholic_opposition_industrial_capacity_factory = 0.1
+			}
 		}
 
 	}
@@ -469,6 +474,9 @@ focus_tree = {
 			add_to_variable = {
 				MEX_cristero_army_strength_michoacan = -10
 			}
+			every_owned_state = {
+				add_manpower = -2000
+			}
 		}
 
 	}
@@ -486,7 +494,7 @@ focus_tree = {
 		completion_reward = {
 			add_power_balance_value = {
 				id = MEX_left_right_bop
-				value = 0.05
+				value = 0.1
 				tooltip_side = MEX_right_side_bop
 			}
 		}
@@ -518,6 +526,7 @@ focus_tree = {
 		y = 2
 		cost = 7
 		completion_reward = {
+			add_ideas = mex_qunlongwushou_panluan
 
 		}
 
@@ -552,6 +561,16 @@ focus_tree = {
 				id = mexico_stage2.2
 				days = 1
 			}
+			create_field_marshal = {
+			name = "MEX_pancho_villa"
+			portrait_path = ""
+			traits = { cavalry_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 6
+			logistics_skill = 5
+			}
 		}
 
 	}
@@ -565,7 +584,8 @@ focus_tree = {
 		y = 1
 		cost = 7
 		completion_reward = {
-
+			add_stability = 0.05
+			add_war_support = 0.05
 		}
 
 	}
@@ -609,7 +629,12 @@ focus_tree = {
 		y = 5
 		cost = 7
 		completion_reward = {
-			
+			add_to_variable = {
+				MEX_catholic_opposition_conscription_factor = 0.1
+			}
+			add_to_variable = {
+				MEX_catholic_opposition_industrial_capacity_factory = 0.1
+			}
 		}
 
 	}

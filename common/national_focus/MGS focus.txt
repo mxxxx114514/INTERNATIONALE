@@ -7,7 +7,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_the_immortal_eagle
-		icon = GFX_focus_unknown
+		icon = MGS_the_immortal_eagle
 		x = 1
 		y = 0
 		cost = 2
@@ -19,7 +19,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_united_under_the_general
-		icon = GFX_focus_unknown
+		icon = MGS_united_under_the_general
 		relative_position_id = MGS_the_immortal_eagle
 		x = 0
 		y = 1
@@ -36,7 +36,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_promote_nationalism
-		icon = GFX_focus_unknown
+		icon = MGS_promote_nationalism
 		relative_position_id = MGS_united_under_the_general
 		x = -3
 		y = 1
@@ -53,7 +53,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_monitor_factories
-		icon = GFX_focus_unknown
+		icon = MGS_monitor_factories
 		relative_position_id = MGS_united_under_the_general
 		x = -1
 		y = 1
@@ -70,7 +70,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_organize_anti_communist_youth_league
-		icon = GFX_focus_unknown
+		icon = MGS_organize_anti_communist_youth_league
 		relative_position_id = MGS_united_under_the_general
 		x = -2
 		y = 2
@@ -91,7 +91,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_forced_conscription
-		icon = GFX_focus_unknown
+		icon = MGS_forced_conscription
 		relative_position_id = MGS_united_under_the_general
 		x = 1
 		y = 1
@@ -114,7 +114,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_quality_over_quantity
-		icon = GFX_focus_unknown
+		icon = MGS_quality_over_quantity
 		relative_position_id = MGS_united_under_the_general
 		x = 3
 		y = 1
@@ -137,7 +137,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_stabilize_front_line
-		icon = GFX_focus_unknown
+		icon = MGS_stabilize_front_line
 		relative_position_id = MGS_united_under_the_general
 		x = 2
 		y = 2
@@ -172,7 +172,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_invite_abascal
-		icon = GFX_focus_unknown
+		icon = MGS_invite_abascal
 		relative_position_id = MGS_united_under_the_general
 		x = 0
 		y = 3
@@ -187,7 +187,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_create_militia
-		icon = GFX_focus_unknown
+		icon = MGS_create_militia
 		relative_position_id = MGS_invite_abascal
 		x = 0
 		y = 1
@@ -207,7 +207,7 @@ focus_tree = {
 
 	focus = {
 		id = MGS_dreams_of_the_nation
-		icon = GFX_focus_unknown
+		icon = MGS_dreams_of_the_nation
 		relative_position_id = MGS_create_militia
 		x = 0
 		y = 1

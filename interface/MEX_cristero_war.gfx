@@ -164,5 +164,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_states_zacatecas.png"
 		transparencecheck = yes
 	}
-	
+	SpriteType = {
+		name = "GFX_MEX_jiduzhanzheng_beijing"
+		texturefile = "gfx/interface/scripted_guis/MEX/GFX_MEX_jiduzhanzheng_beijing.png"
+	}
 }
