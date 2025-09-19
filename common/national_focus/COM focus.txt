@@ -1,3 +1,5 @@
+// 不确定的icon后面加了temporary，%+搜索就可以————CrawlenXx
+
 focus_tree = {
 	id = COM_focus
 
@@ -160,7 +162,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_peasants_and_workers_are_happy
-		icon = GFX_focus_unknown
+		icon = COM_peasants_and_workers_are_happy(temporary)
 		relative_position_id = COM_final_blow
 		x = 0
 		y = 1
@@ -180,7 +182,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_thirty_years_of_struggle
-		icon = GFX_focus_unknown
+		icon = COM_YUC_thirty_years_of_struggle
 		relative_position_id = COM_twenty_five_years
 		x = 8
 		y = 0
@@ -207,7 +209,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_a_piece_of_land_at_last
-		icon = GFX_focus_unknown
+		icon = COM_YUC_a_piece_of_land_at_last
 		relative_position_id = COM_YUC_thirty_years_of_struggle
 		x = 0
 		y = 1
@@ -221,7 +223,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_fight_against_gold_shirts
-		icon = GFX_focus_unknown
+		icon = COM_YUC_fight_against_gold_shirts
 		relative_position_id = COM_YUC_a_piece_of_land_at_last
 		x = -2
 		y = 1
@@ -235,7 +237,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_our_peninsula
-		icon = GFX_focus_unknown
+		icon = COM_YUC_our_peninsula
 		relative_position_id = COM_YUC_fight_against_gold_shirts
 		x = 0
 		y = 1
@@ -249,7 +251,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_defend_our_homeland
-		icon = GFX_focus_unknown
+		icon = COM_YUC_defend_our_homeland
 		relative_position_id = COM_YUC_our_peninsula
 		x = 0
 		y = 1
@@ -263,7 +265,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_request_aid_from_central_gov
-		icon = GFX_focus_unknown
+		icon = COM_YUC_request_aid_from_central_gov
 		relative_position_id = COM_YUC_defend_our_homeland
 		x = 0
 		y = 1
@@ -277,7 +279,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_move_to_new_place
-		icon = GFX_focus_unknown
+		icon = COM_YUC_move_to_new_place
 		relative_position_id = COM_YUC_a_piece_of_land_at_last
 		x = 0
 		y = 1
@@ -291,7 +293,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_meet_with_agrarians
-		icon = GFX_focus_unknown
+		icon = COM_YUC_meet_with_agrarians
 		relative_position_id = COM_YUC_move_to_new_place
 		x = 0
 		y = 1
@@ -305,7 +307,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_consolidate_coalition
-		icon = GFX_focus_unknown
+		icon = COM_YUC_consolidate_coalition(temporary)
 		relative_position_id = COM_YUC_meet_with_agrarians
 		x = 0
 		y = 1
@@ -319,7 +321,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_launch_the_reform
-		icon = GFX_focus_unknown
+		icon = COM_YUC_launch_the_reform
 		relative_position_id = COM_YUC_a_piece_of_land_at_last
 		x = 2
 		y = 1
@@ -333,7 +335,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_all_enterprises_to_workers
-		icon = GFX_focus_unknown
+		icon = COM_YUC_all_enterprises_to_workers
 		relative_position_id = COM_YUC_launch_the_reform
 		x = 0
 		y = 1
@@ -347,7 +349,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_all_plantations_to_peasants
-		icon = GFX_focus_unknown
+		icon = COM_YUC_all_plantations_to_peasants
 		relative_position_id = COM_YUC_all_enterprises_to_workers
 		x = 0
 		y = 1
@@ -361,7 +363,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_first_workers_peasants_congress
-		icon = GFX_focus_unknown
+		icon = COM_YUC_first_workers_peasants_congress
 		relative_position_id = COM_YUC_a_piece_of_land_at_last
 		x = 1
 		y = 4
@@ -376,7 +378,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_the_union_guards_yucatan
-		icon = GFX_focus_unknown
+		icon = COM_YUC_the_union_guards_yucatan
 		relative_position_id = COM_YUC_a_piece_of_land_at_last
 		x = 0
 		y = 5
@@ -391,7 +393,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_question_on_the_british_colony
-		icon = GFX_focus_unknown
+		icon = COM_YUC_question_on_the_british_colony
 		relative_position_id = COM_YUC_the_union_guards_yucatan
 		x = 0
 		y = 1
@@ -405,7 +407,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_drive_the_brits_out
-		icon = GFX_focus_unknown
+		icon = COM_YUC_drive_the_brits_out
 		relative_position_id = COM_YUC_question_on_the_british_colony
 		x = -2
 		y = 1
@@ -420,7 +422,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_ask_for_permission
-		icon = GFX_focus_unknown
+		icon = COM_YUC_ask_for_permission
 		relative_position_id = COM_YUC_drive_the_brits_out
 		x = 0
 		y = 1
@@ -434,7 +436,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_gather_troops
-		icon = GFX_focus_unknown
+		icon = COM_YUC_gather_troops
 		relative_position_id = COM_YUC_ask_for_permission
 		x = 0
 		y = 1
@@ -448,7 +450,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_the_great_bet
-		icon = GFX_focus_unknown
+		icon = COM_YUC_the_great_bet
 		relative_position_id = COM_YUC_gather_troops
 		x = 0
 		y = 1
@@ -462,7 +464,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_destroy_the_colony
-		icon = GFX_focus_unknown
+		icon = COM_YUC_destroy_the_colony
 		relative_position_id = COM_YUC_the_great_bet
 		x = 0
 		y = 1
@@ -476,7 +478,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_contact_the_brits
-		icon = GFX_focus_unknown
+		icon = COM_YUC_contact_the_brits
 		relative_position_id = COM_YUC_question_on_the_british_colony
 		x = 2
 		y = 1
@@ -491,7 +493,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_draw_borders
-		icon = GFX_focus_unknown
+		icon = COM_YUC_draw_borders
 		relative_position_id = COM_YUC_contact_the_brits
 		x = 0
 		y = 1
@@ -505,7 +507,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_peaceful_coexistence
-		icon = GFX_focus_unknown
+		icon = COM_YUC_peaceful_coexistence
 		relative_position_id = COM_YUC_draw_borders
 		x = 0
 		y = 1
@@ -519,7 +521,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_prepare_for_the_worst
-		icon = GFX_focus_unknown
+		icon = COM_YUC_prepare_for_the_worst
 		relative_position_id = COM_YUC_peaceful_coexistence
 		x = -1
 		y = 1
@@ -534,7 +536,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_limited_collaboration
-		icon = GFX_focus_unknown
+		icon = COM_YUC_limited_collaboration
 		relative_position_id = COM_YUC_peaceful_coexistence
 		x = 1
 		y = 1
@@ -549,7 +551,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_lasting_security
-		icon = GFX_focus_unknown
+		icon = COM_YUC_lasting_security(temporary)
 		relative_position_id = COM_YUC_peaceful_coexistence
 		x = 0
 		y = 2
@@ -563,7 +565,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_cheer_for_yucatan
-		icon = GFX_focus_unknown
+		icon = COM_YUC_cheer_for_yucatan
 		relative_position_id = COM_YUC_question_on_the_british_colony
 		x = 0
 		y = 6

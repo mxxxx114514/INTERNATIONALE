@@ -117,8 +117,7 @@ characters={
 			}
 			can_be_fired = no
 		}
-		
-	}
+	} # 阿尔瓦罗·奥夫雷贡·萨利多 - 政治顾问，革命领袖，社会民主派
 
 	MEX_amalia_gonzalez_caballero={
 		name = MEX_amalia_gonzalez_caballero
@@ -162,7 +161,7 @@ characters={
 				feminist_leader
 			}
 		}
-	}
+	} # 阿马利娅·冈萨雷斯·卡瓦列罗 - 政治顾问，女性主义领袖，社会民主派
 
 	MEX_isidro_fabela={
 		name=MEX_isidro_fabela
@@ -205,7 +204,7 @@ characters={
 				leading_diplomat
 			}
 		}
-	}
+	} # 伊西德罗·法贝拉 - 政治顾问，外交领袖，社会民主派
 
 	#PLM-R
 
@@ -271,7 +270,7 @@ characters={
 			}
 			can_be_fired = no
 		}
-	}
+	} # 拉萨罗·卡德纳斯 - 政治顾问、陆军元帅，国家希望，社会民主派
 
 	MEX_vicente_lombardo={
 		name=MEX_vicente_lombardo
@@ -316,7 +315,7 @@ characters={
 				labor_union_reformer
 			}
 		}
-	}
+	} # 维森特·隆巴多 - 政治顾问，工会改革者，社会民主派
 
 	MEX_francisco_mugica = {
 		name=MEX_francisco_mugica
@@ -357,7 +356,7 @@ characters={
 				mexican_bolshevik
 			}
 		}
-	}
+	} # 弗朗西斯科·穆希卡 - 政治顾问，墨西哥布尔什维克，社会民主派
 
 	#PLM-E
 
@@ -420,7 +419,7 @@ characters={
 			}
 			can_be_fired = no
 		}
-	}
+	} # 普卢塔科·埃利亚斯·卡列斯 - 政治顾问，国家领袖，社会民主/权威民主派
 
 	MEX_plutarco_elias_calles_placeholder = {
 		name=MEX_plutarco_elias_calles_placeholder
@@ -430,7 +429,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # 普卢塔科·埃利亚斯·卡列斯（占位） - 国家领袖，权威民主派
 
 	MEX_luis_morones={
 		name=MEX_luis_morones
@@ -473,7 +472,7 @@ characters={
 				senior_labor_unionist
 			}
 		}
-	}
+	} # 路易斯·莫罗内斯 - 政治顾问，高级工会成员，中立派
 
 	MEX_manuel_avila_camacho={
 		name=MEX_manuel_avila_camacho
@@ -530,7 +529,7 @@ characters={
 			logistics_skill=3
 			legacy_id=705
 		}
-	}
+	} # 曼努埃尔·阿维拉·卡马乔 - 政治顾问、军团指挥官，绅士部长，中立派
 
 	MEX_aaron_saenz={
 		name=MEX_aaron_saenz
@@ -573,7 +572,7 @@ characters={
 				shadow_of_calles 
 			}
 		}
-	}
+	} # 亚伦·萨恩斯 - 政治顾问，卡列斯的影子，中立派
 
 	#PNA
 
@@ -618,15 +617,12 @@ characters={
 					popularity = -0.03
 				}
 			}
-			available = {
-				
-			}
 			traits = {
 				MEX_PNA_trait_soto_y_gama
 				successor_of_zapata
 			}
 		}
-	}
+	} # 安东尼奥·索托·伊·伽马 - 政治顾问、国家领袖，萨帕塔继承者，社会主义派
 
 	COM_antonio_soto_y_gama={
 		name=MEX_antonio_soto_y_gama
@@ -642,7 +638,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # 安东尼奥·索托·伊·伽马（COM） - 国家领袖，墨西哥工人救星，社会主义派
 
 	#LDN
 
@@ -695,7 +691,7 @@ characters={
 				centaur_of_the_north
 			}
 		}
-	}
+	} # 潘乔·维拉 - 政治顾问、国家领袖，北方半人马，社会主义派
 
 	MCA_pancho_villa={
 		name=MEX_pancho_villa
@@ -711,7 +707,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # 潘乔·维拉（MCA） - 国家领袖，历史英雄，社会主义派
 
 	#PAN
 
@@ -754,8 +750,8 @@ characters={
 				scholar_ivory_tower
 			}
 		}
-	}
-	
+	} # 曼努埃尔·戈麦斯·莫林 - 政治顾问、国家领袖，学术象牙塔，保守派
+
 	MEX_efrain_gonzalez_luna={
 		name=MEX_efrain_gonzalez_luna
 		portraits={
@@ -782,7 +778,7 @@ characters={
 				catholic_jurist
 			}
 		}
-	}
+	} # 埃弗拉因·冈萨雷斯·卢纳 - 政治顾问，天主教法学家，保守派
 
 	#PSO
 
@@ -794,7 +790,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # M.N.罗伊 - 国家领袖，马克思主义者
 
 	MEX_diego_rivera={
 		name=MEX_diego_rivera
@@ -836,7 +832,7 @@ characters={
 				painter_of_revolutionary_ideals
 			}
 		}
-	}
+	} # 迭戈·里维拉 - 政治顾问，革命理想画家，共产主义派
 
 	#PCM
 
@@ -848,7 +844,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # 迪奥尼西奥·恩西纳 - 国家领袖，权威共产主义派
 
 	#OTHERS
 
@@ -866,7 +862,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # 埃米利奥·波特斯·希尔 - 国家领袖，社会民主派
 
 	MEX_salvador_abascal={
 		name=MEX_salvador_abascal
@@ -881,7 +877,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # 萨尔瓦多·阿瓦斯卡尔 - 国家领袖，法西斯民兵领袖，法朗吉派
 
 	MEX_adolfo_de_la_huerta={ 
 		name=MEX_adolfo_de_la_huerta
@@ -890,7 +886,7 @@ characters={
 				large="GFX_Portrait_MEX_Adolfo_de_la_Huerta"
 			}
 		}
-	}
+	} # 阿道夫·德·拉·韦尔塔 - 无具体角色，潜在国家领袖
 
 	MEX_huerta_faction_remains={ 
 		name=MEX_huerta_faction_remains
@@ -899,7 +895,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # 韦尔塔派系残余 - 国家领袖，社会自由派
 
 	MEX_liberal_movement={ 
 		name=MEX_liberal_movement
@@ -908,7 +904,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # 自由运动 - 国家领袖，自由派
 
 	MEX_reactionary_remains={ 
 		name=MEX_reactionary_remains
@@ -917,7 +913,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # 反动派残余 - 国家领袖，专制派
 
 	MEX_octavio_paz={
 		name=MEX_octavio_paz
@@ -943,7 +939,7 @@ characters={
 				passionate_poet
 			}
 		}
-	}
+	} # 奥克塔维奥·帕斯 - 政治顾问，热情诗人
 
 	MEX_ezequiel_padilla_penaloza={
 		name=MEX_ezequiel_padilla_penaloza
@@ -961,23 +957,7 @@ characters={
 			}
 			traits = {  }
 		}
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	} # 埃塞基耶尔·帕迪利亚·佩纳洛萨 - 政治顾问
 
 	MEX_jesus_degollado_guizar={
 		name=MEX_jesus_degollado_guizar
@@ -990,20 +970,16 @@ characters={
 				small = GFX_portrait_MEX_jesus_degollado_guizar_small
 			}
 		}
-	}
+	} # 赫苏斯·德戈利亚多·吉萨尔 - 潜在国家领袖（法朗吉派）或军事单位领袖
 
-	# INDIGENOUS MEXICAN COUNCIL
 	MEX_indigenous_council = { 
 		name = MEX_indigenous_council
 		portraits = {
 			civilian = {
 				large = GFX_portrait_indigenous_mexico_council
-				#small = GFX_portrait_AFA_mohamed_yayyo_small
 			}
-			
 		}
-		
-	}
+	} # 墨西哥原住民委员会 - 无具体角色
 
 	MEX_hernan_laborde={
 		name=MEX_hernan_laborde
@@ -1018,7 +994,7 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
-	}
+	} # 埃尔南·拉博德 - 国家领袖，托洛茨基主义者，列宁主义派
 
 	MEX_valentin_campa={
 		name=MEX_valentin_campa
@@ -1027,7 +1003,7 @@ characters={
 				large=GFX_portrait_MEX_valentin_campa #Can become country leader later (Communism -> Leninism)
 			}
 		}
-	}
+	} # 瓦伦丁·坎帕 - 潜在国家领袖（列宁主义派）
 
 	MEX_luis_maria_martinez = {
 		name=MEX_luis_maria_martinez
@@ -1036,7 +1012,7 @@ characters={
 				large="GFX_portrait_MEX_Luis_Maria_Martinez" #Can become country leader (Democratic -> Socialism)
 			}
 		}
-	}
+	} # 路易斯·玛利亚·马丁内斯 - 潜在国家领袖（社会主义派）
 
 	MEX_juan_andreu = {
 		name=MEX_juan_andreu
@@ -1045,7 +1021,7 @@ characters={
 				large="GFX_portrait_MEX_juan_andreu" #Can become country leader (Fascism -> Fascism)
 			}
 		}
-	}
+	} # 胡安·安德烈乌 - 潜在国家领袖（法西斯派）
 
 	MEX_heliodoro_charis={
 		name=MEX_heliodoro_charis
@@ -1064,7 +1040,7 @@ characters={
 			logistics_skill=2
 			legacy_id=700
 		}
-	}
+	} # 埃利奥多罗·查里斯 - 军团指挥官，步兵军官
 
 	MEX_gildardo_magana={
 		name=MEX_gildardo_magana
@@ -1083,7 +1059,7 @@ characters={
 			logistics_skill=3
 			legacy_id=702
 		}
-	}
+	} # 吉尔达多·马加尼亚 - 军团指挥官，媒体名人
 
 	MEX_manuel_perez_trevino={
 		name=MEX_manuel_perez_trevino
@@ -1113,7 +1089,6 @@ characters={
 				superior_firepower_expert
 			}
 		}
-
 		corps_commander={
 			traits={ career_officer }
 			skill=3
@@ -1123,7 +1098,7 @@ characters={
 			logistics_skill=3
 			legacy_id=703
 		}
-	}
+	} # 曼努埃尔·佩雷斯·特雷维尼奥 - 军事理论家、军团指挥官，职业军官
 
 	MEX_abelardo_rodriguez={
 		name=MEX_abelardo_rodriguez
@@ -1151,7 +1126,6 @@ characters={
 				factor = 1.000
 			}
 		}
-
 		corps_commander={
 			traits={ politically_connected }
 			skill=3
@@ -1161,7 +1135,7 @@ characters={
 			logistics_skill=2
 			legacy_id=704
 		}
-	}
+	} # 阿贝拉多·罗德里格斯 - 高级指挥官、军团指挥官，政治关系密切
 
 	MEX_othon_blanco={
 		name=MEX_othon_blanco
@@ -1188,7 +1162,6 @@ characters={
 				factor = 1.000
 			}
 		}
-
 		navy_leader={
 			traits={ old_guard_navy }
 			skill=2
@@ -1198,7 +1171,7 @@ characters={
 			coordination_skill=3
 			legacy_id=706
 		}
-	}
+	} # 奥通·布兰科 - 海军总司令、海军领袖，老派海军
 
 	MEX_heriberto_corona={
 		name=MEX_heriberto_corona
@@ -1222,7 +1195,6 @@ characters={
 				factor = 1.000
 			}
 		}
-
 		navy_leader={
 			traits={ navy_media_personality }
 			skill=1
@@ -1232,7 +1204,7 @@ characters={
 			coordination_skill=1
 			legacy_id=707
 		}
-	}
+	} # 埃里贝托·科罗纳 - 海军总司令、海军领袖，海军媒体名人
 
 	MEX_manuel_sanchez={ #Empty FICTIOUS leader -> Can become unit leader later
 		name=MEX_manuel_sanchez
@@ -1242,7 +1214,7 @@ characters={
 				small=GFX_portrait_MEX_manuel_sanchez_small
 			}
 		}
-	}
+	} # 曼努埃尔·桑切斯 - 虚构领袖，潜在单位领袖
 
 	MEX_alberto_gorostieta_vega = { #Empty FICTIOUS leader -> Can become unit leader later
 		name=MEX_alberto_gorostieta_vega
@@ -1252,7 +1224,7 @@ characters={
 				small=GFX_portrait_MEX_alberto_gorostieta_vega_small
 			}
 		}
-	}
+	} # 阿尔贝托·戈罗斯蒂埃塔·维加 - 虚构领袖，潜在单位领袖
 
 	MEX_dionisio_navarro_anguiano = { #Empty FICTIOUS leader -> Can become unit leader later
 		name=MEX_dionisio_navarro_anguiano
@@ -1262,11 +1234,9 @@ characters={
 				small=GFX_portrait_MEX_dionisio_navarro_anguiano_small
 			}
 		}
-	}
+	} # 迪奥尼西奥·纳瓦罗·安吉亚诺 - 虚构领袖，潜在单位领袖
 
 	### THEORISTS ###
-
-	# Treviño up there
 
 	MEX_enrique_estrada={
 		name=MEX_enrique_estrada
@@ -1287,7 +1257,7 @@ characters={
 				military_theorist
 			}
 		}
-	}
+	} # 恩里克·埃斯特拉达 - 军事理论家
 
 	MEX_agustin_olachea={
 		name=MEX_agustin_olachea
@@ -1304,13 +1274,11 @@ characters={
 			allowed = {
 				original_tag = MEX
 			}
-			
 			traits = {
 				air_warfare_theorist
 			}
 		}
-	}
-
+	} # 阿古斯丁·奥拉切亚 - 空军理论家
 
 	### ARMY CHIEFS ###
 
@@ -1325,7 +1293,6 @@ characters={
 				large="GFX_portrait_MEX_saturnino_cedillo" #Can become country leader (Fascism -> Fascism) (Non-Aligned -> Despotism)
 			}
 		}
-
 		country_leader={
 			ideology=falangism
 			traits={ fascist_militia_leader }
@@ -1353,7 +1320,7 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
+	} # 萨图尼诺·塞迪略 - 陆军总司令、国家领袖，法西斯民兵领袖，法朗吉派
 
 	MEX_matias_santos_ramos={
 		name=MEX_matias_santos_ramos
@@ -1376,7 +1343,7 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
+	} # 马蒂亚斯·桑托斯·拉莫斯 - 陆军总司令，防御专家
 
 	MEX_gilberto_limon={
 		name=MEX_gilberto_limon
@@ -1399,14 +1366,13 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
+	} # 吉尔伯托·利蒙 - 陆军总司令，训练专家
 
 	MEX_leon_trotsky={
 		name=MEX_leon_trotsky
 		portraits={
 			civilian = {
 				large = GFX_portrait_MEX_leon_trotsky
-				#small="GFX_idea_SOV_lev_trotsky"
 			}
 			army={
 				small="GFX_idea_MEX_leon_trotsky"
@@ -1432,15 +1398,9 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
-
+	} # 列昂·托洛茨基 - 陆军总司令，红军组织者
 
 	### NAVY CHIEFS ###
-
-	# Corona up there
-
-	# Blanco up there
-
 
 	### AIR CHIEFS ###
 
@@ -1465,7 +1425,7 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
+	} # 安东尼奥·卡德纳斯·罗德里格斯 - 空军总司令，空军改革者
 
 	MEX_luis_farell={
 		name=MEX_luis_farell
@@ -1489,7 +1449,6 @@ characters={
 				factor = 1.000
 			}
 		}
-		
 		corps_commander={
 			traits={ war_hero }
 			skill=3
@@ -1499,12 +1458,9 @@ characters={
 			logistics_skill=3
 			legacy_id=701
 		}
-	}
-
+	} # 路易斯·法雷尔 - 空军总司令、军团指挥官，战争英雄
 
 	### MILITARY HIGH COMMAND ###
-
-	# Rodríguez up there
 
 	MEX_jesus_garza_siller={
 		name=MEX_jesus_garza_siller
@@ -1528,7 +1484,7 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
+	} # 赫苏斯·加西亚·西列尔 - 高级指挥官，战略轰炸专家
 
 	MEX_pablo_macias={
 		name=MEX_pablo_macias
@@ -1552,7 +1508,7 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
+	} # 巴勃罗·马西亚斯 - 高级指挥官，军队重组专家
 
 	MEX_jose_gonzalo_escobar={
 		name=MEX_jose_gonzalo_escobar
@@ -1581,8 +1537,8 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
-		
+	} # 何塞·贡萨洛·埃斯科巴 - 高级指挥官，骑兵专家，潜在单位领袖
+
 	MEX_hector_meixueiro={
 		name=MEX_hector_meixueiro
 		portraits={
@@ -1605,7 +1561,7 @@ characters={
 				factor = 1.000
 			}
 		}
-	}
+	} # 埃克托·梅克斯埃罗 - 高级指挥官，海军防空专家
 
 	MEX_jose_vasconcelos={
 		name=MEX_jose_vasconcelos
@@ -1640,7 +1596,7 @@ characters={
 				syncretic_revanchist 
 			}
 		}
-	}
+	} # 何塞·巴斯孔塞洛斯 - 政治顾问，融合复仇主义者
 
 	MEX_bartolome_garcia_correa={
 		name=MEX_bartolome_garcia_correa
@@ -1675,7 +1631,7 @@ characters={
 				social_reformer 
 			}
 		}
-	}
+	} # 巴托洛梅·加西亚·科雷亚 - 政治顾问，社会改革者
 
 	MEX_eduardo_hay={
 		name=MEX_eduardo_hay
@@ -1694,7 +1650,7 @@ characters={
 				smooth_talking_charmer 
 			}
 		}
-	}
+	} # 爱德华多·海伊 - 政治顾问，口才出众者
 
 	MEX_luis_montes_de_oca={
 		name=MEX_luis_montes_de_oca
@@ -1722,7 +1678,7 @@ characters={
 				financial_expert 
 			}
 		}
-	}
+	} # 路易斯·蒙特斯·德·奥卡 - 政治顾问，金融专家
 
 	MEX_alberto_pani={
 		name=MEX_alberto_pani
@@ -1750,7 +1706,7 @@ characters={
 				captain_of_industry 
 			}
 		}
-	}
+	} # 阿尔贝托·帕尼 - 政治顾问，工业领袖
 
 	MEX_pablo_gonzalez={
 		name=MEX_pablo_gonzalez
@@ -1779,7 +1735,149 @@ characters={
 				prince_of_terror 
 			}
 		}
-	}
-	
-	# Illusive Gentleman auto-generated
+	} # 巴勃罗·冈萨雷斯 - 政治顾问，恐怖王子，潜在单位领袖
+
+	MEX_francisco_serrano={
+		name=MEX_francisco_serrano
+		portraits={
+			army={
+				large=GFX_portrait_MEX_Francisco_Serrano_Seoane
+				small=GFX_portrait_MEX_francisco_serrano_small
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=1
+			logistics_skill=1
+			traits={ infantry_officer }
+		}
+	} # 弗朗西斯科·塞拉诺 - 军团指挥官，步兵军官
+
+	MEX_marcelino_garcia={
+		name=MEX_marcelino_garcia
+		portraits={
+			army={
+				large=GFX_portrait_MEX_marcelino_garcia
+				small=GFX_portrait_MEX_marcelino_garcia_small
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=3
+			traits={ cavalry_officer }
+		}
+	} # 马塞利诺·加西亚 - 军团指挥官，骑兵军官
+
+	MEX_joaquin_amador={
+		name=MEX_joaquin_amador
+		portraits={
+			army={
+				large=GFX_portrait_MEX_joaquin_amador
+				small=GFX_portrait_MEX_joaquin_amador_small
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=2
+			traits={ infantry_officer }
+		}
+	} # 华金·阿马罗 - 军团指挥官，步兵军官
+
+	MEX_ignacio_zaragoza={
+		name=MEX_ignacio_zaragoza
+		portraits={
+			army={
+				large=GFX_portrait_MEX_ignacio_zaragoza
+				small=GFX_portrait_MEX_ignacio_zaragoza_small
+			}
+		}
+		field_marshal={
+			skill=3
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			traits={ infantry_officer }
+		}
+	} # 伊格纳西奥·萨拉戈萨 - 陆军元帅，步兵军官
+
+	MEX_Manuel_M._Diéguez_Ponce={
+    name=MEX_Manuel_M._Diéguez_Ponce
+    portraits={
+        army={
+            large=GFX_portrait_MEX_Manuel_M._Diéguez_Ponce
+            small=GFX_portrait_MEX_Manuel_M._Diéguez_Ponce_small
+        }
+    }
+    corps_commander={
+        skill=2
+        attack_skill=3
+        defense_skill=1
+        planning_skill=2
+        logistics_skill=2
+        traits={ artillery_officer }
+    }
+} # 曼努埃尔·m·迪萨姆格斯·庞塞 - 军团指挥官，炮兵军官
+
+MEX_juan_felipe_julio_castro={
+    name=MEX_juan_felipe_julio_castro
+    portraits={
+        army={
+            large=GFX_portrait_MEX_juan_felipe_julio_castro
+            small=GFX_portrait_MEX_juan_felipe_julio_castro_small
+        }
+    }
+    corps_commander={
+        skill=1
+        attack_skill=2
+        defense_skill=1
+        planning_skill=1
+        logistics_skill=2
+        traits={ air_controller }
+    }
+} # 胡安·费利佩·胡利奥·卡斯特罗 - 军团指挥官，空军联络
+
+MEX_juan_felipe_rodrigo_medina={
+    name=MEX_juan_felipe_rodrigo_medina
+    portraits={
+        army={
+            large=GFX_portrait_MEX_juan_felipe_rodrigo_medina
+            small=GFX_portrait_MEX_juan_felipe_rodrigo_medina_small
+        }
+    }
+    corps_commander={
+        skill=2
+        attack_skill=2
+        defense_skill=1
+        planning_skill=3
+        logistics_skill=3
+        traits={ armor_officer }
+    }
+} # 胡安·费利佩·罗德里戈·梅迪纳 - 军团指挥官，装甲军官
+
+MEX_juan_felipe_marcelino_garcia={
+    name=MEX_juan_felipe_marcelino_garcia
+    portraits={
+        army={
+            large=GFX_portrait_MEX_juan_felipe_marcelino_garcia
+            small=GFX_portrait_MEX_juan_felipe_marcelino_garcia_small
+        }
+    }
+    corps_commander={
+        skill=3
+        attack_skill=2
+        defense_skill=1
+        planning_skill=4
+        logistics_skill=2
+        traits={ cavalry_officer }
+    }
+} # 胡安·费利佩·马塞利诺·加西亚 - 军团指挥官，骑兵军官
 }
