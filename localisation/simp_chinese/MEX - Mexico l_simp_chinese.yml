@@ -506,6 +506,11 @@
  MEX_ARM_loyalty_subtract_tt: "§R降低§!§N墨西哥革命行动§!对政府的态度"
 
 # 基督战争
+ MEX_pol2_1_powerD10TT: "叛军力量：§R-10§!。"
+ MEX_selected_cristero_army_strength_greater_than_0_tt: "§Y[GetMEXSCATGT0STATENAME]§!：§Y[GetMEXSCATGT0STATENAME]§!当前§c基督军§!强度：至少为§Y0§!。"
+ MEX_selected_cristero_divisions_in_state_tt: "（[ROOT.GetNameWithFlag]）：\n        至少§Y5§!个师位于§Y[GetMEXSCATGT0STATENAME]§!地区任意一个相邻地区。"
+ MEX_pol2_5_t: "§Y基督军在行动§!失效"
+ MEX_cristero_war_clear_cristero_army_MEX_cristero_add_tt: "§Y[GetMEXSCATGT0STATENAME]§!：§c基督军§!强度：§R[?MEX_cristero_war_clear_cristero_army_strength]§!。"
  MEX_cristero_war_category: "基督战争"
  MEX_cristero_war_category_desc: "基督战争介绍\n占位符占位符\n占位符占位符\n§S政府军§!和§n北方联盟§!平衡：§Y[?MEX.MEX_LDN_balance|0]§!"
 

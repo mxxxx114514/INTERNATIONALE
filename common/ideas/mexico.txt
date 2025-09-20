@@ -32,6 +32,12 @@ ideas = {
 	}
 
 	country = {
+	    MEX_comedyGodless = {
+		    name = MEX_comedyGodless
+			picture = MEX_comedyGodless
+			production_factory_start_efficiency_factor = 0.1
+			stability_factor = 0.1
+		}
 
 		MEX_legacy_of_1910_war = {
 			name = MEX_legacy_of_1910_war

@@ -142,133 +142,265 @@ MEX_state_cristero_army_strength_greater_than_threshold = { #manually set MEX_cr
 MEX_selected_cristero_army_strength_greater_than_0 = {
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_mexico_city }
-		check_variable = { MEX.MEX_cristero_army_strength_mexico_city > 0 }
+
+		check_variable = { MEX.MEX_cristero_army_strength_mexico_city > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_nuevo_leon }
-		check_variable = { MEX.MEX_cristero_army_strength_nuevo_leon > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_nuevo_leon > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_jalisco }
-		check_variable = { MEX.MEX_cristero_army_strength_jalisco > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_jalisco > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_mexico_state }
-		check_variable = { MEX.MEX_cristero_army_strength_mexico_state > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_mexico_state > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_veracruz }
-		check_variable = { MEX.MEX_cristero_army_strength_veracruz > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_veracruz > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_baja_california }
-		check_variable = { MEX.MEX_cristero_army_strength_baja_california > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_baja_california > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_guanajuato }
-		check_variable = { MEX.MEX_cristero_army_strength_guanajuato > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_guanajuato > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_san_luis_potosi }
-		check_variable = { MEX.MEX_cristero_army_strength_san_luis_potosi > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_san_luis_potosi > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_durango }
-		check_variable = { MEX.MEX_cristero_army_strength_durango > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_durango > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_sinaloa }
-		check_variable = { MEX.MEX_cristero_army_strength_sinaloa > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_sinaloa > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_tamaulipas }
-		check_variable = { MEX.MEX_cristero_army_strength_tamaulipas > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_tamaulipas > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_coahuila }
-		check_variable = { MEX.MEX_cristero_army_strength_coahuila > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_coahuila > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_chihuahua }
-		check_variable = { MEX.MEX_cristero_army_strength_chihuahua > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_chihuahua > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_baja_california_sur }
-		check_variable = { MEX.MEX_cristero_army_strength_baja_california_sur > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_baja_california_sur > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_sonora }
-		check_variable = { MEX.MEX_cristero_army_strength_sonora > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_sonora > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_zacatecas }
-		check_variable = { MEX.MEX_cristero_army_strength_zacatecas > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_zacatecas > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_nayarit }
-		check_variable = { MEX.MEX_cristero_army_strength_nayarit > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_nayarit > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_aguascalientes }
-		check_variable = { MEX.MEX_cristero_army_strength_aguascalientes > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_aguascalientes > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_guerrero }
-		check_variable = { MEX.MEX_cristero_army_strength_guerrero > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_guerrero > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_morelos }
-		check_variable = { MEX.MEX_cristero_army_strength_morelos > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_morelos > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_tlaxcala }
-		check_variable = { MEX.MEX_cristero_army_strength_tlaxcala > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_tlaxcala > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_puebla }
-		check_variable = { MEX.MEX_cristero_army_strength_puebla > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_puebla > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_hidalgo }
-		check_variable = { MEX.MEX_cristero_army_strength_hidalgo > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_hidalgo > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_oaxaca }
-		check_variable = { MEX.MEX_cristero_army_strength_oaxaca > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_oaxaca > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_tabasco }
-		check_variable = { MEX.MEX_cristero_army_strength_tabasco > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_tabasco > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_queretaro }
-		check_variable = { MEX.MEX_cristero_army_strength_queretaro > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_queretaro > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_campeche }
-		check_variable = { MEX.MEX_cristero_army_strength_campeche > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_campeche > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_quintana_roo }
-		check_variable = { MEX.MEX_cristero_army_strength_quintana_roo > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_quintana_roo > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_yucatan }
-		check_variable = { MEX.MEX_cristero_army_strength_yucatan > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_yucatan > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_colima }
-		check_variable = { MEX.MEX_cristero_army_strength_colima > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_colima > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_chiapas }
-		check_variable = { MEX.MEX_cristero_army_strength_chiapas > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_chiapas > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt"}
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_michoacan }
-		check_variable = { MEX.MEX_cristero_army_strength_michoacan > 0 }
+		check_variable = { MEX.MEX_cristero_army_strength_michoacan > 0 tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" }
+		
 	}
+#MEX_CASG_t0tt = yes
+	
 }
+MEX_CASG_t0tt={IF = {
+		limit = { has_country_flag = MEX_clicked_on_mexico_city }
+		277 = { custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_nuevo_leon }
+		930 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_jalisco }
+		478 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_mexico_state }
+		942 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_veracruz }
+		477 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_baja_california }
+		484 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_guanajuato }
+		938 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_san_luis_potosi }
+		937 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_durango }
+		929 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_sinaloa }
+		481 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tamaulipas }
+		479 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_coahuila }
+		480 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_chihuahua }
+		482 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_baja_california_sur }
+		925 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_sonora }
+		483 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_zacatecas }
+		934 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_nayarit }
+		933 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_aguascalientes }
+		935 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_guerrero }
+		485 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_morelos }
+		940 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tlaxcala }
+		943 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_puebla }
+		936 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_hidalgo }
+		941 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_oaxaca }
+		476 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tabasco }
+		928 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_queretaro }
+		939 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_campeche }
+		927 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_quintana_roo }
+		926 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_yucatan }
+		474 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_colima }
+		932 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_chiapas }
+		475 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_michoacan }
+		931 = {  custom_trigger_tooltip = { tooltip = "MEX_selected_cristero_army_strength_greater_than_0_tt" } }
+	}}
 
 MEX_selected_cristero_army_strength_greater_than_35 = {
 	IF = {
@@ -408,131 +540,133 @@ MEX_selected_cristero_army_can_clear_with_army = {
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_nuevo_leon }
-		930 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		930 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_jalisco }
-		478 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		478 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_mexico_state }
-		942 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		942 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_veracruz }
-		477 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		477 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_baja_california }
-		484 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		484 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_guanajuato }
-		938 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		938 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_san_luis_potosi }
-		937 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		937 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_durango }
-		929 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		929 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_sinaloa }
-		481 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		481 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_tamaulipas }
-		479 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		479 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_coahuila }
-		480 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		480 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_chihuahua }
-		482 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		482 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_baja_california_sur }
-		925 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		925 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_sonora }
-		483 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		483 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_zacatecas }
-		934 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		934 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_nayarit }
-		933 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		933 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_aguascalientes }
-		935 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		935 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_guerrero }
-		485 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		485 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_morelos }
-		940 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		940 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_tlaxcala }
-		943 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		943 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_puebla }
-		936 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		936 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_hidalgo }
-		941 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		941 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_oaxaca }
-		476 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		476 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_tabasco }
-		928 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		928 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_queretaro }
-		939 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		939 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_campeche }
-		927 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		927 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_quintana_roo }
-		926 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		926 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_yucatan }
-		474 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		474 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_colima }
-		932 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		932 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_chiapas }
-		475 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		475 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_michoacan }
-		931 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+		931 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
 	}
 }
 
 MEX_selected_cristero_army_is_demilitarized_zone = {
+	OR = {
+	not = {
 	IF = {
 		limit = { has_country_flag = MEX_clicked_on_mexico_city }
 		277 = { is_demilitarized_zone = yes }
@@ -661,6 +795,277 @@ MEX_selected_cristero_army_is_demilitarized_zone = {
 		limit = { has_country_flag = MEX_clicked_on_michoacan }
 		931 = { is_demilitarized_zone = yes }
 	}
+	}
+	and = {
+		custom_trigger_tooltip = {
+			tooltip = MEX_selected_cristero_divisions_in_state_tt
+		
+		
+			
+		
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_mexico_city }
+		277 = { any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_nuevo_leon }
+		930 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_jalisco }
+		478 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_mexico_state }
+		942 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_veracruz }
+		477 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_baja_california }
+		484 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_guanajuato }
+		938 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_san_luis_potosi }
+		937 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_durango }
+		929 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_sinaloa }
+		481 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tamaulipas }
+		479 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_coahuila }
+		480 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_chihuahua }
+		482 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_baja_california_sur }
+		925 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_sonora }
+		483 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_zacatecas }
+		934 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_nayarit }
+		933 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_aguascalientes }
+		935 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_guerrero }
+		485 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_morelos }
+		940 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tlaxcala }
+		943 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_puebla }
+		936 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_hidalgo }
+		941 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_oaxaca }
+		476 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tabasco }
+		928 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_queretaro }
+		939 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_campeche }
+		927 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_quintana_roo }
+		926 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_yucatan }
+		474 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_colima }
+		932 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_chiapas }
+		475 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_michoacan }
+		931 = {  any_neighbor_state = { MEX = { divisions_in_state = { size > 4 state = PREV } } } }
+	}
+}}
+	}
+}
+MEX_selected_cristero_army_is_demilitarized_zone2 = {
+	
+	
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_mexico_city }
+		277 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_nuevo_leon }
+		930 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_jalisco }
+		478 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_mexico_state }
+		942 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_veracruz }
+		477 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_baja_california }
+		484 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_guanajuato }
+		938 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_san_luis_potosi }
+		937 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_durango }
+		929 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_sinaloa }
+		481 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tamaulipas }
+		479 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_coahuila }
+		480 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_chihuahua }
+		482 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_baja_california_sur }
+		925 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_sonora }
+		483 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_zacatecas }
+		934 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_nayarit }
+		933 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_aguascalientes }
+		935 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_guerrero }
+		485 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_morelos }
+		940 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tlaxcala }
+		943 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_puebla }
+		936 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_hidalgo }
+		941 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_oaxaca }
+		476 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_tabasco }
+		928 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_queretaro }
+		939 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_campeche }
+		927 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_quintana_roo }
+		926 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_yucatan }
+		474 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_colima }
+		932 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_chiapas }
+		475 = { is_demilitarized_zone = yes }
+	}
+	IF = {
+		limit = { has_country_flag = MEX_clicked_on_michoacan }
+		931 = { is_demilitarized_zone = yes }
+	}
+	
 }
 MEX_is_northern_state = {
 	custom_trigger_tooltip = {

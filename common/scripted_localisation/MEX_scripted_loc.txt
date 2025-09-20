@@ -877,3 +877,102 @@ defined_text = {
 		localization_key = MEX_PLM_establishment_loyalty_line_0
 	}
 }
+defined_text = {
+	name = GetMEXSCATGT0STATENAME
+	text = { trigger = { has_country_flag = MEX_clicked_on_mexico_city }
+		localization_key = [277.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_nuevo_leon }
+		localization_key = [930.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_jalisco }
+		localization_key = [478.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_mexico_state }
+		localization_key = [942.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_veracruz }
+		localization_key = [477.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_baja_california }
+		localization_key = [484.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_guanajuato }
+		localization_key = [938.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_san_luis_potosi }
+		localization_key = [937.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_durango }
+		localization_key = [929.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_sinaloa }
+		localization_key = [481.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_tamaulipas }
+		localization_key = [479.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_coahuila }
+		localization_key = [480.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_chihuahua }
+		localization_key = [482.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_baja_california_sur }
+		localization_key = [925.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_sonora }
+		localization_key = [483.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_zacatecas }
+		localization_key = [934.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_nayarit }
+		localization_key = [933.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_aguascalientes }
+		localization_key = [935.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_guerrero }
+		localization_key = [485.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_morelos }
+		localization_key = [940.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_tlaxcala }
+		localization_key = [943.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_puebla }
+		localization_key = [936.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_hidalgo }
+		localization_key = [941.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_oaxaca }
+		localization_key = [476.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_tabasco }
+		localization_key = [928.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_queretaro }
+		localization_key = [939.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_campeche }
+		localization_key = [927.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_quintana_roo }
+		localization_key = [926.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_yucatan }
+		localization_key = [474.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_colima }
+		localization_key = [932.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_chiapas }
+		localization_key = [475.GetName]
+	}
+	text = { trigger = { has_country_flag = MEX_clicked_on_michoacan }
+		localization_key = [931.GetName]
+	}
+}

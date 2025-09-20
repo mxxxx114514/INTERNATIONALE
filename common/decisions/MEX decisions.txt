@@ -159,23 +159,26 @@ MEX_cristero_war_category = {
 	}
 
 	MEX_cristero_war_clear_cristero_army = {
-		allowed = { always = no }
+		allowed = { always = yes }
 		available = {
 			hidden_trigger = { is_ai = no }
+
 			MEX_selected_cristero_army_strength_greater_than_0 = yes
-			OR = { MEX_selected_cristero_army_can_clear_with_army = yes MEX_selected_cristero_army_is_demilitarized_zone = no }
+			MEX_selected_cristero_army_is_demilitarized_zone = yes 
 		}
 		days_remove = MEX_cristero_war_clear_cristero_army_cooldown
 		remove_effect = {
 			set_variable = {
 				var = MEX_cristero_add
 				value = MEX_cristero_war_clear_cristero_army_strength
+				tooltip = MEX_cristero_war_clear_cristero_army_MEX_cristero_add_tt
 			}
 			add_to_variable = { MEX.MEX_cristero_GOV_damage = MEX.MEX_cristero_war_clear_cristero_army_strength }
 			MEX_selected_cristero_army_strength_add = yes
 			IF = {
 				limit = {
 					MEX_selected_cristero_army_strength_greater_than_35 = no
+					MEX_selected_cristero_army_is_demilitarized_zone2 = yes
 				}
 				MEX_selected_cristero_army_strength_clear_demilitarized = yes
 			}
@@ -184,11 +187,11 @@ MEX_cristero_war_category = {
 
 	MEX_cristero_war_spread_mission = {
 		allowed = { always = no }
-		days_mission_timeout = 24
+		days_mission_timeout = 10
 
 		available = {
 			hidden_trigger = {
-				has_completed_focus = MEX_pol2_6
+				has_completed_focus = MEX_pol2_5
 			}
 		}
 
@@ -247,16 +250,10 @@ MEX_cristero_war_category = {
 								is_demilitarized_zone = yes
 							}
 						}
-						set_variable = {
-							var = MEX.MEX_cristero_add
-							value = 10
-						}
+						if = { limit = { ROOT = { has_idea = mex_qunlongwushou_panluan } } set_variable = { var = MEX.MEX_cristero_add value = 5 } } else = { set_variable = { var = MEX.MEX_cristero_add value = 10 } }
 						MEX_state_cristero_army_strength_add = yes
 					}
-					set_variable = {
-						var = MEX.MEX_cristero_add
-						value = 10
-					}
+					if = { limit = { ROOT = { has_idea = mex_qunlongwushou_panluan } } set_variable = { var = MEX.MEX_cristero_add value = 5 } } else = { set_variable = { var = MEX.MEX_cristero_add value = 10 } }
 					MEX_state_cristero_army_strength_add = yes
 					set_demilitarized_zone = yes
 					damage_building = {

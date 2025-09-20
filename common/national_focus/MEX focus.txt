@@ -239,7 +239,7 @@ focus_tree = {
 		cost = 1
 		completion_reward = {
 			add_to_variable = {
-				MEX_catholic_opposition_stability_factor = 0.02
+				MEX_catholic_opposition_stability_factor = -0.02
 			}
 			add_to_variable = {
 				MEX_catholic_opposition_war_support_factor = 0.05
@@ -339,7 +339,8 @@ focus_tree = {
 		cost = 7
 		allow_branch = { has_completed_focus = MEX_pol_6 }
 		completion_reward = {
-		activate_targeted_decision = {
+			hidden_effect = {
+				activate_targeted_decision = {
 		target = MEX
 		decision = MEX_cristero_war_test_1
 		}
@@ -351,16 +352,21 @@ focus_tree = {
 		target = MEX
 		decision = MEX_cristero_war_clear_cristero_army
 		}
+		activate_mission = MEX_cristero_war_spread_mission
+		IF = {
+		limit = { THIS = {is_ai = yes } }
+		activate_mission = MEX_cristero_war_clear_ai_mission
+		}
+			}
+		
+		
 		add_ideas = limited_conscription
 		add_ideas = partial_economic_mobilisation
-		activate_mission = MEX_cristero_war_spread_mission
+		
 		hidden_effect = {
 		MEX_clear_all_cristero_war_state_flags = yes
 		set_country_flag = MEX_clicked_on_mexico_city
-		IF = {
-		limit = { is_ai = yes }
-		activate_mission = MEX_cristero_war_clear_ai_mission
-		}
+		
 		}
 		}
 
@@ -375,6 +381,7 @@ focus_tree = {
 		y = 1
 		cost = 7
 		completion_reward = {
+		    
 			add_to_variable = {
 				MEX_cristero_army_strength_mexico_city = -10
 			}
@@ -476,6 +483,7 @@ focus_tree = {
 			}
 			every_owned_state = {
 				add_manpower = -2000
+				custom_effect_tooltip = "MEX_pol2_1_powerD10TT"
 			}
 		}
 
@@ -615,6 +623,10 @@ focus_tree = {
 		y = 1
 		cost = 7
 		completion_reward = {
+			set_technology = {
+                tech_military_police = 1
+            }
+			add_stability = 0.03
 
 		}
 
@@ -635,6 +647,18 @@ focus_tree = {
 			add_to_variable = {
 				MEX_catholic_opposition_industrial_capacity_factory = 0.1
 			}
+			every_state = {
+				limit = {
+					is_owned_by = MEX
+				}
+				custom_effect_tooltip = "MEX_pol2_5_t"
+				every_state = {
+					limit = {
+						is_demilitarized_zone = yes
+					}
+					set_demilitarized_zone = no
+				}		
+			}
 		}
 
 	}
@@ -653,6 +677,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			generic_update_focus_tree = yes
+			remove_dynamic_modifier = {
+				modifier = MEX_catholic_opposition_d
+			}
+			add_ideas = MEX_comedyGodless
 		}
 
 	}
