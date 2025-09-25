@@ -12,7 +12,7 @@ MEX_cristero_war_category = {
 	icon = ""
 	picture = ""
 	priority = 100
-	allowed = { always = yes }
+	allowed = { has_completed_focus = MEX_pol2_0 }
 	scripted_gui = MEX_cristero_war_scripted_gui
 }
 MEX_civil_war_category = {
