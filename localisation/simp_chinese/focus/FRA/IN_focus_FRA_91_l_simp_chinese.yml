@@ -1,0 +1,88 @@
+﻿l_simp_chinese: 
+ # 注意此为FRA_91国策本地化 请勿在此填写无关内容 
+ # 国策的ID为 TAG_FOCUSTREEID_PROJECT_ID 
+ 
+ 
+ 
+ # FRA 91
+ FRA_91_00: "巴黎的复兴"
+ FRA_91_00_desc: ""
+
+ FRA_91_01: "法国社会主义工业化"
+ FRA_91_01_desc: ""
+
+ FRA_91_02: "一建计划"
+ FRA_91_02_desc: ""
+
+ FRA_91_03_A: "出版全国公社人民诊疗手册"
+ FRA_91_03_A_desc: ""
+
+ FRA_91_04_A_L: "学习各国的科学技术"
+ FRA_91_04_A_L_desc: ""
+
+ FRA_91_05_A_L: "社会主义合众国"
+ FRA_91_05_A_L_desc: ""
+
+ FRA_91_06_A_L: "加速技术研发"
+ FRA_91_06_A_L_desc: ""
+
+ FRA_91_07_A_L_A: "建立国际科学研究院"
+ FRA_91_07_A_L_A_desc: ""
+
+ FRA_91_07_A_L_B: "推动社会主义科学联盟"
+ FRA_91_07_A_L_B_desc: ""
+
+ FRA_91_07_A_L_C: "建设国际交流与发展协会"
+ FRA_91_07_A_L_C_desc: ""
+
+ FRA_91_08_A_L: "无产阶级社会的科技进步"
+ FRA_91_08_A_L_desc: ""
+
+ FRA_91_04_A_R: "国内大力宣传"
+ FRA_91_04_A_R_desc: ""
+
+ FRA_91_05_A_R_L: "大国梦想"
+ FRA_91_05_A_R_L_desc: ""
+
+ FRA_91_05_A_R_R: "共同富裕"
+ FRA_91_05_A_R_R_desc: ""
+
+ FRA_91_07_A_R: "为国效力"
+ FRA_91_07_A_R_desc: ""
+
+ FRA_91_03_B: "给予公社工厂生产资料"
+ FRA_91_03_B_desc: ""
+
+ FRA_91_04_B: "人道主义公社"
+ FRA_91_04_B_desc: ""
+
+ FRA_91_05_B_L: "平等团结的公社"
+ FRA_91_05_B_L_desc: ""
+
+ FRA_91_05_B_R: "互帮互助的公社"
+ FRA_91_05_B_R_desc: ""
+
+ FRA_91_07_B: "社会主义自治公社"
+ FRA_91_07_B_desc: ""
+
+ FRA_91_03_C: "建立法国安全防卫局"
+ FRA_91_03_C_desc: ""
+
+ FRA_91_04_C_L: "军事理论教学"
+ FRA_91_04_C_L_desc: ""
+
+ FRA_91_04_C_R: "统一指挥组织"
+ FRA_91_04_C_R_desc: ""
+
+ FRA_91_05_C_L: "建立赤色洪流"
+ FRA_91_05_C_L_desc: ""
+
+ FRA_91_05_C_R: "巴黎人民军校"
+ FRA_91_05_C_R_desc: ""
+
+ FRA_91_07_C: "人民军队"
+ FRA_91_07_C_desc: ""
+
+ FRA_91_09: "宣布完成一建计划"
+ FRA_91_09_desc: ""
+

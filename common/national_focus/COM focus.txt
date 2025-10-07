@@ -1,4 +1,4 @@
-// 不确定的icon后面加了temporary，%+搜索就可以————CrawlenXx
+# // 不确定的icon后面加了temporary，%+搜索就可以————CrawlenXx
 
 focus_tree = {
 	id = COM_focus
@@ -162,7 +162,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_peasants_and_workers_are_happy
-		icon = COM_peasants_and_workers_are_happy(temporary)
+		# icon = COM_peasants_and_workers_are_happy(temporary)
 		relative_position_id = COM_final_blow
 		x = 0
 		y = 1
@@ -307,7 +307,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_consolidate_coalition
-		icon = COM_YUC_consolidate_coalition(temporary)
+		# icon = COM_YUC_consolidate_coalition(temporary)
 		relative_position_id = COM_YUC_meet_with_agrarians
 		x = 0
 		y = 1
@@ -551,7 +551,7 @@ focus_tree = {
 
 	focus = {
 		id = COM_YUC_lasting_security
-		icon = COM_YUC_lasting_security(temporary)
+		# icon = COM_YUC_lasting_security(temporary)
 		relative_position_id = COM_YUC_peaceful_coexistence
 		x = 0
 		y = 2

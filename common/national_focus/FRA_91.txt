@@ -1,0 +1,232 @@
+#!gfx:interface\IN\icons\goals\FRA\91_goals.gfx
+#focus_tree = {
+#	id = FRA_91
+#	country = {
+#		factor = 0
+#		modifier = {
+#			add = 1
+#			tag = FRA
+#		}
+#	}
+#	default = no
+	shared_focus = {
+		id = FRA_91_00
+		icon = GFX_focus_goals_FRA_91_00
+		cost = 0
+		x = -20 y = 12
+		allow_branch = {
+			always = yes
+		}
+		available = {
+			always = no
+		}
+	}
+	shared_focus = {
+		id = FRA_91_01
+		icon = GFX_focus_goals_FRA_91_01
+		cost = 0
+		x = 0 y = 1
+	    relative_position_id = FRA_91_00
+		prerequisite = { focus = FRA_91_00 }
+	}
+	shared_focus = {
+		id = FRA_91_02
+		icon = GFX_focus_goals_FRA_91_02
+		cost = 0
+		x = 0 y = 1
+	    relative_position_id = FRA_91_01
+		prerequisite = { focus = FRA_91_01 }
+	}
+	shared_focus = {
+		id = FRA_91_03_A
+		icon = GFX_focus_goals_FRA_91_03_A
+		cost = 0
+		x = -5 y = 1
+	    relative_position_id = FRA_91_02
+		prerequisite = { focus = FRA_91_02 }
+	}
+	shared_focus = {
+		id = FRA_91_04_A_L
+		icon = GFX_focus_goals_FRA_91_04_A_L
+		cost = 0
+		x = -2 y = 1
+	    relative_position_id = FRA_91_03_A
+		prerequisite = { focus = FRA_91_03_A }
+	}
+	shared_focus = {
+		id = FRA_91_05_A_L
+		icon = GFX_focus_goals_FRA_91_05_A_L
+		cost = 0
+		x = 0 y = 1
+	    relative_position_id = FRA_91_04_A_L
+		prerequisite = { focus = FRA_91_04_A_L }
+	}
+	shared_focus = {
+		id = FRA_91_06_A_L
+		icon = GFX_focus_goals_FRA_91_06_A_L
+		cost = 0
+		x = 0 y = 1
+	    relative_position_id = FRA_91_05_A_L
+		prerequisite = { focus = FRA_91_05_A_L }
+	}
+	shared_focus = {
+		id = FRA_91_07_A_L_A
+		icon = GFX_focus_goals_FRA_91_07_A_L_A
+		cost = 0
+		x = -2 y = 1
+	    relative_position_id = FRA_91_06_A_L
+		prerequisite = { focus = FRA_91_06_A_L }
+	}
+	shared_focus = {
+		id = FRA_91_07_A_L_B
+		icon = GFX_focus_goals_FRA_91_07_A_L_B
+		cost = 0
+		x = 0 y = 1
+	    relative_position_id = FRA_91_06_A_L
+		prerequisite = { focus = FRA_91_06_A_L }
+	}
+	shared_focus = {
+		id = FRA_91_07_A_L_C
+		icon = GFX_focus_goals_FRA_91_07_A_L_C
+		cost = 0
+		x = 2 y = 1
+	    relative_position_id = FRA_91_06_A_L
+		prerequisite = { focus = FRA_91_06_A_L }
+	}
+	shared_focus = {
+		id = FRA_91_08_A_L
+		icon = GFX_focus_goals_FRA_91_08_A_L
+		cost = 0
+		x = 0 y = 2
+	    relative_position_id = FRA_91_06_A_L
+		prerequisite = { focus = FRA_91_07_A_L_A } prerequisite = { focus = FRA_91_07_A_L_B } prerequisite = { focus = FRA_91_07_A_L_C }
+	}
+	shared_focus = {
+		id = FRA_91_04_A_R
+		icon = GFX_focus_goals_FRA_91_04_A_R
+		cost = 0
+		x = 2 y = 1
+	    relative_position_id = FRA_91_03_A
+		prerequisite = { focus = FRA_91_03_A }
+	}
+	shared_focus = {
+		id = FRA_91_05_A_R_L
+		icon = GFX_focus_goals_FRA_91_05_A_R_L
+		cost = 0
+		x = -1 y = 1
+	    relative_position_id = FRA_91_04_A_R
+		prerequisite = { focus = FRA_91_04_A_R }
+	}
+	shared_focus = {
+		id = FRA_91_05_A_R_R
+		icon = GFX_focus_goals_FRA_91_05_A_R_R
+		cost = 0
+		x = 1 y = 1
+	    relative_position_id = FRA_91_04_A_R
+		prerequisite = { focus = FRA_91_04_A_R }
+	}
+	shared_focus = {
+		id = FRA_91_07_A_R
+		icon = GFX_focus_goals_FRA_91_07_A_R
+		cost = 0
+		x = 0 y = 3
+	    relative_position_id = FRA_91_04_A_R
+		prerequisite = { focus = FRA_91_05_A_R_L } prerequisite = { focus = FRA_91_05_A_R_R }
+	}
+	shared_focus = {
+		id = FRA_91_03_B
+		icon = GFX_focus_goals_FRA_91_03_B
+		cost = 0
+		x = 1 y = 1
+	    relative_position_id = FRA_91_02
+		prerequisite = { focus = FRA_91_02 }
+	}
+	shared_focus = {
+		id = FRA_91_04_B
+		icon = GFX_focus_goals_FRA_91_04_B
+		cost = 0
+		x = 0 y = 1
+	    relative_position_id = FRA_91_03_B
+		prerequisite = { focus = FRA_91_03_B }
+	}
+	shared_focus = {
+		id = FRA_91_05_B_L
+		icon = GFX_focus_goals_FRA_91_05_B_L
+		cost = 0
+		x = -1 y = 1
+	    relative_position_id = FRA_91_04_B
+		prerequisite = { focus = FRA_91_04_B }
+	}
+	shared_focus = {
+		id = FRA_91_05_B_R
+		icon = GFX_focus_goals_FRA_91_05_B_R
+		cost = 0
+		x = 1 y = 1
+	    relative_position_id = FRA_91_04_B
+		prerequisite = { focus = FRA_91_04_B }
+	}
+	shared_focus = {
+		id = FRA_91_07_B
+		icon = GFX_focus_goals_FRA_91_07_B
+		cost = 0
+		x = 0 y = 3
+	    relative_position_id = FRA_91_04_B
+		prerequisite = { focus = FRA_91_05_B_L } prerequisite = { focus = FRA_91_05_B_R }
+	}
+	shared_focus = {
+		id = FRA_91_03_C
+		icon = GFX_focus_goals_FRA_91_03_C
+		cost = 0
+		x = 5 y = 1
+	    relative_position_id = FRA_91_02
+		prerequisite = { focus = FRA_91_02 }
+	}
+	shared_focus = {
+		id = FRA_91_04_C_L
+		icon = GFX_focus_goals_FRA_91_04_C_L
+		cost = 0
+		x = -1 y = 1
+	    relative_position_id = FRA_91_03_C
+		prerequisite = { focus = FRA_91_03_C }
+	}
+	shared_focus = {
+		id = FRA_91_04_C_R
+		icon = GFX_focus_goals_FRA_91_04_C_R
+		cost = 0
+		x = 1 y = 1
+	    relative_position_id = FRA_91_03_C
+		prerequisite = { focus = FRA_91_03_C }
+	}
+	shared_focus = {
+		id = FRA_91_05_C_L
+		icon = GFX_focus_goals_FRA_91_05_C_L
+		cost = 0
+		x = 0 y = 1
+	    relative_position_id = FRA_91_04_C_L
+		prerequisite = { focus = FRA_91_04_C_L }
+	}
+	shared_focus = {
+		id = FRA_91_05_C_R
+		icon = GFX_focus_goals_FRA_91_05_C_R
+		cost = 0
+		x = 0 y = 1
+	    relative_position_id = FRA_91_04_C_R
+		prerequisite = { focus = FRA_91_04_C_R }
+	}
+	shared_focus = {
+		id = FRA_91_07_C
+		icon = GFX_focus_goals_FRA_91_07_C
+		cost = 0
+		x = 0 y = 4
+	    relative_position_id = FRA_91_03_C
+		prerequisite = { focus = FRA_91_05_C_L } prerequisite = { focus = FRA_91_05_C_R }
+	}
+	shared_focus = {
+		id = FRA_91_09
+		icon = GFX_focus_goals_FRA_91_09
+		cost = 0
+		x = 0 y = 7
+	    relative_position_id = FRA_91_02
+		prerequisite = { focus = FRA_91_08_A_L } prerequisite = { focus = FRA_91_07_A_R } prerequisite = { focus = FRA_91_07_B } prerequisite = { focus = FRA_91_07_C }
+	}
+#}

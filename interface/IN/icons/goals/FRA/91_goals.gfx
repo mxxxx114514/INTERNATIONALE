@@ -1,0 +1,111 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_00"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_00.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_01"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_01.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_02"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_02.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_03_A"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_03_A.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_04_A_L"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_04_A_L.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_05_A_L"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_05_A_L.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_06_A_L"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_06_A_L.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_07_A_L_A"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_07_A_L_A.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_07_A_L_B"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_07_A_L_B.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_07_A_L_C"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_07_A_L_C.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_08_A_L"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_08_A_L.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_04_A_R"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_04_A_R.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_05_A_R_L"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_05_A_R_L.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_05_A_R_R"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_05_A_R_R.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_07_A_R"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_07_A_R.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_03_B"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_03_B.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_04_B"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_04_B.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_05_B_L"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_05_B_L.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_05_B_R"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_05_B_R.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_07_B"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_07_B.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_03_C"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_03_C.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_04_C_L"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_04_C_L.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_04_C_R"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_04_C_R.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_05_C_L"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_05_C_L.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_05_C_R"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_05_C_R.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_07_C"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_07_C.png"
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_FRA_91_09"
+        texturefile = "gfx/icons/goals/FRA/FRA_91_09.png"
+    }
+}
+
