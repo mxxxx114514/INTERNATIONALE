@@ -13,9 +13,10 @@
 		id = FRA_91_00
 		icon = GFX_focus_goals_FRA_91_00
 		cost = 0
-		x = -20 y = 12
+		x = -26 y = 12
+		relative_position_id = FRA_peoples_revolutionary_front_question
 		allow_branch = {
-			always = yes
+			has_country_flag = DebugFucosShow_FRA_91_00
 		}
 		available = {
 			always = no

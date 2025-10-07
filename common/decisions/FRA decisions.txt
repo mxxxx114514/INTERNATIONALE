@@ -1,0 +1,8 @@
+FRA_DEBUG_category = {
+	FRA_DebugFucosShow_FRA_91_00 = {
+		allowed = { tag = FRA is_debug = yes } visible = { is_debug = yes }
+		icon = ger_mefo_bills
+		fire_only_once = no
+		remove_effect = { if = { limit = { has_country_flag = DebugFucosShow_FRA_91_00 } clr_country_flag = DebugFucosShow_FRA_91_00 } else = { set_country_flag = DebugFucosShow_FRA_91_00 } mark_focus_tree_layout_dirty = yes }
+	}
+}

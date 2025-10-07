@@ -1,0 +1,10 @@
+#################
+#### FRA ####
+#################
+FRA_DEBUG_category = {
+	icon = ""
+	picture = ""
+	priority = 10
+	allowed = { tag = FRA is_debug = yes }
+	visible = { is_debug = yes }
+}
