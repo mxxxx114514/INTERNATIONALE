@@ -1,0 +1,233 @@
+spriteTypes = {
+    SpriteType = {
+        name = "GFX_focus_goals_GER_military"
+        texturefile = "gfx/icons/goals/GER/GER_military.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_defense_lines"
+        texturefile = "gfx/icons/goals/GER/GER_defense_lines.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_military_academy"
+        texturefile = "gfx/icons/goals/GER/GER_military_academy.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_army"
+        texturefile = "gfx/icons/goals/GER/GER_army.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_mobile_warfare"
+        texturefile = "gfx/icons/goals/GER/GER_mobile_warfare.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_reichswehr_cavalry_modernization"
+        texturefile = "gfx/icons/goals/GER/GER_reichswehr_cavalry_modernization.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_auftragstaktik_training"
+        texturefile = "gfx/icons/goals/GER/GER_auftragstaktik_training.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_panzer_vorwarts"
+        texturefile = "gfx/icons/goals/GER/GER_panzer_vorwarts.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_mechanized_infantry"
+        texturefile = "gfx/icons/goals/GER/GER_mechanized_infantry.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_fuel_initiative"
+        texturefile = "gfx/icons/goals/GER/GER_fuel_initiative.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_front_loaded_logistics_network"
+        texturefile = "gfx/icons/goals/GER/GER_front_loaded_logistics_network.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_armored_spearhead"
+        texturefile = "gfx/icons/goals/GER/GER_armored_spearhead.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_luftwaffe_coordination"
+        texturefile = "gfx/icons/goals/GER/GER_luftwaffe_coordination.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_blitzkrieg_unleashed"
+        texturefile = "gfx/icons/goals/GER/GER_blitzkrieg_unleashed.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_systematic_annihilation"
+        texturefile = "gfx/icons/goals/GER/GER_systematic_annihilation.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_artillery_mastery_program"
+        texturefile = "gfx/icons/goals/GER/GER_artillery_mastery_program.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_self_propelled_artillery"
+        texturefile = "gfx/icons/goals/GER/GER_self_propelled_artillery.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_stormtrooper_legacy"
+        texturefile = "gfx/icons/goals/GER/GER_stormtrooper_legacy.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_systematic_logistics_corps"
+        texturefile = "gfx/icons/goals/GER/GER_systematic_logistics_corps.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_materialschlacht"
+        texturefile = "gfx/icons/goals/GER/GER_materialschlacht.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_fortification_bypass_studies"
+        texturefile = "gfx/icons/goals/GER/GER_fortification_bypass_studies.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_defense_in_depth"
+        texturefile = "gfx/icons/goals/GER/GER_defense_in_depth.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_static_warfare_engineering"
+        texturefile = "gfx/icons/goals/GER/GER_static_warfare_engineering.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_methodical_battle_protocol"
+        texturefile = "gfx/icons/goals/GER/GER_methodical_battle_protocol.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_industrial_preparation"
+        texturefile = "gfx/icons/goals/GER/GER_industrial_preparation.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy"
+        texturefile = "gfx/icons/goals/GER/GER_navy.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_dockyards"
+        texturefile = "gfx/icons/goals/GER/GER_navy_dockyards.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_ships"
+        texturefile = "gfx/icons/goals/GER/GER_navy_ships.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_ships_2"
+        texturefile = "gfx/icons/goals/GER/GER_navy_ships_2.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_submarines"
+        texturefile = "gfx/icons/goals/GER/GER_navy_submarines.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_submarines_2"
+        texturefile = "gfx/icons/goals/GER/GER_navy_submarines_2.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air"
+        texturefile = "gfx/icons/goals/GER/GER_air.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_industry"
+        texturefile = "gfx/icons/goals/GER/GER_air_industry.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_strategic_destruction"
+        texturefile = "gfx/icons/goals/GER/GER_air_strategic_destruction.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_heavy_planes"
+        texturefile = "gfx/icons/goals/GER/GER_air_heavy_planes.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_firepower"
+        texturefile = "gfx/icons/goals/GER/GER_air_firepower.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_battlefield_support"
+        texturefile = "gfx/icons/goals/GER/GER_air_battlefield_support.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_build_CAS"
+        texturefile = "gfx/icons/goals/GER/GER_air_build_CAS.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_aces"
+        texturefile = "gfx/icons/goals/GER/GER_air_aces.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_operational_integrity"
+        texturefile = "gfx/icons/goals/GER/GER_air_operational_integrity.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_tactical_bombing"
+        texturefile = "gfx/icons/goals/GER/GER_air_tactical_bombing.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_air_dominance"
+        texturefile = "gfx/icons/goals/GER/GER_air_air_dominance.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_radar"
+        texturefile = "gfx/icons/goals/GER/GER_air_radar.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_anti_air"
+        texturefile = "gfx/icons/goals/GER/GER_air_anti_air.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_airborne_forces"
+        texturefile = "gfx/icons/goals/GER/GER_air_airborne_forces.png"
+        transparencecheck = yes
+    }
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_naval_bombers"
+        texturefile = "gfx/icons/goals/GER/GER_air_naval_bombers.png"
+        transparencecheck = yes
+    }
+}
+

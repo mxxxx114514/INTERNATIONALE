@@ -1,0 +1,1475 @@
+spriteTypes = {
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_military_shine"
+        texturefile = "gfx/icons/goals/GER/GER_military.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_military.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_military.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_defense_lines_shine"
+        texturefile = "gfx/icons/goals/GER/GER_defense_lines.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_defense_lines.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_defense_lines.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_military_academy_shine"
+        texturefile = "gfx/icons/goals/GER/GER_military_academy.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_military_academy.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_military_academy.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_army_shine"
+        texturefile = "gfx/icons/goals/GER/GER_army.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_army.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_army.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_mobile_warfare_shine"
+        texturefile = "gfx/icons/goals/GER/GER_mobile_warfare.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_mobile_warfare.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_mobile_warfare.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_reichswehr_cavalry_modernization_shine"
+        texturefile = "gfx/icons/goals/GER/GER_reichswehr_cavalry_modernization.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_reichswehr_cavalry_modernization.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_reichswehr_cavalry_modernization.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_auftragstaktik_training_shine"
+        texturefile = "gfx/icons/goals/GER/GER_auftragstaktik_training.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_auftragstaktik_training.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_auftragstaktik_training.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_panzer_vorwarts_shine"
+        texturefile = "gfx/icons/goals/GER/GER_panzer_vorwarts.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_panzer_vorwarts.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_panzer_vorwarts.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_mechanized_infantry_shine"
+        texturefile = "gfx/icons/goals/GER/GER_mechanized_infantry.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_mechanized_infantry.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_mechanized_infantry.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_fuel_initiative_shine"
+        texturefile = "gfx/icons/goals/GER/GER_fuel_initiative.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_fuel_initiative.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_fuel_initiative.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_front_loaded_logistics_network_shine"
+        texturefile = "gfx/icons/goals/GER/GER_front_loaded_logistics_network.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_front_loaded_logistics_network.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_front_loaded_logistics_network.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_armored_spearhead_shine"
+        texturefile = "gfx/icons/goals/GER/GER_armored_spearhead.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_armored_spearhead.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_armored_spearhead.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_luftwaffe_coordination_shine"
+        texturefile = "gfx/icons/goals/GER/GER_luftwaffe_coordination.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_luftwaffe_coordination.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_luftwaffe_coordination.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_blitzkrieg_unleashed_shine"
+        texturefile = "gfx/icons/goals/GER/GER_blitzkrieg_unleashed.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_blitzkrieg_unleashed.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_blitzkrieg_unleashed.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_systematic_annihilation_shine"
+        texturefile = "gfx/icons/goals/GER/GER_systematic_annihilation.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_systematic_annihilation.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_systematic_annihilation.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_artillery_mastery_program_shine"
+        texturefile = "gfx/icons/goals/GER/GER_artillery_mastery_program.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_artillery_mastery_program.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_artillery_mastery_program.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_self_propelled_artillery_shine"
+        texturefile = "gfx/icons/goals/GER/GER_self_propelled_artillery.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_self_propelled_artillery.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_self_propelled_artillery.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_stormtrooper_legacy_shine"
+        texturefile = "gfx/icons/goals/GER/GER_stormtrooper_legacy.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_stormtrooper_legacy.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_stormtrooper_legacy.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_systematic_logistics_corps_shine"
+        texturefile = "gfx/icons/goals/GER/GER_systematic_logistics_corps.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_systematic_logistics_corps.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_systematic_logistics_corps.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_materialschlacht_shine"
+        texturefile = "gfx/icons/goals/GER/GER_materialschlacht.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_materialschlacht.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_materialschlacht.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_fortification_bypass_studies_shine"
+        texturefile = "gfx/icons/goals/GER/GER_fortification_bypass_studies.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_fortification_bypass_studies.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_fortification_bypass_studies.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_defense_in_depth_shine"
+        texturefile = "gfx/icons/goals/GER/GER_defense_in_depth.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_defense_in_depth.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_defense_in_depth.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_static_warfare_engineering_shine"
+        texturefile = "gfx/icons/goals/GER/GER_static_warfare_engineering.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_static_warfare_engineering.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_static_warfare_engineering.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_methodical_battle_protocol_shine"
+        texturefile = "gfx/icons/goals/GER/GER_methodical_battle_protocol.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_methodical_battle_protocol.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_methodical_battle_protocol.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_industrial_preparation_shine"
+        texturefile = "gfx/icons/goals/GER/GER_industrial_preparation.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_industrial_preparation.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_industrial_preparation.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_shine"
+        texturefile = "gfx/icons/goals/GER/GER_navy.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_dockyards_shine"
+        texturefile = "gfx/icons/goals/GER/GER_navy_dockyards.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy_dockyards.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy_dockyards.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_ships_shine"
+        texturefile = "gfx/icons/goals/GER/GER_navy_ships.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy_ships.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy_ships.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_ships_2_shine"
+        texturefile = "gfx/icons/goals/GER/GER_navy_ships_2.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy_ships_2.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy_ships_2.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_submarines_shine"
+        texturefile = "gfx/icons/goals/GER/GER_navy_submarines.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy_submarines.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy_submarines.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_navy_submarines_2_shine"
+        texturefile = "gfx/icons/goals/GER/GER_navy_submarines_2.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy_submarines_2.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_navy_submarines_2.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_industry_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_industry.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_industry.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_industry.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_strategic_destruction_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_strategic_destruction.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_strategic_destruction.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_strategic_destruction.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_heavy_planes_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_heavy_planes.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_heavy_planes.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_heavy_planes.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_firepower_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_firepower.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_firepower.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_firepower.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_battlefield_support_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_battlefield_support.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_battlefield_support.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_battlefield_support.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_build_CAS_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_build_CAS.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_build_CAS.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_build_CAS.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_aces_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_aces.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_aces.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_aces.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_operational_integrity_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_operational_integrity.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_operational_integrity.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_operational_integrity.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_tactical_bombing_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_tactical_bombing.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_tactical_bombing.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_tactical_bombing.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_air_dominance_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_air_dominance.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_air_dominance.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_air_dominance.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_radar_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_radar.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_radar.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_radar.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_anti_air_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_anti_air.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_anti_air.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_anti_air.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_airborne_forces_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_airborne_forces.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_airborne_forces.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_airborne_forces.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+###############################################################################################
+    SpriteType = {
+        name = "GFX_focus_goals_GER_air_naval_bombers_shine"
+        texturefile = "gfx/icons/goals/GER/GER_air_naval_bombers.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_naval_bombers.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = -90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 2.0 y = 1.0 }
+        }
+        animation = {
+            animationmaskfile = "gfx/icons/goals/GER/GER_air_naval_bombers.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0
+            animationlooping = no
+            animationtime = 0.75
+            animationdelay = 0
+            animationblendmode = "add"
+            animationtype = "scrolling"
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 }
+        }
+        legacy_lazy_load = no
+        transparencecheck = yes
+    }
+}
+
